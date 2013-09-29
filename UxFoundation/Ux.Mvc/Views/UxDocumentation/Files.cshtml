@@ -1,0 +1,59 @@
+﻿@using Ux.Mvc.Web.UI
+@model Ux.Mvc.ViewModels.Examples
+@{
+    ViewBag.Title = "Files - UxFoundation";
+    Layout = "_UxDocumentationLayout.cshtml";
+}
+@Html.Partial("_Nav")
+<div class="container">
+    <div class="page-header">
+        <h1>Uploading files</h1>
+    </div>
+    <p>To enable the upload or viewing of files, use the <code>Attachment</code> class in your view model.</p>
+
+    <h2>Model</h2>
+    <div class="highlight">
+        <pre class="prettyprint">
+
+        </pre>
+    </div>
+
+
+
+    <h3>Display</h3>
+    <div class="example">
+        @Html.UxDisplayRowFor(m => m.AttachmentOne)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxDisplayRowFor(m => m.AttachmentOne.Filename)
+</pre>
+    </div>
+    
+    <h3>Edit</h3>
+    <div class="example">
+        @using (Html.UxBeginForm(allowFiles: true))
+        {
+            @Html.UxEditorRowFor(m => m.AttachmentOne)
+            <br />
+            @Html.UxSaveButton()
+        }
+
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+// Set the allowFiles property to add the enctype property to your form
+@@using (Html.UxBeginForm(allowFiles: true))
+{
+    @@Html.UxEditorRowFor(m => m.AttachmentOne)
+    @@Html.UxSaveButton()
+}
+</pre>
+    </div>
+
+
+
+
+
+
+</div>

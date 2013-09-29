@@ -1,0 +1,136 @@
+﻿@model Ux.Mvc.ViewModels.Examples
+<div class="page-header">
+	<h1>Boolean <small>bool / bool?</small></h1>
+</div>
+
+<div class="highlight">
+	<pre class="prettyprint">
+// Boolean
+
+public bool Boolean { get; set; }
+
+[Boolean("Oui", "Non")] // Declare the yes and no text explicitly using attributes
+public bool BooleanExplicit { get; set; }
+
+[Boolean(BooleanType.TrueFalse)] // Declare the true and false text by BooleanType using attributes
+public bool BooleanByType { get; set; }
+
+
+// Nullable boolean
+
+public bool? BooleanNullable { get; set; }
+
+[Boolean("Positive","Negative","Uncertain")] // Declare the true, false and null text explicitly using attributes
+public bool? BooleanNullableExplicit { get; set; }
+
+[Boolean(BooleanType.TrueFalse, "Perhaps")] // Declare the true and false text by BooleanType, and null text explicitly using attributes
+public bool BooleanNullableByType { get; set; }
+
+Boolean = true,
+BooleanNullable = null,
+BooleanByType = false,
+BooleanExplicit = true,
+BooleanNullableByType = null,
+BooleanNullableExplicit = false
+</pre>
+</div>
+
+<h3>Raw</h3>
+<div class="example">
+	@Model.Boolean.ToString()
+	@Model.BooleanNullable.ToString()
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Model.Boolean.ToString()
+@@Model.BooleanNullable.ToString()
+</pre>
+</div>
+
+
+<h3>DisplayFor</h3>
+<div class="example">
+	@Html.DisplayFor(m => m.Boolean)<br />
+	@Html.DisplayFor(m => m.BooleanExplicit)<br />
+	@Html.DisplayFor(m => m.BooleanByType)<br />
+	@Html.DisplayFor(m => m.BooleanNullable)<br />
+	@Html.DisplayFor(m => m.BooleanNullableExplicit)<br />
+	@Html.DisplayFor(m => m.BooleanNullableByType)<br />
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.DisplayFor(m => m.Boolean)
+@@Html.DisplayFor(m => m.BooleanExplicit)
+@@Html.DisplayFor(m => m.BooleanByType)
+@@Html.DisplayFor(m => m.BooleanNullable)
+@@Html.DisplayFor(m => m.BooleanNullableExplicit)
+@@Html.DisplayFor(m => m.BooleanNullableByType)
+</pre>
+</div>
+
+<h3>EditorFor<small>Boolean.cshtml</small></h3>
+<div class="example">
+	@Html.EditorFor(m => m.Boolean)<br />
+	@Html.EditorFor(m => m.BooleanExplicit)<br />
+	@Html.EditorFor(m => m.BooleanByType)<br />
+	@Html.EditorFor(m => m.BooleanNullable)<br />
+	@Html.EditorFor(m => m.BooleanNullableExplicit)<br />
+	@Html.EditorFor(m => m.BooleanNullableByType)<br />
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.EditorFor(m => m.Boolean)
+@@Html.EditorFor(m => m.BooleanExplicit)
+@@Html.EditorFor(m => m.BooleanByType)
+@@Html.EditorFor(m => m.BooleanNullable)
+@@Html.EditorFor(m => m.BooleanNullableExplicit)
+@@Html.EditorFor(m => m.BooleanNullableByType)
+</pre>
+
+</div>
+
+<h3>UxDisplayRowFor</h3>
+<div class="example">
+	@Html.UxDisplayRowFor(m => m.Boolean)
+	@Html.UxDisplayRowFor(m => m.BooleanExplicit)
+	@Html.UxDisplayRowFor(m => m.BooleanByType)
+	@Html.UxDisplayRowFor(m => m.BooleanNullable)
+	@Html.UxDisplayRowFor(m => m.BooleanNullableExplicit)
+	@Html.UxDisplayRowFor(m => m.BooleanNullableByType)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxDisplayRowFor(m => m.Boolean)
+@@Html.UxDisplayRowFor(m => m.BooleanExplicit)
+@@Html.UxDisplayRowFor(m => m.BooleanByType)
+@@Html.UxDisplayRowFor(m => m.BooleanNullable)
+@@Html.UxDisplayRowFor(m => m.BooleanNullableExplicit)
+@@Html.UxDisplayRowFor(m => m.BooleanNullableByType)</pre>
+</div>
+
+
+<h3>UxEditorRowFor</h3>
+<div class="example">
+	@using (Html.UxBeginForm())
+ {
+	@Html.UxEditorRowFor(m => m.Boolean)
+	@Html.UxEditorRowFor(m => m.BooleanExplicit)
+	@Html.UxEditorRowFor(m => m.BooleanByType)
+	@Html.UxEditorRowFor(m => m.BooleanNullable)
+	@Html.UxEditorRowFor(m => m.BooleanNullableExplicit)
+	@Html.UxEditorRowFor(m => m.BooleanNullableByType)
+ }
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxEditorRowFor(m => m.Boolean)
+@@Html.UxEditorRowFor(m => m.BooleanExplicit)
+@@Html.UxEditorRowFor(m => m.BooleanByType)
+@@Html.UxEditorRowFor(m => m.BooleanNullable)
+@@Html.UxEditorRowFor(m => m.BooleanNullableExplicit)
+@@Html.UxEditorRowFor(m => m.BooleanNullableByType)
+</pre>
+</div>
+
+
+

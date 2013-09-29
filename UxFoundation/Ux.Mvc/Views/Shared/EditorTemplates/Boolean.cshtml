@@ -1,0 +1,83 @@
+﻿@using Ux.Mvc
+@model bool?
+@{
+	
+	var htmlField = ViewData.TemplateInfo.HtmlFieldPrefix;
+	string nullText = "Not set";
+	string trueText = "Yes";
+	string falseText = "No";
+
+	string key = "trueText";
+
+	if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(key) && ViewData.ModelMetadata.AdditionalValues[key] != null) 
+	{
+		trueText = ViewData.ModelMetadata.AdditionalValues[key].ToString(); 
+	}
+	key = "falseText";
+	if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(key) && ViewData.ModelMetadata.AdditionalValues[key] != null)
+	{
+		falseText = ViewData.ModelMetadata.AdditionalValues[key].ToString();
+	}
+		
+
+
+	if (ViewData.ModelMetadata.AdditionalValues.ContainsKey("booleanType"))
+	{
+		var boolType = (BooleanType)ViewData.ModelMetadata.AdditionalValues["booleanType"];
+		switch (boolType)
+		{
+			case BooleanType.YesNo:
+				trueText = "Yes";
+				falseText = "No";
+				break;
+			case BooleanType.TrueFalse:
+				trueText = "True";
+				falseText = "False";
+				break;
+			default:
+				break;
+		}
+	}
+
+	key = "nullText";
+	if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(key) && ViewData.ModelMetadata.AdditionalValues[key] != null)
+	{
+		nullText = ViewData.ModelMetadata.AdditionalValues[key].ToString();
+	}	
+
+}
+
+@helper SetChecked(bool? option)
+{
+	if (Model == option)
+	{
+	@:checked="checked"
+    }   
+}
+@helper SetActive(bool? option)
+{
+	if (Model == option)
+	{
+	@:active
+    }   
+    
+}
+@using (Html.UxButtonGroup(true))
+{
+	<label class="btn btn-primary @SetActive(true)">
+		<input type="radio" value="True" name="@htmlField" @SetChecked(true) />
+		@trueText
+	</label>
+	<label class="btn btn-primary @SetActive(false)">
+		<input type="radio" value="False" name="@htmlField" @SetChecked(false) />
+		@falseText
+	</label>
+	if (ViewData.ModelMetadata.IsNullableValueType)
+	{
+	<label class="btn btn-primary @SetActive(null)">
+		<input type="radio" value="" name="@htmlField" @SetChecked(null) />
+		@nullText
+	</label>
+	}
+}
+

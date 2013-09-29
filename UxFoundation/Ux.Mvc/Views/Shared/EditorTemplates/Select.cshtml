@@ -1,0 +1,37 @@
+﻿@using Ux.Mvc.Web.UI
+@model int
+@{
+    DataSource DataSource = null;
+    if (ViewBag.DataSource != null) { DataSource = ViewBag.DataSource; }
+
+    var htmlField = ViewData.TemplateInfo.HtmlFieldPrefix;
+    ViewData["selectionMade"] = false;
+        
+}
+@helper SetSelected(string value) {
+    if (bool.Parse(ViewData["selectionMade"].ToString()) == true) { return; }
+    if (Model == int.Parse(value)) { @:selected="selected"   
+        ViewData["selectionMade"] = true;
+    }    
+}
+<select name="@htmlField" id="@htmlField" style="width:200px;">
+@if (DataSource.IsGrouped)
+{
+    foreach (var group in DataSource.GroupedItems)
+    {
+        <optgroup label="@group.Key">
+            @foreach (var option in group.Value)
+            {
+                <option value="@option.Value" @SetSelected(option.Value)>@option.Text</option>
+            }
+        </optgroup>
+    }
+}
+else
+{
+    foreach (var option in DataSource.UnGroupedItems)
+    {
+        <option value="@option.Value" @SetSelected(option.Value)>@option.Text</option>
+    }
+}
+</select>

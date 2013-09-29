@@ -1,0 +1,68 @@
+﻿@model Ux.Mvc.ViewModels.Examples
+<div class="page-header">
+	<h1>Integer <small>int</small></h1>
+</div>
+
+<div class="highlight">
+	<pre class="prettyprint">
+public int Integer { get; set; }
+
+Integer = 123456;
+</pre>
+</div>
+
+<h3>Raw</h3>
+<div class="example">
+	@Model.Integer.ToString()
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Model.Integer
+</pre>
+</div>
+
+<h3>DisplayFor</h3>
+<div class="example">
+	@Html.DisplayFor(m => m.Integer)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.DisplayFor(m => m.Integer)
+</pre>
+</div>
+
+<h3>EditorFor<small>Int32.cshtml</small></h3>
+<div class="example">
+
+	@Html.EditorFor(m => m.Integer)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.EditorFor(m => m.Integer)
+</pre>
+
+</div>
+
+<h3>UxDisplayRowFor</h3>
+<div class="example">
+	@Html.UxDisplayRowFor(m => m.Integer)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxDisplayRowFor(m => m.Integer)
+</pre>
+</div>
+
+
+<h3>UxEditorRowFor</h3>
+<div class="example">
+	@using (Html.UxBeginForm())
+ {
+		@Html.UxEditorRowFor(m => m.Integer)
+ }
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxEditorRowFor(m => m.Integer)
+</pre>
+</div>

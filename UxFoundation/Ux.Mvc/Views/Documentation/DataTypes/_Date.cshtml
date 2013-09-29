@@ -1,0 +1,77 @@
+﻿@model Ux.Mvc.ViewModels.Examples
+<div class="page-header">
+    <h1>Date <small>DateTime</small></h1>
+</div>
+
+<div class="highlight">
+    <pre class="prettyprint">
+[DataType(DataType.Date)]
+public DateTime Date { get; set; }
+
+Date = DateTime.Now;
+</pre>
+</div>
+
+<div class="callout callout-danger">
+    <b>Date picker not displaying properly?</b> Check out the @Html.ActionLink("datepicker configuration documentation","Configuration","UxDocumentation", null, null, "datepickers", null, null) for more information
+</div>
+
+
+<h3>Raw</h3>
+<div class="example">
+    @Model.Date.ToString()
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@Model.Date.ToString()
+</pre>
+</div>
+
+
+<h3>DisplayFor</h3>
+<div class="example">
+    @Html.DisplayFor(m => m.Date)
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@Html.DisplayFor(m => m.Date)
+</pre>
+</div>
+
+<h3>EditorFor<small>Date.cshtml</small></h3>
+<div class="example">
+
+    @Html.EditorFor(m => m.Date)
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@Html.EditorFor(m => m.Date)
+</pre>
+
+</div>
+
+<h3>UxDisplayRowFor</h3>
+<div class="example">
+    @Html.UxDisplayRowFor(m => m.Date)
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@Html.UxDisplayRowFor(m => m.Date)
+</pre>
+</div>
+
+
+<h3>UxEditorRowFor</h3>
+<div class="example">
+    @using (Html.UxBeginForm())
+    {
+        @Html.UxEditorRowFor(m => m.Date)
+    }
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@Html.UxEditorRowFor(m => m.Date)
+</pre>
+</div>
+
+

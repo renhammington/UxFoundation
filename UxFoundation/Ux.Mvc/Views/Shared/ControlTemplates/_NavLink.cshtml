@@ -1,0 +1,19 @@
+﻿@using Ux.Mvc.Web.UI
+@model Ux.Mvc.Web.UI.NavLink
+<li @Model.GetClientIdString() class="@Model.CssClass"><a href="@Model.Url" @if(Model.DataToggle != DataToggle.None) {
+													@:data-toggle="@Model.DataToggle.ToString().ToLower()" 
+												 }>
+	@if (Model.IconType.HasValue && Model.IconPosition == IconPosition.Left)
+ {
+		@Html.UxIcon(Model.IconType.Value)
+ }
+	@Model.Text
+	@if (Model.IconType.HasValue && Model.IconPosition == IconPosition.Right)
+ {
+		@Html.UxIcon(Model.IconType.Value, pullRight: Model.IconPullRight)
+ }
+@if (Model.Badge != null)
+{
+	@Html.UxBadge(Model.Badge)
+}
+</a></li>

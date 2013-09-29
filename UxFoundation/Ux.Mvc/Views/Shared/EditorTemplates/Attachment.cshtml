@@ -1,0 +1,9 @@
+﻿@model Ux.Mvc.Web.UI.Attachment
+@{
+    var htmlField = ViewData.TemplateInfo.HtmlFieldPrefix;
+
+    var name = htmlField + ".UploadedFile";
+    var id = htmlField + "_UploadedFile";
+    //  data-val="true" data-val-required="Please select a file"
+}
+<input type="file" id="@id" name="@name" class="fileuploader"/>
