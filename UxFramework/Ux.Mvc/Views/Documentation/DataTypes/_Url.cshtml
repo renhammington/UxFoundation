@@ -1,0 +1,72 @@
+﻿@model Ux.Mvc.ViewModels.Examples
+<div class="page-header">
+	<h1>Url <small>string</small></h1>
+</div>
+
+<div class="highlight">
+	<pre class="prettyprint">
+[DataType(DataType.Url)]
+public string Url { get; set; }
+
+Url = "http://www.google.com";
+</pre>
+</div>
+
+<h3>Raw</h3>
+<div class="example">
+	@Model.Url
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Model.Url
+</pre>
+</div>
+
+<h3>DisplayFor</h3>
+<div class="example">
+	@Html.DisplayFor(m => m.Url)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.DisplayFor(m => m.Url)
+</pre>
+</div>
+
+<h3>EditorFor<small>Url.cshtml</small></h3>
+<div class="example">
+
+	@Html.EditorFor(m => m.Url)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.EditorFor(m => m.Url)
+</pre>
+
+</div>
+
+<h3>UxDisplayRowFor</h3>
+<div class="example">
+	@Html.UxDisplayRowFor(m => m.Url)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxDisplayRowFor(m => m.Url)
+</pre>
+</div>
+
+
+<h3>UxEditorRowFor</h3>
+<div class="example">
+	@using (Html.UxBeginForm())
+ {
+		@Html.UxEditorRowFor(m => m.Url)
+ }
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxEditorRowFor(m => m.Url)
+</pre>
+</div>
+
+
+

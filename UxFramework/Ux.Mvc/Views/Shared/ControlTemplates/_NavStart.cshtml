@@ -1,0 +1,6 @@
+﻿@model Ux.Mvc.Web.UI.Nav
+<ul @Model.GetClientIdString() class="@Model.CssClass" @if(Model.Affix) {
+							@:data-spy="affix"	 data-offset-top="@Model.AffixOffset"
+							}>
+
+

@@ -1,0 +1,3 @@
+﻿@model Ux.Mvc.Web.UI.NumericPagerPageLink
+<li @Model.GetClientIdString() class="@Model.CssClass">
+	<a href="@Model.Url">@if (Model.Text.IsNullOrEmpty() == false) { @Model.Text } else { @Html.UxIcon(Model.Icon) }</a></li>

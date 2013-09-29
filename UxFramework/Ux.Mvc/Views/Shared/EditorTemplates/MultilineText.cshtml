@@ -1,0 +1,5 @@
+﻿@{
+	string PlaceHolder = null;
+	if (ViewBag.PlaceHolder != null) { PlaceHolder = ViewBag.PlaceHolder; }        
+}
+@Html.TextAreaFor(item=>item, new { @class = "form-control textbox-large", placeholder = @PlaceHolder })

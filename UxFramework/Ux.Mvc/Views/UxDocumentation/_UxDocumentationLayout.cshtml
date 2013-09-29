@@ -1,0 +1,25 @@
+﻿@using System.Web.Optimization
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    @Styles.Render("~/ux/css")
+    @Styles.Render("~/ux/css/documentation")
+    @Styles.Render("~/css")
+</head>
+<body>
+
+    @RenderBody()
+
+    @Scripts.Render("~/js/jquery")
+    @Scripts.Render("~/ux/js")
+    @Scripts.Render("~/js")
+
+</body>
+</html>

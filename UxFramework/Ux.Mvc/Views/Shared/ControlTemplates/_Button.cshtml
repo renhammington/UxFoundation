@@ -1,0 +1,23 @@
+﻿@using Ux.Mvc.Web.UI
+@model Ux.Mvc.Web.UI.Button
+<button @if(Model.LoadingText.IsNullOrEmpty()) {
+            @:type="submit" 
+        } else
+        {
+            @:type="button"
+        }
+    class="btn @Model.CssClass" 
+    value="@Model.Command.ToString()" 
+    name="command"
+    @if (Model.Disabled) { 
+        @Html.Raw("disabled='disabled'")
+    }
+    @if (Model.LoadingText.IsNullOrEmpty() ==false) {
+        @:data-loading-text="@Model.LoadingText"
+    }
+    @Model.GetClientIdString()
+    >
+    @if(Model.Icon != null && Model.IconPosition == IconPosition.Left){ @Html.UxIcon(Model.Icon) } @Model.Text 
+    @if (Model.Icon != null && Model.IconPosition == IconPosition.Right)
+	{ @Html.UxIcon(Model.Icon) } 
+</button>

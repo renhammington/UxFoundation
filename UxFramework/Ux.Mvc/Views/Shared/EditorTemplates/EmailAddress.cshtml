@@ -1,0 +1,8 @@
+﻿@using Ux.Mvc.Web.UI
+<div style="width:300px;">
+<div class="input-group">
+    <span class="input-group-addon">@Html.UxIcon(IconType.EnvelopeAlt)</span>
+
+@Html.TextBoxFor(item=>item, new { @class = "form-control", type="email", placeholder = "something@domain.com" })
+</div>
+    </div>

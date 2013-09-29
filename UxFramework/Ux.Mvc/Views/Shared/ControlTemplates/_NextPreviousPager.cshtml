@@ -1,0 +1,27 @@
+﻿@using Ux.Mvc.Web.UI
+@model Ux.Mvc.Web.UI.NextPreviousPager
+<ul class="@Model.CssClass" @Model.GetClientIdString()>
+	@if (Model.PreviousUrl.IsNullOrEmpty() == false)
+ {
+		<li @if (Model.Position == PagerPosition.Edge)
+	  { 
+		@:class="previous" 
+	}><a href="@Model.PreviousUrl">
+		@if (Model.PreviousIcon.HasValue)
+  {
+			@Html.UxIcon(@Model.PreviousIcon.Value) 
+  }
+		@Model.PreviousText</a></li>
+ }
+	@if (Model.NextUrl.IsNullOrEmpty() == false)
+	{
+		<li @if (Model.Position == PagerPosition.Edge)
+	  { 
+			@:class="next" 
+		}><a href="@Model.NextUrl">@Model.NextText @if (Model.NextIcon.HasValue)
+											 {
+			@Html.UxIcon(@Model.NextIcon.Value) 
+											 } </a></li>
+	}
+</ul>
+

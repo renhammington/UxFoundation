@@ -1,0 +1,5 @@
+﻿@model Ux.Mvc.Web.UI.Icon
+@if (!Model.CssClass.IsNullOrEmpty())
+{
+    <i class="icon-@Model.CssClass" @Model.GetClientIdString()></i>
+}

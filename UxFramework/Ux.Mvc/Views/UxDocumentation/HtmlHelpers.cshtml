@@ -1,0 +1,73 @@
+﻿@using Ux.Mvc.Web.UI
+@model Ux.Mvc.ViewModels.Examples
+@{
+    ViewBag.Title = "Web controls - Ux Framework";
+	Layout = "_UxDocumentationLayout.cshtml";
+}
+@Html.Partial("_Nav")
+<div class="container">
+	<div class="row">
+		<div class="clearfix" style="background: #ededed;width:200px;">
+			@using (Html.UxNav(NavType.PillsStacked, affix: true))
+			{
+				@Html.UxNavLink("Bullet lists", "#bulletLists", dataToggle: DataToggle.Pill)		
+				@Html.UxNavLink("Buttons", "#buttons", dataToggle: DataToggle.Pill)
+				@Html.UxNavLink("Button groups", "#buttonGroups", dataToggle: DataToggle.Pill)
+				@Html.UxNavLink("Button toolbars", "#buttonToolbars", dataToggle: DataToggle.Pill)
+				@Html.UxNavLink("Labels", "#labels", dataToggle: DataToggle.Pill)
+				@Html.UxNavLink("Badges", "#badges", dataToggle: DataToggle.Pill)
+				@Html.UxNavLink("Progress bars", "#progressBars", dataToggle: DataToggle.Pill)
+				@Html.UxNavLink("Wells", "#wells", dataToggle: DataToggle.Pill)
+				@Html.UxNavLink("Alerts", "#alerts", dataToggle: DataToggle.Pill)
+				@Html.UxNavLink("Numeric pagers", "#numPagers", dataToggle: DataToggle.Pill)
+				@Html.UxNavLink("Next-Previous pagers", "#npPagers", dataToggle: DataToggle.Pill)
+				@Html.UxNavLink("Navs", "#navs", dataToggle: DataToggle.Pill)
+				@Html.UxNavLink("Icons", "#icons", dataToggle: DataToggle.Pill)
+			}
+		</div>
+		<div class="tab-content" style="width:800px; margin-left: 200px;">
+			<div class="section tab-pane" id="bulletLists">
+				@Html.Partial("WebControls/_BulletLists")
+			</div>
+			<div class="section tab-pane" id="buttons">
+				@Html.Partial("WebControls/_Buttons")
+			</div>
+			<div class="section tab-pane" id="buttonGroups">
+				@Html.Partial("WebControls/_ButtonGroups")
+			</div>
+			<div class="section tab-pane" id="buttonToolbars">
+				@Html.Partial("WebControls/_ButtonToolbars")
+			</div>
+			<div class="section tab-pane" id="labels">
+				@Html.Partial("WebControls/_Labels")
+			</div>
+			<div class="section tab-pane" id="badges">
+				@Html.Partial("WebControls/_Badges")
+			</div>
+			<div class="section tab-pane" id="progressBars">
+				@Html.Partial("WebControls/_ProgressBars")
+			</div>
+			<div class="section tab-pane" id="wells">
+				@Html.Partial("WebControls/_Wells")
+			</div>
+			<div class="section tab-pane" id="alerts">
+				@Html.Partial("WebControls/_Alerts")
+			</div>
+			<div class="section tab-pane" id="numPagers">
+				@Html.Partial("WebControls/_NumericPagers")
+			</div>
+			<div class="section tab-pane" id="npPagers">
+				@Html.Partial("WebControls/_NextPreviousPagers")
+			</div>
+			<div class="section tab-pane clearfix" id="navs">
+				@Html.Partial("WebControls/_Navs")
+			</div>
+			<div class="section tab-pane" id="icons">
+				@Html.Partial("WebControls/_Icons")
+			</div>
+		</div>
+	</div>
+
+
+
+</div>

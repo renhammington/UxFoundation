@@ -1,0 +1,6 @@
+﻿@model Ux.Mvc.Web.UI.Alert
+<div class="@Model.CssClass" @Model.GetClientIdString()>
+	@if (Model.Dismissable)
+ {
+	 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+ }

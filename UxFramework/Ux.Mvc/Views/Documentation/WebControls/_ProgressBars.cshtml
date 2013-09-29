@@ -1,0 +1,89 @@
+﻿@using Ux.Mvc.Web.UI
+<div class="page-header">
+	<h1>Progress bars <small>UxProgressBar</small></h1>
+</div>
+<h3>Helper</h3>
+<div class="highlight highlight-large">
+	<pre class="prettyprint">
+// Progress bar
+@@Html.UxProgressBar()
+</pre>
+</div>
+
+<h3>Helper options</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><b>value</b></td>
+			<td><code>int</code></td>
+			<td><code>null</code></td>
+			<td>The value of the progress bar, expressed as a whole number out of 100.</td>
+		</tr>
+		<tr>
+			<td>appearance</td>
+			<td><code>AppearanceType</code></td>
+			<td><code>Default</code></td>
+			<td>Sets the coloring of the progress bar. Note, <code>AppearanceType.Default</code> and <code>AppearanceType.Primary</code> automatically re-map to <code>AppearanceType.Success</code>.</td>
+		</tr>
+		<tr>
+			<td>striped</td>
+			<td><code>bool</code></td>
+			<td><code>false</code></td>
+			<td>Sets the striping of the progress bar.</td>
+		</tr>
+		<tr>
+			<td>animated</td>
+			<td><code>bool</code></td>
+			<td><code>false</code></td>
+			<td>If striped, sets the animation of the progress bar.</td>
+		</tr>
+		<tr>
+			<td>clientId</td>
+			<td><code>string</code></td>
+			<td><code>null</code></td>
+			<td>Sets the <code>id</code> property of the rendered html element.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>Appearance</h3>
+<div class="example">
+	@Html.UxProgressBar(30)
+	@Html.UxProgressBar(40, AppearanceType.Warning)
+	@Html.UxProgressBar(55, AppearanceType.Info)
+	@Html.UxProgressBar(70, AppearanceType.Danger)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxProgressBar(30)
+@@Html.UxProgressBar(40, AppearanceType.Warning)
+@@Html.UxProgressBar(55, AppearanceType.Info)
+@@Html.UxProgressBar(70, AppearanceType.Danger)
+</pre>
+</div>
+<h3>Striped</h3>
+<div class="example">
+	@Html.UxProgressBar(50, striped: true)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxProgressBar(50, striped:true)
+</pre>
+</div>
+<h3>Animated</h3>
+<div class="example">
+	@Html.UxProgressBar(50, striped: true, animated: true)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxProgressBar(50, striped:true, animated:true)
+</pre>
+</div>

@@ -1,0 +1,73 @@
+﻿@model Ux.Mvc.ViewModels.Examples
+<div class="page-header">
+	<h1>Multiline text <small>string</small></h1>
+</div>
+
+<div class="highlight">
+	<pre class="prettyprint">
+[DataType(DataType.MultilineText)]
+public string MultiLineText { get; set; }
+
+MultiLineText = @@"Napa cabbage tomato dolichos bean lotus root tarwi pumpkin brussels sprout lentil spring onion. Lotus root fava bean brussels sprout leaves arracacha; brussels sprout bamboo shoot spring onion. Sierra Leone bologi black-eyed pea beet greens. Mustard ulluco winter purslane. Prairie turnip yarrow indian pea - eggplant lotus root garlic celtuce greater plantain kurrat winter purslane." + Environment.NewLine + Environment.NewLine +  "Gobo yardlong bean celeriac tomato chickweed carrot. Napa cabbage camas prussian asparagus, ensete garden rocket lotus root gumbo taro velvet bean.";
+</pre>
+</div>
+
+<h3>Raw</h3>
+<div class="example">
+	@Model.MultiLineText
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Model.MultiLineText
+</pre>
+</div>
+
+<h3>DisplayFor<small>MultiLineText.cshtml</small></h3>
+<p>New lines will be displayed appropriately using this helper.</p>
+<div class="example">
+	@Html.DisplayFor(m => m.MultiLineText)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.DisplayFor(m => m.MultiLineText)
+</pre>
+</div>
+
+<h3>EditorFor<small>MultilineText.cshtml</small></h3>
+<div class="example">
+
+	@Html.EditorFor(m => m.MultiLineText)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.EditorFor(m => m.MultiLineText)
+</pre>
+
+</div>
+
+<h3>UxDisplayRowFor</h3>
+<div class="example">
+	@Html.UxDisplayRowFor(m => m.MultiLineText)
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxDisplayRowFor(m => m.MultiLineText)
+</pre>
+</div>
+
+
+<h3>UxEditorRowFor</h3>
+<div class="example">
+	@using (Html.UxBeginForm())
+ {
+		@Html.UxEditorRowFor(m => m.MultiLineText)
+ }
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxEditorRowFor(m => m.MultiLineText)
+</pre>
+</div>
+
+
+
