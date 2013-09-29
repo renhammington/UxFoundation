@@ -1,5 +1,0 @@
-﻿@{
-	string PlaceHolder = null;
-	if (ViewBag.PlaceHolder != null) { PlaceHolder = ViewBag.PlaceHolder; }        
-}
-@Html.TextBoxFor(item=>item, new { @class = "form-control", placeholder = @PlaceHolder })
