@@ -1,0 +1,140 @@
+﻿@using Ux.Mvc.Web.UI
+<div class="page-header">
+	<h1>Tables <small>UxTable</small></h1>
+</div>
+<h3>Helper</h3>
+<div class="highlight highlight-large">
+	<pre class="prettyprint">
+// Alert
+@@using (Html.Table()) 
+{ 
+	// Your content here
+}
+</pre>
+</div>
+<h3>Helper options</h3>
+@using (Html.UxTable(true)) {
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>striped</td>
+			<td><code>bool</code></td>
+			<td><code>false</code></td>
+			<td>Adds background color to alternating rows.</td>
+		</tr>
+        <tr>
+			<td>bordered</td>
+			<td><code>bool</code></td>
+			<td><code>false</code></td>
+			<td>Adds a border to the table.</td>
+		</tr>
+        <tr>
+			<td>condensed</td>
+			<td><code>bool</code></td>
+			<td><code>false</code></td>
+			<td>Condenses the layout of the table.</td>
+		</tr>
+        <tr>
+			<td>hovered</td>
+			<td><code>bool</code></td>
+			<td><code>false</code></td>
+			<td>Adds highlighting to rows on mouseover.</td>
+		</tr>
+		<tr>
+			<td>clientId</td>
+			<td><code>string</code></td>
+			<td><code>null</code></td>
+			<td>Sets the <code>id</code> property of the rendered html element.</td>
+		</tr>
+	</tbody>
+}
+
+<h3>Appearance</h3>
+<div class="example">
+@using (Html.UxTable())
+{
+    @Html.Partial("_TableContent")
+}
+
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@using (Html.UxTable())
+{
+    &hellip;
+}
+</pre>
+</div>
+
+<h3>Striped</h3>
+<div class="example">
+@using (Html.UxTable(striped:true))
+{
+    @Html.Partial("_TableContent")
+}
+
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@using (Html.UxTable(striped: true))
+{
+    &hellip;
+}
+</pre>
+</div>
+<h3>Bordered</h3>
+<div class="example">
+@using (Html.UxTable(bordered: true))
+{
+    @Html.Partial("_TableContent")
+}
+
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@using (Html.UxTable(bordered: true))
+{
+    &hellip;
+}
+</pre>
+</div>
+
+<h3>Condensed</h3>
+<div class="example">
+@using (Html.UxTable(condensed:true))
+{
+    @Html.Partial("_TableContent")
+}
+
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@using (Html.UxTable(condensed: true))
+{
+    &hellip;
+}
+</pre>
+</div>
+<h3>Hover rows</h3>
+<div class="example">
+@using (Html.UxTable(hovered: true))
+{
+    @Html.Partial("_TableContent")
+}
+
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@using (Html.UxTable(hovered: true))
+{
+    &hellip;
+}
+</pre>
+</div>

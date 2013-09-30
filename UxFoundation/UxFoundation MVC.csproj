@@ -199,6 +199,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ux.Mvc\ViewModels\BaseViewModel.cs" />
     <Compile Include="Ux.Mvc\Web.UI\NextPreviousPager.cs" />
+    <Compile Include="Ux.Mvc\Web.UI\Table.cs" />
     <Compile Include="Ux.Mvc\Web.UI\Well.cs" />
     <Compile Include="Ux.Mvc\ViewModels\Examples.cs" />
     <Compile Include="Ux.Mvc\Web.UI\Label.cs" />
@@ -660,7 +661,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Ux.Mvc\Views\UxDocumentation\_UxDocumentationLayout.cshtml" />
-    <Content Include="Ux.Mvc\Views\UxDocumentation\Index.cshtml" />
+    <Content Include="Ux.Mvc\Views\UxDocumentation\DataTypes.cshtml" />
     <Content Include="Ux.Mvc\Content\tomorrow.css" />
     <Content Include="Ux.Mvc\Scripts\ux.js" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_EditorRow.cshtml" />
@@ -751,6 +752,11 @@
     <Content Include="Ux.Mvc\Content\documentation.less" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery.validate.globalize.min.js.map" />
+    <Content Include="Ux.Mvc\Views\UxDocumentation\Index.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_TableStart.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_TableEnd.cshtml" />
+    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_Tables.cshtml" />
+    <Content Include="Ux.Mvc\Views\UxDocumentation\_TableContent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Ux.Mvc\Models\" />

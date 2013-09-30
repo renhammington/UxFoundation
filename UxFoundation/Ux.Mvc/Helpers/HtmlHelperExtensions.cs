@@ -347,6 +347,13 @@ public static class EditorExtensions
     }
 
 
+    public static IDisposable UxTable(this HtmlHelper htmlHelper, bool striped = false, bool bordered= false, bool condensed = false, bool hovered = false, string clientId = null)
+    {
+        var table = new Table(striped, bordered, condensed, hovered, clientId);
+        return RenderUxDispoableWebControl(htmlHelper, table);
+    }
+
+
     #region Rendering
     private static MvcHtmlString RenderUxControl(this HtmlHelper htmlHelper, WebControl control)
     {

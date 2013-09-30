@@ -1,94 +1,19 @@
-﻿@using Ux.Mvc.Web.UI
-@model Ux.Mvc.ViewModels.Examples
-@{
-    ViewBag.Title = "Data types - UxFoundation";
-    Layout = "_UxDocumentationLayout.cshtml";
+﻿@{
+    ViewBag.Title = "UxFoundation";
+    Layout = "~/Ux.Mvc/Views/UxDocumentation/_UxDocumentationLayout.cshtml";
 }
 @Html.Partial("_Nav")
-
-
 <div class="container">
-	<div class="row">
-		<div class="clearfix" style="background: #ededed; width: 200px;">
-			@using (Html.UxNav(NavType.PillsStacked, affix: true))
-   {
-				@Html.UxNavLink("Date", "#date", active: true, dataToggle: DataToggle.Pill)
-				@Html.UxNavLink("Time", "#time", dataToggle: DataToggle.Pill)
-				@Html.UxNavLink("Date and time", "#dateTime", dataToggle: DataToggle.Pill)	
-	   
-				@Html.UxNavLink("Email address", "#email", dataToggle: DataToggle.Pill)	
-				@Html.UxNavLink("Url", "#url", dataToggle: DataToggle.Pill)	
-				@Html.UxNavLink("Currency", "#currency", dataToggle: DataToggle.Pill)	
-	   
-				@Html.UxNavLink("Integer", "#int", dataToggle: DataToggle.Pill)	
-				@Html.UxNavLink("Decimal", "#decimal", dataToggle: DataToggle.Pill)	
-				@Html.UxNavLink("Double", "#double", dataToggle: DataToggle.Pill)
+    <div class="page-header">
+        <h1>UxFoundation</h1>
+    </div>
 
-				@Html.UxNavLink("Single line text", "#singleLineText", dataToggle: DataToggle.Pill)	
-				@Html.UxNavLink("Multiline text", "#multilineText", dataToggle: DataToggle.Pill)	
-				@Html.UxNavLink("Password", "#password", dataToggle: DataToggle.Pill)
-				
-				@Html.UxNavLink("Html", "#html", dataToggle: DataToggle.Pill)	
-				@Html.UxNavLink("Image Url", "#imageUrl", dataToggle: DataToggle.Pill)	
-	   
-				@Html.UxNavLink("Boolean", "#boolean", dataToggle: DataToggle.Pill)	
-	   
-				@Html.UxNavLink("Files", "#files", dataToggle: DataToggle.Pill)	
-				@Html.UxNavLink("Files", "#files", dataToggle: DataToggle.Pill)		
-	   
-				@Html.UxNavLink("Integer (foreign key)", "#foreignKeys", dataToggle: DataToggle.Pill)	
-   }
+    <h2>Why use this framework?</h2>
+    <p>
+        Who wants to wire all this stuff up for every project?
+        <br />
+        Using Html helpers reduces the amount of bootstrap and UI knowledge required.<br />
+        Centralise your UI experience, enabling rapid changes to how your controls are rendered.
+    </p>
 
-
-		</div>
-		<div class="tab-content" style="width: 800px; margin-left: 200px;">
-			<div class="section tab-pane" id="date">
-				@Html.Partial("DataTypes/_Date", @Model)
-			</div>
-			<div class="section tab-pane" id="time">
-				@Html.Partial("DataTypes/_Time", @Model)
-			</div>
-			<div class="section tab-pane" id="dateTime">
-				@Html.Partial("DataTypes/_DateTime", @Model)
-			</div>
-			<div class="section tab-pane" id="email">
-				@Html.Partial("DataTypes/_EmailAddress", @Model)
-			</div>
-			<div class="section tab-pane" id="url">
-				@Html.Partial("DataTypes/_Url", @Model)
-			</div>
-			<div class="section tab-pane" id="currency">
-				@Html.Partial("DataTypes/_Currency", @Model)
-			</div>
-			<div class="section tab-pane" id="int">
-				@Html.Partial("DataTypes/_Integer", @Model)
-			</div>
-			<div class="section tab-pane" id="decimal">
-				@Html.Partial("DataTypes/_Decimal", @Model)
-			</div>
-			<div class="section tab-pane" id="double">
-				@Html.Partial("DataTypes/_Double", @Model)
-			</div>
-			<div class="section tab-pane" id="singleLineText">
-				@Html.Partial("DataTypes/_SingleLineText", @Model)
-			</div>
-			<div class="section tab-pane" id="multilineText">
-				@Html.Partial("DataTypes/_MultiLineText", @Model)
-			</div>
-			<div class="section tab-pane" id="password">
-				@Html.Partial("DataTypes/_Password", @Model)
-			</div>
-			<div class="section tab-pane" id="html">
-				@Html.Partial("DataTypes/_Html", @Model)
-			</div>
-			<div class="section tab-pane" id="imageUrl">
-				@Html.Partial("DataTypes/_ImageUrl", @Model)
-			</div>
-			<div class="section tab-pane" id="boolean">
-				@Html.Partial("DataTypes/_Boolean", @Model)
-			</div>
-		</div>
-	</div>
 </div>
-
-

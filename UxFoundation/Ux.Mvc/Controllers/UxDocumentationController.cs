@@ -12,10 +12,13 @@ namespace Ux.Mvc.Controllers
 {
 	public class UxDocumentationController : Controller
 	{
-		//
-		// GET: /Home/
 
-		public ActionResult Index()
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+		public ActionResult DataTypes()
 		{
 			var note = new Examples() {
 				EmailAddress = "someemail@domain.com",
@@ -48,7 +51,7 @@ namespace Ux.Mvc.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult Index(Examples examples, ButtonCommand command)
+		public ActionResult DataTypes(Examples examples, ButtonCommand command)
 		{
 			if (command == ButtonCommand.Cancel)
 				Response.Redirect("http://www.google.com");

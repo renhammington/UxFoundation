@@ -23,7 +23,7 @@ namespace Ux.Mvc.Web.UI
 
 		public NumericPager(PagerSize size = PagerSize.Default, string clientId = null) : base("_NumericPager", clientId)
 		{
-			SetSize(PagerSize.Default);
+			SetSize(size);
 		}
 
 
