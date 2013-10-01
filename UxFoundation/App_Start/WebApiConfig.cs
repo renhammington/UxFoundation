@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace WiseGroupContracts
+namespace Ux.Mvc.Configuration
 {
 	public static class WebApiConfig
 	{

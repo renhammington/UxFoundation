@@ -18,8 +18,7 @@ namespace Ux.Mvc
 
 			PartialViewLocationFormats = new[] {
 				"~/Ux.Mvc/Views/{1}/{0}.cshtml",
-				"~/Ux.Mvc/Views/Shared/{0}.cshtml",
-				"~/Ux.Mvc/Views/Documentation/{0}.cshtml"
+				"~/Ux.Mvc/Views/Shared/{0}.cshtml"
 			};
 
 

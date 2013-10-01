@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 
-namespace WiseGroupContracts
+namespace Ux.Mvc.Configuration
 {
     public class BundleConfig
     {
@@ -19,8 +19,11 @@ namespace WiseGroupContracts
 			   ));
 
 			bundles.Add(new StyleBundle("~/css").Include(
-				"~/Content/styles.less"
+				"~/Content/styles.less",
+                 "~/Content/documentation.less"
                 ));
+
+           
 
 			BundleTable.EnableOptimizations = false;
         }

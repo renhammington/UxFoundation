@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using Ux.Mvc.Web.UI;
 
-namespace WiseGroupContracts.ViewModels
+namespace Ux.Mvc.ViewModels
 {
     public class Test
     {

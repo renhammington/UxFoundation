@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WiseGroupContracts</RootNamespace>
-    <AssemblyName>WiseGroupContracts</AssemblyName>
+    <RootNamespace>Ux.Mvc</RootNamespace>
+    <AssemblyName>Ux.Mvc</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -155,7 +155,7 @@
     <Compile Include="Ux.Mvc\Binders\UxDateTimeModelBinder.cs" />
     <Compile Include="Ux.Mvc\Helpers\IntExtensions.cs" />
     <Compile Include="Ux.Mvc\UxConfig.cs" />
-    <Compile Include="Ux.Mvc\Controllers\UxDocumentationController.cs" />
+    <Compile Include="Controllers\UxDocumentationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -174,42 +174,42 @@
     <Compile Include="Ux.Mvc\Enums\WellSize.cs" />
     <Compile Include="Ux.Mvc\Helpers\CssClassMaps.cs" />
     <Compile Include="Ux.Mvc\Views\UxViewEngine.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\Alert.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\Badge.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\ButtonGroup.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\ButtonToolbar.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\DataSource.cs" />
+    <Compile Include="Ux.Mvc\Controls\Alert.cs" />
+    <Compile Include="Ux.Mvc\Controls\Badge.cs" />
+    <Compile Include="Ux.Mvc\Controls\ButtonGroup.cs" />
+    <Compile Include="Ux.Mvc\Controls\ButtonToolbar.cs" />
+    <Compile Include="Ux.Mvc\Controls\DataSource.cs" />
     <Compile Include="Ux.Mvc\Enums\IconPosition.cs" />
     <Compile Include="Ux.Mvc\Enums\IconType.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\BulletListLitem.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\BulletList.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\Button.cs" />
+    <Compile Include="Ux.Mvc\Controls\BulletListLitem.cs" />
+    <Compile Include="Ux.Mvc\Controls\BulletList.cs" />
+    <Compile Include="Ux.Mvc\Controls\Button.cs" />
     <Compile Include="Ux.Mvc\Enums\ButtonCommand.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\DisplayRow.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\DisposableWebControl.cs" />
+    <Compile Include="Ux.Mvc\Controls\DisplayRow.cs" />
+    <Compile Include="Ux.Mvc\Controls\DisposableWebControl.cs" />
     <Compile Include="Ux.Mvc\Enums\ButtonSize.cs" />
     <Compile Include="Ux.Mvc\Enums\IconRotation.cs" />
     <Compile Include="Ux.Mvc\Enums\IconSize.cs" />
     <Compile Include="Ux.Mvc\Helpers\HtmlHelperExtensions.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\EditorRow.cs" />
+    <Compile Include="Ux.Mvc\Controls\EditorRow.cs" />
     <Compile Include="Ux.Mvc\Helpers\RouteValueDictionaryExtensions.cs" />
     <Compile Include="Ux.Mvc\Helpers\StringExtensions.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\Icon.cs" />
+    <Compile Include="Ux.Mvc\Controls\Icon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ux.Mvc\ViewModels\BaseViewModel.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\NextPreviousPager.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\Table.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\Well.cs" />
+    <Compile Include="Ux.Mvc\Controls\NextPreviousPager.cs" />
+    <Compile Include="Ux.Mvc\Controls\Table.cs" />
+    <Compile Include="Ux.Mvc\Controls\Well.cs" />
     <Compile Include="Ux.Mvc\ViewModels\Examples.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\Label.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\Nav.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\NavLink.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\NumericPager.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\NumericPagerPageLink.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\ProgressBar.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\WebControl.cs" />
+    <Compile Include="Ux.Mvc\Controls\Label.cs" />
+    <Compile Include="Ux.Mvc\Controls\Nav.cs" />
+    <Compile Include="Ux.Mvc\Controls\NavLink.cs" />
+    <Compile Include="Ux.Mvc\Controls\NumericPager.cs" />
+    <Compile Include="Ux.Mvc\Controls\NumericPagerPageLink.cs" />
+    <Compile Include="Ux.Mvc\Controls\ProgressBar.cs" />
+    <Compile Include="Ux.Mvc\Controls\WebControl.cs" />
     <Compile Include="ViewModels\Address.cs" />
-    <Compile Include="Ux.Mvc\Web.UI\Attachment.cs" />
+    <Compile Include="Ux.Mvc\Controls\Attachment.cs" />
     <Compile Include="ViewModels\Test.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +217,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\bootstrap-datepicker.css" />
+    <Content Include="Content\bootstrap-select.css" />
+    <Content Include="Content\bootstrap-select.min.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
@@ -234,6 +236,8 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\bootstrap-select.js" />
+    <Content Include="Scripts\bootstrap-select.min.js" />
     <Content Include="Scripts\jquery.validate.globalize.js" />
     <Content Include="Scripts\jquery.validate.globalize.min.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -305,9 +309,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Ux.Mvc\Views\UxDocumentation\_UxDocumentationLayout.cshtml" />
-    <Content Include="Ux.Mvc\Views\UxDocumentation\DataTypes.cshtml" />
-    <Content Include="Ux.Mvc\Content\tomorrow.css" />
+    <Content Include="Views\UxDocumentation\_Layout.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes.cshtml" />
+    <Content Include="Content\tomorrow.css" />
     <Content Include="Ux.Mvc\Scripts\ux.js" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_EditorRow.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\String.cshtml" />
@@ -330,7 +334,7 @@
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\Boolean.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\Select.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\Int32.cshtml" />
-    <Content Include="Ux.Mvc\Views\UxDocumentation\HtmlHelpers.cshtml" />
+    <Content Include="Views\UxDocumentation\HtmlHelpers.cshtml" />
     <Content Include="Ux.Mvc\Views\Web.config" />
     <Content Include="Scripts\jquery-2.0.3.min.map" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Label.cshtml" />
@@ -346,66 +350,65 @@
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_NavStart.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_NavEnd.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_NavLink.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_NumericPagers.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_Icons.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_Alerts.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_Navs.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_Wells.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_ProgressBars.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_Badges.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_Labels.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_Buttons.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_NumericPagers.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Icons.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Alerts.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Navs.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Wells.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_ProgressBars.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Badges.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Labels.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Buttons.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_ButtonToolbarStart.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_ButtonToolbarEnd.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_NextPreviousPagers.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_ButtonGroups.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_ButtonToolbars.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_NextPreviousPagers.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_ButtonGroups.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_ButtonToolbars.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_NextPreviousPager.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_BulletLists.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_BulletLists.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\DisplayTemplates\MultilineText.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\DisplayTemplates\Password.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_Date.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_Time.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_DateTime.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_Date.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_Time.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_DateTime.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_DisplayRow.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\Time.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_EmailAddress.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_Url.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_Currency.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_Decimal.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_Integer.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_Double.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_SingleLineText.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_MultiLineText.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_Password.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_EmailAddress.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_Url.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_Currency.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_Decimal.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_Integer.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_Double.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_SingleLineText.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_MultiLineText.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_Password.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\Password.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_Html.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_ImageUrl.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_Html.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_ImageUrl.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\ImageUrl.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\Double.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\DataTypes\_Boolean.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_Boolean.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\DisplayTemplates\Boolean.cshtml" />
-    <Content Include="Ux.Mvc\Views\UxDocumentation\Files.cshtml" />
+    <Content Include="Views\UxDocumentation\Files.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\Attachment.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\_Object.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Address.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Address.cshtml" />
-    <Content Include="Ux.Mvc\Views\UxDocumentation\_Nav.cshtml" />
-    <Content Include="Ux.Mvc\Views\UxDocumentation\Configuration.cshtml" />
+    <Content Include="Views\UxDocumentation\_Nav.cshtml" />
+    <Content Include="Views\UxDocumentation\Configuration.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Ux.Mvc\Views\UxDocumentation\ViewModels.cshtml" />
-    <Content Include="Ux.Mvc\Content\documentation.less" />
+    <Content Include="Views\UxDocumentation\ViewModels.cshtml" />
+    <Content Include="Content\documentation.less" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery.validate.globalize.min.js.map" />
-    <Content Include="Ux.Mvc\Views\UxDocumentation\Index.cshtml" />
+    <Content Include="Views\UxDocumentation\Index.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_TableStart.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_TableEnd.cshtml" />
-    <Content Include="Ux.Mvc\Views\Documentation\WebControls\_Tables.cshtml" />
-    <Content Include="Ux.Mvc\Views\UxDocumentation\_TableContent.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Tables.cshtml" />
+    <Content Include="Views\UxDocumentation\_TableContent.cshtml" />
+    <Content Include="Views\UxDocumentation\_ViewStart.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Ux.Mvc\Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config">
       <SubType>Designer</SubType>

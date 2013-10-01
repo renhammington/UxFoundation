@@ -7,8 +7,8 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Ux.Mvc.Binders;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Ux.Mvc.UxConfig), "PreStart")]
-namespace Ux.Mvc
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Ux.Mvc.Configuration.UxConfig), "PreStart")]
+namespace Ux.Mvc.Configuration
 {
 
     public static class UxConfig
@@ -77,11 +77,6 @@ namespace Ux.Mvc
                "~/Content/css/select2.css",
                "~/Content/font-awesome.css",
                "~/Ux.Mvc/Content/styles.less"
-               ));
-
-
-            bundles.Add(new StyleBundle("~/ux/css/documentation").Include(
-               "~/Ux.Mvc/Content/documentation.less"
                ));
         }
 
