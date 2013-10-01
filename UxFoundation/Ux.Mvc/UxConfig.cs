@@ -6,9 +6,6 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Ux.Mvc.Binders;
-using Ux.Mvc.Helpers;
-
-
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Ux.Mvc.UxConfig), "PreStart")]
 namespace Ux.Mvc
@@ -58,9 +55,6 @@ namespace Ux.Mvc
             bundles.FileSetOrderList.Clear();
 
             bundles.Add(new ScriptBundle("~/ux/js").Include(
-                "~/scripts/jquery.globalize/globalize.js",
-                "~/scripts/jquery.validate.globalize.js",     
-                GlobalizeCulture.GetCurrentCulture().Value,                
                 "~/scripts/bootstrap.js",
                 "~/scripts/bootstrap-datepicker.js",
                 "~/scripts/select2.js",

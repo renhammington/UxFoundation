@@ -79,7 +79,6 @@ var datepickers = {
 }
 
 $(function () {
-    Globalize.culture("en-NZ");
 	dropdowns.init();
 	validation.init();
 	tooltips.init();
