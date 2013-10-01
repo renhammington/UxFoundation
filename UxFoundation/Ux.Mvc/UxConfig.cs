@@ -61,6 +61,12 @@ namespace Ux.Mvc
                 "~/Ux.Mvc/scripts/jquery.fileinput.js",
                 "~/Ux.Mvc/Scripts/ux.js"
                 ));
+
+            bundles.Add(new ScriptBundle("~/ux/jquery").Include(
+               "~/Scripts/jquery-{version}.js",
+               "~/Scripts/jquery.validate.js",
+               "~/scripts/jquery.validate.unobtrusive.js"
+               ));
         }
 
         private static void RegisterStyleBundles()
