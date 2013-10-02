@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using Ux.Mvc.Attributes;
 using Ux.Mvc.Web.UI;
 
 namespace Ux.Mvc.ViewModels
 {
-    public class Test
+    public class Test :BaseViewModel
     {
         public Test()
         {
@@ -29,5 +30,8 @@ namespace Ux.Mvc.ViewModels
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Birthday { get; set; }
+
+        [UxHint(UxHintType.Select)]
+        public int fk { get; set; }
     }
 }

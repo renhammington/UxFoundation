@@ -32,7 +32,7 @@
 	   
 				@Html.UxNavLink("Boolean", "#boolean", dataToggle: DataToggle.Pill)	
 	   
-				
+				@Html.UxNavLink("Foreign keys", "#foreignKeys", dataToggle: DataToggle.Pill)	
    }
 
 
@@ -82,6 +82,9 @@
 			</div>
 			<div class="section tab-pane" id="boolean">
 				@Html.Partial("DataTypes/_Boolean", @Model)
+			</div>
+            <div class="section tab-pane" id="foreignKeys">
+				@Html.Partial("DataTypes/_ForeignKeys", @Model)
 			</div>
 		</div>
 	</div>

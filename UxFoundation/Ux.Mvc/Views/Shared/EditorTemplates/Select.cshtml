@@ -8,30 +8,51 @@
     ViewData["selectionMade"] = false;
         
 }
-@helper SetSelected(string value) {
+@helper SetSelected(string value)
+{
+    if (value == null) { return; }
     if (bool.Parse(ViewData["selectionMade"].ToString()) == true) { return; }
-    if (Model == int.Parse(value)) { @:selected="selected"   
+    if (Model == int.Parse(value))
+    { @:selected="selected"   
         ViewData["selectionMade"] = true;
     }    
 }
-<select name="@htmlField" id="@htmlField" style="width:200px;">
-@if (DataSource.IsGrouped)
+@helper RenderOption(SelectOption option)
 {
-    foreach (var group in DataSource.GroupedItems)
+    @:<option value="@option.Value" @SetSelected(option.Value) @option.GetPropertiesString()>@option.Text</option>
+}
+@helper RenderItem(SelectListItem item)
+{
+    @:<option value="@item.Value" @SetSelected(item.Value)>@item.Text</option>
+}
+
+@if (DataSource == null)
+{
+    @Html.UxLabel("No datasource has been supplied", AppearanceType.Danger);
+}
+else if (DataSource.IsGrouped)
+{
+    @:<select name="@htmlField" id="@htmlField" class="selectpicker show-tick" data-live-search="true" data-width="auto" data-size="10">
+foreach (var group in DataSource.GroupedItems)
     {
         <optgroup label="@group.Key">
             @foreach (var option in group.Value)
             {
-                <option value="@option.Value" @SetSelected(option.Value)>@option.Text</option>
+                if (option is SelectOption) { @RenderOption((SelectOption)option); }
+                else { @RenderItem(option); }            
             }
         </optgroup>
+        }
+    @:</select>
     }
-}
 else
 {
-    foreach (var option in DataSource.UnGroupedItems)
+    @:<select name="@htmlField" id="@htmlField" class="selectpicker show-tick" data-live-search="true" data-width="auto" data-size="10">
+foreach (var option in DataSource.UnGroupedItems)
     {
-        <option value="@option.Value" @SetSelected(option.Value)>@option.Text</option>
+        if (option is SelectOption) { @RenderOption((SelectOption)option); }
+        else { @RenderItem(option); }    
     }
+    @:</select>
 }
-</select>
+

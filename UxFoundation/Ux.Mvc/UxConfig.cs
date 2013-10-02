@@ -57,7 +57,7 @@ namespace Ux.Mvc.Configuration
             bundles.Add(new ScriptBundle("~/ux/js").Include(
                 "~/scripts/bootstrap.js",
                 "~/scripts/bootstrap-datepicker.js",
-                "~/scripts/select2.js",
+                "~/scripts/bootstrap-select.js",
                 "~/Ux.Mvc/scripts/jquery.fileinput.js",
                 "~/Ux.Mvc/Scripts/ux.js"
                 ));
@@ -74,7 +74,7 @@ namespace Ux.Mvc.Configuration
             bundles.Add(new StyleBundle("~/ux/css").Include(
                "~/Content/bootstrap/bootstrap.css",
                "~/Content/bootstrap-datepicker.css",
-               "~/Content/css/select2.css",
+               "~/Content/bootstrap-select.css",
                "~/Content/font-awesome.css",
                "~/Ux.Mvc/Content/styles.less"
                ));

@@ -1,0 +1,73 @@
+﻿@model Ux.Mvc.ViewModels.Examples
+<div class="page-header">
+    <h1>Foreign keys <small>int</small></h1>
+</div>
+
+<div class="highlight">
+    <pre class="prettyprint">
+[UxHint(UxHintType.Select)]
+public int ForeignKeyValue { get; set; }
+
+ForeignKeyValue = 4
+</pre>
+</div>
+
+<h3>Raw</h3>
+<div class="example">
+    @Model.ForeignKeyValue.ToString()
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@Model.ForeignKeyValue.ToString()
+</pre>
+</div>
+
+<h3>DisplayFor</h3>
+<div class="example">
+    @Html.DisplayFor(m => m.ForeignKeyValue)
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@Html.DisplayFor(m => m.ForeignKeyValue)
+</pre>
+</div>
+
+<h3>EditorFor<small>Select.cshtml</small></h3>
+<p>There are many overloads for the <code>EditorFor</code> helper. To pass a datasource through to the editor for a foreign key, use the <code>UxEditorFor</code> helper instead.</p>
+<div class="example">
+
+    @Html.UxEditorFor(m => m.ForeignKeyValue, @Model.DataSources["ungrouped"])
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@Html.UxEditorFor(m => m.ForeignKeyValue)
+</pre>
+
+</div>
+
+<h3>UxDisplayRowFor</h3>
+<div class="example">
+    @Html.UxDisplayRowFor(m => m.ForeignKeyValue)
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@Html.UxDisplayRowFor(m => m.ForeignKeyValue)
+</pre>
+</div>
+
+
+<h3>UxEditorRowFor</h3>
+<div class="example">
+    @using (Html.UxBeginForm())
+    {
+        @Html.UxEditorRowFor(m => m.ForeignKeyValue, @Model.DataSources["ungrouped"])
+        @Html.UxEditorRowFor(m => m.ForeignKeyValue2, @Model.DataSources["grouped"])
+        @Html.UxSaveButton()
+    }
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@Html.UxEditorRowFor(m => m.ForeignKeyValue, @@Model.DataSources["ungrouped"])
+@@Html.UxEditorRowFor(m => m.ForeignKeyValue2, @@Model.DataSources["grouped"])
+</pre>
+</div>

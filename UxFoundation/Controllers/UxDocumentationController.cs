@@ -42,13 +42,46 @@ namespace Ux.Mvc.Controllers
 				BooleanByType = false,
 				BooleanExplicit = true,
 				BooleanNullableByType = null,
-				BooleanNullableExplicit = false
-				
+				BooleanNullableExplicit = false,
+                ForeignKeyValue = 4,
+                ForeignKeyValue2 = 3
 			};
-			
+
+            LoadDataSources(note);
+            			
 			return View(note);
 			
 		}
+
+
+        private void LoadDataSources(Examples model)
+        {
+            // Foreign key values need a data source to derive from when editing
+            var sampleValues = new List<SelectListItem>() {
+				new SelectListItem() { Text = "Alpha", Value="1" },
+				new SelectListItem() { Text = "Bravo", Value="2" },
+				new SelectListItem() { Text = "Charlie", Value="3" },
+				new SelectListItem() { Text = "Delta", Value="4" },
+				new SelectListItem() { Text = "Echo", Value="5" },
+				new SelectListItem() { Text = "Foxtrot", Value="6" },
+			};
+
+            var grouped = new Dictionary<string, IEnumerable<SelectListItem>>() {
+				{ "One", sampleValues },
+				{ "Two", sampleValues },
+				{ "Three", sampleValues }
+			};
+
+            // In your HtmlHelper call, you need to reference the name of the data source
+            model.DataSources.Add("ungrouped", new DataSource(sampleValues));
+            model.DataSources.Add("grouped", new DataSource(grouped));
+        }
+
+
+
+
+
+
 
 		[HttpPost]
 		public ActionResult DataTypes(Examples examples, ButtonCommand command)
@@ -74,8 +107,6 @@ namespace Ux.Mvc.Controllers
 		}
 
 
-
-
         public ActionResult HtmlHelpers()
         {
             var note = new Examples()
@@ -88,23 +119,7 @@ namespace Ux.Mvc.Controllers
             };
 
 
-            var mockvalues = new List<SelectListItem>() {
-				new SelectListItem() { Text = "Alpha", Value="1" },
-				new SelectListItem() { Text = "Bravo", Value="2" },
-				new SelectListItem() { Text = "Charlie", Value="3" },
-				new SelectListItem() { Text = "Delta", Value="4" },
-				new SelectListItem() { Text = "Echo", Value="5" },
-				new SelectListItem() { Text = "Foxtrot", Value="6" },
-			};
-
-            var grouped = new Dictionary<string, IEnumerable<SelectListItem>>() {
-				{ "One", mockvalues },
-				{ "Two", mockvalues },
-				{ "Three", mockvalues }
-			};
-
-            note.DataSources.Add("ungrouped", new DataSource(mockvalues));
-            note.DataSources.Add("grouped", new DataSource(grouped));
+            
 
             return View(note);
         }

@@ -14,6 +14,13 @@ using Ux.Mvc.Attributes;
 
     public static class HtmlHelpers
     {
+        public static MvcHtmlString UxEditorFor<TModel, TProperty>(this HtmlHelper<TModel> helper,
+           Expression<Func<TModel, TProperty>> expression,
+           DataSource datasource,
+           string clientId = null)
+        {
+            return helper.EditorFor(expression, new { DataSource = datasource });
+        }
 
         #region EditorRow
         public static MvcHtmlString UxEditorRowFor<TModel, TProperty>(this HtmlHelper<TModel> helper,

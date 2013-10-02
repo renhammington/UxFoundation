@@ -153,6 +153,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Ux.Mvc\Binders\UxDateTimeModelBinder.cs" />
+    <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
     <Compile Include="Ux.Mvc\Helpers\IntExtensions.cs" />
     <Compile Include="Ux.Mvc\UxConfig.cs" />
     <Compile Include="Controllers\UxDocumentationController.cs" />
@@ -223,10 +224,6 @@
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
-    <Content Include="Content\css\select2-spinner.gif" />
-    <Content Include="Content\css\select2.css" />
-    <Content Include="Content\css\select2.png" />
-    <Content Include="Content\css\select2x2.png" />
     <Content Include="Content\font-awesome-ie7.css" />
     <Content Include="Content\font-awesome-ie7.min.css" />
     <Content Include="Content\font-awesome.css" />
@@ -299,8 +296,6 @@
     <Content Include="Ux.Mvc\Scripts\jquery.fileinput.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\select2.js" />
-    <Content Include="Scripts\select2.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -407,6 +402,7 @@
     <Content Include="Views\UxDocumentation\WebControls\_Tables.cshtml" />
     <Content Include="Views\UxDocumentation\_TableContent.cshtml" />
     <Content Include="Views\UxDocumentation\_ViewStart.cshtml" />
+    <Content Include="Views\UxDocumentation\DataTypes\_ForeignKeys.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

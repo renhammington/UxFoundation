@@ -1,4 +1,4 @@
-﻿@model WiseGroupContracts.ViewModels.Test
+﻿@model Ux.Mvc.ViewModels.Test
 @using Ux.Mvc.Web.UI
 @{
     ViewBag.Title = "Index";
@@ -11,6 +11,7 @@
     </div>
 
     @Html.UxDisplayRowFor(m => m.Name)
+    @Html.UxDisplayRowFor(m => m.fk)
 
 
     @using (Html.UxBeginForm(allowFiles:true))
@@ -18,7 +19,8 @@
         
         @Html.UxEditorRowFor(m => m.Name)
         @Html.UxEditorRowFor(m => m.AttachmentTwo)
-        @Html.UxEditorRowFor(m => m.Birthday)
+        @Html.UxEditorRowFor(m => m.fk, @Model.DataSources["grouped"])
+         @Html.UxEditorRowFor(m => m.fk, @Model.DataSources["brands"])
         @Html.UxSaveButton() @Html.UxCancelButton()
     }
 
