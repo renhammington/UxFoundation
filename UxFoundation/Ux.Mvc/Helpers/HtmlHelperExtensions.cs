@@ -335,6 +335,11 @@ using Ux.Mvc.Attributes;
             return RenderUxDispoableWebControl(htmlHelper, select);
         }
 
+        public static IDisposable UxSelectGroup(this HtmlHelper htmlHelper, string label, bool disabled = false, string clientId = null)
+        {
+            var group = new SelectGroup(label, disabled, clientId);
+            return RenderUxDispoableWebControl(htmlHelper, group);
+        }
 
         #endregion
 
@@ -392,26 +397,26 @@ using Ux.Mvc.Attributes;
 
 
         #region Rendering
-        private static MvcHtmlString RenderUxControl(this HtmlHelper htmlHelper, WebControl control)
+        private static MvcHtmlString RenderUxControl(this HtmlHelper htmlHelper, UxControl control)
         {
             var partial = htmlHelper.Partial("ControlTemplates/" + control.ViewTemplate, control).ToString();
             return MvcHtmlString.Create(partial);
         }
 
-        private static IDisposable RenderUxDispoableWebControl(this HtmlHelper helper, WebControl control)
+        private static IDisposable RenderUxDispoableWebControl(this HtmlHelper helper, UxControl control)
         {
-            return new DisposableWebControl(
+            return new UxDisposableControl(
                 () => helper.RenderUxControlStart(control),
                 () => helper.RenderUxControlEnd(control)
             );
         }
 
-        private static void RenderUxControlStart(this HtmlHelper htmlHelper, WebControl control)
+        private static void RenderUxControlStart(this HtmlHelper htmlHelper, UxControl control)
         {
             htmlHelper.RenderPartial("ControlTemplates/" + control.ViewTemplate + "Start", control);
         }
 
-        private static void RenderUxControlEnd(this HtmlHelper htmlHelper, WebControl control)
+        private static void RenderUxControlEnd(this HtmlHelper htmlHelper, UxControl control)
         {
             htmlHelper.RenderPartial("ControlTemplates/" + control.ViewTemplate + "End", control);
         }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class ButtonGroup : WebControl
+	public class ButtonGroup : UxControl
 	{
 
 		public bool Toggle { get; private set; }

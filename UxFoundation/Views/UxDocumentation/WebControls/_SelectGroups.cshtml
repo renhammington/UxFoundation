@@ -1,0 +1,129 @@
+﻿@using Ux.Mvc.Web.UI
+<div class="page-header">
+    <h1>Select groups <small>UxSelectGroup</small></h1>
+</div>
+<div class="callout callout-info">
+    <b>bootstrap-select</b><br />
+    Selects are rendered using bootstrap-select, a plugin by Silvio Moreto. For more information, visit <a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a>.
+</div>
+
+<h3>Helper</h3>
+<div class="highlight highlight-large">
+    <pre class="prettyprint">
+// Select option
+@@using (Html.UxSelectGroup()) { &hellip; }
+</pre>
+</div>
+<h3>Helper options</h3>
+@using (Html.UxTable(true))
+{
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>label</td>
+            <td><code>string</code></td>
+            <td><code>null</code></td>
+            <td>Sets the label of the option group.</td>
+        </tr>
+        <tr>
+            <td>disabled</td>
+            <td><code>bool</code></td>
+            <td><code>false</code></td>
+            <td>Prevents the user from selecting any options within the group.</td>
+        </tr>
+        <tr>
+            <td>clientId</td>
+            <td><code>string</code></td>
+            <td><code>null</code></td>
+            <td>Sets the <code>id</code> property of the rendered html element.</td>
+        </tr>
+    </tbody>
+}
+
+<h3>Basic usage</h3>
+<div class="example">
+    @using (Html.UxSelect())
+    {
+        using (Html.UxSelectGroup("Operating systems"))
+        {
+            @Html.UxSelectOption("OSX", "1")
+            @Html.UxSelectOption("Windows", "2")
+        }
+        using (Html.UxSelectGroup("Social media"))
+        {
+            @Html.UxSelectOption("Facebook", "4")
+            @Html.UxSelectOption("Pinterest", "5")
+            @Html.UxSelectOption("Youtube", "6")
+        }
+        @Html.UxSelectDivider()
+        @Html.UxSelectOption("Github", "3")
+    }
+
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@using (Html.UxSelect())
+{
+    using (Html.UxSelectGroup("Operating systems"))
+    {
+        @@Html.UxSelectOption("OSX", "1")
+        @@Html.UxSelectOption("Windows", "2")
+    }
+    using (Html.UxSelectGroup("Social media"))
+    {
+        @@Html.UxSelectOption("Facebook", "4")
+        @@Html.UxSelectOption("Pinterest", "5")
+        @@Html.UxSelectOption("Youtube", "6")
+    }
+    @@Html.UxSelectDivider()
+    @@Html.UxSelectOption("Github", "3")
+}
+</pre>
+</div>
+
+<h3>Disabled</h3>
+<div class="example">
+    @using (Html.UxSelect())
+    {
+        using (Html.UxSelectGroup("Operating systems"))
+        {
+            @Html.UxSelectOption("OSX", "1")
+            @Html.UxSelectOption("Windows", "2")
+        }
+        using (Html.UxSelectGroup("Social media", true))
+        {
+            @Html.UxSelectOption("Facebook", "4")
+            @Html.UxSelectOption("Pinterest", "5")
+            @Html.UxSelectOption("Youtube", "6")
+        }
+        @Html.UxSelectDivider()
+        @Html.UxSelectOption("Github", "3")
+    }
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@using (Html.UxSelect())
+{
+    using (Html.UxSelectGroup("Operating systems"))
+    {
+        @@Html.UxSelectOption("OSX", "1")
+        @@Html.UxSelectOption("Windows", "2")
+    }
+    using (Html.UxSelectGroup("Social media", true))
+    {
+        @@Html.UxSelectOption("Facebook", "4")
+        @@Html.UxSelectOption("Pinterest", "5")
+        @@Html.UxSelectOption("Youtube", "6")
+    }
+    @@Html.UxSelectDivider()
+    @@Html.UxSelectOption("Github", "3")
+}
+</pre>
+</div>

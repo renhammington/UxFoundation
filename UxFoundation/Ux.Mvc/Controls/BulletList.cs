@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class BulletList : WebControl
+	public class BulletList : UxControl
 	{
 		public bool UseCustomIcons { get; private set; }
 		public int ColumnCount { get; private set; }

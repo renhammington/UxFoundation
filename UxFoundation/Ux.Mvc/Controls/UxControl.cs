@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace Ux.Mvc.Web.UI
 {
 
-	public abstract class WebControl
+	public abstract class UxControl
 	{
 				
 		
@@ -29,7 +29,7 @@ namespace Ux.Mvc.Web.UI
 			else return MvcHtmlString.Create(string.Format("id=\"{0}\"", ClientId));
 		}
 
-		public WebControl(string viewTemplate, string clientId)
+		public UxControl(string viewTemplate, string clientId)
 		{
 			ViewTemplate = viewTemplate;
 			SetClientId(clientId);

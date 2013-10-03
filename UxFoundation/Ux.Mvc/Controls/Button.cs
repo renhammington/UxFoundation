@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class Button : WebControl
+	public class Button : UxControl
 	{
 		public string Text { get; set; }
 		public AppearanceType Appearance { get; set; }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class ButtonToolbar : WebControl
+	public class ButtonToolbar : UxControl
 	{
 
 		public string CssClass

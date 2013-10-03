@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class Icon : WebControl
+	public class Icon : UxControl
 	{
 		public IconSize Size { get; private set; }
 		public IconRotation Rotation { get; private set; }

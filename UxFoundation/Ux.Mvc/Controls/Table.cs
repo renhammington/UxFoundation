@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-    public class Table : WebControl
+    public class Table : UxControl
     {
 
         public bool Striped { get; private set; }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class BulletListItem : WebControl
+	public class BulletListItem : UxControl
 	{
 
 		public string Text { get; set; }

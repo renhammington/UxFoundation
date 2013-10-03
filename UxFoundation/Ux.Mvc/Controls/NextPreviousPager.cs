@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class NextPreviousPager : WebControl
+	public class NextPreviousPager : UxControl
 	{
 		
 		public PagerPosition Position { get; private set; }

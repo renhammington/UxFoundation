@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class NumericPager : WebControl
+	public class NumericPager : UxControl
 	{
 		public PagerSize Size { get; private set; }
 		

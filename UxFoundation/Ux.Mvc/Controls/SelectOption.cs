@@ -7,7 +7,7 @@ using Ux.Mvc.Web.UI;
 
 namespace Ux.Mvc.Web.UI
 {
-    public class SelectOption : WebControl 
+    public class SelectOption : UxControl 
     {
         public IconType? IconType { get; private set; }
         public string SubText { get; private set; }

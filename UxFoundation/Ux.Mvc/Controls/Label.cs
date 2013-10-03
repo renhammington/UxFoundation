@@ -6,7 +6,7 @@ using Ux.Mvc.Web.UI;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class Label : WebControl
+	public class Label : UxControl
 	{
 		public string Text { get; private set; }
 		public AppearanceType Appearance { get; private set; }

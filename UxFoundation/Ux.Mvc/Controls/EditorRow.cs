@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class EditorRow : WebControl
+	public class EditorRow : UxControl
 	{
 		public MvcHtmlString Label { get; set; }
 		public MvcHtmlString Editor { get; set; }

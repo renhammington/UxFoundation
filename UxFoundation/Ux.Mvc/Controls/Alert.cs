@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class Alert : WebControl
+	public class Alert : UxControl
 	{
 		public bool Dismissable { get; private set; }
 		public AppearanceType Appearance { get; private set; }

@@ -154,6 +154,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Ux.Mvc\Binders\UxDateTimeModelBinder.cs" />
     <Compile Include="Ux.Mvc\Controls\Select.cs" />
+    <Compile Include="Ux.Mvc\Controls\SelectGroup.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
     <Compile Include="Ux.Mvc\Helpers\IntExtensions.cs" />
     <Compile Include="Ux.Mvc\UxConfig.cs" />
@@ -188,7 +189,7 @@
     <Compile Include="Ux.Mvc\Controls\Button.cs" />
     <Compile Include="Ux.Mvc\Enums\ButtonCommand.cs" />
     <Compile Include="Ux.Mvc\Controls\DisplayRow.cs" />
-    <Compile Include="Ux.Mvc\Controls\DisposableWebControl.cs" />
+    <Compile Include="Ux.Mvc\Controls\UxDisposableControl.cs" />
     <Compile Include="Ux.Mvc\Enums\ButtonSize.cs" />
     <Compile Include="Ux.Mvc\Enums\IconRotation.cs" />
     <Compile Include="Ux.Mvc\Enums\IconSize.cs" />
@@ -209,7 +210,7 @@
     <Compile Include="Ux.Mvc\Controls\NumericPager.cs" />
     <Compile Include="Ux.Mvc\Controls\NumericPagerPageLink.cs" />
     <Compile Include="Ux.Mvc\Controls\ProgressBar.cs" />
-    <Compile Include="Ux.Mvc\Controls\WebControl.cs" />
+    <Compile Include="Ux.Mvc\Controls\UxControl.cs" />
     <Compile Include="ViewModels\Address.cs" />
     <Compile Include="Ux.Mvc\Controls\Attachment.cs" />
     <Compile Include="ViewModels\Test.cs" />
@@ -409,6 +410,9 @@
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_SelectOption.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_Selects.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_SelectOptions.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_SelectGroups.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_SelectGroupStart.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_SelectGroupEnd.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

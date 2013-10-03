@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class ProgressBar : WebControl
+	public class ProgressBar : UxControl
 	{
 
 		public AppearanceType Appearance { get; private set; }

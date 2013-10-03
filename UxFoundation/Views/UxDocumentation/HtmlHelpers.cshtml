@@ -25,6 +25,7 @@
                 @Html.UxNavLink("Numeric pagers", "#numPagers", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Selects", "#selects", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Select options", "#selectOptions", dataToggle: DataToggle.Pill)
+                @Html.UxNavLink("Select groups", "#selectGroups", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Tables", "#tables", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Wells", "#wells", dataToggle: DataToggle.Pill)
             }
@@ -77,6 +78,9 @@
             </div>
             <div class="section tab-pane" id="selectOptions">
                 @Html.Partial("WebControls/_SelectOptions")
+            </div>
+            <div class="section tab-pane" id="selectGroups">
+                @Html.Partial("WebControls/_SelectGroups")
             </div>
         </div>
     </div>

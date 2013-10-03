@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class DisposableWebControl : IDisposable
+	public class UxDisposableControl : IDisposable
 	{
 		
 		private Action End;
 
-		public DisposableWebControl(Action start, Action end)
+		public UxDisposableControl(Action start, Action end)
 		{
 			End = end;
 			start();

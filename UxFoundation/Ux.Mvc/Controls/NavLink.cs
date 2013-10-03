@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class NavLink : WebControl
+	public class NavLink : UxControl
 	{
 
 		public bool Active { get; private set; }

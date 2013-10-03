@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Ux.Mvc.Web.UI
 {
-    public class Select : WebControl
+    public class Select : UxControl
     {
 
         public AppearanceType? Appearance { get; private set; }

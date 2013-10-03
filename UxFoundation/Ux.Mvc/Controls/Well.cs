@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class Well : WebControl
+	public class Well : UxControl
 	{
 		public WellSize Size { get; private set; }
 		

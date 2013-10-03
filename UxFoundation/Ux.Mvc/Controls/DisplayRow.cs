@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class DisplayRow : WebControl
+	public class DisplayRow : UxControl
 	{
 
 		public MvcHtmlString Label { get; set; }

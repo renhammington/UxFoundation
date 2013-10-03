@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class NumericPagerPageLink : WebControl
+	public class NumericPagerPageLink : UxControl
 	{
 
 		public string Url { get; private set; }

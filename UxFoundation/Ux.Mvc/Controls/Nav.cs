@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class Nav : WebControl
+	public class Nav : UxControl
 	{
 		public NavType Type {get;private set;}
 		public bool Justified { get; private set; }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public class Badge : WebControl
+	public class Badge : UxControl
 	{
 
 		public string Text { get; private set; }
