@@ -24,28 +24,28 @@ namespace Ux.Mvc.Controllers
         private void LoadDataSources(Test model)
         {
             // Foreign key values need a data source to derive from when editing
-            var phonetics = new List<SelectListItem>() {
-				new SelectListItem() { Text = "Alpha", Value="1" },
-				new SelectListItem() { Text = "Bravo", Value="2" },
-				new SelectListItem() { Text = "Charlie", Value="3" },
-				new SelectListItem() { Text = "Delta", Value="4" },
-				new SelectListItem() { Text = "Echo", Value="5" },
-				new SelectListItem() { Text = "Foxtrot", Value="6" },
-                new SelectListItem() { Text = "Golf", Value="6" },
+            var phonetics = new List<SelectOption>() {
+				new SelectOption("Alpha","1"),
+				new SelectOption("Bravo", "2"),
+				new SelectOption("Charlie","3"),
+				new SelectOption("Delta","4"),
+				new SelectOption("Echo", "5"),
+				new SelectOption("Foxtrot","6"),
+                new SelectOption("Golf", "6")
 			};
 
             var brands = new List<SelectOption>() {
-				new SelectOption() { Text = "Apple", Value="1", IconType = IconType.Apple },
-				new SelectOption() { Text = "Windows", Value="2", IconType = IconType.Windows, SubText="Microsoft" },
-				new SelectOption() { Text = "Github", Value="5", IconType = IconType.Github, Disabled=true},
-                new SelectOption() { Divider = true },
-				new SelectOption() { Text = "Pinterest", Value="6", IconType = IconType.Pinterest, Disabled = true },
-				new SelectOption() { Text = "Twitter", Value="3", IconType = IconType.Twitter },
-                new SelectOption() { Text = "Facebook", Value="6", IconType = IconType.Facebook },                
-                new SelectOption() { Text = "Youtube", Value="4", IconType = IconType.Youtube, SubText = "Google" }
+				new SelectOption("Apple", "1", iconType:IconType.Apple),
+				new SelectOption("Windows","2", iconType:IconType.Windows, subText:"Microsoft"),
+				new SelectOption("Github","3", iconType:IconType.Github, disabled:true),
+                new SelectOption("Divider","2", divider:true),
+				new SelectOption("Pinterest","3", iconType:IconType.PinterestSign, selected:true) ,
+				new SelectOption("Twitter","4", iconType:IconType.Twitter) ,
+                new SelectOption("Facebook","5", iconType:IconType.Facebook) ,
+                new SelectOption("Youtube","6", iconType:IconType.YoutubePlay, subText:"Google")
 			};
 
-            var grouped = new Dictionary<string, IEnumerable<SelectListItem>>() {
+            var grouped = new Dictionary<string, IEnumerable<SelectOption>>() {
 				{ "Phonetics", phonetics },
 				{ "Brands", brands }
 			};

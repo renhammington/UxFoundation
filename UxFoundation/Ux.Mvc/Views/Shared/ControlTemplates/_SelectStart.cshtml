@@ -1,0 +1,39 @@
+﻿@using Ux.Mvc.Web.UI
+@model Select
+@{
+    Ux.Mvc.Web.UI.DataSource DataSource = null;
+    if (Model.DataSource != null) { DataSource = Model.DataSource; }
+
+    var htmlField = ViewData.TemplateInfo.HtmlFieldPrefix;
+    ViewData["selectionMade"] = false;
+
+}
+
+<select name="@htmlField" id="@htmlField" class="@Model.CssClass" @Model.GetAttributes()>
+@if (DataSource != null)
+{
+
+    if (DataSource.IsGrouped)
+    {
+
+        foreach (var group in DataSource.GroupedItems)
+        {
+                <optgroup label="@group.Key">
+                    @foreach (var option in group.Value)
+                    {
+                        @Html.UxSelectOption(option)
+                    }
+                </optgroup>
+        }
+
+    }
+    else
+    {
+        foreach (var option in DataSource.UnGroupedItems)
+        {
+             @Html.UxSelectOption(option)
+        }
+    }
+
+}
+   

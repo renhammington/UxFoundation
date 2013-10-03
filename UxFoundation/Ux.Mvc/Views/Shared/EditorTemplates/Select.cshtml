@@ -19,7 +19,7 @@
 }
 @helper RenderOption(SelectOption option)
 {
-    @:<option value="@option.Value" @SetSelected(option.Value) @option.GetPropertiesString()>@option.Text</option>
+    @:<option value="@option.Value" @SetSelected(option.Value) @option.GetAttributes()>@option.Text</option>
 }
 @helper RenderItem(SelectListItem item)
 {
@@ -38,8 +38,7 @@ foreach (var group in DataSource.GroupedItems)
         <optgroup label="@group.Key">
             @foreach (var option in group.Value)
             {
-                if (option is SelectOption) { @RenderOption((SelectOption)option); }
-                else { @RenderItem(option); }            
+                @RenderOption(option);
             }
         </optgroup>
         }
@@ -50,8 +49,7 @@ else
     @:<select name="@htmlField" id="@htmlField" class="selectpicker show-tick" data-live-search="true" data-width="auto" data-size="10">
 foreach (var option in DataSource.UnGroupedItems)
     {
-        if (option is SelectOption) { @RenderOption((SelectOption)option); }
-        else { @RenderItem(option); }    
+        @RenderOption(option);
     }
     @:</select>
 }

@@ -1,0 +1,356 @@
+﻿@using Ux.Mvc.Web.UI
+<div class="page-header">
+    <h1>Selects <small>UxSelect</small></h1>
+</div>
+<div class="callout callout-info">
+    <b>bootstrap-select</b><br />
+    Selects are rendered using bootstrap-select, a plugin by Silvio Moreto. For more information, visit <a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a>.
+
+</div>
+
+<h3>Helper</h3>
+<div class="highlight highlight-large">
+    <pre class="prettyprint">
+// Select
+@@using (Html.UxSelect()) 
+{ 
+    // Select option helper
+    @@Html.UxSelectOption()
+
+    // or...
+    &lt;option>Your own options&lt;/option>
+}
+</pre>
+</div>
+<h3>Helper options</h3>
+@using (Html.UxTable(true))
+{
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>appearance</td>
+            <td><code>AppearanceType</code></td>
+            <td><code>Default</code></td>
+            <td>Sets the appearance of the select.</td>
+        </tr>
+        <tr>
+            <td>liveSearch</td>
+            <td><code>bool</code></td>
+            <td><code>false</code></td>
+            <td>Adds a search bar at the top of the dropdown.</td>
+        </tr>
+        <tr>
+            <td>showTick</td>
+            <td><code>bool</code></td>
+            <td><code>false</code></td>
+            <td>Shows a tick against the selected item.</td>
+        </tr>
+        <tr>
+            <td>showArrow</td>
+            <td><code>bool</code></td>
+            <td><code>false</code></td>
+            <td>Shows an arrow connecting the dropdown to the selector</td>
+        </tr>
+        <tr>
+            <td>autoWidth</td>
+            <td><code>bool</code></td>
+            <td><code>true</code></td>
+            <td>Sets the width of the selector to fit contents.</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td><code>string</code></td>
+            <td><code>null</code></td>
+            <td>Sets a predetermined width using CSS style width descriptors. i.e. <code>50%</code> or <code>250px</code>. Note, setting this value overrides <code>autoWidth</code>.</td>
+        </tr>
+        <tr>
+            <td>disabled</td>
+            <td><code>bool</code></td>
+            <td><code>false</code></td>
+            <td>Prevents the user from selecting any options.</td>
+        </tr>
+        <tr>
+            <td>header</td>
+            <td><code>string</code></td>
+            <td><code>null</code></td>
+            <td>If not <code>null</code>, adds a header to the top of the dropdown list.</td>
+        </tr>
+        <tr>
+            <td>container</td>
+            <td><code>string</code></td>
+            <td><code>null</code></td>
+            <td>Assigns the parent container for the dropdown as a css selector. i.e. <code>body</code> or <code>#myContainer</code> or <code>.myClass</code> </td>
+        </tr>
+        <tr>
+            <td>clientId</td>
+            <td><code>string</code></td>
+            <td><code>null</code></td>
+            <td>Sets the <code>id</code> property of the rendered html element.</td>
+        </tr>
+    </tbody>
+}
+
+<h3>Default appearance</h3>
+<div class="example">
+    @using (Html.UxSelect())
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@using (Html.UxSelect())
+{
+    @@Html.UxSelectOption("Apple","1")
+    @@Html.UxSelectOption("Windows","2")
+    @@Html.UxSelectOption("Github","3")
+    @@Html.UxSelectOption("Facebook","4")
+    @@Html.UxSelectOption("Pinterest","5")
+    @@Html.UxSelectOption("Youtube","6")
+}
+</pre>
+</div>
+
+<h3>Appearance</h3>
+<div class="example">
+    @using (Html.UxSelect(appearance: AppearanceType.Primary))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+    @using (Html.UxSelect(appearance: AppearanceType.Info))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+    @using (Html.UxSelect(appearance: AppearanceType.Danger))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+    @using (Html.UxSelect(appearance: AppearanceType.Success))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+    @using (Html.UxSelect(appearance: AppearanceType.Warning))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@using (Html.UxSelect(appearance:AppearanceType.Primary)) { &hellip; }
+@@using (Html.UxSelect(appearance:AppearanceType.Info)) { &hellip; }
+@@using (Html.UxSelect(appearance:AppearanceType.Danger)) { &hellip; }
+@@using (Html.UxSelect(appearance:AppearanceType.Success)) { &hellip; }
+@@using (Html.UxSelect(appearance:AppearanceType.Warning)) { &hellip; }
+</pre>
+</div>
+
+<h3>Live search</h3>
+<div class="example">
+    @using (Html.UxSelect(liveSearch: true))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@using (Html.UxSelect(liveSearch: true)) { &hellip; }
+</pre>
+</div>
+
+
+<h3>Show tick</h3>
+<div class="example">
+    @using (Html.UxSelect(showTick: true))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@using (Html.UxSelect(showTick: true)) { &hellip; }
+</pre>
+</div>
+
+<h3>Width</h3>
+<div class="example">
+    @using (Html.UxSelect(width: "75%"))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }<br />
+    @using (Html.UxSelect(width: "250px"))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }<br />
+    @using (Html.UxSelect(autoWidth: true))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@using (Html.UxSelect(width: "75%")) { &hellip; }
+@@using (Html.UxSelect(width: "250px")) { &hellip; }
+@@using (Html.UxSelect(autoWidth: true)) { &hellip; }
+</pre>
+</div>
+
+<h3>Show arrow</h3>
+<div class="example">
+    @using (Html.UxSelect(showArrow: true))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@using (Html.UxSelect(showArrow: true)) { &hellip; }
+</pre>
+</div>
+
+
+
+<h3>Disabled</h3>
+<div class="example">
+    @using (Html.UxSelect(disabled: true))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@using (Html.UxSelect(disabled: true)) { &hellip; }
+</pre>
+</div>
+
+
+<h3>Header</h3>
+<div class="example">
+    @using (Html.UxSelect(header: "Choose a brand"))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@using (Html.UxSelect(header: "Choose a brand")) { &hellip; }
+</pre>
+</div>
+
+
+
+<h3>Container</h3>
+<p>If your select is within a container with <code>overflow:hidden</code> then your dropdown contents may be obscured when the select is opened. Use <code>container</code> to reposition the dropdown within a parent element.</p>
+<div class="example" style="overflow: hidden">
+
+    @using (Html.UxSelect())
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+    @using (Html.UxSelect(container: "body"))
+    {
+        @Html.UxSelectOption("Apple", "1")
+        @Html.UxSelectOption("Windows", "2")
+        @Html.UxSelectOption("Github", "3")
+        @Html.UxSelectOption("Facebook", "4")
+        @Html.UxSelectOption("Pinterest", "5")
+        @Html.UxSelectOption("Youtube", "6")
+    }
+
+
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@using (Html.Select()) { &hellip; }
+@@using (Html.Select(container: "body")) { &hellip; }
+</pre>
+</div>

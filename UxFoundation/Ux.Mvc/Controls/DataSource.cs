@@ -11,8 +11,8 @@ namespace Ux.Mvc.Web.UI
 	/// </summary>
 	public class DataSource
 	{
-		public IEnumerable<SelectListItem> UnGroupedItems { get; private set; }
-		public IDictionary<string, IEnumerable<SelectListItem>> GroupedItems { get; private set; }
+		public IEnumerable<SelectOption> UnGroupedItems { get; private set; }
+        public IDictionary<string, IEnumerable<SelectOption>> GroupedItems { get; private set; }
 		/// <summary>
 		/// Indicates whether the datasources contains a grouped or ungrouped list of items
 		/// </summary>
@@ -26,12 +26,12 @@ namespace Ux.Mvc.Web.UI
 			}
 		}
 
-		public DataSource(IDictionary<String, IEnumerable<SelectListItem>> groupedItems)
+        public DataSource(IDictionary<String, IEnumerable<SelectOption>> groupedItems)
 		{
 			GroupedItems = groupedItems;
 		}
 
-		public DataSource(IEnumerable<SelectListItem> ungroupedItems)
+        public DataSource(IEnumerable<SelectOption> ungroupedItems)
 		{
 			UnGroupedItems = ungroupedItems;
 		}

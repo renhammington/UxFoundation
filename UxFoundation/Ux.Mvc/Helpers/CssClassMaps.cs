@@ -462,5 +462,15 @@ namespace Ux.Mvc.Web.UI
 			{ NavType.PillsStacked, "nav-pills nav-stacked" },
 		};
 
+        public static Dictionary<AppearanceType, string> SelectStyleCssMap = new Dictionary<AppearanceType, string>() { 
+			{ AppearanceType.Primary, "btn-primary" },
+			{ AppearanceType.Info, "btn-info" },
+            { AppearanceType.Success, "btn-success" },
+            { AppearanceType.Warning, "btn-warning" },
+            { AppearanceType.Danger, "btn-danger" },
+            { AppearanceType.Default, "" }
+			
+		};
+
 	}
 }

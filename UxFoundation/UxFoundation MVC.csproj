@@ -153,6 +153,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Ux.Mvc\Binders\UxDateTimeModelBinder.cs" />
+    <Compile Include="Ux.Mvc\Controls\Select.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
     <Compile Include="Ux.Mvc\Helpers\IntExtensions.cs" />
     <Compile Include="Ux.Mvc\UxConfig.cs" />
@@ -403,6 +404,11 @@
     <Content Include="Views\UxDocumentation\_TableContent.cshtml" />
     <Content Include="Views\UxDocumentation\_ViewStart.cshtml" />
     <Content Include="Views\UxDocumentation\DataTypes\_ForeignKeys.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_SelectStart.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_SelectEnd.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_SelectOption.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Selects.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_SelectOptions.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

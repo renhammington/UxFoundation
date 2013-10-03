@@ -299,13 +299,44 @@ using Ux.Mvc.Attributes;
             return helper.RenderUxControl(navLink);
         }
 
+        #region Selects
+        public static MvcHtmlString UxSelectOption(this HtmlHelper htmlHelper, string text, string value, bool selected = false, IconType? iconType = null, string subText = null, bool divider = false, bool disabled = false, string clientId = null)
+        {
+            var option = new SelectOption(text, value, selected, iconType, subText, divider, disabled, clientId);
+            return UxSelectOption(htmlHelper, option);
+
+        }
+
+        public static MvcHtmlString UxSelectOption(this HtmlHelper htmlHelper, SelectOption option)
+        {
+            return htmlHelper.RenderUxControl(option);
+        }
+
+        public static MvcHtmlString UxSelectDivider(this HtmlHelper htmlHelper)
+        {
+            var option = new SelectOption(null, null, false, null, null, true, false);
+            return UxSelectOption(htmlHelper, option);
+
+        }
+
+        public static MvcHtmlString UxSelectWithDataSource(this HtmlHelper htmlHelper, DataSource dataSource, int? selectedValue = null, AppearanceType appearance = AppearanceType.Default, bool liveSearch = false, bool showTick = false, bool showArrow = false, bool autoWidth = true, string width = null, bool disabled = false, string header = null, string container = null,   string clientId = null)
+        {
+            var select = new Select(selectedValue, dataSource, appearance, liveSearch, showTick, showArrow, autoWidth, width, disabled, header, container, clientId);
+
+            MvcHtmlString start = htmlHelper.Partial("ControlTemplates/" + select.ViewTemplate + "Start", select);
+            MvcHtmlString end = htmlHelper.Partial("ControlTemplates/" + select.ViewTemplate + "End", select);
+
+            return MvcHtmlString.Create(start.ToHtmlString() + end.ToHtmlString());
+        }
+
+        public static IDisposable UxSelect(this HtmlHelper htmlHelper, AppearanceType appearance = AppearanceType.Default, bool liveSearch = false, bool showTick = false, bool showArrow = false, bool autoWidth = true, string width = null, bool disabled = false, string header = null, string container = null, string clientId = null)
+        {
+            var select = new Select(null, null, appearance, liveSearch, showTick, showArrow, autoWidth, width, disabled, header, container, clientId);
+            return RenderUxDispoableWebControl(htmlHelper, select);
+        }
 
 
-
-
-
-
-
+        #endregion
 
         public static IDisposable UxBulletList(this HtmlHelper htmlHelper, bool customIcons = false, int columnCount = 1, string clientId = null)
         {
