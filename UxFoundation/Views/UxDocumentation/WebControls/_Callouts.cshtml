@@ -1,0 +1,61 @@
+﻿@using Ux.Mvc.Web.UI
+@helper calloutContent(string title) {
+    <b>@title</b><br />@:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.   
+}<div class="page-header">
+	<h1>Callouts<small>UxCallout</small></h1>
+</div>
+<h3>Helper</h3>
+<div class="highlight highlight-large">
+	<pre class="prettyprint">
+// Label
+@@using (Html.UxCallout()) { &hellip; }
+</pre>
+</div>
+
+<h3>Helper options</h3>
+@using (Html.UxTable(true)) {
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>appearance</td>
+			<td><code>AppearanceType</code></td>
+			<td><code>Default</code></td>
+			<td>Sets the coloring of the callout. Note, there are currently limited color options for callouts. <code>Default</code>, <code>Info</code>, <code>Primary</code> and <code>Success</code> all result in the same output.</td>
+		</tr>
+		<tr>
+			<td>clientId</td>
+			<td><code>string</code></td>
+			<td><code>null</code></td>
+			<td>Sets the <code>id</code> property of the rendered html element.</td>
+		</tr>
+	</tbody>
+}
+<h3>Appearance</h3>
+<div class="example">
+    @using (Html.UxCallout())
+    {
+        @calloutContent("Default, info, success and primary")
+    }
+    @using (Html.UxCallout(appearance:AppearanceType.Warning))
+    {
+        @calloutContent("Warning")
+    }
+   @using (Html.UxCallout(appearance:AppearanceType.Danger))
+    {
+        @calloutContent("Danger")
+    }
+</div>
+<div class="highlight">
+<pre class="prettyprint">
+@@using (Html.UxCallout()) { &hellip; }
+@@using (Html.UxCallout(appearance:AppearanceType.Warning)) { &hellip; }
+@@using (Html.UxCallout(appearance:AppearanceType.Danger)) { &hellip; }
+</pre>
+</div>

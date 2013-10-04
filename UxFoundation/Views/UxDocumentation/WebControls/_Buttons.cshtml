@@ -11,7 +11,7 @@
 </div>
 
 <h3>Helper options</h3>
-<table class="table table-striped">
+@using (Html.UxTable(true)){
 	<thead>
 		<tr>
 			<th>Name</th>
@@ -70,7 +70,7 @@
 			<td>Sets the <code>id</code> property of the rendered html element.</td>
 		</tr>
 	</tbody>
-</table>
+}
 
 
 <h3>Appearance</h3>
@@ -144,13 +144,24 @@
 <h3>Common buttons</h3>
 <p>Three additional helpers are available for commonly used buttons. Using these helpers in your app ensures a consistent look, feel and behaviour of your frequently used buttons. Appropriate commands and validation behaviours are pre-set.</p>
 <div class="example">
-@Html.UxSaveButton() @Html.UxCancelButton() @Html.UxDeleteButton()
+@Html.UxSaveButton() @Html.UxCancelButton() @Html.UxDeleteButton() 
 </div>
 <div class="highlight">
 	<pre class="prettyprint">
 @@Html.UxSaveButton() 
 @@Html.UxCancelButton() 
 @@Html.UxDeleteButton()
+</pre>
+</div>
+<h3>Close button</h3>
+<p>When used within an alert, set <code>closeAlert: true</code> in the helper to enable automatic hiding on click.</p>
+<div class="example">
+    <div class="clearfix">
+@Html.UxCloseButton()</div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+@@Html.UxCloseButton()
 </pre>
 </div>
 

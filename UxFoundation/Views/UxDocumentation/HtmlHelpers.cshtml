@@ -10,12 +10,14 @@
         <div class="clearfix" style="background: #ededed; width: 200px;">
             @using (Html.UxNav(NavType.PillsStacked, affix: true))
             {
+                @Html.UxNavLink("Abbreviations", "#abbrs", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Alerts", "#alerts", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Badges", "#badges", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Bullet lists", "#bulletLists", dataToggle: DataToggle.Pill)		
                 @Html.UxNavLink("Buttons", "#buttons", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Button groups", "#buttonGroups", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Button toolbars", "#buttonToolbars", dataToggle: DataToggle.Pill)
+                @Html.UxNavLink("Callouts", "#callouts", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Icons", "#icons", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Labels", "#labels", dataToggle: DataToggle.Pill)
 							
@@ -34,6 +36,9 @@
             <div class="section tab-pane" id="bulletLists">
                 @Html.Partial("WebControls/_BulletLists")
             </div>
+            <div class="section tab-pane" id="abbrs">
+                @Html.Partial("WebControls/_Abbreviations")
+            </div>
             <div class="section tab-pane" id="buttons">
                 @Html.Partial("WebControls/_Buttons")
             </div>
@@ -42,6 +47,9 @@
             </div>
             <div class="section tab-pane" id="buttonToolbars">
                 @Html.Partial("WebControls/_ButtonToolbars")
+            </div>
+            <div class="section tab-pane" id="callouts">
+                @Html.Partial("WebControls/_Callouts")
             </div>
             <div class="section tab-pane" id="labels">
                 @Html.Partial("WebControls/_Labels")

@@ -153,6 +153,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Ux.Mvc\Binders\UxDateTimeModelBinder.cs" />
+    <Compile Include="Ux.Mvc\Controls\Abbreviation.cs" />
+    <Compile Include="Ux.Mvc\Controls\Callout.cs" />
+    <Compile Include="Ux.Mvc\Controls\CloseButton.cs" />
     <Compile Include="Ux.Mvc\Controls\Select.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectGroup.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
@@ -413,6 +416,12 @@
     <Content Include="Views\UxDocumentation\WebControls\_SelectGroups.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_SelectGroupStart.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_SelectGroupEnd.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Callouts.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_CalloutStart.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_CalloutEnd.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Abbreviation.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Abbreviations.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_CloseButton.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

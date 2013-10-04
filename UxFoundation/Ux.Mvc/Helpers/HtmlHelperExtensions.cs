@@ -254,6 +254,12 @@ using Ux.Mvc.Attributes;
             return helper.RenderUxControl(label);
         }
 
+        public static MvcHtmlString UxAbbreviation(this HtmlHelper helper, string text, string fullText, string clientId = null)
+        {
+            var abbr = new Abbreviation(text, fullText, clientId);
+            return helper.RenderUxControl(abbr);
+        }
+
         public static MvcHtmlString UxBadge(this HtmlHelper helper, string text, bool pullRight = false, string clientId = null)
         {
             var badge = new Badge(text, pullRight, clientId);
@@ -263,6 +269,12 @@ using Ux.Mvc.Attributes;
         public static MvcHtmlString UxBadge(this HtmlHelper helper, Badge badge)
         {
             return helper.RenderUxControl(badge);
+        }
+
+        public static MvcHtmlString UxCloseButton(this HtmlHelper helper, bool closeAlert = false, string clientId = null)
+        {
+            var close = new CloseButton(closeAlert, clientId);
+            return helper.RenderUxControl(close);
         }
 
         public static MvcHtmlString UxProgressBar(this HtmlHelper helper, int value, AppearanceType appearance = AppearanceType.Default, bool striped = false, bool animated = false, string clientId = null)
@@ -373,6 +385,12 @@ using Ux.Mvc.Attributes;
         {
             var pager = new NumericPager(size, clientId);
             return RenderUxDispoableWebControl(htmlHelper, pager);
+        }
+
+        public static IDisposable UxCallout(this HtmlHelper htmlHelper, AppearanceType appearance = AppearanceType.Default, string clientId = null)
+        {
+            var callout = new Callout(appearance, clientId);
+            return RenderUxDispoableWebControl(htmlHelper, callout);
         }
 
 
