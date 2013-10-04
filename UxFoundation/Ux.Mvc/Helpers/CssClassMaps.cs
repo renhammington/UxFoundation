@@ -473,12 +473,20 @@ namespace Ux.Mvc.Web.UI
 		};
 
         public static Dictionary<AppearanceType, string> CalloutCssMap = new Dictionary<AppearanceType, string>() { 
-			{ AppearanceType.Primary, "callout0info" },
+			{ AppearanceType.Primary, "callout-info" },
 			{ AppearanceType.Info, "callout-info" },
             { AppearanceType.Success, "callout-info" },
             { AppearanceType.Warning, "callout-warning" },
             { AppearanceType.Danger, "callout-danger" },
             { AppearanceType.Default, "callout-info" }
+			
+		};
+
+        public static Dictionary<ImageBox, string> ImageCssMap = new Dictionary<ImageBox, string>() { 
+			{ ImageBox.None, "" },
+			{ ImageBox.Circle, "img-circle" },
+            { ImageBox.Rounded, "img-rounded" },
+            { ImageBox.Thumbnail , "img-thumbnail" }            
 			
 		};
 

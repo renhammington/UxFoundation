@@ -156,9 +156,11 @@
     <Compile Include="Ux.Mvc\Controls\Abbreviation.cs" />
     <Compile Include="Ux.Mvc\Controls\Callout.cs" />
     <Compile Include="Ux.Mvc\Controls\CloseButton.cs" />
+    <Compile Include="Ux.Mvc\Controls\Image.cs" />
     <Compile Include="Ux.Mvc\Controls\Select.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectGroup.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
+    <Compile Include="Ux.Mvc\Enums\ImageBox.cs" />
     <Compile Include="Ux.Mvc\Helpers\IntExtensions.cs" />
     <Compile Include="Ux.Mvc\UxConfig.cs" />
     <Compile Include="Controllers\UxDocumentationController.cs" />
@@ -235,6 +237,7 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\sample.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -422,6 +425,8 @@
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Abbreviation.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_Abbreviations.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_CloseButton.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Image.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Images.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

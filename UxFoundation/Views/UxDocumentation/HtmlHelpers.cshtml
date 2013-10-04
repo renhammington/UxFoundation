@@ -19,6 +19,7 @@
                 @Html.UxNavLink("Button toolbars", "#buttonToolbars", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Callouts", "#callouts", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Icons", "#icons", dataToggle: DataToggle.Pill)
+                @Html.UxNavLink("Images", "#images", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Labels", "#labels", dataToggle: DataToggle.Pill)
 							
                 @Html.UxNavLink("Progress bars", "#progressBars", dataToggle: DataToggle.Pill)
@@ -90,9 +91,12 @@
             <div class="section tab-pane" id="selectGroups">
                 @Html.Partial("WebControls/_SelectGroups")
             </div>
+            <div class="section tab-pane" id="images">
+                @Html.Partial("WebControls/_Images")
+            </div>
         </div>
     </div>
 
-
+    
 
 </div>
