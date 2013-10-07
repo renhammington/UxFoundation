@@ -161,6 +161,7 @@
     <Compile Include="Ux.Mvc\Controls\SelectGroup.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
     <Compile Include="Ux.Mvc\Enums\ImageBox.cs" />
+    <Compile Include="Ux.Mvc\Enums\TooltipPlacement.cs" />
     <Compile Include="Ux.Mvc\Helpers\IntExtensions.cs" />
     <Compile Include="Ux.Mvc\UxConfig.cs" />
     <Compile Include="Controllers\UxDocumentationController.cs" />
@@ -427,6 +428,7 @@
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_CloseButton.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Image.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_Images.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Tooltips.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

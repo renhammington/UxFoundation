@@ -317,6 +317,28 @@ using Ux.Mvc.Attributes;
             return helper.RenderUxControl(navLink);
         }
 
+
+
+
+
+        public static MvcHtmlString UxTooltipAttributes(this HtmlHelper helper, string text, TooltipPlacement placement = TooltipPlacement.Auto)
+        {
+
+            List<string> attributes = new List<string>();
+            attributes.Add("data-toggle=\"tooltip\"");
+            attributes.Add("title=\"" + text + "\"");
+            if (placement != TooltipPlacement.Auto) attributes.Add("data-placement=\"" + placement.ToString().ToLower() + "\"");
+
+            return MvcHtmlString.Create(string.Join(" ", attributes));
+        }
+
+
+
+
+
+
+
+
         #region Selects
         public static MvcHtmlString UxSelectOption(this HtmlHelper htmlHelper, string text, string value, bool selected = false, IconType? iconType = null, string subText = null, bool divider = false, bool disabled = false, string clientId = null)
         {

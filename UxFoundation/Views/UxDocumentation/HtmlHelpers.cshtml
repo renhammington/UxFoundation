@@ -30,6 +30,7 @@
                 @Html.UxNavLink("Select options", "#selectOptions", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Select groups", "#selectGroups", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Tables", "#tables", dataToggle: DataToggle.Pill)
+                @Html.UxNavLink("Tooltip", "#tooltips", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Wells", "#wells", dataToggle: DataToggle.Pill)
             }
         </div>
@@ -93,6 +94,9 @@
             </div>
             <div class="section tab-pane" id="images">
                 @Html.Partial("WebControls/_Images")
+            </div>
+            <div class="section tab-pane" id="tooltips">
+                @Html.Partial("WebControls/_Tooltips")
             </div>
         </div>
     </div>

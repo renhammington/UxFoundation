@@ -47,7 +47,7 @@
                 placement: "right",
                 container: "body"
             });
-
+            $("[data-toggle=tooltip]").tooltip();
         }
     },
 
