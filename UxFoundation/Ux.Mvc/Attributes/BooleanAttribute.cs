@@ -10,8 +10,6 @@ namespace Ux.Mvc.Attributes
 	[AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = false)]
 	public class BooleanAttribute : Attribute, IMetadataAware
 	{
-		readonly string text;
-
 		public string TrueText { get; private set; }
 		public string FalseText { get; private set; }
 		public string NullText { get; private set; }
