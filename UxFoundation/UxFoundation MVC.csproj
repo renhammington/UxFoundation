@@ -156,7 +156,9 @@
     <Compile Include="Ux.Mvc\Controls\Abbreviation.cs" />
     <Compile Include="Ux.Mvc\Controls\Callout.cs" />
     <Compile Include="Ux.Mvc\Controls\CloseButton.cs" />
+    <Compile Include="Ux.Mvc\Controls\_Panel.cs" />
     <Compile Include="Ux.Mvc\Controls\Image.cs" />
+    <Compile Include="Ux.Mvc\Controls\Panel.cs" />
     <Compile Include="Ux.Mvc\Controls\Select.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectGroup.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
@@ -429,6 +431,9 @@
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Image.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_Images.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_Tooltips.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_PanelStart.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_PanelEnd.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Panels.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

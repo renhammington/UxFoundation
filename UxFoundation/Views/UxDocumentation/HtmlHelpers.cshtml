@@ -21,7 +21,7 @@
                 @Html.UxNavLink("Icons", "#icons", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Images", "#images", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Labels", "#labels", dataToggle: DataToggle.Pill)
-							
+				@Html.UxNavLink("Panels", "#panels", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Progress bars", "#progressBars", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Navs", "#navs", dataToggle: DataToggle.Pill)		
                 @Html.UxNavLink("Next-Previous pagers", "#npPagers", dataToggle: DataToggle.Pill)
@@ -97,6 +97,9 @@
             </div>
             <div class="section tab-pane" id="tooltips">
                 @Html.Partial("WebControls/_Tooltips")
+            </div>
+            <div class="section tab-pane" id="panels">
+                @Html.Partial("WebControls/_Panels")
             </div>
         </div>
     </div>

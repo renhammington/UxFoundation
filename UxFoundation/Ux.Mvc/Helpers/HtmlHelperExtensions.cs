@@ -403,6 +403,14 @@ using Ux.Mvc.Attributes;
             return RenderUxDispoableWebControl(htmlHelper, well);
         }
 
+
+        public static Panel UxPanel(this HtmlHelper htmlHelper, AppearanceType appearance = AppearanceType.Default, string clientId = null)
+        {
+            return new Panel(htmlHelper.ViewContext, appearance, clientId);
+        }
+
+
+
         public static IDisposable UxAlert(this HtmlHelper htmlHelper, AppearanceType appearance = AppearanceType.Default, bool dismissable = false, string clientId = null)
         {
             var alert = new Alert(appearance, dismissable, clientId);
