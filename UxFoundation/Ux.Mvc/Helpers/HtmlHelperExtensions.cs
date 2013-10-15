@@ -392,10 +392,20 @@ using Ux.Mvc.Attributes;
 
         public static IDisposable UxButtonGroup(this HtmlHelper htmlHelper, bool toggle = false, ButtonSize size = ButtonSize.Default, string clientId = null)
         {
-            var group = new ButtonGroup(toggle, size, clientId);
+            var group = new ButtonGroup(toggle, size, null, null, clientId);
             return RenderUxDispoableWebControl(htmlHelper, group);
         }
 
+
+        public static MvcHtmlString UxButtonGroupWithDataSource(this HtmlHelper htmlHelper, DataSource dataSource, string selectedValue = null, bool toggle = false, ButtonSize size = ButtonSize.Default, string clientId = null)
+        {
+            var group = new ButtonGroup(toggle, size, selectedValue, dataSource, clientId);
+
+            MvcHtmlString start = htmlHelper.Partial("ControlTemplates/" + group.ViewTemplate + "Start", group);
+            MvcHtmlString end = htmlHelper.Partial("ControlTemplates/" + group.ViewTemplate + "End", group);
+
+            return MvcHtmlString.Create(start.ToHtmlString() + end.ToHtmlString());
+        }
 
         public static IDisposable UxWell(this HtmlHelper htmlHelper, WellSize size = WellSize.Default, string clientId = null)
         {

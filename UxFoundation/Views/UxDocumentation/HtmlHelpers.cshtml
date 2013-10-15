@@ -16,6 +16,7 @@
                 @Html.UxNavLink("Bullet lists", "#bulletLists", dataToggle: DataToggle.Pill)		
                 @Html.UxNavLink("Buttons", "#buttons", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Button groups", "#buttonGroups", dataToggle: DataToggle.Pill)
+                @Html.UxNavLink("Button groups with datasource", "#buttonGroupsDs", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Button toolbars", "#buttonToolbars", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Callouts", "#callouts", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Icons", "#icons", dataToggle: DataToggle.Pill)
@@ -27,6 +28,7 @@
                 @Html.UxNavLink("Next-Previous pagers", "#npPagers", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Numeric pagers", "#numPagers", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Selects", "#selects", dataToggle: DataToggle.Pill)
+                @Html.UxNavLink("Selects with datasource", "#selectsDs", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Select options", "#selectOptions", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Select groups", "#selectGroups", dataToggle: DataToggle.Pill)
                 @Html.UxNavLink("Tables", "#tables", dataToggle: DataToggle.Pill)
@@ -100,6 +102,12 @@
             </div>
             <div class="section tab-pane" id="panels">
                 @Html.Partial("WebControls/_Panels")
+            </div>
+            <div class="section tab-pane" id="selectsDs">
+                @Html.Partial("WebControls/_SelectDataSource")
+            </div>
+             <div class="section tab-pane" id="buttonGroupsDs">
+                @Html.Partial("WebControls/_ButtonGroupsDataSource")
             </div>
         </div>
     </div>

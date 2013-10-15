@@ -368,7 +368,7 @@
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_ButtonToolbarStart.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_ButtonToolbarEnd.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_NextPreviousPagers.cshtml" />
-    <Content Include="Views\UxDocumentation\WebControls\_ButtonGroups.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_ButtonGroupsDataSource.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_ButtonToolbars.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_NextPreviousPager.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_BulletLists.cshtml" />
@@ -434,6 +434,8 @@
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_PanelStart.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_PanelEnd.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_Panels.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_SelectDataSource.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_ButtonGroups.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
