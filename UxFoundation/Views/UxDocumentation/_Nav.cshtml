@@ -9,26 +9,53 @@
 @helper navItem(string text, string action, string controller, IconType? icon = null)
 {
     <li @isActive(action, controller)>
-       
-        <a href="@Url.Action(action, controller)"> @if (icon.HasValue) {
-         @Html.UxIcon(icon.Value)   
-        } @text</a></li>
+
+        <a href="@Url.Action(action, controller)">@if (icon.HasValue)
+                                                  {
+            @Html.UxIcon(icon.Value)   
+                                                  } @text</a></li>
 }
-@helper helperItem(string text, string nameOfPartial)
+@helper helperItem(string text, string nameOfPartial, bool isNew = false)
 {
-    <li>@Html.ActionLink(text, "HtmlHelpers", "UxDocumentation", new { partial = nameOfPartial }, null)</li>
+    
+    <li><a href="@Url.Action("HtmlHelpers", "UxDocumentation", new { partial = nameOfPartial }, null)">@text @if (isNew)
+                                                                                                            {
+        @Html.UxLabel("New", appearance: AppearanceType.Danger)
+                                                                                                            }
+    </a></li>
+}
+@helper sampleItem(string text, string nameOfPartial, bool isNew = false)
+{
+    
+    <li><a href="@Url.Action("Samples", "UxDocumentation", new { partial = nameOfPartial }, null)">@text @if (isNew)
+                                                                                                        {
+        @Html.UxLabel("New", appearance: AppearanceType.Danger)
+                                                                                                        }
+    </a></li>
+}
+
+@helper dataItem(string text, string nameOfPartial, bool isNew = false)
+{
+    
+    <li><a href="@Url.Action("DataTypes", "UxDocumentation", new { partial = nameOfPartial }, null)">@text @if (isNew)
+                                                                                                          {
+        @Html.UxLabel("New", appearance: AppearanceType.Danger)
+                                                                                                          }
+    </a></li>
 }
 
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-    
+
         <ul class="nav navbar-nav">
             @navItem("Home", "Index", "UxDocumentation", IconType.Home)
-            @*@navItem("Data types", "DataTypes", "UxDocumentation")*@
-            
+            @navItem("Setup", "Configuration", "UxDocumentation", IconType.Wrench)
+
+
 
             <li 
-                @if (Url.Action("HtmlHelpers","UxDocumentation")== Request.Url.LocalPath) {
+                @if (Url.Action("HtmlHelpers", "UxDocumentation") == Request.Url.LocalPath)
+                {
                     @:class="dropdown active" 
                 }
                 else
@@ -42,28 +69,45 @@
                     @helperItem("Alerts", "Alerts")
                     @helperItem("Badges", "Badges")
                     @helperItem("Bullet lists", "BulletLists")
-                    @helperItem("Buttons", "Buttons")
-                    @helperItem("Button groups", "ButtonGroups")
-                    @helperItem("Button groups with datasource", "ButtonGroupsDataSource")
-                    @helperItem("Button toolbars", "ButtonToolbars")
+                    
                     @helperItem("Callouts", "Callouts")
                     @helperItem("Icons", "Icons")
                     @helperItem("Images", "Images")
                     @helperItem("Labels", "Labels")
-                    @helperItem("Link buttons", "LinkButtons")
+                    
+
+                    @helperItem("Navs", "Navs")
+                   
                     @helperItem("Panels", "Panels")
                     @helperItem("Progress bars", "ProgressBars")
-                    @helperItem("Navs", "Navs")
-                    @helperItem("Next-Previous pagers", "NextPreviousPagers")
-                    @helperItem("Numeric pagers", "NumericPagers")
-                    @helperItem("Selects", "Selects")
-                    @helperItem("Selects with datasource", "SelectDataSource")
-                    @helperItem("Select options", "SelectOptions")
-                    @helperItem("Select groups", "SelectGroups")
+                    
                     @helperItem("Tables", "Tables")
                     @helperItem("Tooltips", "Tooltips")
                     @helperItem("Wells", "Wells")
+
                     
+
+
+                    <li class="divider"></li>
+                    <li class="dd-group">Buttons</li>
+                    @helperItem("Buttons", "Buttons")
+                    @helperItem("Groups", "ButtonGroups")
+                    @helperItem("Groups with DataSource", "ButtonGroupsDataSource")
+                    @helperItem("Toolbars", "ButtonToolbars")
+                    @helperItem("Link buttons", "LinkButtons", true)
+
+                    <li class="divider"></li>
+                    <li class="dd-group">Selects</li>
+                    @helperItem("Selects", "Selects")
+                    @helperItem("With DataSource", "SelectDataSource")
+                    @helperItem("Options", "SelectOptions")
+                    @helperItem("Groups", "SelectGroups")
+
+                    <li class="divider"></li>
+                    <li class="dd-group">Paging</li>
+                    @helperItem("Next-Previous", "NextPreviousPagers")
+                    @helperItem("Numeric", "NumericPagers")
+
                 </ul>
 
 
@@ -72,10 +116,67 @@
 
 
             @*@navItem("Files", "Files", "UxDocumentation")*@
-            @navItem("Setup", "Configuration", "UxDocumentation", IconType.Wrench)
+
             @*@navItem("View models and models", "ViewModels", "UxDocumentation")*@
+            <li 
+                @if (Url.Action("Samples", "UxDocumentation") == Request.Url.LocalPath)
+                {
+                    @:class="dropdown active" 
+                }
+                else
+                {
+                    @:class="dropdown" 
+                }>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Html.UxIcon(IconType.Code) Samples <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    @sampleItem("Tables", "Tables")
+                </ul>
+            </li>
+
+
+
+            <li 
+                @if (Url.Action("DataTypes", "UxDocumentation") == Request.Url.LocalPath)
+                {
+                    @:class="dropdown active" 
+                }
+                else
+                {
+                    @:class="dropdown" 
+                }>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Html.UxIcon(IconType.ListAlt) Data types <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li class="dd-group">Date and time</li>
+                    @dataItem("Date", "Date")
+                    @dataItem("Time", "Time")
+                    @dataItem("Date and time", "DateTime")
+                    <li class="divider"></li>
+                    <li class="dd-group">Strings</li>
+                    @dataItem("Single line text", "SingleLineText")
+                    @dataItem("Multiline text", "MultilineText")
+                    @dataItem("Email address", "EmailAddress")
+                    @dataItem("Url", "Url")
+                    @dataItem("Password", "Password")
+                    @dataItem("Html", "Html")
+                    @dataItem("Image Url", "ImageUrl")
+                    <li class="divider"></li>
+                    <li class="dd-group">Numbers</li>
+                    @dataItem("Currency", "Currency")
+                    @dataItem("Integer", "Integer")
+                    @dataItem("Decimal", "Decimal")
+                    @dataItem("Double", "Double")
+                    @dataItem("Foreign keys", "ForeignKeys")
+                    <li class="divider"></li>
+                    @dataItem("Boolean", "Boolean")
+                    
+
+                </ul>
+            </li>
+            @navItem("Credits", "About", "UxDocumentation", IconType.ThumbsUp)
+
         </ul>
-        <div style="position:relative;float:right;margin-top:10px;margin-bottom: -20px;z-index:9999;"><a href="/">@Html.UxImage("~/Content/logo.png", width: "50px", height: "50px")</a></div>    
+
+        <div style="position: relative; float: right; margin-top: 10px; margin-bottom: -20px; z-index: 9999;"><a href="/">@Html.UxImage("~/Content/logo.png", width: "50px", height: "50px")</a></div>
     </div>
 </div>
 

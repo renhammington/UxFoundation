@@ -1,69 +1,48 @@
 ﻿@using Ux.Mvc.Web.UI
 <div class="page-header">
-<h1>Button toolbars<small>UxButtonToolbar</small></h1>
-	</div>
-<h3>Helpers</h3>
-<div class="highlight highlight-large">
-	<pre class="prettyprint">
-// Button toolbar
-@@Using (Html.UxButtonToolbar())
-{
-	// Buttons or button groups
-}</pre>
+    <h1>Button toolbars<small>UxButtonToolbar</small></h1>
 </div>
-
-<h3>Helper options</h3>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Type</th>
-			<th>Default</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>clientId</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>Sets the <code>id</code> property of the rendered html element.</td>
-		</tr>
-	</tbody>
-</table>
-
-
-<h3>Appearance</h3>
-<p>Complex button arrangements can be achieved by using a button toolbar.</p>
-<div class="example">
-@using(Html.UxButtonToolbar())
-{
-	using (Html.UxButtonGroup(toggle:true))
-	{
-		@Html.UxButton("", iconType: IconType.Bold)
-		@Html.UxButton("", iconType: IconType.Italic)
-		@Html.UxButton("", iconType: IconType.Underline)
-	}
-	using (Html.UxButtonGroup())
-	{
-		@Html.UxButton("", iconType: IconType.Cut)
-		@Html.UxButton("", iconType: IconType.Copy)
-		@Html.UxButton("", iconType: IconType.Paste)
-	}
-	using (Html.UxButtonGroup())
-	{
-		@Html.UxButton("", iconType: IconType.IndentLeft)
-		@Html.UxButton("", iconType: IconType.IndentRight)
-		@Html.UxButton("", iconType: IconType.AlignLeft)
-		@Html.UxButton("", iconType: IconType.AlignCenter)
-		@Html.UxButton("", iconType: IconType.AlignRight)
-		@Html.UxButton("", iconType: IconType.AlignJustify)
-	}
-	@Html.UxButton("", iconType: IconType.Picture)
-}
+<div class="section">
+    <h3>Helpers</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
+@@Using (Html.UxButtonToolbar()) { // Buttons or button groups }</pre>
+    </div>
 </div>
-<div class="highlight">
-	<pre class="prettyprint">
+<div class="section">
+
+
+    <h3>Appearance</h3>
+    <p>Complex button arrangements can be achieved by using a button toolbar.</p>
+    <div class="example">
+        @using (Html.UxButtonToolbar())
+        {
+            using (Html.UxButtonGroup(toggle: true))
+            {
+            @Html.UxButton("", iconType: IconType.Bold)
+            @Html.UxButton("", iconType: IconType.Italic)
+            @Html.UxButton("", iconType: IconType.Underline)
+            }
+            using (Html.UxButtonGroup())
+            {
+            @Html.UxButton("", iconType: IconType.Cut)
+            @Html.UxButton("", iconType: IconType.Copy)
+            @Html.UxButton("", iconType: IconType.Paste)
+            }
+            using (Html.UxButtonGroup())
+            {
+            @Html.UxButton("", iconType: IconType.IndentLeft)
+            @Html.UxButton("", iconType: IconType.IndentRight)
+            @Html.UxButton("", iconType: IconType.AlignLeft)
+            @Html.UxButton("", iconType: IconType.AlignCenter)
+            @Html.UxButton("", iconType: IconType.AlignRight)
+            @Html.UxButton("", iconType: IconType.AlignJustify)
+            }
+            @Html.UxButton("", iconType: IconType.Picture)
+        }
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using(Html.UxButtonToolbar())
 {
 	using (Html.UxButtonGroup(toggle:true))
@@ -89,4 +68,31 @@
 	}
 	@@Html.UxButton("", iconType: IconType.Picture)
 }</pre>
+    </div>
 </div>
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxButtonToolbar
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }

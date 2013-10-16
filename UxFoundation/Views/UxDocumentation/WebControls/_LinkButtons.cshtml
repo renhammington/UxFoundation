@@ -2,154 +2,168 @@
 <div class="page-header">
     <h1>Link Buttons <small>UxLinkButton</small></h1>
 </div>
-<h3>Helpers</h3>
-<div class="highlight highlight-large">
-    <pre class="prettyprint">
+<div class="section">
+    <h3>Helpers</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
 @@Html.UxLinkButton()
 </pre>
+    </div>
 </div>
+<div class="section">
 
-<h3>Helper options</h3>
-@using (Html.UxTable(true))
-{
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>text</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>The text to display on the button.</td>
-        </tr>
-        <tr>
-            <td>url</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>The url to navigate to when clicked.</td>
-        </tr>
-        <tr>
-            <td>target</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>The target of the link. i.e. <code>_blank</code>, <code>_parent</code>, <code>_self</code>, <code>_top</code>.</td>
-        </tr>
-        <tr>
-            <td>appearance</td>
-            <td><code>AppearanceType</code></td>
-            <td><code>Default</code></td>
-            <td>Sets the coloring of the button.</td>
-        </tr>
-        <tr>
-            <td>size</td>
-            <td><code>ButtonSize</code></td>
-            <td><code>Default</code></td>
-            <td>Sets the size of the button.</td>
-        </tr>
-        <tr>
-            <td>iconType</td>
-            <td><code>IconType</code></td>
-            <td><code>null</code></td>
-            <td>Sets the icon for the button.</td>
-        </tr>
-        <tr>
-            <td>iconPosition</td>
-            <td><code>IconPosition</code></td>
-            <td><code>Left</code></td>
-            <td>Sets the position of the icon, relative to the button text.</td>
-        </tr>
-        <tr>
-            <td>clientId</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>Sets the <code>id</code> property of the rendered html element.</td>
-        </tr>
-    </tbody>
-}
-
-<h3>Default behaviour</h3>
-<div class="example">
-    @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com")
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+    <h3>Default behaviour</h3>
+    <div class="example">
+        @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxLinkButton("Take me to Apple!", "http://www.apple.com")
 </pre>
+    </div>
 </div>
+<div class="section">
+    <h3>Appearance</h3>
+    <div class="example">
+        @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Default)
+        @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Primary)
+        @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Success)
+        @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Info)
+        @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Warning)
+        @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Danger)
 
-<h3>Appearance</h3>
-<div class="example">
-    @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Default)
-    @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Primary)
-    @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Success)
-    @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Info)
-    @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Warning)
-    @Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Danger)
-
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Default)
 @@Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Primary)
 @@Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Success)
 @@Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Info)
 @@Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Warning)
 @@Html.UxLinkButton("Take me to Apple!", "http://www.apple.com", appearance: AppearanceType.Danger)</pre>
+    </div>
 </div>
-
-<h3>Target</h3>
-<div class="example">
-    @Html.UxLinkButton("Apple - this window", "http://www.apple.com")
-    @Html.UxLinkButton("Apple - new window", "http://www.apple.com", "_blank")
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+<div class="section">
+    <h3>Target</h3>
+    <div class="example">
+        @Html.UxLinkButton("Apple - this window", "http://www.apple.com")
+        @Html.UxLinkButton("Apple - new window", "http://www.apple.com", "_blank")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxLinkButton("Apple - this window", "http://www.apple.com")
 @@Html.UxLinkButton("Apple - new window", "http://www.apple.com", "_blank")
 </pre>
+    </div>
 </div>
+<div class="section">
 
-
-<h3>Icons</h3>
-<p>Icons can be included with buttons using the <code>IconType</code> enumeration. The position of the icon can be set using the <code>IconPosition</code> enumeration. If there is no button text, the position is ignored.</p>
-<div class="example">
-    @Html.UxLinkButton("Back", "#", icon: IconType.ChevronLeft)
-    @Html.UxLinkButton("Apple", "http://www.apple.com", icon: IconType.Apple)
-    @Html.UxLinkButton("", "http://www.facebook.com", icon: IconType.FacebookSign)
-    @Html.UxLinkButton("Github", "http://www.github.com", icon: IconType.Github, iconPosition: IconPosition.Right)
-    @Html.UxLinkButton("Forward", "#", icon: IconType.ChevronRight, iconPosition: IconPosition.Right)
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+    <h3>Icons</h3>
+    <p>Icons can be included with buttons using the <code>IconType</code> enumeration. The position of the icon can be set using the <code>IconPosition</code> enumeration. If there is no button text, the position is ignored.</p>
+    <div class="example">
+        @Html.UxLinkButton("Back", "#", icon: IconType.ChevronLeft)
+        @Html.UxLinkButton("Apple", "http://www.apple.com", icon: IconType.Apple)
+        @Html.UxLinkButton("", "http://www.facebook.com", icon: IconType.FacebookSign)
+        @Html.UxLinkButton("Github", "http://www.github.com", icon: IconType.Github, iconPosition: IconPosition.Right)
+        @Html.UxLinkButton("Forward", "#", icon: IconType.ChevronRight, iconPosition: IconPosition.Right)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxLinkButton("Back", "#", icon:IconType.ChevronLeft)
 @@Html.UxLinkButton("Apple", "http://www.apple.com", icon:IconType.Apple)
 @@Html.UxLinkButton("", "http://www.facebook.com", icon:IconType.FacebookSign)
 @@Html.UxLinkButton("Github", "http://www.github.com", icon:IconType.Github, iconPosition:IconPosition.Right)
 @@Html.UxLinkButton("Forward", "#", icon:IconType.ChevronRight, iconPosition:IconPosition.Right)
 </pre>
+    </div>
 </div>
+<div class="section">
 
-
-<h3>Sizes</h3>
-<div class="example">
-    @Html.UxLinkButton("Apple", "http://www.apple.com", size: ButtonSize.ExtraSmall)
-    @Html.UxLinkButton("Apple", "http://www.apple.com", size: ButtonSize.Small)
-    @Html.UxLinkButton("Apple", "http://www.apple.com")
-    @Html.UxLinkButton("Apple", "http://www.apple.com", size: ButtonSize.Large)
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+    <h3>Sizes</h3>
+    <div class="example">
+        @Html.UxLinkButton("Apple", "http://www.apple.com", size: ButtonSize.ExtraSmall)
+        @Html.UxLinkButton("Apple", "http://www.apple.com", size: ButtonSize.Small)
+        @Html.UxLinkButton("Apple", "http://www.apple.com")
+        @Html.UxLinkButton("Apple", "http://www.apple.com", size: ButtonSize.Large)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxLinkButton("Apple", "http://www.apple.com", size:ButtonSize.ExtraSmall)
 @@Html.UxLinkButton("Apple", "http://www.apple.com", size:ButtonSize.Small)
 @@Html.UxLinkButton("Apple", "http://www.apple.com")
 @@Html.UxLinkButton("Apple", "http://www.apple.com", size:ButtonSize.Large)</pre>
+    </div>
+
 </div>
 
 
 
-
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxLinkButton
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>text</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The text to display on the button.</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The url to navigate to when clicked.</td>
+                </tr>
+                <tr>
+                    <td>target</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The target of the link. i.e. <code>_blank</code>, <code>_parent</code>, <code>_self</code>, <code>_top</code>.</td>
+                </tr>
+                <tr>
+                    <td>appearance</td>
+                    <td><code>AppearanceType</code></td>
+                    <td><code>Default</code></td>
+                    <td>Sets the coloring of the button.</td>
+                </tr>
+                <tr>
+                    <td>size</td>
+                    <td><code>ButtonSize</code></td>
+                    <td><code>Default</code></td>
+                    <td>Sets the size of the button.</td>
+                </tr>
+                <tr>
+                    <td>iconType</td>
+                    <td><code>IconType</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the icon for the button.</td>
+                </tr>
+                <tr>
+                    <td>iconPosition</td>
+                    <td><code>IconPosition</code></td>
+                    <td><code>Left</code></td>
+                    <td>Sets the position of the icon, relative to the button text.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

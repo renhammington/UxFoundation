@@ -1,122 +1,119 @@
 ﻿@using Ux.Mvc.Web.UI
 @{
     var options = new List<SelectOption>();
-    options.Add(new SelectOption("Apple","1"));
-    options.Add(new SelectOption("Banana","2"));
-    options.Add(new SelectOption("Orange","3"));
-    options.Add(new SelectOption("Pear","4"));
-            
+    options.Add(new SelectOption("Apple", "1"));
+    options.Add(new SelectOption("Banana", "2"));
+    options.Add(new SelectOption("Orange", "3"));
+    options.Add(new SelectOption("Pear", "4"));
+
+    var iconOptions = new List<SelectOption>();
+    iconOptions.Add(new SelectOption("Apple", "1", iconType: IconType.Apple));
+    iconOptions.Add(new SelectOption("Github", "2", iconType: IconType.Github));
+    iconOptions.Add(new SelectOption("Facebook", "3", iconType: IconType.FacebookSign));
+    iconOptions.Add(new SelectOption("Pinterest", "4", iconType: IconType.PinterestSign));
+
     var ds = new DataSource(options);
+    var dsIcons = new DataSource(iconOptions);
       
 }
 <div class="page-header">
-<h1>Button groups with DataSource<small>UxButtonGroupWithDataSource</small></h1>
-	</div>
-<h3>Helpers</h3>
-<div class="highlight highlight-large">
-	<pre class="prettyprint">
+    <h1>Button groups with DataSource<small>UxButtonGroupWithDataSource</small></h1>
+</div>
+<div class="section">
+    <h3>Helpers</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
 // Button group
 @@Html.UxButtonGroupWithDataSource()
 </pre>
+    </div>
+
 </div>
 
-<h3>Helper options</h3>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Type</th>
-			<th>Default</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>toggle</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>If <code>true</code>, sets the buttons within to toggle state when clicked.</td>
-		</tr>
-		<tr>
-			<td>size</td>
-			<td><code>ButtonSize</code></td>
-			<td><code>Default</code></td>
-			<td>Sets the size of all buttons within the group.</td>
-		</tr>
-		<tr>
-			<td>clientId</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>Sets the <code>id</code> property of the rendered html element.</td>
-		</tr>
-	</tbody>
-</table>
+<div class="section">
 
-
-<h3>Appearance</h3>
-<div class="example">
-@Html.UxButtonGroupWithDataSource(ds, null)
-    @Html.UxButtonGroupWithDataSource(ds, "3")
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
-@@Html.UxButtonGroupWithDataSource(ds, true)
+    <h3>Appearance</h3>
+    <div class="example">
+        @Html.UxButtonGroupWithDataSource(ds, "3")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxButtonGroupWithDataSource(ds, "3")
 </pre>
+    </div>
 </div>
-
-<h3>Size</h3>
-<div class="example">
-@using (Html.UxButtonGroup(toggle:true, size: ButtonSize.Large))
-{
-	@Html.UxButton("", iconType: IconType.Bold)
-	@Html.UxButton("", iconType: IconType.Italic)
-	@Html.UxButton("", iconType: IconType.Underline)
-}<br /><br />
-	@using (Html.UxButtonGroup(toggle:true, size: ButtonSize.Default))
-{
-	@Html.UxButton("", iconType: IconType.Bold)
-	@Html.UxButton("", iconType: IconType.Italic)
-	@Html.UxButton("", iconType: IconType.Underline)
-}<br /><br />
-	@using (Html.UxButtonGroup(toggle:true, size: ButtonSize.Small))
-{
-	@Html.UxButton("", iconType: IconType.Bold)
-	@Html.UxButton("", iconType: IconType.Italic)
-	@Html.UxButton("", iconType: IconType.Underline)
-}<br /><br />
-	@using (Html.UxButtonGroup(toggle:true, size: ButtonSize.ExtraSmall))
-{
-	@Html.UxButton("", iconType: IconType.Bold)
-	@Html.UxButton("", iconType: IconType.Italic)
-	@Html.UxButton("", iconType: IconType.Underline)
-}
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
-@@using (Html.UxButtonGroup(toggle: true, size: ButtonSize.Large)) { &hellip; }
-@@using (Html.UxButtonGroup(toggle: true)) { &hellip; }
-@@using (Html.UxButtonGroup(toggle: true, size: ButtonSize.Small)) { &hellip; }
-@@using (Html.UxButtonGroup(toggle: true, size: ButtonSize.ExtraSmall)) { &hellip; }
+<div class="section">
+    <h3>Size</h3>
+    <div class="example">
+        @Html.UxButtonGroupWithDataSource(ds, "3", ButtonSize.ExtraSmall)
+        @Html.UxButtonGroupWithDataSource(ds, "3", ButtonSize.Small)
+        @Html.UxButtonGroupWithDataSource(ds, "3")
+        @Html.UxButtonGroupWithDataSource(ds, "3", ButtonSize.Large)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxButtonGroupWithDataSource(ds, "3",ButtonSize.ExtraSmall)
+@@Html.UxButtonGroupWithDataSource(ds, "3",ButtonSize.Small)
+@@Html.UxButtonGroupWithDataSource(ds, "3")
+@@Html.UxButtonGroupWithDataSource(ds, "3",ButtonSize.Large)
 </pre>
+    </div>
 </div>
-
-
-<h3>Toggle</h3>
-<div class="example">
-@using (Html.UxButtonGroup(toggle:true))
-{
-	@Html.UxButton("", iconType: IconType.Bold)
-	@Html.UxButton("", iconType: IconType.Italic)
-	@Html.UxButton("", iconType: IconType.Underline)
-}
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
-@@using (Html.UxButtonGroup(toggle:true))
-{
-	@@Html.UxButton("", iconType: IconType.Bold)
-	@@Html.UxButton("", iconType: IconType.Italic)
-	@@Html.UxButton("", iconType: IconType.Underline)
-}
+<div class="section">
+    <h3>Icons</h3>
+    <p>Icons are set in your datasource.</p>
+    <div class="example">
+        @Html.UxButtonGroupWithDataSource(dsIcons, "3")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxButtonGroupWithDataSource(dsIcons, "3")
 </pre>
+    </div>
+</div>
+
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxButtonGroupWithDataSource
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>dataSource</td>
+                    <td><code>DataSource</code></td>
+                    <td><code>null</code></td>
+                    <td>The items to include in your group.</td>
+                </tr>
+                <tr>
+                    <td>selectedValue</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The corresponding <code>value</code> of the item in your datasource you wish to select.</td>
+                </tr>
+                <tr>
+                    <td>size</td>
+                    <td><code>ButtonSize</code></td>
+                    <td><code>Default</code></td>
+                    <td>Sets the size of all buttons within the group.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
 </div>

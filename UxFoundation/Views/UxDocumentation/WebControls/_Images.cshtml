@@ -2,106 +2,121 @@
 <div class="page-header">
     <h1>Images<small>UxImage</small></h1>
 </div>
-
-<h3>Helper</h3>
-<div class="highlight highlight-large">
-    <pre class="prettyprint">
-// Icon
+<div class="section">
+    <h3>Helper</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
 @@Html.UxImage()</pre>
+    </div>
 </div>
-
-<h3>Helper options</h3>
-@using (Html.UxTable(true))
-{
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>src</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>The path to the image file.</td>
-        </tr>
-        <tr>
-            <td>alt</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>The <code>alt</code> text.</td>
-        </tr>
-        <tr>
-            <td>box</td>
-            <td><code>ImageBox</code></td>
-            <td><code>None</code></td>
-            <td>Sets the boxing surrounding the image.</td>
-        </tr>
-        <tr>
-            <td>width</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>Sets the width of the image using css dimensions. i.e. <code>50%</code> or <code>250px</code>.</td>
-        </tr>
-        <tr>
-            <td>clientId</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>Sets the <code>id</code> property of the rendered html element.</td>
-        </tr>
-    </tbody>
-}
-
-
-
-
-<h3>Basic usage</h3>
-<div class="example">
-    @Html.UxImage("~/Content/sample.jpg")
+<div class="section">
 </div>
-<div class="highlight">
-    <pre class="prettyprint">
+<div class="section">
+
+
+    <h3>Basic usage</h3>
+    <div class="example">
+        @Html.UxImage("~/Content/sample.jpg")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxImage("~/Content/sample.jpg")
 </pre>
+    </div>
 </div>
+<div class="section">
 
-<h3>Alt</h3>
-<div class="example">
-    @Html.UxImage("~/Content/sample.jpg", "A range of colored pencils")
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+    <h3>Alt</h3>
+    <div class="example">
+        @Html.UxImage("~/Content/sample.jpg", "A range of colored pencils")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxImage("~/Content/sample.jpg", "A range of colored pencils")
 </pre>
+    </div>
 </div>
+<div class="section">
 
-<h3>Boxing</h3>
-<div class="example">
-    @Html.UxImage("~/Content/sample.jpg", box: ImageBox.Rounded)
-    @Html.UxImage("~/Content/sample.jpg", box: ImageBox.Circle)
-    @Html.UxImage("~/Content/sample.jpg", box: ImageBox.Thumbnail)
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+    <h3>Boxing</h3>
+    <div class="example">
+        @Html.UxImage("~/Content/sample.jpg", box: ImageBox.Rounded)
+        @Html.UxImage("~/Content/sample.jpg", box: ImageBox.Circle)
+        @Html.UxImage("~/Content/sample.jpg", box: ImageBox.Thumbnail)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxImage("~/Content/sample.jpg", box: ImageBox.Rounded)
 @@Html.UxImage("~/Content/sample.jpg", box: ImageBox.Circle)
 @@Html.UxImage("~/Content/sample.jpg", box: ImageBox.Thumbnail)
 </pre>
+    </div>
 </div>
+<div class="section">
 
-<h3>Dimensions</h3>
-<div class="example">
-    @Html.UxImage("~/Content/sample.jpg", width: "25%", height: "25%")
-    @Html.UxImage("~/Content/sample.jpg", width: "150px", height: "150px")
-    @Html.UxImage("~/Content/sample.jpg", width: "10%", height: "50px")
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+    <h3>Dimensions</h3>
+    <div class="example">
+        @Html.UxImage("~/Content/sample.jpg", width: "25%", height: "25%")
+        @Html.UxImage("~/Content/sample.jpg", width: "150px", height: "150px")
+        @Html.UxImage("~/Content/sample.jpg", width: "10%", height: "50px")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxImage("~/Content/sample.jpg", width: "25%", height: "25%")
 @@Html.UxImage("~/Content/sample.jpg", width: "150px", height: "150px")
 @@Html.UxImage("~/Content/sample.jpg", width: "10%", height: "50px")
 </pre>
+    </div>
+</div>
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxImage
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>src</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The path to the image file.</td>
+                </tr>
+                <tr>
+                    <td>alt</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The <code>alt</code> text.</td>
+                </tr>
+                <tr>
+                    <td>box</td>
+                    <td><code>ImageBox</code></td>
+                    <td><code>None</code></td>
+                    <td>Sets the boxing surrounding the image.</td>
+                </tr>
+                <tr>
+                    <td>width</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the width of the image using css dimensions. i.e. <code>50%</code> or <code>250px</code>.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+
 </div>

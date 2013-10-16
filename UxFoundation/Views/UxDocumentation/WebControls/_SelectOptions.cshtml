@@ -7,91 +7,34 @@
     Selects are rendered using bootstrap-select, a plugin by Silvio Moreto. For more information, visit <a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a>.
 </div>
 
-<h3>Helper</h3>
-<div class="highlight highlight-large">
-    <pre class="prettyprint">
+<div class="section">
+    <h3>Helper</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
 // Select option
 @@Html.UxSelectOption()
 </pre>
+    </div>
 </div>
-<h3>Helper options</h3>
-@using (Html.UxTable(true))
-{
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>text</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>Sets the text of the option.</td>
-        </tr>
-        <tr>
-            <td>value</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>Sets the value of the option.</td>
-        </tr>
-        <tr>
-            <td>selected</td>
-            <td><code>bool</code></td>
-            <td><code>false</code></td>
-            <td>If <code>true</code>, makes the option the selected item in the select control.</td>
-        </tr>
-        <tr>
-            <td>iconType</td>
-            <td><code>IconType</code></td>
-            <td><code>null</code></td>
-            <td>Sets the icon for the option. Appears to the left of the <code>text</code> value.</td>
-        </tr>
-        <tr>
-            <td>subText</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>If set, appears to the right of the <code>text</code> value.</td>
-        </tr>
-        <tr>
-            <td>divider</td>
-            <td><code>bool</code></td>
-            <td><code>false</code></td>
-            <td>If <code>true</code>, converts the option into an unselectable divider line. Note, when <code>true</code>, all other properties will be ignored. A simple helper has been created for divider lines. Use <code>UxSelectDivider</code> instead.</td>
-        </tr>
-        <tr>
-            <td>disabled</td>
-            <td><code>bool</code></td>
-            <td><code>false</code></td>
-            <td>Prevents the user from selecting any options.</td>
-        </tr>
-        <tr>
-            <td>clientId</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>Sets the <code>id</code> property of the rendered html element.</td>
-        </tr>
-    </tbody>
-}
+<div class="section">
 
-<h3>Basic usage</h3>
-<div class="example">
-    @using (Html.UxSelect())
-    {
-        @Html.UxSelectOption("OSX", "1")
-        @Html.UxSelectOption("Windows", "2")
-        @Html.UxSelectOption("Github", "3")
-        @Html.UxSelectOption("Facebook", "4")
-        @Html.UxSelectOption("Pinterest", "5")
-        @Html.UxSelectOption("Youtube", "6")
-    }
 
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+
+    <h3>Basic usage</h3>
+    <div class="example">
+        @using (Html.UxSelect())
+        {
+            @Html.UxSelectOption("OSX", "1")
+            @Html.UxSelectOption("Windows", "2")
+            @Html.UxSelectOption("Github", "3")
+            @Html.UxSelectOption("Facebook", "4")
+            @Html.UxSelectOption("Pinterest", "5")
+            @Html.UxSelectOption("Youtube", "6")
+        }
+
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxSelect())
 {
     @@Html.UxSelectOption("OSX","1")
@@ -102,32 +45,34 @@
     @@Html.UxSelectOption("Youtube","6")
 }
 </pre>
+    </div>
 </div>
+<div class="section">
 
-<h3>Selected item</h3>
-<p>Set <code>showTick: true</code> on the <code>UxSelect</code> to show a tick against the selected option in the dropdown list</p>
-<div class="example">
-    @using (Html.UxSelect())
-    {
-        @Html.UxSelectOption("OSX", "1")
-        @Html.UxSelectOption("Windows", "2")
-        @Html.UxSelectOption("Github", "3", true)
-        @Html.UxSelectOption("Facebook", "4")
-        @Html.UxSelectOption("Pinterest", "5")
-        @Html.UxSelectOption("Youtube", "6")
-    }
-    @using (Html.UxSelect(showTick:true))
-    {
-        @Html.UxSelectOption("OSX", "1")
-        @Html.UxSelectOption("Windows", "2")
-        @Html.UxSelectOption("Github", "3", true)
-        @Html.UxSelectOption("Facebook", "4")
-        @Html.UxSelectOption("Pinterest", "5")
-        @Html.UxSelectOption("Youtube", "6")
-    }
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+    <h3>Selected item</h3>
+    <p>Set <code>showTick: true</code> on the <code>UxSelect</code> to show a tick against the selected option in the dropdown list</p>
+    <div class="example">
+        @using (Html.UxSelect())
+        {
+            @Html.UxSelectOption("OSX", "1")
+            @Html.UxSelectOption("Windows", "2")
+            @Html.UxSelectOption("Github", "3", true)
+            @Html.UxSelectOption("Facebook", "4")
+            @Html.UxSelectOption("Pinterest", "5")
+            @Html.UxSelectOption("Youtube", "6")
+        }
+        @using (Html.UxSelect(showTick: true))
+        {
+            @Html.UxSelectOption("OSX", "1")
+            @Html.UxSelectOption("Windows", "2")
+            @Html.UxSelectOption("Github", "3", true)
+            @Html.UxSelectOption("Facebook", "4")
+            @Html.UxSelectOption("Pinterest", "5")
+            @Html.UxSelectOption("Youtube", "6")
+        }
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxSelect()) 
 {
     &hellip;
@@ -143,23 +88,25 @@
 }
 
 </pre>
+    </div>
 </div>
+<div class="section">
 
-<h3>Icons</h3>
-<div class="example">
-    @using (Html.UxSelect())
-    {
-        @Html.UxSelectOption("OSX", "1", iconType: IconType.Apple)
-        @Html.UxSelectOption("Windows", "2", iconType: IconType.Windows)
-        @Html.UxSelectOption("Github", "3", iconType: IconType.Github)
-        @Html.UxSelectOption("Facebook", "4", iconType: IconType.FacebookSign)
-        @Html.UxSelectOption("Pinterest", "5", iconType: IconType.PinterestSign)
-        @Html.UxSelectOption("Youtube", "6", iconType: IconType.YoutubePlay)
-    }
+    <h3>Icons</h3>
+    <div class="example">
+        @using (Html.UxSelect())
+        {
+            @Html.UxSelectOption("OSX", "1", iconType: IconType.Apple)
+            @Html.UxSelectOption("Windows", "2", iconType: IconType.Windows)
+            @Html.UxSelectOption("Github", "3", iconType: IconType.Github)
+            @Html.UxSelectOption("Facebook", "4", iconType: IconType.FacebookSign)
+            @Html.UxSelectOption("Pinterest", "5", iconType: IconType.PinterestSign)
+            @Html.UxSelectOption("Youtube", "6", iconType: IconType.YoutubePlay)
+        }
 
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxSelect())
 {
     @@Html.UxSelectOption("OSX", "1", iconType: IconType.Apple)
@@ -169,24 +116,26 @@
     @@Html.UxSelectOption("Pinterest", "5", iconType: IconType.PinterestSign)
     @@Html.UxSelectOption("Youtube", "6", iconType: IconType.YoutubePlay)
 }</pre>
-</div>
-
-
-<h3>Sub-text</h3>
-<div class="example">
-    @using (Html.UxSelect())
-    {
-        @Html.UxSelectOption("OSX", "1", subText:"Apple")
-        @Html.UxSelectOption("Windows", "2", subText:"Microsoft")
-        @Html.UxSelectOption("Github", "3")
-        @Html.UxSelectOption("Facebook", "4")
-        @Html.UxSelectOption("Pinterest", "5")
-        @Html.UxSelectOption("Youtube", "6", subText:"Google")
-    }
+    </div>
 
 </div>
-<div class="highlight">
-    <pre class="prettyprint">
+<div class="section">
+
+    <h3>Sub-text</h3>
+    <div class="example">
+        @using (Html.UxSelect())
+        {
+            @Html.UxSelectOption("OSX", "1", subText: "Apple")
+            @Html.UxSelectOption("Windows", "2", subText: "Microsoft")
+            @Html.UxSelectOption("Github", "3")
+            @Html.UxSelectOption("Facebook", "4")
+            @Html.UxSelectOption("Pinterest", "5")
+            @Html.UxSelectOption("Youtube", "6", subText: "Google")
+        }
+
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxSelect())
 {
     @@Html.UxSelectOption("OSX", "1", subText:"Apple")
@@ -196,49 +145,126 @@
     @@Html.UxSelectOption("Pinterest", "5")
     @@Html.UxSelectOption("Youtube", "6", subText:"Google"))
 }</pre>
+    </div>
 </div>
+<div class="section">
 
-<h3>Divider</h3>
-<div class="example">
-    @using (Html.UxSelect())
-    {
-        @Html.UxSelectOption("OSX", "1")
-        @Html.UxSelectOption("Windows", "2")
-        @Html.UxSelectDivider()
-        @Html.UxSelectOption("Github", "3")
-        @Html.UxSelectOption("Facebook", "4")
-        @Html.UxSelectOption("Pinterest", "5")
-        @Html.UxSelectOption("Youtube", "6")
-    }
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+    <h3>Divider</h3>
+    <div class="example">
+        @using (Html.UxSelect())
+        {
+            @Html.UxSelectOption("OSX", "1")
+            @Html.UxSelectOption("Windows", "2")
+            @Html.UxSelectDivider()
+            @Html.UxSelectOption("Github", "3")
+            @Html.UxSelectOption("Facebook", "4")
+            @Html.UxSelectOption("Pinterest", "5")
+            @Html.UxSelectOption("Youtube", "6")
+        }
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxSelect())
 {
     &hellip;
     @@Html.UxSelectDivider()
     &hellip;
 }</pre>
+    </div>
 </div>
+<div class="section">
 
-<h3>Disabled</h3>
-<div class="example">
-    @using (Html.UxSelect())
-    {
-        @Html.UxSelectOption("OSX", "1")
-        @Html.UxSelectOption("Windows", "2")
-        @Html.UxSelectOption("Github", "3", disabled:true)
-        @Html.UxSelectOption("Facebook", "4")
-        @Html.UxSelectOption("Pinterest", "5")
-        @Html.UxSelectOption("Youtube", "6")
-    }
-</div>
-<div class="highlight">
-    <pre class="prettyprint">
+    <h3>Disabled</h3>
+    <div class="example">
+        @using (Html.UxSelect())
+        {
+            @Html.UxSelectOption("OSX", "1")
+            @Html.UxSelectOption("Windows", "2")
+            @Html.UxSelectOption("Github", "3", disabled: true)
+            @Html.UxSelectOption("Facebook", "4")
+            @Html.UxSelectOption("Pinterest", "5")
+            @Html.UxSelectOption("Youtube", "6")
+        }
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxSelect())
 {
     &hellip;
     @@Html.UxSelectOption("Github", "3", disabled:true)
     &hellip;
 }</pre>
+    </div>
+</div>
+
+
+
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxSelectOption
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>text</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the text of the option.</td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the value of the option.</td>
+                </tr>
+                <tr>
+                    <td>selected</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>If <code>true</code>, makes the option the selected item in the select control.</td>
+                </tr>
+                <tr>
+                    <td>iconType</td>
+                    <td><code>IconType</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the icon for the option. Appears to the left of the <code>text</code> value.</td>
+                </tr>
+                <tr>
+                    <td>subText</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>If set, appears to the right of the <code>text</code> value.</td>
+                </tr>
+                <tr>
+                    <td>divider</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>If <code>true</code>, converts the option into an unselectable divider line. Note, when <code>true</code>, all other properties will be ignored. A simple helper has been created for divider lines. Use <code>UxSelectDivider</code> instead.</td>
+                </tr>
+                <tr>
+                    <td>disabled</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>Prevents the user from selecting any options.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
 </div>

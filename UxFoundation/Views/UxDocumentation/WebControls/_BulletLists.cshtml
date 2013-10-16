@@ -1,98 +1,37 @@
 ﻿@using Ux.Mvc.Web.UI
 <div class="page-header">
-	<h1>Bullet lists <small>UxBulletList + UxBulletListItem</small></h1>
+    <h1>Bullet lists <small>UxBulletList + UxBulletListItem</small></h1>
 </div>
-<h3>Helper</h3>
-<div class="highlight highlight-large">
-	<pre class="prettyprint">
-// Bullet list
+<div class="section">
+    <h3>Helper</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
 @@using (Html.UxBulletList()) 
 { 
-	// Bullet list item
 	@@Html.UxBulletListItem()
 }
 </pre>
+    </div>
 </div>
-<h3>UxBulletList Helper options</h3>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Type</th>
-			<th>Default</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>useCustomIcons</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Set to <code>true</code> to use icons for bullets.</td>
-		</tr>
-		<tr>
-			<td>columnCount</td>
-			<td><code>int</code></td>
-			<td><code>1</code></td>
-			<td>Sets the number of columns for the list. Maximum <code>6</code>.</td>
-		</tr>
-		<tr>
-			<td>clientId</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>Sets the <code>id</code> property of the rendered html element.</td>
-		</tr>
-	</tbody>
-</table>
 
-<h3>UxBulletListItem Helper options</h3>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Type</th>
-			<th>Default</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>text</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>Sets the text of the bullet list item.</td>
-		</tr>
-		<tr>
-			<td>iconType</td>
-			<td><code>IconType</code></td>
-			<td><code>null</code></td>
-			<td>Sets the icon for the bullet list item. Note, the parent <code>UxBulletList</code> must have the <code>useCustomIcons</code> property set to <code>true</code> for this to be effective.</td>
-		</tr>
-		<tr>
-			<td>clientId</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>Sets the <code>id</code> property of the rendered html element.</td>
-		</tr>
-	</tbody>
-</table>
+<div class="section">
 
-<h3>Appearance</h3>
-<div class="example" style="font-size: 1.5em;">
-	@using (Html.UxBulletList())
- {
-		@Html.UxBulletListItem("Apple")
-		@Html.UxBulletListItem("Windows")
-		@Html.UxBulletListItem("Twitter");
-		@Html.UxBulletListItem("Facebook");
-		@Html.UxBulletListItem("Flickr");
-		@Html.UxBulletListItem("Github");
-		@Html.UxBulletListItem("Youtube")
-		@Html.UxBulletListItem("Pinterest")
- }
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+    <h3>Appearance</h3>
+    <div class="example" style="font-size: 1.5em;">
+        @using (Html.UxBulletList())
+        {
+            @Html.UxBulletListItem("Apple")
+            @Html.UxBulletListItem("Windows")
+            @Html.UxBulletListItem("Twitter");
+            @Html.UxBulletListItem("Facebook");
+            @Html.UxBulletListItem("Flickr");
+            @Html.UxBulletListItem("Github");
+            @Html.UxBulletListItem("Youtube")
+            @Html.UxBulletListItem("Pinterest")
+        }
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxBulletList())
 {
 	@@Html.UxBulletListItem("Apple")
@@ -105,25 +44,26 @@
 	@@Html.UxBulletListItem("Pinterest")
 }
 </pre>
+    </div>
 </div>
-
-<h3>Icons</h3>
-<div class="example" style="font-size: 1.5em;">
-	@using (Html.UxBulletList(true))
- {
-		@Html.UxBulletListItem("Apple", IconType.Apple)
-		@Html.UxBulletListItem("Windows", IconType.Windows)
-		@Html.UxBulletListItem("Twitter", IconType.Twitter)
-		@Html.UxBulletListItem("Facebook", IconType.FacebookSign)
-		@Html.UxBulletListItem("Flickr", IconType.Flickr)
-		@Html.UxBulletListItem("Github", IconType.Github)
-		@Html.UxBulletListItem("Youtube", IconType.YoutubePlay)
-		@Html.UxBulletListItem("Pinterest", IconType.Pinterest)
+<div class="section">
+    <h3>Icons</h3>
+    <div class="example" style="font-size: 1.5em;">
+        @using (Html.UxBulletList(true))
+        {
+            @Html.UxBulletListItem("Apple", IconType.Apple)
+            @Html.UxBulletListItem("Windows", IconType.Windows)
+            @Html.UxBulletListItem("Twitter", IconType.Twitter)
+            @Html.UxBulletListItem("Facebook", IconType.FacebookSign)
+            @Html.UxBulletListItem("Flickr", IconType.Flickr)
+            @Html.UxBulletListItem("Github", IconType.Github)
+            @Html.UxBulletListItem("Youtube", IconType.YoutubePlay)
+            @Html.UxBulletListItem("Pinterest", IconType.Pinterest)
 	 
- }
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+        }
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxBulletList(true))
 {
 	@@Html.UxBulletListItem("Apple", IconType.Apple)
@@ -136,29 +76,106 @@
 	@@Html.UxBulletListItem("Pinterest", IconType.Pinterest)
 }
 </pre>
+    </div>
 </div>
-
-<h3>Columns</h3>
-<p>When using columns, you may need to wrap your entire bullet list in a container with <code>class="clearfix"</code>.</p>
-<div class="example" style="font-size: 1.5em;">
-	<div class="clearfix">
-		@using (Html.UxBulletList(true, 4))
-  {
-			@Html.UxBulletListItem("Apple", IconType.Apple)
-			@Html.UxBulletListItem("Windows", IconType.Windows)
-			@Html.UxBulletListItem("Twitter", IconType.Twitter)
-			@Html.UxBulletListItem("Facebook", IconType.FacebookSign)
-			@Html.UxBulletListItem("Flickr", IconType.Flickr)
-			@Html.UxBulletListItem("Github", IconType.Github)
-			@Html.UxBulletListItem("Youtube", IconType.YoutubePlay)
-			@Html.UxBulletListItem("Pinterest", IconType.Pinterest)
-  }
-	</div>
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+<div class="section">
+    <h3>Columns</h3>
+    <p>When using columns, you may need to wrap your entire bullet list in a container with <code>class="clearfix"</code>.</p>
+    <div class="example" style="font-size: 1.5em;">
+        <div class="clearfix">
+            @using (Html.UxBulletList(true, 4))
+            {
+                @Html.UxBulletListItem("Apple", IconType.Apple)
+                @Html.UxBulletListItem("Windows", IconType.Windows)
+                @Html.UxBulletListItem("Twitter", IconType.Twitter)
+                @Html.UxBulletListItem("Facebook", IconType.FacebookSign)
+                @Html.UxBulletListItem("Flickr", IconType.Flickr)
+                @Html.UxBulletListItem("Github", IconType.Github)
+                @Html.UxBulletListItem("Youtube", IconType.YoutubePlay)
+                @Html.UxBulletListItem("Pinterest", IconType.Pinterest)
+            }
+        </div>
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxBulletList(true, 4)) { &hellip; }
 </pre>
+    </div>
 </div>
 
-
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxBulletList
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>useCustomIcons</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>Set to <code>true</code> to use icons for bullets.</td>
+                </tr>
+                <tr>
+                    <td>columnCount</td>
+                    <td><code>int</code></td>
+                    <td><code>1</code></td>
+                    <td>Sets the number of columns for the list. Maximum <code>6</code>.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxBulletListItem
+)
+  
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>text</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the text of the bullet list item.</td>
+                </tr>
+                <tr>
+                    <td>iconType</td>
+                    <td><code>IconType</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the icon for the bullet list item. Note, the parent <code>UxBulletList</code> must have the <code>useCustomIcons</code> property set to <code>true</code> for this to be effective.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

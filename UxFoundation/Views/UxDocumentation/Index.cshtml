@@ -12,6 +12,10 @@
 
 
     </div>
+    @using (Html.UxCallout(Ux.Mvc.Web.UI.AppearanceType.Info))
+    {
+        @:<b>Pre-release</b><br />This package is still in a pre-release state. Not all Bootstrap components have been made available as Html helpers, but work on this continues.
+    }
     <div style="padding: 0 30px;">
 
         <h2>@Html.UxIcon(Ux.Mvc.Web.UI.IconType.DownloadAlt) Download</h2>
@@ -38,11 +42,34 @@
             </ol>
 
         </p>
+        <div class="section">
+            <h3>@Html.UxIcon(Ux.Mvc.Web.UI.IconType.Briefcase) What you get</h3>
 
+            <p>
+                <b>Dependencies</b>
+                <ul>
+                    <li><a href="http://www.jquery.com">jQuery</a> - <code>jQuery (>=2.0.0)</code></li>
+                    <li><a href="http://jqueryvalidation.org/">jQuery Validation</a> - <code>jQuery.Validation(>=1.11.1)</code></li>
+                    <li><a href="http://getbootstrap.com">Bootstrap 3.0.0</a> - <code>Twitter.Bootstrap (>=3.0.0)</code></li>
+                    <li><a href="http://silviomoreto.github.io/bootstrap-select/">Bootstrap Select</a> - <code>bootstrap-select (>=1.3.4)</code></li>
+                    <li><a href="http://www.eyecon.ro/bootstrap-datepicker/">Bootstrap Datepicker</a> - <code>Bootstrap.Datepicker (>=1.1.3.1)</code></li>
+                    <li><a href="http://www.fontawesome.io">FontAwesome</a> - <code>FontAwesome (>=3.2.1)</code></li>
+                    <li><a href="http://aspnetoptimization.codeplex.com/">Microsoft ASP.Net Web Optimization Framework</a> - <code>Microsoft.AspNet.Web.Optimization (>=1.1.0)</code></li>
+                    <li><a href="http://www.dotlesscss.org/">Dotless</a> - <code>dotless (>=1.3.1.0)</code></li>
+                    <li><a href="https://github.com/davidebbo/WebActivator">WebActivator</a> - <code>WebActivatorEx (>=2.0.3)</code></li>
+                    <li><a href="https://github.com/TroyGoode/PagedList">Paged List</a> - <code>PagedList.Mvc (>=4.5.0.0)</code></li>
+
+                </ul>
+            </p>
+            <p>
+                <b>Files and folders</b>
+                <ul>
+                    <li><code>~/Ux.Mvc/*</code> - all of the files required for UxFoundation are included in this folder, rather than an assembly. This gives you direct insight to how the helpers were created and the ability to refine/improve as you see fit.</li>
+                </ul>
+            </p>
+
+        </div>
     </div>
-@using (Html.UxCallout(Ux.Mvc.Web.UI.AppearanceType.Info))
-{
-    @:<b>Pre-release</b><br />This package is still in a pre-release state. Not all Bootstrap components have been made available as Html helpers, but work on this continues.
-    }
+
 
 </div>

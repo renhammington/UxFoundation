@@ -1,54 +1,61 @@
 ﻿@using Ux.Mvc.Web.UI
 <div class="page-header">
-	<h1>Badges <small>UxBadge</small></h1>
+    <h1>Badges <small>UxBadge</small></h1>
 </div>
 <h3>Helper</h3>
 <div class="highlight highlight-large">
-	<pre class="prettyprint">
-// Badge
+    <pre class="prettyprint">
 @@Html.UxBadge()
 </pre>
 </div>
 
-<h3>Helper options</h3>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Type</th>
-			<th>Default</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><b>text</b></td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>The text to display in the badge.</td>
-		</tr>
-		<tr>
-			<td>pullRight</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>If <code>true</code>, pulls the badge to the right of it's parent container.</td>
-		</tr>
-		<tr>
-			<td>clientId</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>Sets the <code>id</code> property of the rendered html element.</td>
-		</tr>
-	</tbody>
-</table>
-<h3>Appearance</h3>
-<div class="example">
-<a href="#">Inbox @Html.UxBadge("12")</a>
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+<div class="section">
+    <h3>Appearance</h3>
+    <div class="example">
+        <a href="#">Inbox @Html.UxBadge("12")</a>
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxBadge("12")
 </pre>
+    </div>
 </div>
-
-
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxBadge
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>text</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The text to display in the badge.</td>
+                </tr>
+                <tr>
+                    <td>pullRight</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>If <code>true</code>, pulls the badge to the right of it's parent container.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

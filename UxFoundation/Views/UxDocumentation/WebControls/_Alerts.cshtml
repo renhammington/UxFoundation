@@ -1,91 +1,101 @@
 ﻿@using Ux.Mvc.Web.UI
 <div class="page-header">
-	<h1>Alerts <small>UxAlert</small></h1>
+    <h1>Alerts <small>UxAlert</small></h1>
 </div>
 <h3>Helper</h3>
 <div class="highlight highlight-large">
-	<pre class="prettyprint">
-// Alert
-@@using (Html.UxAlert()) 
-{ 
-	// Your content here
-}
+    <pre class="prettyprint">
+@@using (Html.UxAlert()) { &hellip; }
 </pre>
 </div>
-<h3>Helper options</h3>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Type</th>
-			<th>Default</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>appearance</td>
-			<td><code>AppearanceType</code></td>
-			<td><code>Default</code></td>
-			<td>Sets the coloring of the alert. Note, <code>AppearanceType.Default</code> and <code>AppearanceType.Primary</code> automatically re-map to <code>AppearanceType.Success</code>.</td>
-		</tr>
-		<tr>
-			<td>dismissable</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Adds a close icon to allow the dismissing of the alert.</td>
-		</tr>
-		<tr>
-			<td>clientId</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>Sets the <code>id</code> property of the rendered html element.</td>
-		</tr>
-	</tbody>
-</table>
 
-<h3>Appearance</h3>
-<div class="example">
-	@using (Html.UxAlert())
- {
-		<b>Success, default and primary</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
+
+
+<div class="section">
+
+    <h3>Appearance</h3>
+    <div class="example">
+        @using (Html.UxAlert())
+        {
+            <b>Success, default and primary</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
  }
-	@using (Html.UxAlert(AppearanceType.Danger))
- {
-		<b>Danger</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
+        @using (Html.UxAlert(AppearanceType.Danger))
+        {
+            <b>Danger</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
  }
-	@using (Html.UxAlert(AppearanceType.Info))
- {
-		<b>Info</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
+        @using (Html.UxAlert(AppearanceType.Info))
+        {
+            <b>Info</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
  }
-	@using (Html.UxAlert(AppearanceType.Warning))
- {
-		<b>Warning</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
+        @using (Html.UxAlert(AppearanceType.Warning))
+        {
+            <b>Warning</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
  }
 
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxAlert()) { &hellip; }
 @@using (Html.UxAlert(AppearanceType.Danger)) { &hellip; }
 @@using (Html.UxAlert(AppearanceType.Info)) { &hellip; }
 @@using (Html.UxAlert(AppearanceType.Warning)) { &hellip; }
 </pre>
+    </div>
 </div>
-<h3>Dismissable</h3>
-<p>The dismissable setting adds a close link affixed to the right of the alert.</p>
-<div class="example">
-	@using (Html.UxAlert(dismissable:true))
- {
-	<b>Success, default and primary</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
+<div class="section">
+    <h3>Dismissable</h3>
+    <p>The dismissable setting adds a close link affixed to the right of the alert.</p>
+    <div class="example">
+        @using (Html.UxAlert(dismissable: true))
+        {
+            <b>Success, default and primary</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
  }
 
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxAlert(dismissable:true)) { &hellip; }
 </pre>
+    </div>
+
 </div>
 
-
-
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxAlert
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>appearance</td>
+                    <td><code>AppearanceType</code></td>
+                    <td><code>Default</code></td>
+                    <td>Sets the coloring of the alert. Note, <code>AppearanceType.Default</code> and <code>AppearanceType.Primary</code> automatically re-map to <code>AppearanceType.Success</code>.</td>
+                </tr>
+                <tr>
+                    <td>dismissable</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>Adds a close icon to allow the dismissing of the alert.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

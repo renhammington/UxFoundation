@@ -6,62 +6,13 @@
 @Html.Partial("_Nav")
 <div class="container">
     <div class="page-header">
-        <h1>Configuration and setup</h1>
+        <h1>Setup</h1>
     </div>
-    <div class="section">
-        <h2>Dependencies</h2>
-        @using (Html.UxBulletList(true))
-        {
-            @Html.UxBulletListItem("WebActivatorEx", IconType.Ok)
-            @Html.UxBulletListItem("Select2", IconType.Ok)
-            @Html.UxBulletListItem("Bootstrap 3.0.0", IconType.Ok)
-            @Html.UxBulletListItem("FontAwesome", IconType.Ok)
-            @Html.UxBulletListItem("jQuery", IconType.Ok)
-            @Html.UxBulletListItem("jQuery Validation", IconType.Ok)
 
-        }
-
-        <h3>Configuration <small>~/Ux.Mvc/UxConfig.cs</small></h3>
-        <p>
-            The <code>PreStart</code> method fires automatically when you app starts, using the WebActivator framework. This approach means that Ux avoids tampering with your <code>global.asax</code>.
-         
-        </p>
-
-        <div class="highlight">
-            <pre class="prettyprint">
-public static class UxConfig
-{
-    public static void PreStart()
-    {
-        
-        // Adds the UxViewEngine into your app's ViewEngines
-        AddUxViewEngine();
-        
-        // Adds styles and scripts for Ux        
-        RegisterScriptBundes();
-        RegisterStyleBundles();
-    }
     
-    &hellip;
-}
-</pre>
-        </div>
-        </div>
-    <div class="section">
-        <h3>Add Ux View Engine</h3>
-        <p>Ux comes with a wide number of editor and display templates. Rather than copy these into your own MVC editor and display template folders, these have been placed in a separate location and made accessible through the addition of a View Engine.</p>
-        <p>The advantage of this approach is that you can customise the templates without changing the Ux templates themselves. Simply override the template as you would any other template, by placing a razor file into the EditorTemplates or DisplayTemplates folder. Any customisations you make in your own templates will not be affected by any future UxFoundation updates.</p>
-        <p>
-            The following locations are added:
-        </p>
 
-        <ul>
-            <li><code>~/Ux.Mvc/Views/{1}/{0}.cshtml</code></li>
-            <li><code>~/Ux.Mvc/Views/Shared/{0}.cshtml</code></li>
-            <li><code>~/Ux.Mvc/Views/Documentation/{0}.cshtml</code></li>
-        </ul>
 
-    </div>
+
     <div class="section">
         <h3>Include styles and scripts in your layouts</h3>
         <p>You will need to add a reference to the UX style and script bundles within your own layouts.</p>
@@ -109,4 +60,21 @@ this.component = this.element.is('.date') ? this.element.find('.add-on, .btn') :
 this.component = this.element.is('.date') ? this.element.find('.add-on, .input-group-addon, .btn') : false;
 </pre>
         </div>
+    </div>
+    
+    <div class="section">
+        <h3>How it works</h3>
+
+        <p>Ux comes with a wide number of editor and display templates. Rather than copy these into your own MVC editor and display template folders, these have been placed in a separate location and made accessible through the addition of a View Engine.</p>
+        <p>The advantage of this approach is that you can customise the templates without changing the Ux templates themselves. Simply override the template as you would any other template, by placing a razor file into the EditorTemplates or DisplayTemplates folder. Any customisations you make in your own templates will not be affected by any future UxFoundation updates.</p>
+        <p>
+            The following locations are added:
+        </p>
+
+        <ul>
+            <li><code>~/Ux.Mvc/Views/{1}/{0}.cshtml</code></li>
+            <li><code>~/Ux.Mvc/Views/Shared/{0}.cshtml</code></li>
+            <li><code>~/Ux.Mvc/Views/Documentation/{0}.cshtml</code></li>
+        </ul>
+
     </div>

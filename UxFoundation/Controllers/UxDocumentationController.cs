@@ -10,48 +10,52 @@ using Ux.Mvc.Web.UI;
 
 namespace Ux.Mvc.Controllers
 {
-	public class UxDocumentationController : Controller
-	{
+    public class UxDocumentationController : Controller
+    {
 
         public ActionResult Index()
         {
             return View();
         }
 
-		public ActionResult DataTypes()
-		{
-			var note = new Examples() {
-				EmailAddress = "someemail@domain.com",
-				EmailAddressWithAttribute = "someemail@domain.com", 
-				Time = DateTime.Now, 
-				Date = DateTime.Now, 
-				DateTime = DateTime.Now ,
-				Url = "http://www.google.com",
-				UrlWithAttribute = "http://www.google.com",
-				Currency = 123.456789M,
-				Integer = 123456,
-				Decimal = 123.456789M,
-				Double = 12345.6789,
-				Password = "thisisapassword123",
-				Html = "<b>Radish nopal, chickweed brussels sprout celtuce winter melon.</b><ul><li>Water chestnut taro jícama chickweed </li><li>Fava bean polk ti chard, tigernut</li></ul>",
-				SingleLineText = "Radish nopal, chickweed brussels sprout celtuce winter melon. Water chestnut taro jícama chickweed chicory; scorzonera beetroot. Fava bean polk ti chard, tigernut - napa cabbage arracacha black-eyed pea. American groundnut brinjal catsear tinda; ahipa bitter gourd ceylon spinach, fiddlehead? Mustard arracacha water chestnut bell pepper. Mustard chinese artichoke tigernut mizuna greens chrysanthemum leaves.",
-				MultiLineText = @"Napa cabbage tomato dolichos bean lotus root tarwi pumpkin brussels sprout lentil spring onion. Lotus root fava bean brussels sprout leaves arracacha; brussels sprout bamboo shoot spring onion. Sierra Leone bologi black-eyed pea beet greens. Mustard ulluco winter purslane. Prairie turnip yarrow indian pea - eggplant lotus root garlic celtuce greater plantain kurrat winter purslane." + Environment.NewLine + Environment.NewLine +  "Gobo yardlong bean celeriac tomato chickweed carrot. Napa cabbage camas prussian asparagus, ensete garden rocket lotus root gumbo taro velvet bean.",
-				ImageUrl = "https://www.google.com/images/srpr/logo4w.png",
-				Boolean = true,
-				BooleanNullable = null,
-				BooleanByType = false,
-				BooleanExplicit = true,
-				BooleanNullableByType = null,
-				BooleanNullableExplicit = false,
+
+        public ActionResult DataTypes(string partial = "Date")
+        {
+            var note = new Examples()
+            {
+                EmailAddress = "someemail@domain.com",
+                EmailAddressWithAttribute = "someemail@domain.com",
+                Time = DateTime.Now,
+                Date = DateTime.Now,
+                DateTime = DateTime.Now,
+                Url = "http://www.google.com",
+                UrlWithAttribute = "http://www.google.com",
+                Currency = 123.456789M,
+                Integer = 123456,
+                Decimal = 123.456789M,
+                Double = 12345.6789,
+                Password = "thisisapassword123",
+                Html = "<b>Radish nopal, chickweed brussels sprout celtuce winter melon.</b><ul><li>Water chestnut taro jícama chickweed </li><li>Fava bean polk ti chard, tigernut</li></ul>",
+                SingleLineText = "Radish nopal, chickweed brussels sprout celtuce winter melon. Water chestnut taro jícama chickweed chicory; scorzonera beetroot. Fava bean polk ti chard, tigernut - napa cabbage arracacha black-eyed pea. American groundnut brinjal catsear tinda; ahipa bitter gourd ceylon spinach, fiddlehead? Mustard arracacha water chestnut bell pepper. Mustard chinese artichoke tigernut mizuna greens chrysanthemum leaves.",
+                MultiLineText = @"Napa cabbage tomato dolichos bean lotus root tarwi pumpkin brussels sprout lentil spring onion. Lotus root fava bean brussels sprout leaves arracacha; brussels sprout bamboo shoot spring onion. Sierra Leone bologi black-eyed pea beet greens. Mustard ulluco winter purslane. Prairie turnip yarrow indian pea - eggplant lotus root garlic celtuce greater plantain kurrat winter purslane." + Environment.NewLine + Environment.NewLine + "Gobo yardlong bean celeriac tomato chickweed carrot. Napa cabbage camas prussian asparagus, ensete garden rocket lotus root gumbo taro velvet bean.",
+                ImageUrl = "https://www.google.com/images/srpr/logo4w.png",
+                Boolean = true,
+                BooleanNullable = null,
+                BooleanByType = false,
+                BooleanExplicit = true,
+                BooleanNullableByType = null,
+                BooleanNullableExplicit = false,
                 ForeignKeyValue = 4,
                 ForeignKeyValue2 = 3
-			};
+            };
 
             LoadDataSources(note);
-            			
-			return View(note);
-			
-		}
+
+            ViewBag.PartialToShow = "DataTypes/_" + partial;
+
+
+            return View(note);
+        }
 
 
         private void LoadDataSources(Examples model)
@@ -95,28 +99,28 @@ namespace Ux.Mvc.Controllers
 
 
 
-		[HttpPost]
-		public ActionResult DataTypes(Examples examples, ButtonCommand command)
-		{
-			if (command == ButtonCommand.Cancel)
-				Response.Redirect("http://www.google.com");
+        [HttpPost]
+        public ActionResult DataTypes(Examples examples, ButtonCommand command)
+        {
+            if (command == ButtonCommand.Cancel)
+                Response.Redirect("http://www.google.com");
 
-			if (ModelState.IsValid == false) return View(examples);
+            if (ModelState.IsValid == false) return View(examples);
 
-			// Get the original object
-			// call the right method on the domain object
+            // Get the original object
+            // call the right method on the domain object
 
-			//var db = string;
+            //var db = string;
 
-			//var original = db.FindById(note.Id);
-			//// concurrency check
-			//// if ok
+            //var original = db.FindById(note.Id);
+            //// concurrency check
+            //// if ok
 
-			//orignal.changeName(note.name);
-			//db.SaveChanges();
+            //orignal.changeName(note.name);
+            //db.SaveChanges();
 
-			return View(examples);
-		}
+            return View(examples);
+        }
 
 
         public ActionResult HtmlHelpers(string partial = "Abbreviations")
@@ -131,7 +135,7 @@ namespace Ux.Mvc.Controllers
             };
 
             ViewBag.PartialToShow = "WebControls/_" + partial;
-            
+
 
             return View(note);
         }
@@ -144,21 +148,18 @@ namespace Ux.Mvc.Controllers
 
 
 
-		public ActionResult Files()
-		{
+        public ActionResult Files()
+        {
 
             var examples = new Examples();
-
-
-
             return View(examples);
-		}
+        }
 
 
 
-		[HttpPost]
-		public ActionResult Files(Examples examples)
-		{
+        [HttpPost]
+        public ActionResult Files(Examples examples)
+        {
             //workingFile = new Test();
             if (ModelState.IsValid)
             {
@@ -178,7 +179,7 @@ namespace Ux.Mvc.Controllers
                     examples.Name += examples.AttachmentTwo.UploadedFile.FileName;
                 }
             }
-           
+
             //if (ModelState.IsValid)
             //{
             //    workingFile = new Test();
@@ -202,7 +203,7 @@ namespace Ux.Mvc.Controllers
             //}
 
             return View(examples);
-		}
+        }
 
 
         //public FileContentResult GetFile(int productId)
@@ -218,5 +219,17 @@ namespace Ux.Mvc.Controllers
         }
 
 
-	}
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Samples(string partial = "Tables")
+        {
+            ViewBag.PartialToShow = "Samples/_" + partial;
+            return View();
+        }
+
+
+    }
 }

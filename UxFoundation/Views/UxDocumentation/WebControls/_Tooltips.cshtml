@@ -2,64 +2,77 @@
 <div class="page-header">
     <h1>Tooltips<small>UxTooltipAttributes</small></h1>
 </div>
-<h3>Helper</h3>
-<div class="highlight highlight-large">
-    <pre class="prettyprint">
-// Label
+<div class="section">
+    <h3>Helper</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
 @@Html.UxTooltipAttributes()
 </pre>
+    </div>
 </div>
+<div class="section">
 
-<h3>Helper options</h3>
-@using (Html.UxTable(true))
-{
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>text</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>The text to display in the tooltip.</td>
-        </tr>
-        <tr>
-            <td>placement</td>
-            <td><code>TooltipPlacement</code></td>
-            <td><code>Auto</code></td>
-            <td>Sets the position of the tooltip.</td>
-        </tr>
-    </tbody>
-}
-<h3>Basic usage</h3>
-<p>Tooltip attributes can be added to other controls, such as links or buttons.</p>
-<div class="example">
-    If you hover over <a href="#" @Html.UxTooltipAttributes("This is a tooltip")>this text</a>, a tooltip should appear.
-</div>
-<div class="highlight">
-    <pre class="prettyprint lang-html">
+
+    <h3>Basic usage</h3>
+    <p>Tooltip attributes can be added to other controls, such as links or buttons.</p>
+    <div class="example">
+        If you hover over <a href="#" @Html.UxTooltipAttributes("This is a tooltip")>this text</a>, a tooltip should appear.
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint lang-html">
 &lt;a href="#" @Html.UxTooltipAttributes("This is a tooltip")>this text&lt;/a>
 </pre>
+    </div>
 </div>
-<h3>Placement</h3>
-<p>Tooltip attributes can be added to other controls, such as links or buttons.</p>
-<div class="example">
-    <b>Top:</b> if you <a href="#" @Html.UxTooltipAttributes("This is a top-placed tooltip", TooltipPlacement.Top)>hover over me</a>, a tooltip should appear.<br />
-    <b>Right:</b> if you <a href="#" @Html.UxTooltipAttributes("This is a right-placed tooltip", TooltipPlacement.Right)>hover over me</a>, a tooltip should appear.<br />
-    <b>Bottom:</b> if you <a href="#" @Html.UxTooltipAttributes("This is a bottom-placed tooltip", TooltipPlacement.Bottom)>hover over me</a>, a tooltip should appear.<br />
-    <b>Left:</b> if you <a href="#" @Html.UxTooltipAttributes("This is a left-placed tooltip", TooltipPlacement.Left)>hover over me</a>, a tooltip should appear.<br />
-</div>
-<div class="highlight">
-    <pre class="prettyprint lang-html">
+<div class="section">
+    <h3>Placement</h3>
+    <p>Tooltip attributes can be added to other controls, such as links or buttons.</p>
+    <div class="example">
+        <b>Top:</b> if you <a href="#" @Html.UxTooltipAttributes("This is a top-placed tooltip", TooltipPlacement.Top)>hover over me</a>, a tooltip should appear.<br />
+        <b>Right:</b> if you <a href="#" @Html.UxTooltipAttributes("This is a right-placed tooltip", TooltipPlacement.Right)>hover over me</a>, a tooltip should appear.<br />
+        <b>Bottom:</b> if you <a href="#" @Html.UxTooltipAttributes("This is a bottom-placed tooltip", TooltipPlacement.Bottom)>hover over me</a>, a tooltip should appear.<br />
+        <b>Left:</b> if you <a href="#" @Html.UxTooltipAttributes("This is a left-placed tooltip", TooltipPlacement.Left)>hover over me</a>, a tooltip should appear.<br />
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint lang-html">
 &lt;a href="#" @@Html.UxTooltipAttributes("This is a top-placed tooltip", TooltipPlacement.Top)>&hellip;&lt;/a>
 &lt;a href="#" @@Html.UxTooltipAttributes("This is a right-placed tooltip", TooltipPlacement.Right)>&hellip;&lt;/a>
 &lt;a href="#" @@Html.UxTooltipAttributes("This is a bottom-placed tooltip", TooltipPlacement.Bottom)>&hellip;&lt;/a>
 &lt;a href="#" @@Html.UxTooltipAttributes("This is a left-placed tooltip", TooltipPlacement.Left)>&hellip;&lt;/a>
 </pre>
+    </div>
 </div>
 
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxTooltipAttributes
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>text</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The text to display in the tooltip.</td>
+                </tr>
+                <tr>
+                    <td>placement</td>
+                    <td><code>TooltipPlacement</code></td>
+                    <td><code>Auto</code></td>
+                    <td>Sets the position of the tooltip.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

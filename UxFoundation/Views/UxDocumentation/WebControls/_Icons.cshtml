@@ -1,129 +1,74 @@
 ﻿@using Ux.Mvc.Web.UI
 <div class="page-header">
-	<h1>Icons<small>UxIcon</small></h1>
+    <h1>Icons<small>UxIcon</small></h1>
 </div>
 
-<h3>Helper</h3>
-<div class="highlight highlight-large">
-	<pre class="prettyprint">
-// Icon
+<div class="section">
+    <h3>Helper</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
 @@Html.UxIcon()</pre>
+    </div>
 </div>
-
-<h3>Helper options</h3>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Type</th>
-			<th>Default</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><b>iconType</b></td>
-			<td><code>IconType</code></td>
-			<td><code>null</code></td>
-			<td>The icon type to display.</td>
-		</tr>
-		<tr>
-			<td>size</td>
-			<td><code>IconSize</code></td>
-			<td><code>Default</code></td>
-			<td>Sets the size of the icon.</td>
-		</tr>
-		<tr>
-			<td>rotation</td>
-			<td><code>IconRotation</code></td>
-			<td><code>Default</code></td>
-			<td>Sets the rotation or flip of the icon.</td>
-		</tr>
-		<tr>
-			<td>borderVisible</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Shows or hides the icon border.</td>
-		</tr>
-		<tr>
-			<td>spin</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Spins the icon if set to <code>true</code>.</td>
-		</tr>
-		<tr>
-			<td>pullRight</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>For use when combined with a pill-stacked navbar.</td>
-		</tr>
-		<tr>
-			<td>listItem</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>For use when associated with a BulletListItem.</td>
-		</tr>
-		<tr>
-			<td>clientId</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>Sets the <code>id</code> property of the rendered html element.</td>
-		</tr>
-	</tbody>
-</table>
+<div class="section">
 
 
 
-<h3>Icon type</h3>
-<p>FontAwesome icons are used for rendering icons and are available using the <code>IconType</code> enumeration. A full list of icons (as at 3.2.1) is below.</p>
-<div style="height: 400px; border-top: 1px #ddd solid; border-bottom: 1px #ddd solid; overflow: auto; padding: 18px;">
-	@using (Html.UxBulletList(true, 3))
- {
-	 foreach (var i in Enum.GetValues(typeof(IconType)).Cast<IconType>().OrderBy(i => i.ToString()))
-	 {
-		@Html.UxBulletListItem(i.ToString(), i)
-	 }
- }
+
+    <h3>Icon type</h3>
+    <p>FontAwesome icons are used for rendering icons and are available using the <code>IconType</code> enumeration. A full list of icons (as at 3.2.1) is below.</p>
+    <div style="height: 400px; border-top: 1px #ddd solid; border-bottom: 1px #ddd solid; overflow: auto; padding: 18px;">
+        @using (Html.UxBulletList(true, 3))
+        {
+            foreach (var i in Enum.GetValues(typeof(IconType)).Cast<IconType>().OrderBy(i => i.ToString()))
+            {
+            @Html.UxBulletListItem(i.ToString(), i)
+            }
+        }
+    </div>
 </div>
+<div class="section">
 
-<h3>Sizes</h3>
-<p>Icon sizes can be set using the <code>IconSize</code> enumeration.</p>
-<div class="example">
-	@Html.UxIcon(IconType.Twitter, IconSize.Large)
-	@Html.UxIcon(IconType.Twitter, IconSize.x2)
-	@Html.UxIcon(IconType.Twitter, IconSize.x3)
-	@Html.UxIcon(IconType.Twitter, IconSize.x4)
-	@Html.UxIcon(IconType.Apple, IconSize.Large)
-	@Html.UxIcon(IconType.Apple, IconSize.x2)
-	@Html.UxIcon(IconType.Apple, IconSize.x3)
-	@Html.UxIcon(IconType.Apple, IconSize.x4)
-	@Html.UxIcon(IconType.Windows, IconSize.Large)
-	@Html.UxIcon(IconType.Windows, IconSize.x2)
-	@Html.UxIcon(IconType.Windows, IconSize.x3)
-	@Html.UxIcon(IconType.Windows, IconSize.x4)
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+    <h3>Sizes</h3>
+    <p>Icon sizes can be set using the <code>IconSize</code> enumeration.</p>
+    <div class="example">
+        @Html.UxIcon(IconType.Twitter, IconSize.Large)
+        @Html.UxIcon(IconType.Twitter, IconSize.x2)
+        @Html.UxIcon(IconType.Twitter, IconSize.x3)
+        @Html.UxIcon(IconType.Twitter, IconSize.x4)
+        @Html.UxIcon(IconType.Apple, IconSize.Large)
+        @Html.UxIcon(IconType.Apple, IconSize.x2)
+        @Html.UxIcon(IconType.Apple, IconSize.x3)
+        @Html.UxIcon(IconType.Apple, IconSize.x4)
+        @Html.UxIcon(IconType.Windows, IconSize.Large)
+        @Html.UxIcon(IconType.Windows, IconSize.x2)
+        @Html.UxIcon(IconType.Windows, IconSize.x3)
+        @Html.UxIcon(IconType.Windows, IconSize.x4)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxIcon(IconType.Twitter)
 @@Html.UxIcon(IconType.Twitter, IconSize.Large)
 @@Html.UxIcon(IconType.Twitter, IconSize.x2)
 @@Html.UxIcon(IconType.Twitter, IconSize.x3)
 @@Html.UxIcon(IconType.Twitter, IconSize.x4)
 </pre>
+    </div>
 </div>
+<div class="section">
 
-<h3>Rotation</h3>
-<p>Icon rotation can be set using the <code>IconRotation</code> enumeration</p>
-<div class="example">
-	@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Default)
-	@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Rotate90)
-	@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Rotate180)
-	@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Rotate270)
-	@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.FlipHorizontal)
-	@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.FlipVertical)
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+    <h3>Rotation</h3>
+    <p>Icon rotation can be set using the <code>IconRotation</code> enumeration</p>
+    <div class="example">
+        @Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Default)
+        @Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Rotate90)
+        @Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Rotate180)
+        @Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Rotate270)
+        @Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.FlipHorizontal)
+        @Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.FlipVertical)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Default)
 @@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Rotate90)
 @@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Rotate180)
@@ -131,25 +76,100 @@
 @@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.FlipHorizontal)
 @@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.FlipVertical)</pre>
 
+    </div>
 </div>
+<div class="section">
 
-<h3>Bordered</h3>
-<p>Icons can be bordered by setting the <code>borderVisible</code> argument of the helper to <code>true</code>.</p>
-<div class="example">
-	@Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Default, true)
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+    <h3>Bordered</h3>
+    <p>Icons can be bordered by setting the <code>borderVisible</code> argument of the helper to <code>true</code>.</p>
+    <div class="example">
+        @Html.UxIcon(IconType.Twitter, IconSize.x4, IconRotation.Default, true)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxIcon(IconType.Twitter, borderVisible: true)</pre>
+    </div>
 </div>
-<h3>Spin</h3>
-<p>Icons can be set to spin by setting the <code>spin</code> argument of the helper to <code>true</code></p>
-<div class="example">
-	@Html.UxIcon(IconType.Refresh, IconSize.x4, IconRotation.Default, spin: true)
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+<div class="section">
+
+    <h3>Spin</h3>
+    <p>Icons can be set to spin by setting the <code>spin</code> argument of the helper to <code>true</code></p>
+    <div class="example">
+        @Html.UxIcon(IconType.Refresh, IconSize.x4, IconRotation.Default, spin: true)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@Html.UxIcon(IconType.Refresh, spin: true)</pre>
 
-</div>
+    </div>
 
+</div>
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxIcon
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>iconType</td>
+                    <td><code>IconType</code></td>
+                    <td><code>null</code></td>
+                    <td>The icon type to display.</td>
+                </tr>
+                <tr>
+                    <td>size</td>
+                    <td><code>IconSize</code></td>
+                    <td><code>Default</code></td>
+                    <td>Sets the size of the icon.</td>
+                </tr>
+                <tr>
+                    <td>rotation</td>
+                    <td><code>IconRotation</code></td>
+                    <td><code>Default</code></td>
+                    <td>Sets the rotation or flip of the icon.</td>
+                </tr>
+                <tr>
+                    <td>borderVisible</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>Shows or hides the icon border.</td>
+                </tr>
+                <tr>
+                    <td>spin</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>Spins the icon if set to <code>true</code>.</td>
+                </tr>
+                <tr>
+                    <td>pullRight</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>For use when combined with a pill-stacked navbar.</td>
+                </tr>
+                <tr>
+                    <td>listItem</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>For use when associated with a BulletListItem.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

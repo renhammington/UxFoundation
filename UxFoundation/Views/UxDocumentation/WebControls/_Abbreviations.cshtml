@@ -1,67 +1,82 @@
 ﻿@using Ux.Mvc.Web.UI
-@helper calloutContent(string title) {
-    <b>@title</b><br />@:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.   
+@helper calloutContent(string title)
+{
+    <b>@title</b><br />
+    @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.   
 }<div class="page-header">
-	<h1>Abbreviations<small>UxAbbreviation</small></h1>
+    <h1>Abbreviations<small>UxAbbreviation</small></h1>
 </div>
-<h3>Helper</h3>
-<div class="highlight highlight-large">
-	<pre class="prettyprint">
+<div class="section">
+    <h3>Helper</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
 @@using (Html.UxAbbreviation()) { &hellip; }
 </pre>
+    </div>
 </div>
 
-<h3>Helper options</h3>
-@using (Html.UxTable(true)) {
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Type</th>
-			<th>Default</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>text</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>The abbreviation to display.</td>
-		</tr>
-        <tr>
-			<td>fullText</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>The expanded text to display after a long hover over the abbreviation.</td>
-		</tr>
-		<tr>
-			<td>clientId</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>Sets the <code>id</code> property of the rendered html element.</td>
-		</tr>
-	</tbody>
-}
-<h3>Basic usage</h3>
-<div class="example">
-    Coding for the web is done using a range of languages including @Html.UxAbbreviation("HTML","Hypertext Markup Language"), Javascipt and @Html.UxAbbreviation("CSS","Cascading Style Sheet").    
-</div>
-<div class="highlight">
-<pre class="prettyprint">
+<div class="section">
+    <h3>Basic usage</h3>
+    <div class="example">
+        Coding for the web is done using a range of languages including @Html.UxAbbreviation("HTML", "Hypertext Markup Language"), Javascipt and @Html.UxAbbreviation("CSS", "Cascading Style Sheet").    
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 &hellip; @@Html.UxAbbreviation("HTML","Hypertext Markup Language")
 &hellip; @@Html.UxAbbreviation("CSS","Cascading Style Sheet")
 </pre>
+    </div>
 </div>
-
-<h3>Alternative approach</h3>
-<p>UxTooltip offers an alternative approach for handling abbreviations</p>
-<div class="example">
-    Coding for the web is done using a range of languages including <a @Html.UxTooltipAttributes("Hypertext Markup Language")>HTML</a>, Javascipt and <a @Html.UxTooltipAttributes("Cascading Style Sheet")>CSS</a>.    
-</div>
-<div class="highlight">
-<pre class="prettyprint">
+<div class="section">
+    <h3>Alternative approach</h3>
+    <p>UxTooltip offers an alternative approach for handling abbreviations</p>
+    <div class="example">
+        Coding for the web is done using a range of languages including <a @Html.UxTooltipAttributes("Hypertext Markup Language")>HTML</a>, Javascipt and <a @Html.UxTooltipAttributes("Cascading Style Sheet")>CSS</a>.    
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 &hellip;&lt;a @@Html.UxTooltipAttributes("Hypertext Markup Language")>HTML&lt;/a>
 &hellip;&lt;a @@Html.UxTooltipAttributes("Cascading Style Sheet")>CSS&lt;/a>
 </pre>
+    </div>
 </div>
+<div class="section">
+        <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxAbbreviation
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>text</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The abbreviation to display.</td>
+                </tr>
+                <tr>
+                    <td>fullText</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The expanded text to display after a long hover over the abbreviation.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
 
+</div>

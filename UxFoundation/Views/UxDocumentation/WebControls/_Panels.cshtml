@@ -2,42 +2,14 @@
 <div class="page-header">
     <h1>Panels<small>UxPanel</small></h1>
 </div>
-<h3>Helper</h3>
-<div class="highlight highlight-large">
-    <pre class="prettyprint">
-// Panel
-@@using (@@Html.UxPanel()) 
-{ 
-	// Your content here
-}
-</pre>
+<div class="section">
+    <h3>Helper</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
+@@using (@@Html.UxPanel()) { &hellip; }</pre>
+    </div>
 </div>
-
-<h3>Helper options</h3>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>appearance</td>
-            <td><code>AppearanceType</code></td>
-            <td><code>Default</code></td>
-            <td>Sets the coloring of the panel.</td>
-        </tr>
-        <tr>
-            <td>clientId</td>
-            <td><code>string</code></td>
-            <td><code>null</code></td>
-            <td>Sets the <code>id</code> property of the rendered html element.</td>
-        </tr>
-    </tbody>
-</table>
+<div class="section">
 
 <h3>Appearance</h3>
 <div class="example">
@@ -100,4 +72,39 @@
 }
 </pre>
 </div>
+    </div>
 
+
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxPanel
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>appearance</td>
+                    <td><code>AppearanceType</code></td>
+                    <td><code>Default</code></td>
+                    <td>Sets the coloring of the panel.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

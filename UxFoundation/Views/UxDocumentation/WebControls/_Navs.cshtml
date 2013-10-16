@@ -1,160 +1,31 @@
 ﻿@using Ux.Mvc.Web.UI
 <div class="page-header">
-	<h1>Navs<small>UxNav + UxNavLink</small></h1>
+    <h1>Navs<small>UxNav + UxNavLink</small></h1>
 </div>
-
+<div class="section">
 <h3>Helper</h3>
 <div class="highlight highlight-large">
-	<pre class="prettyprint">
-// Nav
+    <pre class="prettyprint">
 @@using (@@Html.UxNav())
 {
-	// Nav link
 	@@Html.UxNavLink()
 }
 </pre>
 </div>
-
-@using (var panel = Html.UxPanel(AppearanceType.Success)) {
-    @panel.Header(
-    @:Html.UxNav options
-    )
-    <table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Type</th>
-			<th>Default</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><b>type</b></td>
-			<td><code>NavType</code></td>
-			<td><code>null</code></td>
-			<td>The icon type to display.</td>
-		</tr>
-		<tr>
-			<td>justified</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Sets the size of the icon.</td>
-		</tr>
-		<tr>
-			<td>affix</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Prevents the nav from scrolling with the rest of the page, if set to <code>true</code></td>
-		</tr>
-		<tr>
-			<td>affixOffset</td>
-			<td><code>int</code></td>
-			<td><code>0</code></td>
-			<td>Set the number of scroll pixels before affix takes effect.</td>
-		</tr>
-		<tr>
-			<td>clientId</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>Sets the <code>id</code> property of the rendered html element.</td>
-		</tr>
-	</tbody>
-</table>
-}
-
-<h3>UxNavLink Helper options</h3>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Type</th>
-			<th>Default</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><b>text</b></td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>The text to display in the link.</td>
-		</tr>
-		<tr>
-			<td><b>url</b></td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>The Url to navigate to when the link is clicked.</td>
-		</tr>
-		<tr>
-			<td>iconType</td>
-			<td><code>IconType</code></td>
-			<td><code>null</code></td>
-			<td>Sets the icon to include in the link.</td>
-		</tr>
-		<tr>
-			<td>iconPosition</td>
-			<td><code>IconPosition</code></td>
-			<td><code>Left</code></td>
-			<td>Set the position of the icon relative to the link text.</td>
-		</tr>
-		<tr>
-			<td>active</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Highlights the link, if set to <code>true</code>.</td>
-		</tr>
-		<tr>
-			<td>disabled</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Disables the link, if set to <code>true</code>.</td>
-		</tr>
-		<tr>
-			<td>iconPullRight</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Pulls the icon to the right of the link, if set to <code>true</code> and <code>iconPosition: right</code>.</td>
-		</tr>
-		<tr>
-			<td>dataToggle</td>
-			<td><code>DataToggle</code></td>
-			<td><code>null</code></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>badgeText</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>The text to display in the badge.</td>
-		</tr>
-		<tr>
-			<td>badgePullRight</td>
-			<td><code>bool</code></td>
-			<td><code>false</code></td>
-			<td>Pulls the badge to the right of the link, if set to <code>true</code>.</td>
-		</tr>
-		<tr>
-			<td>clientId</td>
-			<td><code>string</code></td>
-			<td><code>null</code></td>
-			<td>Sets the <code>id</code> property of the rendered html element.</td>
-		</tr>
-	</tbody>
-</table>
-
-<h3>Tabs</h3>
-<div class="example">
-	@using (Html.UxNav(NavType.Tabs))
- {
-		@Html.UxNavLink("Home", "#home", active: true)
-		@Html.UxNavLink("Profile", "#profile")
-		@Html.UxNavLink("Messages", "#messages", IconType.Envelope, IconPosition.Right)
-		@Html.UxNavLink("Disabled", "#", disabled: true);
- }
 </div>
-<div class="highlight">
-	<pre class="prettyprint">
+<div class="section">
+    <h3>Tabs</h3>
+    <div class="example">
+        @using (Html.UxNav(NavType.Tabs))
+        {
+            @Html.UxNavLink("Home", "#home", active: true)
+            @Html.UxNavLink("Profile", "#profile")
+            @Html.UxNavLink("Messages", "#messages", IconType.Envelope, IconPosition.Right)
+            @Html.UxNavLink("Disabled", "#", disabled: true);
+        }
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxNav(NavType.Tabs))
 {
 	@@Html.UxNavLink("Home", "#home", active: true)
@@ -163,20 +34,21 @@
 	@@Html.UxNavLink("Disabled", "#", disabled: true);
 }
 </pre>
+    </div>
 </div>
-
-<h3>Pills</h3>
-<div class="example">
-	@using (Html.UxNav(NavType.Pills))
- {
-		@Html.UxNavLink("Home", "#home", active: true)
-		@Html.UxNavLink("Profile", "#profile")
-		@Html.UxNavLink("Messages", "#messages", IconType.Envelope, IconPosition.Right)
-		@Html.UxNavLink("Disabled", "#", disabled: true);
- }
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+<div class="section">
+    <h3>Pills</h3>
+    <div class="example">
+        @using (Html.UxNav(NavType.Pills))
+        {
+            @Html.UxNavLink("Home", "#home", active: true)
+            @Html.UxNavLink("Profile", "#profile")
+            @Html.UxNavLink("Messages", "#messages", IconType.Envelope, IconPosition.Right)
+            @Html.UxNavLink("Disabled", "#", disabled: true);
+        }
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxNav(NavType.Pills))
 {
 	@@Html.UxNavLink("Home", "#home", active: true)
@@ -185,25 +57,26 @@
 	@@Html.UxNavLink("Disabled", "#", disabled: true);
 }
 </pre>
+    </div>
 </div>
-
-<h3>Pills - stacked</h3>
-<p>Staked pills automatically fill the width of the parent container.</p>
-<div class="example">
-	<div class="clearfix">
-		<div class="col-xs-4">
-			@using (Html.UxNav(NavType.PillsStacked))
-   {
-				@Html.UxNavLink("Home", "#home", active: true)
-				@Html.UxNavLink("Profile", "#profile")
-				@Html.UxNavLink("Messages", "#messages", IconType.Envelope, IconPosition.Right, iconPullRight: true)
-				@Html.UxNavLink("Disabled", "#", disabled: true);
-   }
-		</div>
-	</div>
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+<div class="section">
+    <h3>Pills - stacked</h3>
+    <p>Staked pills automatically fill the width of the parent container.</p>
+    <div class="example">
+        <div class="clearfix">
+            <div class="col-xs-4">
+                @using (Html.UxNav(NavType.PillsStacked))
+                {
+                    @Html.UxNavLink("Home", "#home", active: true)
+                    @Html.UxNavLink("Profile", "#profile")
+                    @Html.UxNavLink("Messages", "#messages", IconType.Envelope, IconPosition.Right, iconPullRight: true)
+                    @Html.UxNavLink("Disabled", "#", disabled: true);
+                }
+            </div>
+        </div>
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxNav(NavType.PillsStacked))
 {
 	@@Html.UxNavLink("Home", "#home", active: true)
@@ -212,24 +85,25 @@
 	@@Html.UxNavLink("Disabled", "#", disabled: true);
 }
 </pre>
+    </div>
 </div>
-
-<h3>With Badges</h3>
-<div class="example">
-	<div class="clearfix">
-		<div class="col-xs-4">
-			@using (Html.UxNav(NavType.PillsStacked))
-   {
-				@Html.UxNavLink("Home", "#home", IconType.Home, active: true, badgeText: "4", badgePullRight: true)
-				@Html.UxNavLink("Profile", "#profile", IconType.User)
-				@Html.UxNavLink("Messages", "#messages", IconType.Envelope, badgeText: "12", badgePullRight: true)
-				@Html.UxNavLink("Disabled", "#", IconType.BanCircle, disabled: true);
-   }
-		</div>
-	</div>
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+<div class="section">
+    <h3>With Badges</h3>
+    <div class="example">
+        <div class="clearfix">
+            <div class="col-xs-4">
+                @using (Html.UxNav(NavType.PillsStacked))
+                {
+                    @Html.UxNavLink("Home", "#home", IconType.Home, active: true, badgeText: "4", badgePullRight: true)
+                    @Html.UxNavLink("Profile", "#profile", IconType.User)
+                    @Html.UxNavLink("Messages", "#messages", IconType.Envelope, badgeText: "12", badgePullRight: true)
+                    @Html.UxNavLink("Disabled", "#", IconType.BanCircle, disabled: true);
+                }
+            </div>
+        </div>
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxNav(NavType.PillsStacked))
 {		
 	@@Html.UxNavLink("Home", "#home", IconType.Home, active: true, badgeText:"4", badgePullRight:true)
@@ -238,34 +112,35 @@
 	@@Html.UxNavLink("Disabled", "#", IconType.BanCircle, disabled: true);
 }
 </pre>
+    </div>
 </div>
+<div class="section">
+    <h3>With tab content</h3>
+    <p>Use the data toggle property to automatically show/hide related tab content. The <code>url</code> of each navlink must correspond to an element of the same <code>id</code>, within a <code>.tab-content</code> classed container.</p>
+    <div class="example">
+        @using (Html.UxNav(NavType.Tabs))
+        {
+            @Html.UxNavLink("Home", "#home", active: true, dataToggle: DataToggle.Tab)
+            @Html.UxNavLink("Profile", "#profile", dataToggle: DataToggle.Tab)
+            @Html.UxNavLink("Messages", "#messages", IconType.Envelope, IconPosition.Right, dataToggle: DataToggle.Tab)
+            @Html.UxNavLink("Disabled", "#", disabled: true);
+        }
 
-<h3>With tab content</h3>
-<p>Use the data toggle property to automatically show/hide related tab content. The <code>url</code> of each navlink must correspond to an element of the same <code>id</code>, within a <code>.tab-content</code> classed container.</p>
-<div class="example">
-	@using (Html.UxNav(NavType.Tabs))
- {
-		@Html.UxNavLink("Home", "#home", active: true, dataToggle: DataToggle.Tab)
-		@Html.UxNavLink("Profile", "#profile", dataToggle: DataToggle.Tab)
-		@Html.UxNavLink("Messages", "#messages", IconType.Envelope, IconPosition.Right, dataToggle: DataToggle.Tab)
-		@Html.UxNavLink("Disabled", "#", disabled: true);
- }
+        <div class="tab-content" style="padding: 15px; border: 0 1px 1px 1px solid #efefef;">
+            <div class="tab-pane active" id="home">
+                Tomatillo, chinese mallow beet greens spinach. Collard greens ahipa drumstick yardlong bean west indian gherkin winged bean ginger taro ginger, west indian gherkin tatsoi jícama. Sorrel land cress potato dandelion greater plantain pigeon pea florence fennel, welsh onion sea beet cassava nopal, lotus root turnip greens.
+            </div>
+            <div class="tab-pane" id="messages">
+                Radicchio sierra leone bologi. Common bean florence fennel radish, chard prairie turnip lentil west indian gherkin - plectranthus. Chicory, lotus root bitter melon lotus root, yarrow, kurrat carrot, shallot ti? Welsh onion napa cabbage, fava bean, yardlong bean.
+            </div>
+            <div class="tab-pane" id="profile">
+                Ginger mizuna greens, lima bean chinese mallow. Cabbage dolichos bean chinese mallow celery lettuce, orache green bean summer purslane chickpea; kurrat. Canna; corn salad beetroot broccoli rabe garlic burdock land cress. Taro bell pepper radicchio; chaya garlic. Tepary bean velvet bean chickpea winter melon; welsh onion, brinjal; prussian asparagus
+            </div>
 
-	<div class="tab-content" style="padding: 15px; border: 0 1px 1px 1px solid #efefef;">
-		<div class="tab-pane active" id="home">
-			Tomatillo, chinese mallow beet greens spinach. Collard greens ahipa drumstick yardlong bean west indian gherkin winged bean ginger taro ginger, west indian gherkin tatsoi jícama. Sorrel land cress potato dandelion greater plantain pigeon pea florence fennel, welsh onion sea beet cassava nopal, lotus root turnip greens.
-		</div>
-		<div class="tab-pane" id="messages">
-			Radicchio sierra leone bologi. Common bean florence fennel radish, chard prairie turnip lentil west indian gherkin - plectranthus. Chicory, lotus root bitter melon lotus root, yarrow, kurrat carrot, shallot ti? Welsh onion napa cabbage, fava bean, yardlong bean.
-		</div>
-		<div class="tab-pane" id="profile">
-			Ginger mizuna greens, lima bean chinese mallow. Cabbage dolichos bean chinese mallow celery lettuce, orache green bean summer purslane chickpea; kurrat. Canna; corn salad beetroot broccoli rabe garlic burdock land cress. Taro bell pepper radicchio; chaya garlic. Tepary bean velvet bean chickpea winter melon; welsh onion, brinjal; prussian asparagus
-		</div>
-
-	</div>
-</div>
-<div class="highlight">
-	<pre class="prettyprint">
+        </div>
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
 @@using (Html.UxNav(NavType.Tabs))
 {
 	@@Html.UxNavLink("Home", "#home", active: true, dataToggle: DataToggle.Tab)
@@ -285,4 +160,141 @@
 	&lt;/div>
 &lt;/div>
 </pre>
+    </div>
+</div>
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxNav
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>type</td>
+                    <td><code>NavType</code></td>
+                    <td><code>null</code></td>
+                    <td>The type of nav to use.</td>
+                </tr>
+                <tr>
+                    <td>justified</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>If set to <code>true</code>, the nav will fill with width of the container.</td>
+                </tr>
+                <tr>
+                    <td>affix</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>Prevents the nav from scrolling with the rest of the page, if set to <code>true</code></td>
+                </tr>
+                <tr>
+                    <td>affixOffset</td>
+                    <td><code>int</code></td>
+                    <td><code>0</code></td>
+                    <td>Set the number of scroll pixels before affix takes effect.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxNavLink
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>text</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The text to display in the link.</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The Url to navigate to when the link is clicked.</td>
+                </tr>
+                <tr>
+                    <td>iconType</td>
+                    <td><code>IconType</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the icon to include in the link.</td>
+                </tr>
+                <tr>
+                    <td>iconPosition</td>
+                    <td><code>IconPosition</code></td>
+                    <td><code>Left</code></td>
+                    <td>Set the position of the icon relative to the link text.</td>
+                </tr>
+                <tr>
+                    <td>active</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>Highlights the link, if set to <code>true</code>.</td>
+                </tr>
+                <tr>
+                    <td>disabled</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>Disables the link, if set to <code>true</code>.</td>
+                </tr>
+                <tr>
+                    <td>iconPullRight</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>Pulls the icon to the right of the link, if set to <code>true</code> and <code>iconPosition: right</code>.</td>
+                </tr>
+                <tr>
+                    <td>dataToggle</td>
+                    <td><code>DataToggle</code></td>
+                    <td><code>null</code></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>badgeText</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The text to display in the badge.</td>
+                </tr>
+                <tr>
+                    <td>badgePullRight</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>Pulls the badge to the right of the link, if set to <code>true</code>.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
 </div>
