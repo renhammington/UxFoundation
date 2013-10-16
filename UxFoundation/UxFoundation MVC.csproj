@@ -154,6 +154,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Ux.Mvc\Binders\UxDateTimeModelBinder.cs" />
     <Compile Include="Ux.Mvc\Controls\Abbreviation.cs" />
+    <Compile Include="Ux.Mvc\Controls\LinkButton.cs" />
     <Compile Include="Ux.Mvc\Controls\Callout.cs" />
     <Compile Include="Ux.Mvc\Controls\CloseButton.cs" />
     <Compile Include="Ux.Mvc\Controls\_Panel.cs" />
@@ -178,6 +179,7 @@
     <Compile Include="Ux.Mvc\Helpers\UxButton.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxButtonGroup.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxButtonGroupWithDataSource.cs" />
+    <Compile Include="Ux.Mvc\Helpers\UxLinkButton.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxButtonToolbar.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxCallout.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxCancelButton.cs" />
@@ -476,6 +478,8 @@
     <Content Include="Views\UxDocumentation\WebControls\_Panels.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_SelectDataSource.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_ButtonGroups.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_LinkButton.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_LinkButtons.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

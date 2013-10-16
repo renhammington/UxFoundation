@@ -2,13 +2,12 @@
 @helper calloutContent(string title) {
     <b>@title</b><br />@:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.   
 }<div class="page-header">
-	<h1>Callouts<small>UxCallout</small></h1>
+	<h1>Abbreviations<small>UxAbbreviation</small></h1>
 </div>
 <h3>Helper</h3>
 <div class="highlight highlight-large">
 	<pre class="prettyprint">
-// Label
-@@using (Html.UxCallout()) { &hellip; }
+@@using (Html.UxAbbreviation()) { &hellip; }
 </pre>
 </div>
 
@@ -49,8 +48,20 @@
 </div>
 <div class="highlight">
 <pre class="prettyprint">
-&hellip; @@Html.UxAbbreviation("HTML","Hypertext Markup Language")<br />
+&hellip; @@Html.UxAbbreviation("HTML","Hypertext Markup Language")
 &hellip; @@Html.UxAbbreviation("CSS","Cascading Style Sheet")
+</pre>
+</div>
+
+<h3>Alternative approach</h3>
+<p>UxTooltip offers an alternative approach for handling abbreviations</p>
+<div class="example">
+    Coding for the web is done using a range of languages including <a @Html.UxTooltipAttributes("Hypertext Markup Language")>HTML</a>, Javascipt and <a @Html.UxTooltipAttributes("Cascading Style Sheet")>CSS</a>.    
+</div>
+<div class="highlight">
+<pre class="prettyprint">
+&hellip;&lt;a @@Html.UxTooltipAttributes("Hypertext Markup Language")>HTML&lt;/a>
+&hellip;&lt;a @@Html.UxTooltipAttributes("Cascading Style Sheet")>CSS&lt;/a>
 </pre>
 </div>
 

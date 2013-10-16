@@ -3,17 +3,46 @@
 }
 @Html.Partial("_Nav")
 <div class="container">
-    <div class="page-header">
+    <br />
+    <div class="jumbotron">
+
+
         <h1>UxFoundation</h1>
+        <p>UxFoundation is a curated collection of the very best HTML, Javascript and Bootstrap components to kickstart the user interface and experience design of your MVC project.</p>
+
+
     </div>
+    <div style="padding: 0 30px;">
 
-    <h2>Why use this framework?</h2>
-    <p>
-        Who wants to wire all this stuff up for every project?
+        <h2>@Html.UxIcon(Ux.Mvc.Web.UI.IconType.DownloadAlt) Download</h2>
+        <p>
+            UxFoundation is available as a Nuget package from a private source within the Wise Group network.
         <br />
-        Using Html helpers reduces the amount of bootstrap and UI knowledge required.<br />
-        Centralise your UI experience, enabling rapid changes to how your controls are rendered.
-    </p>
+            <br />
+            <b>Add the private package source to Visual Studio</b>
+            <ol>
+                <li>Open Visual Studio</li>
+                <li>Select <code>Tools</code> > <code>Library Package Manager</code> > <code>Package Manager Settings</code> from the menu</li>
+                <li>Select <code>Package Sources</code> from the navigation menu</li>
+                <li>Add <code>\\WISEPC2336:1977\NugetPackages</code> as a package source</li>
+                <li>Save your settings</li>
+            </ol>
+        </p>
+        <p>
+            <b>Add UxFoundation to your project</b>
+            <ol>
+                <li>Open your MVC4 project</li>
+                <li>Open the Nuget Package Manager</li>
+                <li>Choose the appropriate package source (as created above)</li>
+                <li>Install the UxFoundation package</li>
+            </ol>
 
-  
+        </p>
+
+    </div>
+@using (Html.UxCallout(Ux.Mvc.Web.UI.AppearanceType.Info))
+{
+    @:<b>Pre-release</b><br />This package is still in a pre-release state. Not all Bootstrap components have been made available as Html helpers, but work on this continues.
+    }
+
 </div>

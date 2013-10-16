@@ -119,7 +119,7 @@ namespace Ux.Mvc.Controllers
 		}
 
 
-        public ActionResult HtmlHelpers()
+        public ActionResult HtmlHelpers(string partial = "Abbreviations")
         {
             var note = new Examples()
             {
@@ -130,7 +130,7 @@ namespace Ux.Mvc.Controllers
                 EmailAddress = "renhammington@gmail.com"
             };
 
-
+            ViewBag.PartialToShow = "WebControls/_" + partial;
             
 
             return View(note);

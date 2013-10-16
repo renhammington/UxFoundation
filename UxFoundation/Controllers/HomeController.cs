@@ -14,11 +14,12 @@ namespace Ux.Mvc.Controllers
 
         public ActionResult Index()
         {
-            var test = new Test();
-            test.Birthday = DateTime.Today;
-            //test.fk = 4;
-            LoadDataSources(test);
-            return View(test);
+            return RedirectToAction("Index", "UxDocumentation");
+            //var test = new Test();
+            //test.Birthday = DateTime.Today;
+            ////test.fk = 4;
+            //LoadDataSources(test);
+            //return View(test);
         }
 
         private void LoadDataSources(Test model)
