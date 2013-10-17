@@ -352,6 +352,11 @@
     <Content Include="Scripts\locales\bootstrap-datepicker.uk.js" />
     <Content Include="Scripts\locales\bootstrap-datepicker.zh-CN.js" />
     <Content Include="Scripts\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="Scripts\moment-with-langs.js" />
+    <Content Include="Scripts\moment-with-langs.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Ux.Mvc\Content\daterangepicker-bs3.css" />
     <Content Include="Ux.Mvc\Content\prettyCheckable-blue.png" />
     <Content Include="Ux.Mvc\Content\prettyCheckable-gray.png" />
     <Content Include="Ux.Mvc\Content\prettyCheckable-green.png" />
@@ -372,6 +377,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Ux.Mvc\Scripts\daterangepicker.js" />
     <Content Include="Ux.Mvc\Scripts\jquery.fileinput.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -516,6 +522,7 @@
     <Content Include="Views\UxDocumentation\WebControls\_RadioButtons.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Checkbox.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_Checkboxes.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

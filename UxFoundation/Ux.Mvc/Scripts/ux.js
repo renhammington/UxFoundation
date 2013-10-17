@@ -84,6 +84,23 @@
                 autoclose: true,
                 format: "dd/mm/yyyy"
             });
+
+            $("input[type=text].daterange").each(function () {
+                $(this).daterangepicker({
+                    format: $(this).attr("data-dateformat"),
+                    showDropdowns: $(this).attr("data-showdropdowns"),
+                    startDate: $(this).attr("data-start"),
+                    endDate: $(this).attr("data-end"),
+                    ranges: {
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                        'Last 7 Days': [moment().subtract('days', 6), moment()],
+                        'Last 30 Days': [moment().subtract('days', 29), moment()],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+                    },
+                });
+            });
         }
     },
 

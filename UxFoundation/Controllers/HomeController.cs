@@ -76,5 +76,17 @@ namespace Ux.Mvc.Controllers
             return View(test);
         }
 
+
+        public ActionResult Test()
+        {
+            return View();
+        }
+        
+        [HttpPost]
+        public ActionResult Test(DateTime? myDate)
+        {
+            return View(myDate);
+        }
+
     }
 }

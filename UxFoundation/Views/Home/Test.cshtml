@@ -1,0 +1,10 @@
+﻿@model DateTime?
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Test</h2>
+@using (Html.UxBeginForm()) {
+@Html.TextBox("mydate")
+@Html.UxSaveButton()
+}
