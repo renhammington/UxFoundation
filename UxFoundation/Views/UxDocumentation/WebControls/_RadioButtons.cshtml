@@ -1,0 +1,144 @@
+﻿@using Ux.Mvc.Web.UI
+<div class="page-header">
+    <h1>Radio buttons <small>UxRadioButton</small></h1>
+</div>
+<h3>Helper</h3>
+<div class="highlight highlight-large">
+    <pre class="prettyprint">
+@@Html.UxRadioButton()
+</pre>
+</div>
+<div class="section">
+    <h3>Default behaviour</h3>
+    <div class="example">
+        @Html.UxRadioButton("Choice 1","Choices","1")
+        @Html.UxRadioButton("Choice 2","Choices","2")
+        @Html.UxRadioButton("Choice 3","Choices","3")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxRadioButton("Choice 1","Choices","1")
+@@Html.UxRadioButton("Choice 2","Choices","2")
+@@Html.UxRadioButton("Choice 3","Choices","3")
+</pre>
+    </div>
+</div>
+
+
+
+<div class="section">
+    <h3>Selected</h3>
+    <div class="example">
+        @Html.UxRadioButton("Choice 1","Choices","1")
+        @Html.UxRadioButton("Choice 2","Choices","2", true)
+        @Html.UxRadioButton("Choice 3","Choices","3")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxRadioButton("Choice 1","Choices","1")
+@@Html.UxRadioButton("Choice 2","Choices","2", true)
+@@Html.UxRadioButton("Choice 3","Choices","3")
+</pre>
+    </div>
+</div>
+
+
+
+<div class="section">
+    <h3>Label position</h3>
+    <div class="example">
+        @Html.UxRadioButton("Left aligned","Choices","1", position:LabelPosition.Left)
+        @Html.UxRadioButton("Right aligned","Choices","2", position:LabelPosition.Right)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxRadioButton("Left aligned","Choices","1", position:LabelPosition.Left)
+@@Html.UxRadioButton("Right aligned","Choices","2", position:LabelPosition.Right)
+</pre>
+    </div>
+</div>
+
+
+
+<div class="section">
+    <h3>Color</h3>
+    <div class="example">
+        @Html.UxRadioButton("Blue","Choices","1", color: CheckColor.Blue)
+        @Html.UxRadioButton("Gray","Choices","2", color: CheckColor.Gray)
+        @Html.UxRadioButton("Green","Choices","3", color: CheckColor.Green)
+        @Html.UxRadioButton("Red","Choices","4", color: CheckColor.Red)
+        @Html.UxRadioButton("Yellow","Choices","5", color: CheckColor.Yellow)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxRadioButton("Blue","Choices","1", color: CheckColor.Blue)
+@@Html.UxRadioButton("Gray","Choices","2", color: CheckColor.Gray)
+@@Html.UxRadioButton("Green","Choices","3", color: CheckColor.Green)
+@@Html.UxRadioButton("Red","Choices","4", color: CheckColor.Red)
+@@Html.UxRadioButton("Yellow","Choices","5", color: CheckColor.Yellow)
+</pre>
+    </div>
+</div>
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxRadioButton
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>label</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The label to display next to the radio button.</td>
+                </tr>
+                <tr>
+                    <td>group</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Use to associate radio buttons together into a group.</td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The <code>value</code> of the radio button.</td>
+                </tr>
+                <tr>
+                    <td>selected</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>If <code>true</code>, sets the radio button to selected.</td>
+                </tr>
+                <tr>
+                    <td>labelPosition</td>
+                    <td><code>LabelPosition</code></td>
+                    <td><code>Right</code></td>
+                    <td>Sets the position of the label relative to the radio button.</td>
+                </tr>
+                <tr>
+                    <td>checkColor</td>
+                    <td><code>CheckColor</code></td>
+                    <td><code>Blue</code></td>
+                    <td>Sets the color of the check when selected.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

@@ -87,6 +87,12 @@
         }
     },
 
+    checkable: {
+        init: function () {
+            $(".uxCheck").prettyCheckable();
+        }
+    },
+
     init: function () {
         this.dropdowns.init();
         this.validation.init();
@@ -95,6 +101,7 @@
         this.files.init();
         this.datepickers.init();
         this.popovers.init();
+        this.checkable.init();
     }
 };
 

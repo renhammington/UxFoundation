@@ -1,0 +1,4 @@
+﻿@model Ux.Mvc.Web.UI.RadioButton
+<input type="radio" class="uxCheck" name="@Model.Group" data-color="@Model.Color.ToString().ToLower()" data-label="@Model.Label" data-labelPosition="@Model.LabelPosition.ToString().ToLower()" @Model.GetClientIdString() value="@Model.Value" @if (Model.Selected) {
+                                                                                                                                                                                                                                                @:checked="checked" 
+                                                                                                                                                                                                                                                }/>

@@ -1,0 +1,144 @@
+﻿@using Ux.Mvc.Web.UI
+<div class="page-header">
+    <h1>Checkboxes <small>UxCheckbox</small></h1>
+</div>
+<h3>Helper</h3>
+<div class="highlight highlight-large">
+    <pre class="prettyprint">
+@@Html.UxCheckbox()
+</pre>
+</div>
+<div class="section">
+    <h3>Default behaviour</h3>
+    <div class="example">
+        @Html.UxCheckbox("Choice 1","Choices","1")
+        @Html.UxCheckbox("Choice 2","Choices","2")
+        @Html.UxCheckbox("Choice 3","Choices","3")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxCheckbox("Choice 1","Choices","1")
+@@Html.UxCheckbox("Choice 2","Choices","2")
+@@Html.UxCheckbox("Choice 3","Choices","3")
+</pre>
+    </div>
+</div>
+
+
+
+<div class="section">
+    <h3>Selected</h3>
+    <div class="example">
+        @Html.UxCheckbox("Choice 1","Choices","1")
+        @Html.UxCheckbox("Choice 2","Choices","2", true)
+        @Html.UxCheckbox("Choice 3","Choices","3")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxCheckbox("Choice 1","Choices","1")
+@@Html.UxCheckbox("Choice 2","Choices","2", true)
+@@Html.UxCheckbox("Choice 3","Choices","3")
+</pre>
+    </div>
+</div>
+
+
+
+<div class="section">
+    <h3>Label position</h3>
+    <div class="example">
+        @Html.UxCheckbox("Left aligned","Choices","1", position:LabelPosition.Left)
+        @Html.UxCheckbox("Right aligned","Choices","2", position:LabelPosition.Right)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxCheckbox("Left aligned","Choices","1", position:LabelPosition.Left)
+@@Html.UxCheckbox("Right aligned","Choices","2", position:LabelPosition.Right)
+</pre>
+    </div>
+</div>
+
+
+
+<div class="section">
+    <h3>Color</h3>
+    <div class="example">
+        @Html.UxCheckbox("Blue","Choices","1", true, color: CheckColor.Blue)
+        @Html.UxCheckbox("Gray","Choices","2", true, color: CheckColor.Gray)
+        @Html.UxCheckbox("Green","Choices","3",true, color: CheckColor.Green)
+        @Html.UxCheckbox("Red","Choices","4",true, color: CheckColor.Red)
+        @Html.UxCheckbox("Yellow","Choices","5",true, color: CheckColor.Yellow)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxCheckbox("Blue","Choices","1",true, color: CheckColor.Blue)
+@@Html.UxCheckbox("Gray","Choices","2",true, color: CheckColor.Gray)
+@@Html.UxCheckbox("Green","Choices","3",true, color: CheckColor.Green)
+@@Html.UxCheckbox("Red","Choices","4",true, color: CheckColor.Red)
+@@Html.UxCheckbox("Yellow","Choices","5",true, color: CheckColor.Yellow)
+</pre>
+    </div>
+</div>
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxCheckbox
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>label</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The label to display next to the checkbox.</td>
+                </tr>
+                <tr>
+                    <td>group</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Use to associate checkboxes together into a group.</td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The <code>value</code> of the checkbox.</td>
+                </tr>
+                <tr>
+                    <td>selected</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>If <code>true</code>, sets the checkbox to selected.</td>
+                </tr>
+                <tr>
+                    <td>labelPosition</td>
+                    <td><code>LabelPosition</code></td>
+                    <td><code>Right</code></td>
+                    <td>Sets the position of the label relative to the checkbox.</td>
+                </tr>
+                <tr>
+                    <td>checkColor</td>
+                    <td><code>CheckColor</code></td>
+                    <td><code>Blue</code></td>
+                    <td>Sets the color of the check when selected.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

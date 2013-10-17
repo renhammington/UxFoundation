@@ -59,6 +59,7 @@ namespace Ux.Mvc.Configuration
                 "~/scripts/bootstrap-datepicker.js",
                 "~/scripts/bootstrap-select.js",
                 "~/Ux.Mvc/scripts/jquery.fileinput.js",
+                "~/Ux.Mvc/scripts/prettyCheckable.js",
                 "~/Ux.Mvc/Scripts/ux.js"
                 ));
 
@@ -76,6 +77,7 @@ namespace Ux.Mvc.Configuration
                "~/Content/bootstrap-datepicker.css",
                "~/Content/bootstrap-select.css",
                "~/Content/font-awesome.css",
+               "~/Ux.Mvc/Content/prettyCheckable.css",
                "~/Ux.Mvc/Content/styles.less"
                ));
         }

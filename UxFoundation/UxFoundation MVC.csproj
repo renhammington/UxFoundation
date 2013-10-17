@@ -160,10 +160,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Ux.Mvc\Binders\UxDateTimeModelBinder.cs" />
     <Compile Include="Ux.Mvc\Controls\Abbreviation.cs" />
+    <Compile Include="Ux.Mvc\Controls\Checkbox.cs" />
     <Compile Include="Ux.Mvc\Controls\LinkButton.cs" />
     <Compile Include="Ux.Mvc\Controls\Callout.cs" />
     <Compile Include="Ux.Mvc\Controls\CloseButton.cs" />
     <Compile Include="Ux.Mvc\Controls\Popover.cs" />
+    <Compile Include="Ux.Mvc\Controls\RadioButton.cs" />
     <Compile Include="Ux.Mvc\Controls\Tooltip.cs" />
     <Compile Include="Ux.Mvc\Controls\_Panel.cs" />
     <Compile Include="Ux.Mvc\Controls\Image.cs" />
@@ -171,7 +173,9 @@
     <Compile Include="Ux.Mvc\Controls\Select.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectGroup.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
+    <Compile Include="Ux.Mvc\Enums\CheckColor.cs" />
     <Compile Include="Ux.Mvc\Enums\ImageBox.cs" />
+    <Compile Include="Ux.Mvc\Enums\LabelPosition.cs" />
     <Compile Include="Ux.Mvc\Enums\PopoverPlacement.cs" />
     <Compile Include="Ux.Mvc\Enums\PopoverTrigger.cs" />
     <Compile Include="Ux.Mvc\Enums\TooltipPlacement.cs" />
@@ -189,6 +193,7 @@
     <Compile Include="Ux.Mvc\Helpers\UxButton.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxButtonGroup.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxButtonGroupWithDataSource.cs" />
+    <Compile Include="Ux.Mvc\Helpers\UxCheckbox.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxLinkButton.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxButtonToolbar.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxCallout.cs" />
@@ -209,6 +214,7 @@
     <Compile Include="Ux.Mvc\Helpers\UxPanel.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxPopoverAttributes.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxProgressBar.cs" />
+    <Compile Include="Ux.Mvc\Helpers\UxRadioButton.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxSaveButton.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxSelect.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxSelectDivider.cs" />
@@ -346,6 +352,12 @@
     <Content Include="Scripts\locales\bootstrap-datepicker.uk.js" />
     <Content Include="Scripts\locales\bootstrap-datepicker.zh-CN.js" />
     <Content Include="Scripts\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="Ux.Mvc\Content\prettyCheckable-blue.png" />
+    <Content Include="Ux.Mvc\Content\prettyCheckable-gray.png" />
+    <Content Include="Ux.Mvc\Content\prettyCheckable-green.png" />
+    <Content Include="Ux.Mvc\Content\prettyCheckable-red.png" />
+    <Content Include="Ux.Mvc\Content\prettyCheckable-yellow.png" />
+    <Content Include="Ux.Mvc\Content\prettyCheckable.css" />
     <Content Include="Ux.Mvc\Content\styles.less" />
     <Content Include="Scripts\app.js" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
@@ -363,6 +375,7 @@
     <Content Include="Ux.Mvc\Scripts\jquery.fileinput.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Ux.Mvc\Scripts\prettyCheckable.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -499,6 +512,10 @@
     <Content Include="Views\UxDocumentation\Samples.cshtml" />
     <Content Include="Views\UxDocumentation\Samples\_Tables.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_Popovers.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_RadioButton.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_RadioButtons.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Checkbox.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Checkboxes.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
