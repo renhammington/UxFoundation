@@ -13,6 +13,7 @@ namespace Ux.Mvc.Web.UI
 		public bool Spin { get; private set; }
 		public bool PullRight { get; private set; }
 		public bool ListItem { get; private set; }
+        public Popover Popover { get; private set; }
 
 		// The css class to use for the icon
 		private IconType IconType { get; set; }
@@ -36,7 +37,7 @@ namespace Ux.Mvc.Web.UI
 		
 
 
-		public Icon(IconType iconType, IconSize size = IconSize.Default, IconRotation rotation = IconRotation.Default, bool borderVisible = false, bool spin = false, bool pullRight = false, bool listItem = false, string clientId = null) : base("_Icon", clientId)
+		public Icon(IconType iconType, IconSize size = IconSize.Default, IconRotation rotation = IconRotation.Default, bool borderVisible = false, bool spin = false, bool pullRight = false, bool listItem = false, Popover popover = null,string clientId = null) : base("_Icon", clientId)
 		{
 			SetBorderVisible(borderVisible)
 				.SetSize(size)
@@ -44,9 +45,16 @@ namespace Ux.Mvc.Web.UI
 				.SetType(iconType)
 				.SetSpin(spin)
 				.SetPullRight(pullRight)
-				.SetListItem(listItem);
+				.SetListItem(listItem)
+                .SetPopover(popover);
 			
 		}
+
+        public Icon SetPopover(Popover popover)
+        {
+            Popover = popover;
+            return this;
+        }
 
 		public Icon SetSize(IconSize size)
 		{

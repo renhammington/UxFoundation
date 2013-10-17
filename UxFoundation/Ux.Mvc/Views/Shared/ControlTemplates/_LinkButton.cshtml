@@ -1,12 +1,23 @@
 ﻿@model Ux.Mvc.Web.UI.LinkButton
-<a href="@Model.Url" class="@Model.CssClass" @Model.GetClientIdString() @if(Model.Target.IsNullOrEmpty()== false) {
+<a class="@Model.CssClass" @Model.GetClientIdString() @if (Model.Target.IsNullOrEmpty() == false)
+                                                      {
                                                                          @:target="@Model.Target"   
-                                                                        }>
-    @if (Model.IconType.HasValue && Model.IconPosition == Ux.Mvc.Web.UI.IconPosition.Left) {
+                                                                        }
+   @if (Model.Popover != null)
+   {
+    @Model.Popover.ToHtmlString()   
+   }
+   else
+   {
+      @:href="@Model.Url" 
+   }>
+    @if (Model.IconType.HasValue && Model.IconPosition == Ux.Mvc.Web.UI.IconPosition.Left)
+    {
         @Html.UxIcon(Model.IconType.Value)
     }
     @Model.Text
-    @if (Model.IconType.HasValue && Model.IconPosition == Ux.Mvc.Web.UI.IconPosition.Right) {
+    @if (Model.IconType.HasValue && Model.IconPosition == Ux.Mvc.Web.UI.IconPosition.Right)
+    {
         @Html.UxIcon(Model.IconType.Value)
     }
 </a>

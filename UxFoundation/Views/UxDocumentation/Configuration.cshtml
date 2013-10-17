@@ -25,7 +25,7 @@
 &lt;html>
 &lt;head>
     &hellip;
-    @@Styles.Render("~/css/ux")
+    <b>@@Styles.Render("~/ux/css")</b>
     @@Styles.Render("~/your/css/bundle")
     &hellip;
 &lt;/head>
@@ -35,7 +35,7 @@
 
     @@Scripts.Render("~/js/jquery")
     &lt;!-- Must be placed after jQuery scripts -->
-    @@Scripts.Render("~/js/ux")
+    <b>@@Scripts.Render("~/ux/js")</b>
     @@Scripts.Render("~/your/js/bundle")
 &lt;/body>
 &lt;/html>

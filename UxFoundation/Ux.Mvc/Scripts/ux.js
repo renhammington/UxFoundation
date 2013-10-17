@@ -50,6 +50,13 @@
             $("[data-toggle=tooltip]").tooltip();
         }
     },
+    popovers: {
+        init: function () {
+            $("[data-toggle=popover]").popover();
+        }
+
+
+    },
 
     buttons: {
         init: function () {
@@ -87,6 +94,7 @@
         this.buttons.init();
         this.files.init();
         this.datepickers.init();
+        this.popovers.init();
     }
 };
 

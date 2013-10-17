@@ -163,6 +163,7 @@
     <Compile Include="Ux.Mvc\Controls\LinkButton.cs" />
     <Compile Include="Ux.Mvc\Controls\Callout.cs" />
     <Compile Include="Ux.Mvc\Controls\CloseButton.cs" />
+    <Compile Include="Ux.Mvc\Controls\Popover.cs" />
     <Compile Include="Ux.Mvc\Controls\_Panel.cs" />
     <Compile Include="Ux.Mvc\Controls\Image.cs" />
     <Compile Include="Ux.Mvc\Controls\Panel.cs" />
@@ -170,6 +171,8 @@
     <Compile Include="Ux.Mvc\Controls\SelectGroup.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
     <Compile Include="Ux.Mvc\Enums\ImageBox.cs" />
+    <Compile Include="Ux.Mvc\Enums\PopoverPlacement.cs" />
+    <Compile Include="Ux.Mvc\Enums\PopoverTrigger.cs" />
     <Compile Include="Ux.Mvc\Enums\TooltipPlacement.cs" />
     <Compile Include="Ux.Mvc\Helpers\IntExtensions.cs" />
     <Compile Include="Ux.Mvc\Helpers\RenderUxControl.cs" />
@@ -203,6 +206,7 @@
     <Compile Include="Ux.Mvc\Helpers\UxNumericPager.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxPageLink.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxPanel.cs" />
+    <Compile Include="Ux.Mvc\Helpers\UxPopoverAttributes.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxProgressBar.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxSaveButton.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxSelect.cs" />
@@ -282,12 +286,14 @@
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\favicon.ico" />
     <Content Include="Content\font-awesome-ie7.css" />
     <Content Include="Content\font-awesome-ie7.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\logo.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\sample.jpg" />
     <Content Include="Global.asax" />
@@ -491,6 +497,7 @@
     <Content Include="Views\UxDocumentation\_Footer.cshtml" />
     <Content Include="Views\UxDocumentation\Samples.cshtml" />
     <Content Include="Views\UxDocumentation\Samples\_Tables.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Popovers.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

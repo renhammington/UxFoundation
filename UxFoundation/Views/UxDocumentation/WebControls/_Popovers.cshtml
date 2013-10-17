@@ -1,0 +1,139 @@
+﻿@using Ux.Mvc.Web.UI
+<div class="page-header">
+    <h1>Popovers<small>UxPopoverAttributes</small></h1>
+</div>
+<div class="section">
+    <h3>Helper</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
+@@Html.UxPopoverAttributes()
+</pre>
+    </div>
+</div>
+
+<div class="section">
+    <h3>Basic usage</h3>
+    <p>Popovers can be added to other elements such as link buttons, links or icons.</p>
+    <div class="example">
+        <b>Links</b>: If you click <a href="#" @Html.UxPopoverAttributes("Title of Popover", "Tomatillo radicchio kohlrabi sierra leone bologi tarwi sweet pepper. Manioc; lotus root shallot chaya. Potato lotus root, bamboo shoot soybean beetroot swiss chard aubergine elephant garlic; parsnip polk. Horseradish taro mung bean, okra mizuna greens nopal corn salad; pigeon pea.")>this text</a>, a popover will appear.
+        <br /><br />
+        <b>Buttons</b>: @Html.UxLinkButton("Click to reveal popover","#",popover:new Popover("Title of popover","Tomatillo radicchio kohlrabi sierra leone bologi tarwi sweet pepper. Manioc; lotus root shallot chaya. Potato lotus root, bamboo shoot soybean beetroot swiss chard aubergine elephant garlic; parsnip polk. Horseradish taro mung bean, okra mizuna greens nopal corn salad; pigeon pea."))
+        <br /><br />
+        <b>Icons</b>: @Html.UxIcon(IconType.QuestionSign, size: IconSize.Large, popover:new Popover("Title of popover","Tomatillo radicchio kohlrabi sierra leone bologi tarwi sweet pepper. Manioc; lotus root shallot chaya. Potato lotus root, bamboo shoot soybean beetroot swiss chard aubergine elephant garlic; parsnip polk. Horseradish taro mung bean, okra mizuna greens nopal corn salad; pigeon pea."))
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint lang-cs">
+&lt;a href="#" @@Html.UxPopoverAttributes("Title of Popover", "Tomatillo radicchio&hellip;")>this text&lt;/a>
+@@Html.UxLinkButton("Click to reveal popover","#",popover: new Popover("Title of popover","Tomatillo radicchio&hellip;"))
+@@Html.UxIcon(IconType.QuestionSign, size: IconSize.Large, popover: new Popover("Title of popover","Tomatillo radicchio&hellip;"))
+</pre>
+    </div>
+</div>
+<div class="section">
+    <h3>Html content</h3>
+    <div class="example" style="text-align:center;">
+        @Html.UxLinkButton("Click to reveal","#",popover: new Popover("Title","This <b>content</b> has some <b>HTML</b> embedded within", true))
+        
+        
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxLinkButton("Click to reveal","#",popover: new Popover("Title","This &lt;b>content&lt;/b> has some &lt;b>HTML&lt;/b> embedded within", true))</pre>
+    </div>
+</div>
+<div class="section">
+    <h3>Placement</h3>
+    <div class="example" style="text-align:center;">
+        @Html.UxLinkButton("Left","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Left))
+        @Html.UxLinkButton("Top","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Top))
+        @Html.UxLinkButton("Bottom","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Bottom))
+        @Html.UxLinkButton("Right","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Right))
+        
+        
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxLinkButton("Left","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Left))
+@@Html.UxLinkButton("Top","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Top))
+@@Html.UxLinkButton("Bottom","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Bottom))
+@@Html.UxLinkButton("Right","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Right))
+</pre>
+    </div>
+</div>
+<div class="section">
+    <h3>Triggers</h3>
+    <div class="example" style="text-align:center;">
+        @Html.UxLinkButton("Click","#",popover: new Popover("Title","Content", trigger:PopoverTrigger.Click))
+        @Html.UxLinkButton("Hover","#",popover: new Popover("Title","Content", trigger:PopoverTrigger.Hover))
+        @Html.UxLinkButton("Focus","#",popover: new Popover("Title","Content", trigger:PopoverTrigger.Focus))     
+        
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxLinkButton("Left","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Left))
+@@Html.UxLinkButton("Top","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Top))
+@@Html.UxLinkButton("Bottom","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Bottom))
+@@Html.UxLinkButton("Right","#",popover: new Popover("Title","Content", placement:PopoverPlacement.Right))
+</pre>
+    </div>
+</div>
+
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    {
+        @panel.Header(
+    @:UxPopoverAttributes
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>title</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The title to display in the popover.</td>
+                </tr>
+                <tr>
+                    <td>content</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The content to use in the popover.</td>
+                </tr>
+                <tr>
+                    <td>isHtml</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>If <code>true</code>, treats the content as HTML.</td>
+                </tr>
+                <tr>
+                    <td>placement</td>
+                    <td><code>PopoverPlacement</code></td>
+                    <td><code>Auto</code></td>
+                    <td>Sets where the popover should appear.</td>
+                </tr>
+                <tr>
+                    <td>trigger</td>
+                    <td><code>PopoverTrigger</code></td>
+                    <td><code>Click</code></td>
+                    <td>Sets when the popover should appear.</td>
+                </tr>
+                <tr>
+                    <td>container</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Appends the popover to a specific element.</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    }
+</div>
+

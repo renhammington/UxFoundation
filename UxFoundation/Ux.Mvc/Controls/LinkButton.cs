@@ -16,6 +16,7 @@ namespace Ux.Mvc.Web.UI
         public IconPosition IconPosition {get;private set;}
         public ButtonSize Size { get; private set; }
         public string Target { get; private set; }
+        public Popover Popover { get; private set; }
 
         public string CssClass
         {
@@ -26,19 +27,26 @@ namespace Ux.Mvc.Web.UI
             }
         }
 
-        public LinkButton(string text, string url, string target = null, AppearanceType appearance = AppearanceType.Default, ButtonSize size = ButtonSize.Default, IconType? icon = null, IconPosition position = IconPosition.Left,string clientId = null) : base("_LinkButton",clientId)
+        public LinkButton(string text, string url, string target = null, AppearanceType appearance = AppearanceType.Default, ButtonSize size = ButtonSize.Default, IconType? icon = null, IconPosition position = IconPosition.Left, Popover popover = null, string clientId = null) : base("_LinkButton",clientId)
         {
             SetLink(text, url)
                 .SetTarget(target)
                 .SetAppearance(appearance)
                 .SetIcon(icon, position)
-                .SetSize(size);
+                .SetSize(size)
+                .SetPopover(popover);
         }
 
         public LinkButton SetLink(string text, string url)
         {
             Text = text;
             Url = url;
+            return this;
+        }
+
+        public LinkButton SetPopover(Popover popover)
+        {
+            Popover = popover;
             return this;
         }
 
