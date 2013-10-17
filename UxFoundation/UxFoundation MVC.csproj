@@ -164,6 +164,7 @@
     <Compile Include="Ux.Mvc\Controls\Callout.cs" />
     <Compile Include="Ux.Mvc\Controls\CloseButton.cs" />
     <Compile Include="Ux.Mvc\Controls\Popover.cs" />
+    <Compile Include="Ux.Mvc\Controls\Tooltip.cs" />
     <Compile Include="Ux.Mvc\Controls\_Panel.cs" />
     <Compile Include="Ux.Mvc\Controls\Image.cs" />
     <Compile Include="Ux.Mvc\Controls\Panel.cs" />

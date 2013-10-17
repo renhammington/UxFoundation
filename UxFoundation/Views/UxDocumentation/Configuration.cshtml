@@ -1,7 +1,7 @@
 ﻿@using Ux.Mvc.Web.UI
 @model Ux.Mvc.ViewModels.Examples
 @{
-    ViewBag.Title = "Configuration - UxFoundation";
+    ViewBag.Title = "Setup";
 }
 @Html.Partial("_Nav")
 <div class="container">
@@ -9,36 +9,28 @@
         <h1>Setup</h1>
     </div>
 
-    
-
-
 
     <div class="section">
-        <h3>Include styles and scripts in your layouts</h3>
-        <p>You will need to add a reference to the UX style and script bundles within your own layouts.</p>
-        <div class="callout callout-info">
-            <b>Note</b> you do not need to add any style or script paths for Bootstrap, Select2, Font Awesome or any of the other Ux dependent projects. Ux handles this for you.
-        </div>
-
+        <h3>Include UX styles in your layouts</h3>
+        <p>UxFoundation creates a style bundle containing references to all dependent CSS files, including Bootstrap. Add the following in the <code>head</code> of your page before your own CSS.</p>
+        
         <div class="highlight">
-            <pre class="prettyprint lang-html">
-&lt;html>
-&lt;head>
-    &hellip;
-    <b>@@Styles.Render("~/ux/css")</b>
-    @@Styles.Render("~/your/css/bundle")
-    &hellip;
-&lt;/head>
-&lt;body>
-     
-    // Your content here
+            <pre class="prettyprint lang-cs">
+@@Styles.Render("~/ux/css")
+// Your own app CSS references go here
+</pre>
 
-    @@Scripts.Render("~/js/jquery")
-    &lt;!-- Must be placed after jQuery scripts -->
-    <b>@@Scripts.Render("~/ux/js")</b>
-    @@Scripts.Render("~/your/js/bundle")
-&lt;/body>
-&lt;/html>
+
+        </div>
+    </div>
+    <div class="section">
+        <h3>Include UX scripts in your layouts</h3>
+        <p>Add the following at the bottom of your page (before the closing <code>body</code> tag). Insert it after including jQuery and before your own scripts.</p>
+        <div class="highlight">
+            <pre class="prettyprint lang-cs">
+// Your jQuery script reference goes here
+@@Scripts.Render("~/ux/js")
+// Your own app script references go here
 </pre>
 
 

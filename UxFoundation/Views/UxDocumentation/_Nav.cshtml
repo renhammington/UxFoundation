@@ -19,18 +19,18 @@
 {
     
     <li><a href="@Url.Action("HtmlHelpers", "UxDocumentation", new { partial = nameOfPartial }, null)">@text @if (isNew)
-                                                                                                            {
+                                                                                                             {
         @Html.UxLabel("New", appearance: AppearanceType.Danger)
-                                                                                                            }
+                                                                                                             }
     </a></li>
 }
 @helper sampleItem(string text, string nameOfPartial, bool isNew = false)
 {
     
     <li><a href="@Url.Action("Samples", "UxDocumentation", new { partial = nameOfPartial }, null)">@text @if (isNew)
-                                                                                                        {
+                                                                                                         {
         @Html.UxLabel("New", appearance: AppearanceType.Danger)
-                                                                                                        }
+                                                                                                         }
     </a></li>
 }
 
@@ -38,9 +38,9 @@
 {
     
     <li><a href="@Url.Action("DataTypes", "UxDocumentation", new { partial = nameOfPartial }, null)">@text @if (isNew)
-                                                                                                          {
+                                                                                                           {
         @Html.UxLabel("New", appearance: AppearanceType.Danger)
-                                                                                                          }
+                                                                                                           }
     </a></li>
 }
 
@@ -69,46 +69,56 @@
                     @helperItem("Alerts", "Alerts")
                     @helperItem("Badges", "Badges")
                     @helperItem("Bullet lists", "BulletLists")
-                    
+
                     @helperItem("Callouts", "Callouts")
                     @helperItem("Icons", "Icons")
                     @helperItem("Images", "Images")
                     @helperItem("Labels", "Labels")
-                    
-
                     @helperItem("Navs", "Navs")
-                   
                     @helperItem("Panels", "Panels")
+                    @helperItem("Popovers", "Popovers", true)
                     @helperItem("Progress bars", "ProgressBars")
-                    
+                    @helperItem("Tooltips", "Tooltips")
                     @helperItem("Tables", "Tables")
-                   
+
                     @helperItem("Wells", "Wells")
 
                     <li class="divider"></li>
-                    <li class="dd-group">Attribute builders</li>
-                    @helperItem("Popovers", "Popovers")
-                     @helperItem("Tooltips", "Tooltips")
+                    <li class="dropdown-submenu">
+                        <a href="#">Buttons</a>
+                        <ul class="dropdown-menu">
+                            @helperItem("Buttons", "Buttons")
+                            @helperItem("Groups", "ButtonGroups")
+                            @helperItem("Groups with DataSource", "ButtonGroupsDataSource")
+                            @helperItem("Toolbars", "ButtonToolbars")
+                            @helperItem("Link buttons", "LinkButtons", true)
 
+                        </ul>
+                    </li>
                     <li class="divider"></li>
-                    <li class="dd-group">Buttons</li>
-                    @helperItem("Buttons", "Buttons")
-                    @helperItem("Groups", "ButtonGroups")
-                    @helperItem("Groups with DataSource", "ButtonGroupsDataSource")
-                    @helperItem("Toolbars", "ButtonToolbars")
-                    @helperItem("Link buttons", "LinkButtons", true)
+                    <li class="dropdown-submenu">
+                        <a href="#">Selects</a>
+                        <ul class="dropdown-menu">
+                            @helperItem("Selects", "Selects")
+                            @helperItem("With DataSource", "SelectDataSource")
+                            @helperItem("Options", "SelectOptions")
+                            @helperItem("Groups", "SelectGroups")
 
+                        </ul>
+                    </li>
                     <li class="divider"></li>
-                    <li class="dd-group">Selects</li>
-                    @helperItem("Selects", "Selects")
-                    @helperItem("With DataSource", "SelectDataSource")
-                    @helperItem("Options", "SelectOptions")
-                    @helperItem("Groups", "SelectGroups")
+                    <li class="dropdown-submenu">
+                        <a href="#">Paging</a>
+                        <ul class="dropdown-menu">
+                            @helperItem("Next-Previous", "NextPreviousPagers")
+                            @helperItem("Numeric", "NumericPagers")
 
-                    <li class="divider"></li>
-                    <li class="dd-group">Paging</li>
-                    @helperItem("Next-Previous", "NextPreviousPagers")
-                    @helperItem("Numeric", "NumericPagers")
+                        </ul>
+                    </li>
+
+
+
+
 
                 </ul>
 
@@ -170,7 +180,7 @@
                     @dataItem("Foreign keys", "ForeignKeys")
                     <li class="divider"></li>
                     @dataItem("Boolean", "Boolean")
-                    
+
 
                 </ul>
             </li>

@@ -11,12 +11,7 @@ public static partial class UxHtmlHelpers
 {
     public static MvcHtmlString UxTooltipAttributes(this HtmlHelper helper, string text, TooltipPlacement placement = TooltipPlacement.Auto)
     {
-
-        List<string> attributes = new List<string>();
-        attributes.Add("data-toggle=\"tooltip\"");
-        attributes.Add("title=\"" + text + "\"");
-        if (placement != TooltipPlacement.Auto) attributes.Add("data-placement=\"" + placement.ToString().ToLower() + "\"");
-
-        return MvcHtmlString.Create(string.Join(" ", attributes));
+        var tooltip = new Tooltip(text, placement);
+        return tooltip.ToHtmlString();
     }
 }
