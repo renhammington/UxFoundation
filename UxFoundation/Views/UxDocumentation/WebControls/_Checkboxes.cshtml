@@ -79,6 +79,19 @@
 </pre>
     </div>
 </div>
+
+<div class="section">
+    <h3>Disabled</h3>
+    <div class="example">
+        @Html.UxCheckbox("Blue", "Choices", "1", disabled:true)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxCheckbox("Blue", "Choices", "1", disabled:true)
+</pre>
+    </div>
+</div>
+
 <div class="section">
     <h3>Parameters</h3>
     @using (var panel = Html.UxPanel(AppearanceType.Default))
@@ -131,6 +144,12 @@
                     <td><code>CheckColor</code></td>
                     <td><code>Blue</code></td>
                     <td>Sets the color of the check when selected.</td>
+                </tr>
+                <tr>
+                    <td>disabled</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>Prevents the checkbox from being clicked if set to <code>true</code>.</td>
                 </tr>
                 <tr>
                     <td>clientId</td>

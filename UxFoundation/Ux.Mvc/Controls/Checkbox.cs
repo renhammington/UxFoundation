@@ -13,6 +13,7 @@ namespace Ux.Mvc.Web.UI
         public string Group { get; private set; }
         public bool Selected { get; private set; }
         public string Value { get; private set; }
+        public bool Disabled { get; set; }
 
         public Checkbox(string label,
             string group,
@@ -20,6 +21,7 @@ namespace Ux.Mvc.Web.UI
             bool selected = false,
             LabelPosition position = UI.LabelPosition.Right,
             CheckColor color = CheckColor.Blue,
+            bool disabled = false,
             string clientId = null)
             : base("_Checkbox", clientId)
         {
@@ -27,7 +29,8 @@ namespace Ux.Mvc.Web.UI
                 .SetSelected(selected)
                 .SetLabel(label, position)
                 .SetColor(color)
-                .SetValue(value);
+                .SetValue(value)
+                .SetDisabled(disabled);
         }
 
         public Checkbox SetGroup(string group)
@@ -41,6 +44,13 @@ namespace Ux.Mvc.Web.UI
             Selected = selected;
             return this;
         }
+        public Checkbox SetDisabled(bool disabled)
+        {
+            Disabled = disabled;
+            return this;
+        }
+
+
 
         public Checkbox SetLabel(string text, LabelPosition position)
         {

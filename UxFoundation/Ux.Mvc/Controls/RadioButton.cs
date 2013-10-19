@@ -13,20 +13,23 @@ namespace Ux.Mvc.Web.UI
         public string Group { get; private set; }
         public bool Selected { get; private set; }
         public string Value { get; private set; }
+        public bool Disabled { get; set; }
 
         public RadioButton(string label, 
             string group, 
             string value = "", 
             bool selected = false, 
             LabelPosition position = UI.LabelPosition.Right, 
-            CheckColor color = CheckColor.Blue, 
+            CheckColor color = CheckColor.Blue,
+            bool disabled = false,
             string clientId = null) : base("_RadioButton",clientId)
         {
             SetGroup(group)
                 .SetSelected(selected)
                 .SetLabel(label, position)
                 .SetColor(color)
-                .SetValue(value);        
+                .SetValue(value)
+                .SetDisabled(disabled);        
         }
 
         public RadioButton SetGroup(string group)
@@ -38,6 +41,12 @@ namespace Ux.Mvc.Web.UI
         public RadioButton SetSelected(bool selected)
         {
             Selected = selected;
+            return this;
+        }
+
+        public RadioButton SetDisabled(bool disabled)
+        {
+            Disabled = disabled;
             return this;
         }
 

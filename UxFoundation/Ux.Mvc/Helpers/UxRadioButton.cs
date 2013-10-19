@@ -16,9 +16,10 @@ public static partial class UxHtmlHelpers
         bool selected = false, 
         LabelPosition position = LabelPosition.Right, 
         CheckColor color = CheckColor.Blue, 
+        bool disabled = false, 
         string clientId = null)
     {
-        var radio = new RadioButton(label, group, value, selected, position, color, clientId);
+        var radio = new RadioButton(label, group, value, selected, position, color, disabled, clientId);
         return htmlHelper.RenderUxControl(radio);
     }
 }
