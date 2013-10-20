@@ -171,6 +171,7 @@
     <Compile Include="Ux.Mvc\Controls\CloseButton.cs" />
     <Compile Include="Ux.Mvc\Controls\Popover.cs" />
     <Compile Include="Ux.Mvc\Controls\RadioButton.cs" />
+    <Compile Include="Ux.Mvc\Controls\TimePicker.cs" />
     <Compile Include="Ux.Mvc\Controls\Tooltip.cs" />
     <Compile Include="Ux.Mvc\Controls\_Panel.cs" />
     <Compile Include="Ux.Mvc\Controls\Image.cs" />
@@ -305,6 +306,7 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\jquery.timepicker.css" />
     <Content Include="Content\logo.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\sample.jpg" />
@@ -313,6 +315,8 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\bootstrap-select.js" />
     <Content Include="Scripts\bootstrap-select.min.js" />
+    <Content Include="Scripts\jquery.timepicker.js" />
+    <Content Include="Scripts\jquery.timepicker.min.js" />
     <Content Include="Scripts\jquery.validate.globalize.js" />
     <Content Include="Scripts\jquery.validate.globalize.min.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -414,7 +418,9 @@
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\Select.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\Int32.cshtml" />
     <Content Include="Views\UxDocumentation\HtmlHelpers.cshtml" />
-    <Content Include="Ux.Mvc\Views\Web.config" />
+    <Content Include="Ux.Mvc\Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\jquery-2.0.3.min.map" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Label.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Badge.cshtml" />
@@ -524,6 +530,7 @@
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_DateRangePicker.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_DateRangePicker.cshtml" />
     <Content Include="Web.config" />
+    <Content Include="Views\UxDocumentation\WebControls\_TimePickers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

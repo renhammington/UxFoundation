@@ -36,6 +36,25 @@
 
         </div>
     </div>
+    <div class="section">
+        <h3>Remove dotless httpHandler from web.config</h3>
+        <p>Dotless adds handlers to the <code>system.web</code> and <code>system.webServer</code> elements in your <code>web.config</code>. For MVC5, you need to remove the handlers declared in the <code>system.web</code> element.</p>
+        <div class="highlight">
+            <pre class="prettyprint lang-html">
+// your web.config
+&lt;system.web>
+    &hellip;
+    &lt;httphandlers>
+        // Remove this handler
+        &lt;add path="*.less" verb="GET" type="dotless.Core.LessCssHttpHandler, dotless.Core" />
+    &lt;/httphandlers>
+    &hellip;
+&lt;/system.web>
+</pre>
+
+
+        </div>
+    </div>
     <div class="Section">
 
         <h3 id="datepickers">Bootstrap Datepicker update</h3>

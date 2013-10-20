@@ -62,6 +62,7 @@ namespace Ux.Mvc.Configuration
                 "~/Ux.Mvc/scripts/prettyCheckable.js",
                 "~/scripts/moment.js",
                 "~/Ux.Mvc/Scripts/daterangepicker.js",
+                "~/scripts/jquery.timepicker.js",
                 "~/Ux.Mvc/Scripts/ux.js"
                 ));
 
@@ -81,6 +82,7 @@ namespace Ux.Mvc.Configuration
                "~/Content/font-awesome.css",
                "~/Ux.Mvc/Content/prettyCheckable.css",
                "~/Ux.Mvc/Content/daterangepicker-bs3.css",
+               "~/Content/jquery.timepicker.css",
                "~/Ux.Mvc/Content/styles.less"
                ));
         }

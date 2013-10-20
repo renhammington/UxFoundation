@@ -103,7 +103,11 @@
             });
         }
     },
-
+    timepickers: {
+        init: function() {
+            $(".uxTime").timepicker();
+        }
+    },
     checkable: {
         init: function () {
             $(".uxCheck").prettyCheckable();
@@ -117,6 +121,7 @@
         this.buttons.init();
         this.files.init();
         this.datepickers.init();
+        this.timepickers.init();
         this.popovers.init();
         this.checkable.init();
     }
