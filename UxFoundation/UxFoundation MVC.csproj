@@ -179,6 +179,7 @@
     <Compile Include="Ux.Mvc\Controls\Select.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectGroup.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\ButtonGroupSize.cs" />
     <Compile Include="Ux.Mvc\CssMappers\CalloutAppearanceType.cs" />
     <Compile Include="Ux.Mvc\CssMappers\LabelAppearanceType.cs" />
     <Compile Include="Ux.Mvc\CssMappers\PanelAppearanceType.cs" />
@@ -268,7 +269,7 @@
     <Compile Include="Ux.Mvc\Enums\ButtonCommand.cs" />
     <Compile Include="Ux.Mvc\Controls\DisplayRow.cs" />
     <Compile Include="Ux.Mvc\Controls\UxDisposableControl.cs" />
-    <Compile Include="Ux.Mvc\Enums\ButtonSize.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\ButtonSize.cs" />
     <Compile Include="Ux.Mvc\CssMappers\IconRotation.cs" />
     <Compile Include="Ux.Mvc\CssMappers\IconSize.cs" />
     <Compile Include="Ux.Mvc\Helpers\HtmlHelperExtensions.cs" />

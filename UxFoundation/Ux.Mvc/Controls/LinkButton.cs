@@ -22,12 +22,12 @@ namespace Ux.Mvc.Web.UI
         {
             get
             {
-                List<string> classes = new List<string>() { "btn", Appearance.CssClass , CssClassMaps.ButtonSizeCssMap[Size] };
+                List<string> classes = new List<string>() { "btn", Appearance.CssClass , Size.CssClass };
                 return string.Join(" ", classes);
             }
         }
 
-        public LinkButton(string text, string url, string target = null, ButtonAppearanceType appearance = null, ButtonSize size = ButtonSize.Default, IconType? icon = null, IconPosition position = null, Popover popover = null, string clientId = null) : base("_LinkButton",clientId)
+        public LinkButton(string text, string url, string target = null, ButtonAppearanceType appearance = null, ButtonSize size = null, IconType? icon = null, IconPosition position = null, Popover popover = null, string clientId = null) : base("_LinkButton",clientId)
         {
             SetLink(text, url)
                 .SetTarget(target)
@@ -52,7 +52,7 @@ namespace Ux.Mvc.Web.UI
 
         public LinkButton SetSize(ButtonSize size)
         {
-            Size = size;
+            Size = size ?? ButtonSize.Default;
             return this;
         }
 

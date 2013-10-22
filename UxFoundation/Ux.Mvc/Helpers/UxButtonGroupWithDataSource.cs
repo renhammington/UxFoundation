@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static MvcHtmlString UxButtonGroupWithDataSource(this HtmlHelper htmlHelper, DataSource dataSource, string selectedValue = null, ButtonSize size = ButtonSize.Default, string clientId = null)
+    public static MvcHtmlString UxButtonGroupWithDataSource(this HtmlHelper htmlHelper, DataSource dataSource, string selectedValue = null, ButtonGroupSize size = null, string clientId = null)
     {
         var group = new ButtonGroup(true, size, selectedValue, dataSource, clientId);
 

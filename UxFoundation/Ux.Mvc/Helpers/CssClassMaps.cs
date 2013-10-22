@@ -374,20 +374,6 @@ namespace Ux.Mvc.Web.UI
 			{ IconType.Renren,"renren" },
 		};
 
-		public static Dictionary<ButtonSize, string> ButtonSizeCssMap = new Dictionary<ButtonSize, string>() { 
-			{ ButtonSize.Default, string.Empty },
-			{ ButtonSize.Small, "btn-sm" },
-			{ ButtonSize.ExtraSmall, "btn-xs" },
-			{ ButtonSize.Large, "btn-lg" }
-		};
-
-		public static Dictionary<ButtonSize, string> ButtonGroupSizeCssMap = new Dictionary<ButtonSize, string>() { 
-			{ ButtonSize.Default, string.Empty },
-			{ ButtonSize.Small, "btn-group-sm" },
-			{ ButtonSize.ExtraSmall, "btn-group-xs" },
-			{ ButtonSize.Large, "btn-group-lg" }
-		};
-
 	
 		public static Dictionary<AppearanceType, string> ProgressBarAppearanceCssMap = new Dictionary<AppearanceType, string>() { 
 			{ AppearanceType.Default, "progress-bar-success" },

@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static IDisposable UxButtonGroup(this HtmlHelper htmlHelper, bool toggle = false, ButtonSize size = ButtonSize.Default, string clientId = null)
+    public static IDisposable UxButtonGroup(this HtmlHelper htmlHelper, bool toggle = false, ButtonGroupSize size = null, string clientId = null)
     {
         var group = new ButtonGroup(toggle, size, null, null, clientId);
         return RenderUxDispoableWebControl(htmlHelper, group);

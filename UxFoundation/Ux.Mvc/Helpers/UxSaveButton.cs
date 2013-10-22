@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static MvcHtmlString UxSaveButton(this HtmlHelper helper, ButtonSize size = ButtonSize.Default, string clientId = null)
+    public static MvcHtmlString UxSaveButton(this HtmlHelper helper, ButtonSize size = null, string clientId = null)
     {
         var button = new Button("Save", ButtonCommand.Save, ButtonAppearanceType.Success)
             .SetIcon(new Icon(IconType.Ok))

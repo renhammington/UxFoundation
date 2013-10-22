@@ -22,13 +22,14 @@ namespace Ux.Mvc.Web.UI
 		{
 			get
 			{
-				List<string> classes = new List<string>(){ Appearance.CssClass, CssClassMaps.ButtonSizeCssMap[Size] };
+				List<string> classes = new List<string>(){ Appearance.CssClass, Size.CssClass };
 				if (!CausesValidation) classes.Add("cancel");
 				return string.Join(" ", classes);
 			}
 		}
 
-		public Button(string text, ButtonCommand command, ButtonAppearanceType appearance = null, ButtonSize size = ButtonSize.Default, string clientId = null) : base("_Button", clientId)
+		public Button(string text, ButtonCommand command, ButtonAppearanceType appearance = null, ButtonSize size = null, string clientId = null) 
+			: base("_Button", clientId)
 		{
 			Text = text;
 			SetAppearance(appearance);
@@ -60,7 +61,7 @@ namespace Ux.Mvc.Web.UI
 
 		public Button SetSize(ButtonSize size)
 		{
-			Size = size;
+			Size = size ?? ButtonSize.Default;
 			return this;
 		}
 

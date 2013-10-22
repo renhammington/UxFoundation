@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static MvcHtmlString UxLabel(this HtmlHelper helper, string text, AppearanceType appearance = AppearanceType.Default, string clientId = null)
+    public static MvcHtmlString UxLabel(this HtmlHelper helper, string text, LabelAppearanceType appearance = null, string clientId = null)
     {
         var label = new Label(text, appearance, clientId);
         return helper.RenderUxControl(label);

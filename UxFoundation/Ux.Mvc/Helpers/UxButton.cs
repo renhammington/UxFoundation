@@ -17,7 +17,7 @@ public static partial class UxHtmlHelpers
     public static MvcHtmlString UxButton(this HtmlHelper helper,
         string text,
         ButtonAppearanceType appearance = null,
-        ButtonSize size = ButtonSize.Default,
+        ButtonSize size = null,
         IconType? iconType = null,
         IconPosition position = null,
         bool causesValidation = true,
