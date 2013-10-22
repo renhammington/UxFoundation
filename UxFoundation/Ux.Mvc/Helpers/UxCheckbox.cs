@@ -14,7 +14,7 @@ public static partial class UxHtmlHelpers
         string group,
         string value = "",
         bool selected = false,
-        LabelPosition position = LabelPosition.Right,
+        LabelPosition position = null,
         CheckColor color = CheckColor.Blue,
         bool disabled = false,
         string clientId = null)

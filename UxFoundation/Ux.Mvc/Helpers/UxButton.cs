@@ -19,7 +19,7 @@ public static partial class UxHtmlHelpers
         ButtonAppearanceType appearance = null,
         ButtonSize size = ButtonSize.Default,
         IconType? iconType = null,
-        IconPosition position = IconPosition.Left,
+        IconPosition position = null,
         bool causesValidation = true,
         bool disabled = false,
         string loadingText = null,

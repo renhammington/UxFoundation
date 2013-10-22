@@ -25,7 +25,7 @@ namespace Ux.Mvc.Web.UI
 		{
 			get
 			{
-				List<string> classes = new List<string>() { CssClassMaps.IconCssMap[IconType], CssClassMaps.IconRotationCssMap[Rotation], CssClassMaps.IconSizeCssMap[Size] };
+				List<string> classes = new List<string>() { CssClassMaps.IconCssMap[IconType], Rotation.CssClass, Size.CssClass };
 				if (BorderVisible) classes.Add("icon-border");
 				if (Spin) classes.Add("icon-spin");
 				if (PullRight) classes.Add("pull-right");
@@ -37,7 +37,7 @@ namespace Ux.Mvc.Web.UI
 		
 
 
-		public Icon(IconType iconType, IconSize size = IconSize.Default, IconRotation rotation = IconRotation.Default, bool borderVisible = false, bool spin = false, bool pullRight = false, bool listItem = false, Popover popover = null,string clientId = null) : base("_Icon", clientId)
+		public Icon(IconType iconType, IconSize size = null, IconRotation rotation = null, bool borderVisible = false, bool spin = false, bool pullRight = false, bool listItem = false, Popover popover = null,string clientId = null) : base("_Icon", clientId)
 		{
 			SetBorderVisible(borderVisible)
 				.SetSize(size)
@@ -58,12 +58,12 @@ namespace Ux.Mvc.Web.UI
 
 		public Icon SetSize(IconSize size)
 		{
-			Size = size;
+			Size = size ?? IconSize.Default;
 			return this;
 		}
 		public Icon SetRotation(IconRotation rotation)
 		{
-			Rotation = rotation;
+			Rotation = rotation ?? IconRotation.Default;
 			return this;
 		}
 		public Icon SetBorderVisible(bool visible)

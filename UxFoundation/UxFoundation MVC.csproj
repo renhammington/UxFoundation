@@ -241,7 +241,7 @@
     <Compile Include="Ux.Mvc\Attributes\PlaceholderAttribute.cs" />
     <Compile Include="Ux.Mvc\Attributes\TooltipAttribute.cs" />
     <Compile Include="Ux.Mvc\Attributes\UxHintAttribute.cs" />
-    <Compile Include="Ux.Mvc\Enums\AppearanceType.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\AppearanceType.cs" />
     <Compile Include="Ux.Mvc\Enums\BooleanType.cs" />
     <Compile Include="Ux.Mvc\Enums\DataToggle.cs" />
     <Compile Include="Ux.Mvc\Enums\NavType.cs" />
@@ -249,7 +249,7 @@
     <Compile Include="Ux.Mvc\Enums\PagerSize.cs" />
     <Compile Include="Ux.Mvc\Enums\PagerType.cs" />
     <Compile Include="Ux.Mvc\Enums\UxHintType.cs" />
-    <Compile Include="Ux.Mvc\Enums\WellSize.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\WellSize.cs" />
     <Compile Include="Ux.Mvc\Helpers\CssClassMaps.cs" />
     <Compile Include="Ux.Mvc\Views\UxViewEngine.cs" />
     <Compile Include="Ux.Mvc\Controls\Alert.cs" />
@@ -266,8 +266,8 @@
     <Compile Include="Ux.Mvc\Controls\DisplayRow.cs" />
     <Compile Include="Ux.Mvc\Controls\UxDisposableControl.cs" />
     <Compile Include="Ux.Mvc\Enums\ButtonSize.cs" />
-    <Compile Include="Ux.Mvc\Enums\IconRotation.cs" />
-    <Compile Include="Ux.Mvc\Enums\IconSize.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\IconRotation.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\IconSize.cs" />
     <Compile Include="Ux.Mvc\Helpers\HtmlHelperExtensions.cs" />
     <Compile Include="Ux.Mvc\Controls\EditorRow.cs" />
     <Compile Include="Ux.Mvc\Helpers\RouteValueDictionaryExtensions.cs" />

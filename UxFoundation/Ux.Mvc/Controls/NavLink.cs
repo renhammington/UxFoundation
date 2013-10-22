@@ -21,7 +21,7 @@ namespace Ux.Mvc.Web.UI
 		public NavLink(string text, 
 			string url, 
 			IconType? icon = null, 
-			IconPosition position = IconPosition.Left, 
+			IconPosition position = null, 
 			bool active = false, 
 			bool disabled= false,
 			bool iconPullRight = false,
@@ -74,7 +74,7 @@ namespace Ux.Mvc.Web.UI
 		public NavLink SetIcon(IconType? icon, IconPosition position, bool pullRight = false)
 		{
 			IconType = icon;
-			IconPosition = position;
+			IconPosition = position ?? IconPosition.Left;
 			IconPullRight = pullRight;
 			return this;
 

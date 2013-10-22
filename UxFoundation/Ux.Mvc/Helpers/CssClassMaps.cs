@@ -388,22 +388,9 @@ namespace Ux.Mvc.Web.UI
 			{ ButtonSize.Large, "btn-group-lg" }
 		};
 
-		public static Dictionary<IconRotation, string> IconRotationCssMap = new Dictionary<IconRotation, string>() { 
-			{ IconRotation.Default, string.Empty },
-			{ IconRotation.Rotate90, "icon-rotate-90" },
-			{ IconRotation.Rotate180, "icon-rotate-180" },
-			{ IconRotation.Rotate270, "icon-rotate-270" },
-			{ IconRotation.FlipHorizontal, "icon-flip-horizontal" },
-			{ IconRotation.FlipVertical, "icon-flip-vertical" }
-		};
+		
 
-		public static Dictionary<IconSize, string> IconSizeCssMap = new Dictionary<IconSize, string>() { 
-			{ IconSize.Default, string.Empty },
-			{ IconSize.Large, "icon-large" },
-			{ IconSize.x2, "icon-2x" },
-			{ IconSize.x3, "icon-3x" },
-			{ IconSize.x4, "icon-4x" }
-		};
+		
 		public static Dictionary<AppearanceType, string> LabelAppearanceCssMap = new Dictionary<AppearanceType, string>() { 
 			{ AppearanceType.Default, "label-default" },
 			{ AppearanceType.Primary, "label-primary" },

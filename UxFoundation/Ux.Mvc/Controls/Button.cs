@@ -45,10 +45,10 @@ namespace Ux.Mvc.Web.UI
 		}
 
 
-		public Button SetIcon(Icon icon, IconPosition position = IconPosition.Left)
+		public Button SetIcon(Icon icon, IconPosition position = null)
 		{
 			Icon = icon;
-			IconPosition = position;
+			IconPosition = position ?? IconPosition.Left;
 			return this;
 		}
 

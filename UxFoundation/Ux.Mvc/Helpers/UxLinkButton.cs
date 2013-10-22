@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static MvcHtmlString UxLinkButton(this HtmlHelper helper, string text, string url, string target = null, ButtonAppearanceType appearance = null, ButtonSize size = ButtonSize.Default, IconType? icon = null, IconPosition iconPosition = IconPosition.Left, Popover popover = null, string clientId = null)
+    public static MvcHtmlString UxLinkButton(this HtmlHelper helper, string text, string url, string target = null, ButtonAppearanceType appearance = null, ButtonSize size = ButtonSize.Default, IconType? icon = null, IconPosition iconPosition = null, Popover popover = null, string clientId = null)
     {
         var link = new LinkButton(text, url, target, appearance, size, icon, iconPosition, popover,clientId);
         return helper.RenderUxControl(link);

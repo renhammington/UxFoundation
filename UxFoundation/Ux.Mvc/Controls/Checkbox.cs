@@ -19,7 +19,7 @@ namespace Ux.Mvc.Web.UI
             string group,
             string value = "",
             bool selected = false,
-            LabelPosition position = UI.LabelPosition.Right,
+            LabelPosition position = null,
             CheckColor color = CheckColor.Blue,
             bool disabled = false,
             string clientId = null)
@@ -55,7 +55,7 @@ namespace Ux.Mvc.Web.UI
         public Checkbox SetLabel(string text, LabelPosition position)
         {
             Label = text;
-            LabelPosition = position;
+            LabelPosition = position ?? LabelPosition.Right;
             return this;
         }
 
