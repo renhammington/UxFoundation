@@ -388,18 +388,7 @@ namespace Ux.Mvc.Web.UI
 			{ ButtonSize.Large, "btn-group-lg" }
 		};
 
-		
-
-		
-		public static Dictionary<AppearanceType, string> LabelAppearanceCssMap = new Dictionary<AppearanceType, string>() { 
-			{ AppearanceType.Default, "label-default" },
-			{ AppearanceType.Primary, "label-primary" },
-			{ AppearanceType.Success, "label-success" },
-			{ AppearanceType.Info, "label-info" },
-			{ AppearanceType.Warning, "label-warning" },
-			{ AppearanceType.Danger, "label-danger" }
-		};
-
+	
 		public static Dictionary<AppearanceType, string> ProgressBarAppearanceCssMap = new Dictionary<AppearanceType, string>() { 
 			{ AppearanceType.Default, "progress-bar-success" },
 			{ AppearanceType.Primary, "progress-bar-success" },

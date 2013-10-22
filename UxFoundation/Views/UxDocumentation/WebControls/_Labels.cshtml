@@ -16,20 +16,20 @@
     <h3>Appearance</h3>
     <div class="example">
         @Html.UxLabel("Default")
-        @Html.UxLabel("Success", AppearanceType.Success)
-        @Html.UxLabel("Primary", AppearanceType.Primary)
-        @Html.UxLabel("Danger", AppearanceType.Danger)
-        @Html.UxLabel("Info", AppearanceType.Info)
-        @Html.UxLabel("Warning", AppearanceType.Warning)
+        @Html.UxLabel("Success", LabelAppearanceType.Success)
+        @Html.UxLabel("Primary", LabelAppearanceType.Primary)
+        @Html.UxLabel("Danger", LabelAppearanceType.Danger)
+        @Html.UxLabel("Info", LabelAppearanceType.Info)
+        @Html.UxLabel("Warning", LabelAppearanceType.Warning)
     </div>
     <div class="highlight">
         <pre class="prettyprint">
 @@Html.UxLabel("Default")
-@@Html.UxLabel("Success", AppearanceType.Success)
-@@Html.UxLabel("Primary", AppearanceType.Primary)
-@@Html.UxLabel("Danger", AppearanceType.Danger)
-@@Html.UxLabel("Info", AppearanceType.Info)
-@@Html.UxLabel("Warning", AppearanceType.Warning)
+@@Html.UxLabel("Success", LabelAppearanceType.Success)
+@@Html.UxLabel("Primary", LabelAppearanceType.Primary)
+@@Html.UxLabel("Danger", LabelAppearanceType.Danger)
+@@Html.UxLabel("Info", LabelAppearanceType.Info)
+@@Html.UxLabel("Warning", LabelAppearanceType.Warning)
 </pre>
     </div>
 </div>
@@ -59,7 +59,7 @@
 
 <div class="section">
     <h3>Parameters</h3>
-    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    @using (var panel = Html.UxPanel())
     {
         @panel.Header(
     @:UxLabel
@@ -82,7 +82,7 @@
                 </tr>
                 <tr>
                     <td>appearance</td>
-                    <td><code>AppearanceType</code></td>
+                    <td><code>LabelAppearanceType</code></td>
                     <td><code>Default</code></td>
                     <td>Sets the coloring of the label.</td>
                 </tr>
