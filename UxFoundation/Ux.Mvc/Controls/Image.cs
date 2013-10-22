@@ -25,7 +25,7 @@ namespace Ux.Mvc.Web.UI
         {
             get
             {
-                List<string> classes = new List<string>() { CssClassMaps.ImageCssMap[ImageBox] };
+                List<string> classes = new List<string>() { ImageBox.CssClass };
                 return string.Join(" ", classes);
             }
         }
@@ -40,7 +40,7 @@ namespace Ux.Mvc.Web.UI
                 return string.Join(";", styles);
             }
         }
-        public Image(string src, string alt = null, ImageBox box = UI.ImageBox.None, string width = null, string height = null, string clientId = null) : base("_Image",clientId)
+        public Image(string src, string alt = null, ImageBox box = null, string width = null, string height = null, string clientId = null) : base("_Image",clientId)
         {
             SetSrc(src).SetAlt(alt).SetDimensions(width, height).SetImageBox(box);
         }
@@ -66,7 +66,7 @@ namespace Ux.Mvc.Web.UI
 
         public Image SetImageBox(ImageBox box)
         {
-            ImageBox = box;
+            ImageBox = box ?? ImageBox.None;
             return this;
         }
 

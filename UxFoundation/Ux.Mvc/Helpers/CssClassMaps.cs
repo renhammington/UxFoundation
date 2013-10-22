@@ -454,15 +454,7 @@ namespace Ux.Mvc.Web.UI
 			
 		};
 
-        public static Dictionary<ImageBox, string> ImageCssMap = new Dictionary<ImageBox, string>() { 
-			{ ImageBox.None, "" },
-			{ ImageBox.Circle, "img-circle" },
-            { ImageBox.Rounded, "img-rounded" },
-            { ImageBox.Thumbnail , "img-thumbnail" }            
-			
-		};
-
-
+        
         public static Dictionary<AppearanceType, string> PanelCssMap = new Dictionary<AppearanceType, string>() {
             { AppearanceType.Primary, "panel-primary" },
 			{ AppearanceType.Info, "panel-info" },

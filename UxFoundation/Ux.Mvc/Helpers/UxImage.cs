@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static MvcHtmlString UxImage(this HtmlHelper helper, string src, string alt = null, ImageBox box = ImageBox.None, string width = null, string height = null, string clientId = null)
+    public static MvcHtmlString UxImage(this HtmlHelper helper, string src, string alt = null, ImageBox box = null, string width = null, string height = null, string clientId = null)
     {
         var image = new Image(src, alt, box, width, height, clientId);
         return helper.RenderUxControl(image);

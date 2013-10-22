@@ -11,4 +11,6 @@ namespace Ux.Mvc.Web.UI
 		Pills,
 		PillsStacked
 	}
+
+
 }
