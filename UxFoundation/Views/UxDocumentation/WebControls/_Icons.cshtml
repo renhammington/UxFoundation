@@ -20,9 +20,9 @@
     <div style="height: 400px; border-top: 1px #ddd solid; border-bottom: 1px #ddd solid; overflow: auto; padding: 18px;">
         @using (Html.UxBulletList(true, 3))
         {
-            foreach (var i in Enum.GetValues(typeof(IconType)).Cast<IconType>().OrderBy(i => i.ToString()))
+            foreach (var icon in Ux.Mvc.Enumeration.GetAll<IconType>())
             {
-            @Html.UxBulletListItem(i.ToString(), i)
+                @Html.UxBulletListItem(icon.ToString(), icon)
             }
         }
     </div>
@@ -106,10 +106,10 @@
 </div>
 <div class="section">
     <h3>Parameters</h3>
-    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    @using (var panel = Html.UxPanel())
     {
         @panel.Header(
-    @:UxIcon
+        @:UxIcon
 )
         <table class="table table-striped">
             <thead>

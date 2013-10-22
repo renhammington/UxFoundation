@@ -8,8 +8,8 @@ namespace Ux.Mvc.Web.UI
 	public class IconType : CssMapper
 	{
 
-		private IconType() { }
-		private IconType(int value, string displayName, string cssClass = null)
+		public IconType() { }
+		protected IconType(int value, string displayName, string cssClass = null)
 			: base(value, displayName, cssClass) { }
 
 		public static readonly IconType Adjust = new IconType(1, "Adjust", "adjust");

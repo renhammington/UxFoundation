@@ -11,13 +11,13 @@
    {
       @:href="@Model.Url" 
    }>
-    @if (Model.IconType.HasValue && Model.IconPosition == Ux.Mvc.Web.UI.IconPosition.Left)
+    @if (Model.IconType !=null && Model.IconPosition == Ux.Mvc.Web.UI.IconPosition.Left)
     {
-        @Html.UxIcon(Model.IconType.Value)
+        @Html.UxIcon(Model.IconType)
     }
     @Model.Text
-    @if (Model.IconType.HasValue && Model.IconPosition == Ux.Mvc.Web.UI.IconPosition.Right)
+    @if (Model.IconType!=null && Model.IconPosition == Ux.Mvc.Web.UI.IconPosition.Right)
     {
-        @Html.UxIcon(Model.IconType.Value)
+        @Html.UxIcon(Model.IconType)
     }
 </a>

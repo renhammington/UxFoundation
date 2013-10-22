@@ -3,14 +3,14 @@
 <li @Model.GetClientIdString() class="@Model.CssClass"><a href="@Model.Url" @if(Model.DataToggle != DataToggle.None) {
 													@:data-toggle="@Model.DataToggle.ToString().ToLower()" 
 												 }>
-	@if (Model.IconType.HasValue && Model.IconPosition == IconPosition.Left)
+	@if (Model.IconType!=null && Model.IconPosition == IconPosition.Left)
  {
-		@Html.UxIcon(Model.IconType.Value)
+		@Html.UxIcon(Model.IconType)
  }
 	@Model.Text
-	@if (Model.IconType.HasValue && Model.IconPosition == IconPosition.Right)
+	@if (Model.IconType!=null && Model.IconPosition == IconPosition.Right)
  {
-		@Html.UxIcon(Model.IconType.Value, pullRight: Model.IconPullRight)
+		@Html.UxIcon(Model.IconType, pullRight: Model.IconPullRight)
  }
 @if (Model.Badge != null)
 {

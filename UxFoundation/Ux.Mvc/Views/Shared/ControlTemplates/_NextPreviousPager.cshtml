@@ -7,9 +7,9 @@
 	  { 
 		@:class="previous" 
 	}><a href="@Model.PreviousUrl">
-		@if (Model.PreviousIcon.HasValue)
+		@if (Model.PreviousIcon!=null)
   {
-			@Html.UxIcon(@Model.PreviousIcon.Value) 
+			@Html.UxIcon(@Model.PreviousIcon) 
   }
 		@Model.PreviousText</a></li>
  }
@@ -18,9 +18,9 @@
 		<li @if (Model.Position == PagerPosition.Edge)
 	  { 
 			@:class="next" 
-		}><a href="@Model.NextUrl">@Model.NextText @if (Model.NextIcon.HasValue)
+		}><a href="@Model.NextUrl">@Model.NextText @if (Model.NextIcon!=null)
 											 {
-			@Html.UxIcon(@Model.NextIcon.Value) 
+			@Html.UxIcon(@Model.NextIcon) 
 											 } </a></li>
 	}
 </ul>
