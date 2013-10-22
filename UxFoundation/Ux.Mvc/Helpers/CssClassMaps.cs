@@ -433,16 +433,5 @@ namespace Ux.Mvc.Web.UI
 			
 		};
 
-        
-        public static Dictionary<AppearanceType, string> PanelCssMap = new Dictionary<AppearanceType, string>() {
-            { AppearanceType.Primary, "panel-primary" },
-			{ AppearanceType.Info, "panel-info" },
-            { AppearanceType.Success, "panel-success" },
-            { AppearanceType.Warning, "panel-warning" },
-            { AppearanceType.Danger, "panel-danger" },
-            { AppearanceType.Default, "panel-default" }
-
-        };
-
 	}
 }

@@ -9,19 +9,19 @@ namespace Ux.Mvc.Web.UI
     {
 
         public string Title { get; private set; }
-        public AppearanceType Appearance { get; private set; }
+        public PanelAppearanceType Appearance { get; private set; }
 
 
         public string CssClass
         {
             get
             {
-                List<string> classes = new List<string>() { "panel", CssClassMaps.PanelCssMap[Appearance] };
+                List<string> classes = new List<string>() { "panel", Appearance.CssClass };
                 return string.Join(" ", classes);
             }
         }
 
-        public _Panel(string title = null, AppearanceType appearance = AppearanceType.Default, string clientId = null)
+        public _Panel(string title = null, PanelAppearanceType appearance = null, string clientId = null)
             : base("_Panel", clientId)
         {
             SetTitle(title)
@@ -29,9 +29,9 @@ namespace Ux.Mvc.Web.UI
         }
 
 
-        public _Panel SetAppearance(AppearanceType appearance)
+        public _Panel SetAppearance(PanelAppearanceType appearance)
         {
-            Appearance = appearance;
+            Appearance = appearance ?? PanelAppearanceType.Default;
             return this;
         }
 

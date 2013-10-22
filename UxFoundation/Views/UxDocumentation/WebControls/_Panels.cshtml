@@ -30,25 +30,25 @@
         
         
     }
-    @using (var panel = Html.UxPanel(AppearanceType.Info))
+    @using (var panel = Html.UxPanel(PanelAppearanceType.Info))
     {
         @panel.Header(@<span>Info</span>)
         @panel.Body(@<span>Scorzonera fava bean beet greens bamboo shoot broadleaf arrowhead soybean. Sea beet chaya onion mung bean corn salad chrysanthemum leaves? Ulluco, bok choy welsh onion chickpea pea sprouts indian pea, velvet bean lizard's tail fava bean, tepary bean lizard's tail - moth bean. Lettuce winged bean squash orache plectranthus prussian asparagus lotus root!</span>)
         @panel.Footer(@<i>in the footer</i>)
     }
-    @using (var panel = Html.UxPanel(AppearanceType.Success))
+    @using (var panel = Html.UxPanel(PanelAppearanceType.Success))
     {
         @panel.Header(@<span>This is the header</span>)
         @panel.Body(@<span>Scorzonera fava bean beet greens bamboo shoot broadleaf arrowhead soybean. Sea beet chaya onion mung bean corn salad chrysanthemum leaves? Ulluco, bok choy welsh onion chickpea pea sprouts indian pea, velvet bean lizard's tail fava bean, tepary bean lizard's tail - moth bean. Lettuce winged bean squash orache plectranthus prussian asparagus lotus root!</span>)
         @panel.Footer(@<i>in the footer</i>)
     }
-    @using (var panel = Html.UxPanel(AppearanceType.Danger))
+    @using (var panel = Html.UxPanel(PanelAppearanceType.Danger))
     {
         @panel.Header(@<span>This is the header</span>)
         @panel.Body(@<span>Scorzonera fava bean beet greens bamboo shoot broadleaf arrowhead soybean. Sea beet chaya onion mung bean corn salad chrysanthemum leaves? Ulluco, bok choy welsh onion chickpea pea sprouts indian pea, velvet bean lizard's tail fava bean, tepary bean lizard's tail - moth bean. Lettuce winged bean squash orache plectranthus prussian asparagus lotus root!</span>)
         @panel.Footer(@<i>in the footer</i>)
     }
-    @using (var panel = Html.UxPanel(AppearanceType.Warning))
+    @using (var panel = Html.UxPanel(PanelAppearanceType.Warning))
     {
         @panel.Header(@<span>This is the header</span>)
         @panel.Body(@<span>Scorzonera fava bean beet greens bamboo shoot broadleaf arrowhead soybean. Sea beet chaya onion mung bean corn salad chrysanthemum leaves? Ulluco, bok choy welsh onion chickpea pea sprouts indian pea, velvet bean lizard's tail fava bean, tepary bean lizard's tail - moth bean. Lettuce winged bean squash orache plectranthus prussian asparagus lotus root!</span>)
@@ -77,7 +77,7 @@
 
 <div class="section">
     <h3>Parameters</h3>
-    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    @using (var panel = Html.UxPanel(PanelAppearanceType.Default))
     {
         @panel.Header(
     @:UxPanel
@@ -94,7 +94,7 @@
             <tbody>
                 <tr>
                     <td>appearance</td>
-                    <td><code>AppearanceType</code></td>
+                    <td><code>PanelAppearanceType</code></td>
                     <td><code>Default</code></td>
                     <td>Sets the coloring of the panel.</td>
                 </tr>

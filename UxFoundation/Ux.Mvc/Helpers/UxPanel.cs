@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static Panel UxPanel(this HtmlHelper htmlHelper, AppearanceType appearance = AppearanceType.Default, string clientId = null)
+    public static Panel UxPanel(this HtmlHelper htmlHelper, PanelAppearanceType appearance = null, string clientId = null)
     {
         return new Panel(htmlHelper.ViewContext, appearance, clientId);
     }

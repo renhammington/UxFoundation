@@ -10,7 +10,7 @@ namespace Ux.Mvc.Web.UI
     {
 
         public string Title { get; private set; }
-        public AppearanceType Appearance { get; private set; }
+        public PanelAppearanceType Appearance { get; private set; }
 
         ViewContext ViewContext;
         Boolean isDisposed = false;
@@ -19,12 +19,12 @@ namespace Ux.Mvc.Web.UI
         {
             get
             {
-                List<string> classes = new List<string>() { "panel", CssClassMaps.PanelCssMap[Appearance] };
+                List<string> classes = new List<string>() { "panel", Appearance.CssClass };
                 return string.Join(" ", classes);
             }
         }
 
-        public Panel(ViewContext viewContext, AppearanceType appearance = AppearanceType.Default, string clientId = null)
+        public Panel(ViewContext viewContext, PanelAppearanceType appearance = null, string clientId = null)
         {
             ViewContext = viewContext;
             SetAppearance(appearance);
@@ -63,9 +63,9 @@ namespace Ux.Mvc.Web.UI
         }
 
 
-        public Panel SetAppearance(AppearanceType appearance)
+        public Panel SetAppearance(PanelAppearanceType appearance)
         {
-            Appearance = appearance;
+            Appearance = appearance ?? PanelAppearanceType.Default;
             return this;
         }
 

@@ -180,6 +180,7 @@
     <Compile Include="Ux.Mvc\Controls\SelectGroup.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
     <Compile Include="Ux.Mvc\CssMappers\CalloutAppearanceType.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\PanelAppearanceType.cs" />
     <Compile Include="Ux.Mvc\Enums\CheckColor.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMapper.cs" />
     <Compile Include="Ux.Mvc\Enums\Enumeration.cs" />
