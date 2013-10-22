@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static MvcHtmlString UxBulletListItem(this HtmlHelper helper, string text, IconType? iconType = null, string clientId = null)
+    public static MvcHtmlString UxBulletListItem(this HtmlHelper helper, string text, IconType iconType = null, string clientId = null)
     {
         BulletListItem bullet = new BulletListItem(text, iconType, clientId);
         return helper.RenderUxControl(bullet);

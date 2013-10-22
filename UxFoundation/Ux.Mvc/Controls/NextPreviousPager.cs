@@ -13,8 +13,8 @@ namespace Ux.Mvc.Web.UI
 		public string NextText { get; private set; }
 		public string PreviousUrl { get; private set; }
 		public string NextUrl { get; private set; }
-		public IconType? NextIcon { get; private set; }
-		public IconType? PreviousIcon { get; private set; }
+		public IconType NextIcon { get; private set; }
+		public IconType PreviousIcon { get; private set; }
 
 		public string CssClass
 		{
@@ -26,7 +26,7 @@ namespace Ux.Mvc.Web.UI
 		}
 
 
-		public NextPreviousPager(string nextText, string nextUrl, string prevText, string prevUrl, IconType? nextIcon = IconType.ChevronRight, IconType? prevIcon = IconType.ChevronLeft, PagerPosition position = PagerPosition.Center,  string clientId = null)
+		public NextPreviousPager(string nextText, string nextUrl, string prevText, string prevUrl, IconType nextIcon = null, IconType prevIcon = null, PagerPosition position = PagerPosition.Center,  string clientId = null)
 			: base("_NextPreviousPager", clientId)
 		{
 			SetNext(nextText, nextUrl, nextIcon).SetPrevious(prevText, prevUrl, prevIcon).SetPosition(position);
@@ -40,7 +40,7 @@ namespace Ux.Mvc.Web.UI
 			return this;
 		}
 
-		public NextPreviousPager SetNext(string text, string url, IconType? icon)
+		public NextPreviousPager SetNext(string text, string url, IconType icon)
 		{
 			NextUrl = url;
 			NextText = text;
@@ -48,7 +48,7 @@ namespace Ux.Mvc.Web.UI
 			return this;
 		}
 
-		public NextPreviousPager SetPrevious(string text, string url, IconType? icon)
+		public NextPreviousPager SetPrevious(string text, string url, IconType icon)
 		{
 			PreviousUrl = url;
 			PreviousText = text;

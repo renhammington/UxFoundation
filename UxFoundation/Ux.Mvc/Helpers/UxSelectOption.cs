@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static MvcHtmlString UxSelectOption(this HtmlHelper htmlHelper, string text, string value, bool selected = false, IconType? iconType = null, string subText = null, bool divider = false, bool disabled = false, string clientId = null)
+    public static MvcHtmlString UxSelectOption(this HtmlHelper htmlHelper, string text, string value, bool selected = false, IconType iconType = null, string subText = null, bool divider = false, bool disabled = false, string clientId = null)
     {
         var option = new SelectOption(text, value, selected, iconType, subText, divider, disabled, clientId);
         return UxSelectOption(htmlHelper, option);

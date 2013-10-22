@@ -5,17 +5,6 @@ using System.Web;
 
 namespace Ux.Mvc.Web.UI
 {
-	public enum AppearanceType
-	{
-		Default,
-		Primary,
-		Success,
-		Info,
-		Warning,
-		Danger
-	}
-
-
 	public class ButtonAppearanceType : CssMapper
 	{
 		public static readonly ButtonAppearanceType Default = new ButtonAppearanceType(0, "Default", "btn-default");

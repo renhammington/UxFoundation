@@ -6,13 +6,13 @@
     @:class="active"   
     }    
 }
-@helper navItem(string text, string action, string controller, IconType? icon = null)
+@helper navItem(string text, string action, string controller, IconType icon = null)
 {
     <li @isActive(action, controller)>
 
-        <a href="@Url.Action(action, controller)">@if (icon.HasValue)
+        <a href="@Url.Action(action, controller)">@if (icon!=null)
                                                   {
-            @Html.UxIcon(icon.Value)   
+            @Html.UxIcon(icon)   
                                                   } @text</a></li>
 }
 @helper helperItem(string text, string nameOfPartial, bool isNew = false)
@@ -20,7 +20,7 @@
     
     <li><a href="@Url.Action("HtmlHelpers", "UxDocumentation", new { partial = nameOfPartial }, null)">@text @if (isNew)
                                                                                                              {
-        @Html.UxLabel("New", appearance: AppearanceType.Danger)
+        @Html.UxLabel("New", appearance: LabelAppearanceType.Danger)
                                                                                                              }
     </a></li>
 }
@@ -29,7 +29,7 @@
     
     <li><a href="@Url.Action("Samples", "UxDocumentation", new { partial = nameOfPartial }, null)">@text @if (isNew)
                                                                                                          {
-        @Html.UxLabel("New", appearance: AppearanceType.Danger)
+        @Html.UxLabel("New", appearance: LabelAppearanceType.Danger)
                                                                                                          }
     </a></li>
 }
@@ -39,7 +39,7 @@
     
     <li><a href="@Url.Action("DataTypes", "UxDocumentation", new { partial = nameOfPartial }, null)">@text @if (isNew)
                                                                                                            {
-        @Html.UxLabel("New", appearance: AppearanceType.Danger)
+        @Html.UxLabel("New", appearance: LabelAppearanceType.Danger)
                                                                                                            }
     </a></li>
 }

@@ -18,7 +18,7 @@ public static partial class UxHtmlHelpers
         string text,
         ButtonAppearanceType appearance = null,
         ButtonSize size = null,
-        IconType? iconType = null,
+        IconType iconType = null,
         IconPosition position = null,
         bool causesValidation = true,
         bool disabled = false,
@@ -33,8 +33,8 @@ public static partial class UxHtmlHelpers
 
         button.SetClientId(clientId);
 
-        if (iconType.HasValue)
-            button.SetIcon(new Icon(iconType.Value), position);
+        if (iconType!=null)
+            button.SetIcon(new Icon(iconType), position);
 
         return UxButton(helper, button);
     }

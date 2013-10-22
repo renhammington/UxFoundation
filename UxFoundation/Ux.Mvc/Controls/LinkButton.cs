@@ -12,7 +12,7 @@ namespace Ux.Mvc.Web.UI
         public string Text { get; private set; }
         public string Url { get; private set; }
         public ButtonAppearanceType Appearance { get; private set; }
-        public IconType? IconType {get;private set;}
+        public IconType IconType {get;private set;}
         public IconPosition IconPosition {get;private set;}
         public ButtonSize Size { get; private set; }
         public string Target { get; private set; }
@@ -27,7 +27,7 @@ namespace Ux.Mvc.Web.UI
             }
         }
 
-        public LinkButton(string text, string url, string target = null, ButtonAppearanceType appearance = null, ButtonSize size = null, IconType? icon = null, IconPosition position = null, Popover popover = null, string clientId = null) : base("_LinkButton",clientId)
+        public LinkButton(string text, string url, string target = null, ButtonAppearanceType appearance = null, ButtonSize size = null, IconType icon = null, IconPosition position = null, Popover popover = null, string clientId = null) : base("_LinkButton",clientId)
         {
             SetLink(text, url)
                 .SetTarget(target)
@@ -62,7 +62,7 @@ namespace Ux.Mvc.Web.UI
             return this;
         }
 
-        public LinkButton SetIcon(IconType? icon, IconPosition position)
+        public LinkButton SetIcon(IconType icon, IconPosition position)
         {
             IconType = icon;
             IconPosition = position ?? IconPosition.Left;

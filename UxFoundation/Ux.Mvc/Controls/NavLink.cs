@@ -12,7 +12,7 @@ namespace Ux.Mvc.Web.UI
 		public bool Disabled { get; private set; }
 		public string Url { get; private set; }
 		public string Text { get; private set; }
-		public IconType? IconType { get; private set; }
+		public IconType IconType { get; private set; }
 		public IconPosition IconPosition { get; private set; }
 		public bool IconPullRight { get; private set; }
 		public DataToggle DataToggle { get; private set; }
@@ -20,7 +20,7 @@ namespace Ux.Mvc.Web.UI
 
 		public NavLink(string text, 
 			string url, 
-			IconType? icon = null, 
+			IconType icon = null, 
 			IconPosition position = null, 
 			bool active = false, 
 			bool disabled= false,
@@ -71,7 +71,7 @@ namespace Ux.Mvc.Web.UI
 			return this;
 		}
 
-		public NavLink SetIcon(IconType? icon, IconPosition position, bool pullRight = false)
+		public NavLink SetIcon(IconType icon, IconPosition position, bool pullRight = false)
 		{
 			IconType = icon;
 			IconPosition = position ?? IconPosition.Left;

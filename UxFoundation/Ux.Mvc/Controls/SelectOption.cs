@@ -9,7 +9,7 @@ namespace Ux.Mvc.Web.UI
 {
     public class SelectOption : UxControl 
     {
-        public IconType? IconType { get; private set; }
+        public IconType IconType { get; private set; }
         public string SubText { get; private set; }
         public bool Divider { get; private set; }
         public bool Disabled { get; private set; }
@@ -18,7 +18,7 @@ namespace Ux.Mvc.Web.UI
         public string Value { get; private set; }
 
         
-        public SelectOption(string text, string value, bool selected = false, IconType? iconType = null, string subText = null, bool divider = false, bool disabled = false, string clientId = null) : base("_SelectOption",clientId)
+        public SelectOption(string text, string value, bool selected = false, IconType iconType = null, string subText = null, bool divider = false, bool disabled = false, string clientId = null) : base("_SelectOption",clientId)
         {
             SetTextAndValue(text, value)
                 .SetSelected(selected)
@@ -52,7 +52,7 @@ namespace Ux.Mvc.Web.UI
             return this;
         }
 
-        public SelectOption SetIcon(IconType? iconType)
+        public SelectOption SetIcon(IconType iconType)
         {
             IconType = iconType;
             return this;
@@ -75,7 +75,7 @@ namespace Ux.Mvc.Web.UI
             if (Disabled) properties.Add("disabled=\"disabled\"");
             if (Divider) properties.Add("data-divider=\"true\"");
             if (SubText.IsNullOrEmpty() == false) properties.Add("data-subtext=\"" + SubText + "\"");
-            if (IconType.HasValue) properties.Add("data-icon=\"icon-" + CssClassMaps.IconCssMap[IconType.Value] + "\"");
+            if (IconType!=null) properties.Add("data-icon=\"icon-" + IconType.CssClass + "\"");
             if (Selected) properties.Add("selected=\"selected\"");
             return MvcHtmlString.Create(string.Join(" ", properties));
         }

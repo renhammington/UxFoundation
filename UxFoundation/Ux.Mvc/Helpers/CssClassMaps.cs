@@ -374,18 +374,5 @@ namespace Ux.Mvc.Web.UI
 			{ IconType.Renren,"renren" },
 		};
 
-	
-		
-			
-		//public static Dictionary<AppearanceType, string> SelectStyleCssMap = new Dictionary<AppearanceType, string>() { 
-		//	{ AppearanceType.Primary, "btn-primary" },
-		//	{ AppearanceType.Info, "btn-info" },
-		//	{ AppearanceType.Success, "btn-success" },
-		//	{ AppearanceType.Warning, "btn-warning" },
-		//	{ AppearanceType.Danger, "btn-danger" },
-		//	{ AppearanceType.Default, "" }
-			
-		//};
-
 	}
 }

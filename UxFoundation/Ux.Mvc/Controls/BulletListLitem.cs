@@ -10,9 +10,9 @@ namespace Ux.Mvc.Web.UI
 
 		public string Text { get; set; }
 		
-		public IconType? IconType { get; set; }
+		public IconType IconType { get; set; }
 		
-		public BulletListItem(string text, IconType? iconType = null, string clientId = null)
+		public BulletListItem(string text, IconType iconType = null, string clientId = null)
 			: base("_BulletListItem", clientId)
 		{
 			Text = text;
