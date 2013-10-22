@@ -384,20 +384,7 @@ namespace Ux.Mvc.Web.UI
 			{ AppearanceType.Danger, "progress-bar-danger" }
 		};
 
-		
-
-		public static Dictionary<AppearanceType, string> AlertAppearanceCssMap = new Dictionary<AppearanceType, string>() { 
-			{ AppearanceType.Default, "alert-success" },
-			{ AppearanceType.Primary, "alert-success" },
-			{ AppearanceType.Success, "alert-success" },
-			{ AppearanceType.Info, "alert-info" },
-			{ AppearanceType.Warning, "alert-warning" },
-			{ AppearanceType.Danger, "alert-danger" }
 			
-		};
-
-
-		
         public static Dictionary<AppearanceType, string> SelectStyleCssMap = new Dictionary<AppearanceType, string>() { 
 			{ AppearanceType.Primary, "btn-primary" },
 			{ AppearanceType.Info, "btn-info" },

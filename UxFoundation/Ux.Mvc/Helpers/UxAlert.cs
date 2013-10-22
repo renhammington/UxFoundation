@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static IDisposable UxAlert(this HtmlHelper htmlHelper, AppearanceType appearance = AppearanceType.Default, bool dismissable = false, string clientId = null)
+    public static IDisposable UxAlert(this HtmlHelper htmlHelper, AlertAppearanceType appearance = null, bool dismissable = false, string clientId = null)
     {
         var alert = new Alert(appearance, dismissable, clientId);
         return RenderUxDispoableWebControl(htmlHelper, alert);

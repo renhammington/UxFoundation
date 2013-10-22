@@ -8,22 +8,22 @@ namespace Ux.Mvc.Web.UI
 	public class Alert : UxControl
 	{
 		public bool Dismissable { get; private set; }
-		public AppearanceType Appearance { get; private set; }
+		public AlertAppearanceType Appearance { get; private set; }
 
 		public string CssClass
 		{
 			get
 			{
-				List<string> classes = new List<string>() { "alert", CssClassMaps.AlertAppearanceCssMap[Appearance] };
+				List<string> classes = new List<string>() { "alert", Appearance.CssClass };
 				if (Dismissable) classes.Add("alert-dismissable");
 				return string.Join(" ", classes);
 			}
 		}
 
-		public Alert(AppearanceType appearance = AppearanceType.Default, bool dismissable = false, string clientId = null) : base("_Alert", clientId)
+		public Alert(AlertAppearanceType appearance = null, bool dismissable = false, string clientId = null) : base("_Alert", clientId)
 		{
-			SetDismissable(dismissable);
-			SetAppearance(appearance);
+			SetDismissable(dismissable)
+				.SetAppearance(appearance);
 		}
 
 		public Alert SetDismissable(bool value)
@@ -31,9 +31,9 @@ namespace Ux.Mvc.Web.UI
 			Dismissable = value;
 			return this;
 		}
-		public Alert SetAppearance(AppearanceType appearance)
+		public Alert SetAppearance(AlertAppearanceType appearance)
 		{
-			Appearance = appearance;
+			Appearance = appearance ?? AlertAppearanceType.Info;
 			return this;
 		}
 

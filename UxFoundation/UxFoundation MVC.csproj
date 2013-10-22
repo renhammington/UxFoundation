@@ -179,6 +179,7 @@
     <Compile Include="Ux.Mvc\Controls\Select.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectGroup.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\AlertAppearanceType.cs" />
     <Compile Include="Ux.Mvc\CssMappers\ButtonGroupSize.cs" />
     <Compile Include="Ux.Mvc\CssMappers\CalloutAppearanceType.cs" />
     <Compile Include="Ux.Mvc\CssMappers\LabelAppearanceType.cs" />

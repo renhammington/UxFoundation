@@ -15,19 +15,19 @@
 
     <h3>Appearance</h3>
     <div class="example">
-        @using (Html.UxAlert())
+        @using (Html.UxAlert(AlertAppearanceType.Success))
         {
             <b>Success, default and primary</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
  }
-        @using (Html.UxAlert(AppearanceType.Danger))
+        @using (Html.UxAlert(AlertAppearanceType.Danger))
         {
             <b>Danger</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
  }
-        @using (Html.UxAlert(AppearanceType.Info))
+        @using (Html.UxAlert(AlertAppearanceType.Info))
         {
             <b>Info</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
  }
-        @using (Html.UxAlert(AppearanceType.Warning))
+        @using (Html.UxAlert(AlertAppearanceType.Warning))
         {
             <b>Warning</b> @:garbanzo peanut - tepary bean moth bean chrysanthemum leaves komatsuna earthnut pea gobo velvet bean. Parsnip pumpkin kohlrabi plectranthus mooli rutabaga kuka. Chickpea welsh onion? Lizard's tail aubergine chaya yardlong bean fat hen chickpea ensete swede catsear bitter melon arugula.
  }
@@ -35,10 +35,10 @@
     </div>
     <div class="highlight">
         <pre class="prettyprint">
-@@using (Html.UxAlert()) { &hellip; }
-@@using (Html.UxAlert(AppearanceType.Danger)) { &hellip; }
-@@using (Html.UxAlert(AppearanceType.Info)) { &hellip; }
-@@using (Html.UxAlert(AppearanceType.Warning)) { &hellip; }
+@@using (Html.UxAlert(AlertAppearanceType.Success)) { &hellip; }
+@@using (Html.UxAlert(AlertAppearanceType.Danger)) { &hellip; }
+@@using (Html.UxAlert(AlertAppearanceType.Info)) { &hellip; }
+@@using (Html.UxAlert(AlertAppearanceType.Warning)) { &hellip; }
 </pre>
     </div>
 </div>
@@ -62,7 +62,7 @@
 
 <div class="section">
     <h3>Parameters</h3>
-    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    @using (var panel = Html.UxPanel())
     {
         @panel.Header(
     @:UxAlert
@@ -79,9 +79,9 @@
             <tbody>
                 <tr>
                     <td>appearance</td>
-                    <td><code>AppearanceType</code></td>
-                    <td><code>Default</code></td>
-                    <td>Sets the coloring of the alert. Note, <code>AppearanceType.Default</code> and <code>AppearanceType.Primary</code> automatically re-map to <code>AppearanceType.Success</code>.</td>
+                    <td><code>AlertAppearanceType</code></td>
+                    <td><code>Info</code></td>
+                    <td>Sets the coloring of the alert.</td>
                 </tr>
                 <tr>
                     <td>dismissable</td>

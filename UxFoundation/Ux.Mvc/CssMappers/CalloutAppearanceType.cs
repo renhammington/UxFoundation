@@ -9,8 +9,8 @@ namespace Ux.Mvc.Web.UI
 	{
 		public static readonly CalloutAppearanceType Success = new CalloutAppearanceType(2, "Success", "callout-success");
 		public static readonly CalloutAppearanceType Info = new CalloutAppearanceType(2, "Info", "callout-info");
-		public static readonly CalloutAppearanceType Warning = new CalloutAppearanceType(2, "Warning", "callout-warning");
-		public static readonly CalloutAppearanceType Danger = new CalloutAppearanceType(2, "Danger", "callout-danger");
+		public static readonly CalloutAppearanceType Warning = new CalloutAppearanceType(3, "Warning", "callout-warning");
+		public static readonly CalloutAppearanceType Danger = new CalloutAppearanceType(4, "Danger", "callout-danger");
 
 		private CalloutAppearanceType() { }
 		private CalloutAppearanceType(int value, string displayName, string cssClass = null)
