@@ -59,7 +59,7 @@
 
     <h3>Appearance</h3>
     <div class="example">
-        @using (Html.UxSelect(appearance: AppearanceType.Primary))
+        @using (Html.UxSelect(appearance: SelectAppearanceType.Primary))
         {
             @Html.UxSelectOption("Apple", "1")
             @Html.UxSelectOption("Windows", "2")
@@ -68,7 +68,7 @@
             @Html.UxSelectOption("Pinterest", "5")
             @Html.UxSelectOption("Youtube", "6")
         }
-        @using (Html.UxSelect(appearance: AppearanceType.Info))
+        @using (Html.UxSelect(appearance: SelectAppearanceType.Info))
         {
             @Html.UxSelectOption("Apple", "1")
             @Html.UxSelectOption("Windows", "2")
@@ -77,7 +77,7 @@
             @Html.UxSelectOption("Pinterest", "5")
             @Html.UxSelectOption("Youtube", "6")
         }
-        @using (Html.UxSelect(appearance: AppearanceType.Danger))
+        @using (Html.UxSelect(appearance: SelectAppearanceType.Danger))
         {
             @Html.UxSelectOption("Apple", "1")
             @Html.UxSelectOption("Windows", "2")
@@ -86,7 +86,7 @@
             @Html.UxSelectOption("Pinterest", "5")
             @Html.UxSelectOption("Youtube", "6")
         }
-        @using (Html.UxSelect(appearance: AppearanceType.Success))
+        @using (Html.UxSelect(appearance: SelectAppearanceType.Success))
         {
             @Html.UxSelectOption("Apple", "1")
             @Html.UxSelectOption("Windows", "2")
@@ -95,7 +95,7 @@
             @Html.UxSelectOption("Pinterest", "5")
             @Html.UxSelectOption("Youtube", "6")
         }
-        @using (Html.UxSelect(appearance: AppearanceType.Warning))
+        @using (Html.UxSelect(appearance: SelectAppearanceType.Warning))
         {
             @Html.UxSelectOption("Apple", "1")
             @Html.UxSelectOption("Windows", "2")
@@ -108,11 +108,11 @@
     </div>
     <div class="highlight">
         <pre class="prettyprint">
-@@using (Html.UxSelect(appearance:AppearanceType.Primary)) { &hellip; }
-@@using (Html.UxSelect(appearance:AppearanceType.Info)) { &hellip; }
-@@using (Html.UxSelect(appearance:AppearanceType.Danger)) { &hellip; }
-@@using (Html.UxSelect(appearance:AppearanceType.Success)) { &hellip; }
-@@using (Html.UxSelect(appearance:AppearanceType.Warning)) { &hellip; }
+@@using (Html.UxSelect(appearance:SelectAppearanceType.Primary)) { &hellip; }
+@@using (Html.UxSelect(appearance:SelectAppearanceType.Info)) { &hellip; }
+@@using (Html.UxSelect(appearance:SelectAppearanceType.Danger)) { &hellip; }
+@@using (Html.UxSelect(appearance:SelectAppearanceType.Success)) { &hellip; }
+@@using (Html.UxSelect(appearance:SelectAppearanceType.Warning)) { &hellip; }
 </pre>
     </div>
 </div>
@@ -308,7 +308,7 @@
 
 <div class="section">
     <h3>Parameters</h3>
-    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    @using (var panel = Html.UxPanel())
     {
         @panel.Header(
     @:UxSelect
@@ -325,7 +325,7 @@
             <tbody>
                 <tr>
                     <td>appearance</td>
-                    <td><code>AppearanceType</code></td>
+                    <td><code>SelectAppearanceType</code></td>
                     <td><code>Default</code></td>
                     <td>Sets the appearance of the select.</td>
                 </tr>

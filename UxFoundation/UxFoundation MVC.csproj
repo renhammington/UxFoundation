@@ -185,6 +185,7 @@
     <Compile Include="Ux.Mvc\CssMappers\LabelAppearanceType.cs" />
     <Compile Include="Ux.Mvc\CssMappers\PanelAppearanceType.cs" />
     <Compile Include="Ux.Mvc\CssMappers\ProgressBarAppearanceType.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\SelectAppearanceType.cs" />
     <Compile Include="Ux.Mvc\Enums\CheckColor.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMapper.cs" />
     <Compile Include="Ux.Mvc\Enums\Enumeration.cs" />

@@ -10,7 +10,7 @@ namespace Ux.Mvc.Web.UI
     public class Select : UxControl
     {
 
-        public AppearanceType? Appearance { get; private set; }
+        public SelectAppearanceType Appearance { get; private set; }
         public bool LiveSearch { get; private set; }
         public bool ShowTick { get; private set; }
         public bool ShowArrow { get; private set; }
@@ -47,7 +47,7 @@ namespace Ux.Mvc.Web.UI
         {
             List<string> properties = new List<string>();
             if (LiveSearch) properties.Add("data-live-search=\"true\"");
-            if (Appearance.HasValue) properties.Add("data-style=\"" + CssClassMaps.SelectStyleCssMap[Appearance.Value] + "\"");
+            properties.Add("data-style=\"" + Appearance.CssClass + "\"");
             if (AutoWidth) properties.Add("data-width=\"auto\"");
             else if (Width.IsNullOrEmpty() == false) properties.Add("data-width=\"" + Width + "\"");
             if (Header.IsNullOrEmpty() == false) properties.Add("data-header=\"" + Header + "\"");
@@ -61,7 +61,7 @@ namespace Ux.Mvc.Web.UI
         public Select(
             int? selectedValue = null,
             DataSource datasource = null,
-            AppearanceType appearance = AppearanceType.Default,
+            SelectAppearanceType appearance = null,
             bool liveSearch = false,
             bool showTick = false,
             bool showArrow = false,
@@ -90,9 +90,9 @@ namespace Ux.Mvc.Web.UI
                 SetAutoWidth();
         }
 
-        public Select SetAppearance(AppearanceType appearance)
+		public Select SetAppearance(SelectAppearanceType appearance)
         {
-            Appearance = appearance;
+			Appearance = appearance ?? SelectAppearanceType.Default;
             return this;
         }
 
