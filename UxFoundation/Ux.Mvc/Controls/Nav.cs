@@ -16,7 +16,7 @@ namespace Ux.Mvc.Web.UI
 		{
 			get
 			{
-				List<string> classes = new List<string>() { "nav", CssClassMaps.NavTypeCssMap[Type] };
+				List<string> classes = new List<string>() { "nav", Type.CssClass };
 				if (Justified) classes.Add("nav-justified");
 				return string.Join(" ", classes);
 			}
@@ -32,7 +32,7 @@ namespace Ux.Mvc.Web.UI
 
 		public Nav SetType(NavType type)
 		{
-			Type = type;
+			Type = type ?? NavType.Tabs;
 			return this;
 		}
 

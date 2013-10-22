@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static IDisposable UxNumericPager(this HtmlHelper htmlHelper, PagerSize size = PagerSize.Default, string clientId = null)
+    public static IDisposable UxNumericPager(this HtmlHelper htmlHelper, PagerSize size = null, string clientId = null)
     {
         var pager = new NumericPager(size, clientId);
         return RenderUxDispoableWebControl(htmlHelper, pager);

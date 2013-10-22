@@ -242,12 +242,12 @@
     <Compile Include="Ux.Mvc\Attributes\PlaceholderAttribute.cs" />
     <Compile Include="Ux.Mvc\Attributes\TooltipAttribute.cs" />
     <Compile Include="Ux.Mvc\Attributes\UxHintAttribute.cs" />
-    <Compile Include="Ux.Mvc\CssMappers\AppearanceType.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\ButtonAppearanceType.cs" />
     <Compile Include="Ux.Mvc\Enums\BooleanType.cs" />
     <Compile Include="Ux.Mvc\Enums\DataToggle.cs" />
-    <Compile Include="Ux.Mvc\Enums\NavType.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\NavType.cs" />
     <Compile Include="Ux.Mvc\Enums\PagerPosition.cs" />
-    <Compile Include="Ux.Mvc\Enums\PagerSize.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\PagerSize.cs" />
     <Compile Include="Ux.Mvc\Enums\PagerType.cs" />
     <Compile Include="Ux.Mvc\Enums\UxHintType.cs" />
     <Compile Include="Ux.Mvc\CssMappers\WellSize.cs" />

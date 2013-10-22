@@ -421,19 +421,8 @@ namespace Ux.Mvc.Web.UI
 			
 		};
 
-		public static Dictionary<PagerSize, string> PagerSizeCssMap = new Dictionary<PagerSize, string>() { 
-			{ PagerSize.Default, "" },
-			{ PagerSize.Small, "pagination-sm" },
-			{ PagerSize.Large, "pagination-lg" },
-			
-		};
 
-		public static Dictionary<NavType, string> NavTypeCssMap = new Dictionary<NavType, string>() { 
-			{ NavType.Tabs, "nav-tabs" },
-			{ NavType.Pills, "nav-pills" },
-			{ NavType.PillsStacked, "nav-pills nav-stacked" },
-		};
-
+		
         public static Dictionary<AppearanceType, string> SelectStyleCssMap = new Dictionary<AppearanceType, string>() { 
 			{ AppearanceType.Primary, "btn-primary" },
 			{ AppearanceType.Info, "btn-info" },

@@ -15,13 +15,13 @@ namespace Ux.Mvc.Web.UI
 			{
 				List<string> classes = new List<string>();
 				classes.Add("pagination");
-				classes.Add(CssClassMaps.PagerSizeCssMap[Size]);
+				classes.Add(Size.CssClass);
 				return string.Join(" ", classes);
 			}
 		}
 
 
-		public NumericPager(PagerSize size = PagerSize.Default, string clientId = null) : base("_NumericPager", clientId)
+		public NumericPager(PagerSize size = null, string clientId = null) : base("_NumericPager", clientId)
 		{
 			SetSize(size);
 		}
@@ -29,7 +29,7 @@ namespace Ux.Mvc.Web.UI
 
 		public NumericPager SetSize(PagerSize size)
 		{
-			Size = size;
+			Size = size ?? PagerSize.Default;
 			return this;
 		}
 		
