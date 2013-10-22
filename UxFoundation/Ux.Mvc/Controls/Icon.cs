@@ -25,7 +25,7 @@ namespace Ux.Mvc.Web.UI
 		{
 			get
 			{
-				List<string> classes = new List<string>() { CssClassMaps.IconCssMap[IconType], Rotation.CssClass, Size.CssClass };
+				List<string> classes = new List<string>() { IconType.CssClass, Rotation.CssClass, Size.CssClass };
 				if (BorderVisible) classes.Add("icon-border");
 				if (Spin) classes.Add("icon-spin");
 				if (PullRight) classes.Add("pull-right");

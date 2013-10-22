@@ -258,7 +258,6 @@
     <Compile Include="Ux.Mvc\Enums\PagerType.cs" />
     <Compile Include="Ux.Mvc\Enums\UxHintType.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMappers\WellSize.cs" />
-    <Compile Include="Ux.Mvc\Helpers\CssClassMaps.cs" />
     <Compile Include="Ux.Mvc\Views\UxViewEngine.cs" />
     <Compile Include="Ux.Mvc\Controls\Alert.cs" />
     <Compile Include="Ux.Mvc\Controls\Badge.cs" />
