@@ -7,7 +7,7 @@ namespace Ux.Mvc.Web.UI
 {
 	public class CalloutAppearanceType : CssMapper
 	{
-		public static readonly CalloutAppearanceType Success = new CalloutAppearanceType(2, "Success", "callout-success");
+		public static readonly CalloutAppearanceType Success = new CalloutAppearanceType(1, "Success", "callout-success");
 		public static readonly CalloutAppearanceType Info = new CalloutAppearanceType(2, "Info", "callout-info");
 		public static readonly CalloutAppearanceType Warning = new CalloutAppearanceType(3, "Warning", "callout-warning");
 		public static readonly CalloutAppearanceType Danger = new CalloutAppearanceType(4, "Danger", "callout-danger");

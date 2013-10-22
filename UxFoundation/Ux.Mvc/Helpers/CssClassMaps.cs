@@ -375,15 +375,7 @@ namespace Ux.Mvc.Web.UI
 		};
 
 	
-		public static Dictionary<AppearanceType, string> ProgressBarAppearanceCssMap = new Dictionary<AppearanceType, string>() { 
-			{ AppearanceType.Default, "progress-bar-success" },
-			{ AppearanceType.Primary, "progress-bar-success" },
-			{ AppearanceType.Success, "progress-bar-success" },
-			{ AppearanceType.Info, "progress-bar-info" },
-			{ AppearanceType.Warning, "progress-bar-warning" },
-			{ AppearanceType.Danger, "progress-bar-danger" }
-		};
-
+		
 			
         public static Dictionary<AppearanceType, string> SelectStyleCssMap = new Dictionary<AppearanceType, string>() { 
 			{ AppearanceType.Primary, "btn-primary" },

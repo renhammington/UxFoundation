@@ -16,17 +16,17 @@
 
     <h3>Appearance</h3>
     <div class="example">
-        @Html.UxProgressBar(30)
-        @Html.UxProgressBar(40, AppearanceType.Warning)
-        @Html.UxProgressBar(55, AppearanceType.Info)
-        @Html.UxProgressBar(70, AppearanceType.Danger)
+        @Html.UxProgressBar(30, ProgressBarAppearanceType.Success)
+        @Html.UxProgressBar(40, ProgressBarAppearanceType.Warning)
+        @Html.UxProgressBar(55, ProgressBarAppearanceType.Info)
+        @Html.UxProgressBar(70, ProgressBarAppearanceType.Danger)
     </div>
     <div class="highlight">
         <pre class="prettyprint">
 @@Html.UxProgressBar(30)
-@@Html.UxProgressBar(40, AppearanceType.Warning)
-@@Html.UxProgressBar(55, AppearanceType.Info)
-@@Html.UxProgressBar(70, AppearanceType.Danger)
+@@Html.UxProgressBar(40, ProgressBarAppearanceType.Warning)
+@@Html.UxProgressBar(55, ProgressBarAppearanceType.Info)
+@@Html.UxProgressBar(70, ProgressBarAppearanceType.Danger)
 </pre>
     </div>
 
@@ -60,7 +60,7 @@
 
 <div class="section">
     <h3>Parameters</h3>
-    @using (var panel = Html.UxPanel(AppearanceType.Default))
+    @using (var panel = Html.UxPanel())
     {
         @panel.Header(
     @:UxProgressBar
@@ -83,9 +83,9 @@
                 </tr>
                 <tr>
                     <td>appearance</td>
-                    <td><code>AppearanceType</code></td>
-                    <td><code>Default</code></td>
-                    <td>Sets the coloring of the progress bar. Note, <code>AppearanceType.Default</code> and <code>AppearanceType.Primary</code> automatically re-map to <code>AppearanceType.Success</code>.</td>
+                    <td><code>ProgressBarAppearanceType</code></td>
+                    <td><code>Success</code></td>
+                    <td>Sets the coloring of the progress bar.</td>
                 </tr>
                 <tr>
                     <td>striped</td>

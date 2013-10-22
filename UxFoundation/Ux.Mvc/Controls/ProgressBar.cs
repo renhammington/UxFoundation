@@ -8,7 +8,7 @@ namespace Ux.Mvc.Web.UI
 	public class ProgressBar : UxControl
 	{
 
-		public AppearanceType Appearance { get; private set; }
+		public ProgressBarAppearanceType Appearance { get; private set; }
 		public bool Striped { get; private set; }
 		public bool Animated { get; private set; }
 		
@@ -21,7 +21,7 @@ namespace Ux.Mvc.Web.UI
 		{
 			get
 			{
-				List<string> classes = new List<string>() { "progress-bar", CssClassMaps.ProgressBarAppearanceCssMap[Appearance] };
+				List<string> classes = new List<string>() { "progress-bar", Appearance.CssClass };
 				return string.Join(" ", classes);
 			}
 		}
@@ -38,20 +38,22 @@ namespace Ux.Mvc.Web.UI
 		}
 
 
-		public ProgressBar(int value, AppearanceType appearance = AppearanceType.Default, bool striped = false, bool animated = false, string clientId = null) : base("_ProgressBar", clientId)
+		public ProgressBar(int value, ProgressBarAppearanceType appearance = null, bool striped = false, bool animated = false, string clientId = null)
+			: base("_ProgressBar", clientId)
 		{
-			// Ensure value boundaries not exceeded
+			
 			SetAppearance(appearance);
 			SetStriped(striped);
 			SetAnimated(animated);
 			SetValue(value);
 		}
 
-		public ProgressBar SetAppearance(AppearanceType appearance)
+		public ProgressBar SetAppearance(ProgressBarAppearanceType appearance)
 		{
-			Appearance = appearance;
+			Appearance = appearance ?? ProgressBarAppearanceType.Success;
 			return this;
 		}
+
 		public ProgressBar SetValue(int value)
 		{
 			if (value > 100) value = 100;
