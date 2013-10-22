@@ -444,16 +444,6 @@ namespace Ux.Mvc.Web.UI
 			
 		};
 
-        public static Dictionary<AppearanceType, string> CalloutCssMap = new Dictionary<AppearanceType, string>() { 
-			{ AppearanceType.Primary, "callout-info" },
-			{ AppearanceType.Info, "callout-info" },
-            { AppearanceType.Success, "callout-success" },
-            { AppearanceType.Warning, "callout-warning" },
-            { AppearanceType.Danger, "callout-danger" },
-            { AppearanceType.Default, "callout-info" }
-			
-		};
-
         
         public static Dictionary<AppearanceType, string> PanelCssMap = new Dictionary<AppearanceType, string>() {
             { AppearanceType.Primary, "panel-primary" },

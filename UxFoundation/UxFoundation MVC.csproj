@@ -179,10 +179,11 @@
     <Compile Include="Ux.Mvc\Controls\Select.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectGroup.cs" />
     <Compile Include="Ux.Mvc\Controls\SelectOption.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\CalloutAppearanceType.cs" />
     <Compile Include="Ux.Mvc\Enums\CheckColor.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMapper.cs" />
     <Compile Include="Ux.Mvc\Enums\Enumeration.cs" />
-    <Compile Include="Ux.Mvc\Enums\ImageBox.cs" />
+    <Compile Include="Ux.Mvc\CssMappers\ImageBox.cs" />
     <Compile Include="Ux.Mvc\Enums\LabelPosition.cs" />
     <Compile Include="Ux.Mvc\Enums\PopoverPlacement.cs" />
     <Compile Include="Ux.Mvc\Enums\PopoverTrigger.cs" />

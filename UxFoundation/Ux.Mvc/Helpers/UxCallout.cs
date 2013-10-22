@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static IDisposable UxCallout(this HtmlHelper htmlHelper, AppearanceType appearance = AppearanceType.Default, string clientId = null)
+    public static IDisposable UxCallout(this HtmlHelper htmlHelper, CalloutAppearanceType appearance = null, string clientId = null)
     {
         var callout = new Callout(appearance, clientId);
         return RenderUxDispoableWebControl(htmlHelper, callout);

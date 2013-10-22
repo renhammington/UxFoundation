@@ -1,4 +1,5 @@
-﻿@{
+﻿@using Ux.Mvc.Web.UI
+@{
     ViewBag.Title = "UxFoundation";
 }
 @Html.Partial("_Nav")
@@ -12,7 +13,7 @@
 
 
     </div>
-    @using (Html.UxCallout(Ux.Mvc.Web.UI.AppearanceType.Info))
+    @using (Html.UxCallout())
     {
         @:<b>Pre-release</b><br />This package is still in a pre-release state. Not all Bootstrap components have been made available as Html helpers, but work on this continues.
     }

@@ -22,15 +22,15 @@
         {
             @calloutContent("Default, info, success and primary")
         }
-        @using (Html.UxCallout(appearance: AppearanceType.Success))
+        @using (Html.UxCallout(appearance: CalloutAppearanceType.Success))
         {
             @calloutContent("Success")
         }
-        @using (Html.UxCallout(appearance: AppearanceType.Warning))
+        @using (Html.UxCallout(appearance: CalloutAppearanceType.Warning))
         {
             @calloutContent("Warning")
         }
-        @using (Html.UxCallout(appearance: AppearanceType.Danger))
+        @using (Html.UxCallout(appearance: CalloutAppearanceType.Danger))
         {
             @calloutContent("Danger")
         }
@@ -38,9 +38,9 @@
     <div class="highlight">
         <pre class="prettyprint">
 @@using (Html.UxCallout()) { &hellip; }
-@@using (Html.UxCallout(appearance:AppearanceType.Success)) { &hellip; }
-@@using (Html.UxCallout(appearance:AppearanceType.Warning)) { &hellip; }
-@@using (Html.UxCallout(appearance:AppearanceType.Danger)) { &hellip; }
+@@using (Html.UxCallout(appearance:CalloutAppearanceType.Success)) { &hellip; }
+@@using (Html.UxCallout(appearance:CalloutAppearanceType.Warning)) { &hellip; }
+@@using (Html.UxCallout(appearance:CalloutAppearanceType.Danger)) { &hellip; }
 </pre>
     </div>
 </div>
@@ -64,7 +64,7 @@
             <tbody>
                 <tr>
                     <td>appearance</td>
-                    <td><code>AppearanceType</code></td>
+                    <td><code>CalloutAppearanceType</code></td>
                     <td><code>Default</code></td>
                     <td>Sets the coloring of the callout. Note, there are currently limited color options for callouts. <code>Default</code>, <code>Info</code>, <code>Primary</code> all result in the same output.</td>
                 </tr>
