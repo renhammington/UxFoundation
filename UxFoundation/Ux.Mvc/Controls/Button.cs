@@ -9,7 +9,7 @@ namespace Ux.Mvc.Web.UI
 	public class Button : UxControl
 	{
 		public string Text { get; set; }
-		public AppearanceType Appearance { get; set; }
+		public ButtonAppearanceType Appearance { get; set; }
 		public ButtonSize Size { get; set; }
 		public ButtonCommand Command { get; set; }
 		public bool CausesValidation { get; set; }
@@ -22,16 +22,16 @@ namespace Ux.Mvc.Web.UI
 		{
 			get
 			{
-				List<string> classes = new List<string>(){ CssClassMaps.ButtonAppearanceCssMap[Appearance], CssClassMaps.ButtonSizeCssMap[Size] };
+				List<string> classes = new List<string>(){ Appearance.CssClass, CssClassMaps.ButtonSizeCssMap[Size] };
 				if (!CausesValidation) classes.Add("cancel");
 				return string.Join(" ", classes);
 			}
 		}
 
-		public Button(string text, ButtonCommand command, AppearanceType appearance = AppearanceType.Default, ButtonSize size = ButtonSize.Default, string clientId = null) : base("_Button", clientId)
+		public Button(string text, ButtonCommand command, ButtonAppearanceType appearance = null, ButtonSize size = ButtonSize.Default, string clientId = null) : base("_Button", clientId)
 		{
 			Text = text;
-			Appearance = appearance;
+			SetAppearance(appearance);
 			SetSize(size);
 			Command = command;
 			CausesValidation = true;
@@ -52,9 +52,9 @@ namespace Ux.Mvc.Web.UI
 			return this;
 		}
 
-		public Button SetAppearance(AppearanceType type)
+		public Button SetAppearance(ButtonAppearanceType appearance)
 		{
-			Appearance = type;
+			Appearance = appearance ?? ButtonAppearanceType.Default;
 			return this;
 		}
 

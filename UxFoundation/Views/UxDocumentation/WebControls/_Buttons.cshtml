@@ -15,16 +15,16 @@
     <h3>Appearance</h3>
     <p>Button appearance can be set using the <code>AppearanceType</code> enumeration.</p>
     <div class="example">
-        @Html.UxButton("Default", AppearanceType.Default) @Html.UxButton("Primary", AppearanceType.Primary) @Html.UxButton("Success", AppearanceType.Success) @Html.UxButton("Info", AppearanceType.Info) @Html.UxButton("Warning", AppearanceType.Warning) @Html.UxButton("Danger", AppearanceType.Danger)
+        @Html.UxButton("Default", ButtonAppearanceType.Default) @Html.UxButton("Primary", ButtonAppearanceType.Primary) @Html.UxButton("Success", ButtonAppearanceType.Success) @Html.UxButton("Info", ButtonAppearanceType.Info) @Html.UxButton("Warning", ButtonAppearanceType.Warning) @Html.UxButton("Danger", ButtonAppearanceType.Danger)
     </div>
     <div class="highlight">
         <pre class="prettyprint">
 @@Html.UxButton("Default") 
-@@Html.UxButton("Primary", AppearanceType.Primary) 
-@@Html.UxButton("Success", AppearanceType.Success) 
-@@Html.UxButton("Info", AppearanceType.Info) 
-@@Html.UxButton("Warning", AppearanceType.Warning) 
-@@Html.UxButton("Danger", AppearanceType.Danger)</pre>
+@@Html.UxButton("Primary", ButtonAppearanceType.Primary) 
+@@Html.UxButton("Success", ButtonAppearanceType.Success) 
+@@Html.UxButton("Info", ButtonAppearanceType.Info) 
+@@Html.UxButton("Warning", ButtonAppearanceType.Warning) 
+@@Html.UxButton("Danger", ButtonAppearanceType.Danger)</pre>
     </div>
 </div>
 <div class="section">
@@ -32,8 +32,8 @@
     <h3>Icons</h3>
     <p>Icons can be included with buttons using the <code>IconType</code> enumeration. The position of the icon can be set using the <code>IconPosition</code> enumeration. If there is no button text, the position is ignored.</p>
     <div class="example">
-        @Html.UxButton("Left icon", AppearanceType.Primary, iconType: IconType.Ok)
-        @Html.UxButton("Right icon", AppearanceType.Primary, iconType: IconType.Ok, position: IconPosition.Right)
+        @Html.UxButton("Left icon", ButtonAppearanceType.Primary, iconType: IconType.Ok)
+        @Html.UxButton("Right icon", ButtonAppearanceType.Primary, iconType: IconType.Ok, position: IconPosition.Right)
     </div>
     <div class="highlight">
         <pre class="prettyprint">
@@ -47,10 +47,10 @@
     <h3>Sizes</h3>
     <p>Button size can be set using the <code>ButtonSize</code> enumeration.</p>
     <div class="example">
-        @Html.UxButton("Extra small", AppearanceType.Success, size: ButtonSize.ExtraSmall)
-        @Html.UxButton("Small", AppearanceType.Success, size: ButtonSize.Small)
-        @Html.UxButton("Default", AppearanceType.Success)
-        @Html.UxButton("Large", AppearanceType.Success, size: ButtonSize.Large)
+        @Html.UxButton("Extra small", ButtonAppearanceType.Success, size: ButtonSize.ExtraSmall)
+        @Html.UxButton("Small", ButtonAppearanceType.Success, size: ButtonSize.Small)
+        @Html.UxButton("Default", ButtonAppearanceType.Success)
+        @Html.UxButton("Large", ButtonAppearanceType.Success, size: ButtonSize.Large)
     </div>
     <div class="highlight">
         <pre class="prettyprint">
@@ -64,11 +64,11 @@
     <h3>Disabled</h3>
     <p>Buttons can be disabled by setting the <code>disabled</code> argument.</p>
     <div class="example">
-        @Html.UxButton("Disabled", AppearanceType.Primary, disabled: true)
+        @Html.UxButton("Disabled", ButtonAppearanceType.Primary, disabled: true)
     </div>
     <div class="highlight">
         <pre class="prettyprint">
-@@Html.UxButton("Disabled", AppearanceType.Primary, disabled: true)
+@@Html.UxButton("Disabled", ButtonAppearanceType.Primary, disabled: true)
 </pre>
     </div>
 </div>
@@ -138,7 +138,7 @@
                 </tr>
                 <tr>
                     <td>appearance</td>
-                    <td><code>AppearanceType</code></td>
+                    <td><code>ButtonAppearanceType</code></td>
                     <td><code>Default</code></td>
                     <td>Sets the coloring of the button.</td>
                 </tr>

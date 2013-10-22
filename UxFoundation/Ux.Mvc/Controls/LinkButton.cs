@@ -11,7 +11,7 @@ namespace Ux.Mvc.Web.UI
 
         public string Text { get; private set; }
         public string Url { get; private set; }
-        public AppearanceType Appearance { get; private set; }
+        public ButtonAppearanceType Appearance { get; private set; }
         public IconType? IconType {get;private set;}
         public IconPosition IconPosition {get;private set;}
         public ButtonSize Size { get; private set; }
@@ -22,12 +22,12 @@ namespace Ux.Mvc.Web.UI
         {
             get
             {
-                List<string> classes = new List<string>() { "btn", CssClassMaps.ButtonAppearanceCssMap[Appearance], CssClassMaps.ButtonSizeCssMap[Size] };
+                List<string> classes = new List<string>() { "btn", Appearance.CssClass , CssClassMaps.ButtonSizeCssMap[Size] };
                 return string.Join(" ", classes);
             }
         }
 
-        public LinkButton(string text, string url, string target = null, AppearanceType appearance = AppearanceType.Default, ButtonSize size = ButtonSize.Default, IconType? icon = null, IconPosition position = IconPosition.Left, Popover popover = null, string clientId = null) : base("_LinkButton",clientId)
+        public LinkButton(string text, string url, string target = null, ButtonAppearanceType appearance = null, ButtonSize size = ButtonSize.Default, IconType? icon = null, IconPosition position = IconPosition.Left, Popover popover = null, string clientId = null) : base("_LinkButton",clientId)
         {
             SetLink(text, url)
                 .SetTarget(target)
@@ -69,8 +69,9 @@ namespace Ux.Mvc.Web.UI
             return this;
         }
 
-        public LinkButton SetAppearance(AppearanceType appearance)
+        public LinkButton SetAppearance(ButtonAppearanceType appearance)
         {
+			if (appearance == null) appearance = ButtonAppearanceType.Default;
             Appearance = appearance;
             return this;
         }

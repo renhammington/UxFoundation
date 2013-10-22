@@ -9,7 +9,7 @@ using Ux.Mvc.Web.UI;
 
 public static partial class UxHtmlHelpers
 {
-    public static IDisposable UxWell(this HtmlHelper htmlHelper, WellSize size = WellSize.Default, string clientId = null)
+    public static IDisposable UxWell(this HtmlHelper htmlHelper, WellSize size = null, string clientId = null)
     {
         var well = new Well(size, clientId);
         return RenderUxDispoableWebControl(htmlHelper, well);

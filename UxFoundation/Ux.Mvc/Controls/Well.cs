@@ -9,7 +9,7 @@ namespace Ux.Mvc.Web.UI
 	{
 		public WellSize Size { get; private set; }
 		
-		public Well(WellSize size = WellSize.Default, string clientId = null)
+		public Well(WellSize size = null, string clientId = null)
 			: base("_Well", clientId)
 		{
 			SetSize(size);	
@@ -19,13 +19,14 @@ namespace Ux.Mvc.Web.UI
 		{
 			get
 			{
-				List<string> classes = new List<string>() { "well", CssClassMaps.WellSizeCssMap[Size] };
+				List<string> classes = new List<string>() { "well", Size.CssClass };
 				return string.Join(" ", classes);
 			}
 		}
 
 		public Well SetSize(WellSize size)
 		{
+			if (size == null) size = WellSize.Default;
 			Size = size;
 			return this;
 		}

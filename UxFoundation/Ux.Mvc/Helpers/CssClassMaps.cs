@@ -374,16 +374,6 @@ namespace Ux.Mvc.Web.UI
 			{ IconType.Renren,"renren" },
 		};
 
-
-		public static Dictionary<AppearanceType, string> ButtonAppearanceCssMap = new Dictionary<AppearanceType, string>() { 
-			{ AppearanceType.Default, "btn-default" },
-			{ AppearanceType.Primary, "btn-primary" },
-			{ AppearanceType.Success, "btn-success" },
-			{ AppearanceType.Info, "btn-info" },
-			{ AppearanceType.Warning, "btn-warning" },
-			{ AppearanceType.Danger, "btn-danger" }
-		};
-
 		public static Dictionary<ButtonSize, string> ButtonSizeCssMap = new Dictionary<ButtonSize, string>() { 
 			{ ButtonSize.Default, string.Empty },
 			{ ButtonSize.Small, "btn-sm" },
@@ -432,12 +422,7 @@ namespace Ux.Mvc.Web.UI
 			{ AppearanceType.Danger, "progress-bar-danger" }
 		};
 
-		public static Dictionary<WellSize, string> WellSizeCssMap = new Dictionary<WellSize, string>() { 
-			{ WellSize.Default, "" },
-			{ WellSize.Small, "well-sm" },
-			{ WellSize.Large, "well-lg" },
-			
-		};
+		
 
 		public static Dictionary<AppearanceType, string> AlertAppearanceCssMap = new Dictionary<AppearanceType, string>() { 
 			{ AppearanceType.Default, "alert-success" },
