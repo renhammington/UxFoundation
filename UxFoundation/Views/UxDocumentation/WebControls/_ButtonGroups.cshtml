@@ -37,28 +37,28 @@
     <div class="section">
         <h3>Size</h3>
         <div class="example">
-            @using (Html.UxButtonGroup(toggle: true, size: ButtonSize.Large))
+            @using (Html.UxButtonGroup(toggle: true, size: ButtonGroupSize.Large))
             {
                 @Html.UxButton("", iconType: IconType.Bold)
                 @Html.UxButton("", iconType: IconType.Italic)
                 @Html.UxButton("", iconType: IconType.Underline)
             }<br />
             <br />
-            @using (Html.UxButtonGroup(toggle: true, size: ButtonSize.Default))
+            @using (Html.UxButtonGroup(toggle: true, size: ButtonGroupSize.Default))
             {
                 @Html.UxButton("", iconType: IconType.Bold)
                 @Html.UxButton("", iconType: IconType.Italic)
                 @Html.UxButton("", iconType: IconType.Underline)
             }<br />
             <br />
-            @using (Html.UxButtonGroup(toggle: true, size: ButtonSize.Small))
+            @using (Html.UxButtonGroup(toggle: true, size: ButtonGroupSize.Small))
             {
                 @Html.UxButton("", iconType: IconType.Bold)
                 @Html.UxButton("", iconType: IconType.Italic)
                 @Html.UxButton("", iconType: IconType.Underline)
             }<br />
             <br />
-            @using (Html.UxButtonGroup(toggle: true, size: ButtonSize.ExtraSmall))
+            @using (Html.UxButtonGroup(toggle: true, size: ButtonGroupSize.ExtraSmall))
             {
                 @Html.UxButton("", iconType: IconType.Bold)
                 @Html.UxButton("", iconType: IconType.Italic)
@@ -67,10 +67,10 @@
         </div>
         <div class="highlight">
             <pre class="prettyprint">
-@@using (Html.UxButtonGroup(toggle: true, size: ButtonSize.Large)) { &hellip; }
+@@using (Html.UxButtonGroup(toggle: true, size: ButtonGroupSize.Large)) { &hellip; }
 @@using (Html.UxButtonGroup(toggle: true)) { &hellip; }
-@@using (Html.UxButtonGroup(toggle: true, size: ButtonSize.Small)) { &hellip; }
-@@using (Html.UxButtonGroup(toggle: true, size: ButtonSize.ExtraSmall)) { &hellip; }
+@@using (Html.UxButtonGroup(toggle: true, size: ButtonGroupSize.Small)) { &hellip; }
+@@using (Html.UxButtonGroup(toggle: true, size: ButtonGroupSize.ExtraSmall)) { &hellip; }
 </pre>
         </div>
     </div>

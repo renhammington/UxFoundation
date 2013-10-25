@@ -81,8 +81,7 @@ namespace Ux.Mvc.Web.UI
                 .SetArrow(showArrow)
                 .SetDisabled(disabled)
                 .SetHeader(header)
-                .SetContainer(container)
-                .SetClientId(clientId);
+                .SetContainer(container);                
 
             if (width != null)
                 SetWidth(width);

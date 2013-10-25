@@ -16,7 +16,7 @@ namespace Ux.Mvc.Configuration
         public static void PreStart()
         {
             AddUxViewEngine();
-            RegisterScriptBundes();
+            RegisterScriptBundles();
             RegisterStyleBundles();
             RegisterModelBinders();
         }
@@ -50,7 +50,7 @@ namespace Ux.Mvc.Configuration
             }
         }
 
-        private static void RegisterScriptBundes()
+        private static void RegisterScriptBundles()
         {
             bundles.FileSetOrderList.Clear();
 

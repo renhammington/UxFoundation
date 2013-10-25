@@ -9,7 +9,7 @@
 
 }
 
-<select name="@htmlField" id="@htmlField" class="@Model.CssClass" @Model.GetAttributes()>
+<select name="@htmlField" class="@Model.CssClass" @Model.GetAttributes() @Model.GetClientIdString()>
 @if (DataSource != null)
 {
 
