@@ -35,6 +35,11 @@ namespace Ux.Mvc.Web.UI
 			SetClientId(clientId);
 		}
 
+		protected static string CreateProperty(string name, string value)
+		{
+			return string.Format("{0}=\"{1}\"", name, value);
+		}
+
 	}
 
 }

@@ -171,6 +171,7 @@
     <Compile Include="Ux.Mvc\Controls\CloseButton.cs" />
     <Compile Include="Ux.Mvc\Controls\Popover.cs" />
     <Compile Include="Ux.Mvc\Controls\RadioButton.cs" />
+    <Compile Include="Ux.Mvc\Controls\Textbox.cs" />
     <Compile Include="Ux.Mvc\Controls\TimePicker.cs" />
     <Compile Include="Ux.Mvc\Controls\Tooltip.cs" />
     <Compile Include="Ux.Mvc\Controls\_Panel.cs" />
@@ -182,6 +183,7 @@
     <Compile Include="Ux.Mvc\Enums\CssMappers\AlertAppearanceType.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMappers\ButtonGroupSize.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMappers\CalloutAppearanceType.cs" />
+    <Compile Include="Ux.Mvc\Enums\CssMappers\GridSize.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMappers\IconType.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMappers\LabelAppearanceType.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMappers\PanelAppearanceType.cs" />
@@ -194,6 +196,7 @@
     <Compile Include="Ux.Mvc\Enums\LabelPosition.cs" />
     <Compile Include="Ux.Mvc\Enums\PopoverPlacement.cs" />
     <Compile Include="Ux.Mvc\Enums\PopoverTrigger.cs" />
+    <Compile Include="Ux.Mvc\Enums\CssMappers\TextboxSize.cs" />
     <Compile Include="Ux.Mvc\Enums\TooltipPlacement.cs" />
     <Compile Include="Ux.Mvc\Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Ux.Mvc\Helpers\IntExtensions.cs" />
@@ -239,6 +242,7 @@
     <Compile Include="Ux.Mvc\Helpers\UxSelectOption.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxSelectWithDataSource.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxTable.cs" />
+    <Compile Include="Ux.Mvc\Helpers\UxTextbox.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxTooltipAttributes.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxWell.cs" />
     <Compile Include="Ux.Mvc\UxConfig.cs" />
@@ -540,6 +544,8 @@
     <Content Include="Views\UxDocumentation\WebControls\_DateRangePicker.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Views\UxDocumentation\WebControls\_TimePickers.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Textbox.cshtml" />
+    <Content Include="Views\UxDocumentation\WebControls\_Textboxes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,227 @@
+﻿@using Ux.Mvc.Web.UI
+@{
+    var longtext = "Kurrat, samphire swede cauliflower, ahipa tepary bean chard. Ginger velvet bean lima bean. Tigernut; bell pepper yardlong bean winter purslane.\n\nTomato polk, squash; mung bean soybean. Avocado prussian asparagus broadleaf arrowhead cucumber, winter purslane tomatillo chicory florence fennel earthnut pea celeriac.;";
+    var text = "Lorem ipsum dolor sit amet.";
+}
+<div class="page-header">
+    <h1>Textboxes<small>UxTextbox</small></h1>
+</div>
+<div class="section">
+    <h3>Helper</h3>
+    <div class="highlight highlight-large">
+        <pre class="prettyprint">
+@@Html.UxTextbox()
+</pre>
+    </div>
+</div>
+<div class="section">
+    <h3>Basic usage</h3>
+
+    <div class="example">
+        @Html.UxTextbox(text)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxTextbox("Lorem ipsum dolor sit amet")
+</pre>
+    </div>
+</div>
+<div class="section">
+    <h3>Placeholder</h3>
+
+    <div class="example">
+        @Html.UxTextbox(null,"Enter your email address")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxTextbox(null,"Enter your email address")
+</pre>
+    </div>
+</div>
+
+<div class="section">
+    <h3>Mutiline text</h3>
+
+    <div class="example">
+        
+        @Html.UxTextbox(longtext, multiLine: true)<br/>
+        @Html.UxTextbox(longtext, multiLine: true, rows: 5)<br/>
+        @Html.UxTextbox(longtext, multiLine: true, rows: 10)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxTextbox("&hellip;", multiLine: true)
+@@Html.UxTextbox("&hellip;", multiLine: true, rows: 5)
+@@Html.UxTextbox("&hellip;", multiLine: true, rows: 10)
+</pre>
+    </div>
+</div>
+<div class="section">
+    <h3>Size</h3>
+
+    <div class="example">
+        @Html.UxTextbox(text, size: TextboxSize.Large)<br/>
+        @Html.UxTextbox(text, size: TextboxSize.Default)<br/>
+        @Html.UxTextbox(text, size: TextboxSize.Small)
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxTextbox(text, size: TextboxSize.Large)
+@@Html.UxTextbox(text, size: TextboxSize.Default)
+@@Html.UxTextbox(text, size: TextboxSize.Small)
+</pre>
+    </div>
+</div>
+
+
+<div class="section">
+    <h3>Grid size</h3>
+
+    <div class="example">
+       <div class="row">@Html.UxTextbox(GridSize.x01.ToString(), gridSize: GridSize.x01)  </div>
+       <div class="row">@Html.UxTextbox(GridSize.x02.ToString(), gridSize: GridSize.x02)  </div>
+       <div class="row">@Html.UxTextbox(GridSize.x03.ToString(), gridSize: GridSize.x03)  </div>
+       <div class="row">@Html.UxTextbox(GridSize.x04.ToString(), gridSize: GridSize.x04)  </div>
+       <div class="row">@Html.UxTextbox(GridSize.x05.ToString(), gridSize: GridSize.x05)  </div>
+       <div class="row">@Html.UxTextbox(GridSize.x06.ToString(), gridSize: GridSize.x06)  </div>
+       <div class="row">@Html.UxTextbox(GridSize.x07.ToString(), gridSize: GridSize.x07)  </div>
+       <div class="row">@Html.UxTextbox(GridSize.x08.ToString(), gridSize: GridSize.x08)  </div>
+       <div class="row">@Html.UxTextbox(GridSize.x09.ToString(), gridSize: GridSize.x09)  </div>
+       <div class="row">@Html.UxTextbox(GridSize.x10.ToString(), gridSize: GridSize.x10)  </div>
+       <div class="row">@Html.UxTextbox(GridSize.x11.ToString(), gridSize: GridSize.x11)  </div>
+       <div class="row">@Html.UxTextbox(GridSize.x12.ToString(), gridSize: GridSize.x12)  </div>
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x01)
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x02)
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x03)
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x04)
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x05)
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x06)
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x07)
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x08)
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x09)
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x10)
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x11)
+@@Html.UxTextbox("&hellip;", gridSize: GridSize.x12)
+</pre>
+    </div>
+</div>
+
+<div class="section">
+    <h3>Custom width and height</h3>
+
+    <div class="example">
+        @Html.UxTextbox(text, width: "200px")<br />
+        @Html.UxTextbox(text, width: "75%")<br />
+        @Html.UxTextbox(text, height: "100px")<br/>
+        @Html.UxTextbox(text, height: "50px", width: "60%")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxTextbox("&hellip;", width: "200px")
+@@Html.UxTextbox("&hellip;", width: "75%")
+@@Html.UxTextbox("&hellip;", height: "100px")
+@@Html.UxTextbox("&hellip;", height: "50px", width: "60%")
+</pre>
+    </div>
+</div>
+
+
+<div class="section">
+    <h3>Help text</h3>
+
+    <div class="example">
+        @Html.UxTextbox(text,helpText:"Help text will appear just beneath the textbox.")<br/>
+        @Html.UxTextbox(text, multiLine:true, helpText: "Help text will appear just beneath the textbox.")
+    </div>
+    <div class="highlight">
+        <pre class="prettyprint">
+@@Html.UxTextbox("&hellip;",helpText:"Help text will appear just beneath the textbox.")
+@@Html.UxTextbox("&hellip;", multiLine:true, helpText: "Help text will appear just beneath the textbox.")
+</pre>
+    </div>
+</div>
+
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel())
+    {
+        @panel.Header(
+        @:UxTextbox
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>text</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The text to display in the textbox.</td>
+                </tr>
+                <tr>
+                    <td>placeholder</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The placeholder text to display in the textbox.</td>
+                </tr>
+                <tr>
+                    <td>multiLine</td>
+                    <td><code>bool</code></td>
+                    <td><code>false</code></td>
+                    <td>If <code>true</code>, allows multiline text.</td>
+                </tr>
+                <tr>
+                    <td>rows</td>
+                    <td><code>int?</code></td>
+                    <td><code>false</code></td>
+                    <td>The height of the textbox in rows .</td>
+                </tr>
+                <tr>
+                    <td>size</td>
+                    <td><code>TextboxSize</code></td>
+                    <td><code>Default</code></td>
+                    <td>The size of the textbox font.</td>
+                </tr>
+                <tr>
+                    <td>gridSize</td>
+                    <td><code>GridSize</code></td>
+                    <td><code>NotSet</code></td>
+                    <td>The width of the textbox using grid columns.</td>
+                </tr>
+                <tr>
+                    <td>width</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The Css-style width of the textbox.</td>
+                </tr>
+                <tr>
+                    <td>height</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The Css-style height of the textbox.</td>
+                </tr>
+                <tr>
+                    <td>helpText</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Instructive help text to be placed beneath the textbox.</td>
+                </tr>
+                <tr>
+                    <td>clientId</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>Sets the <code>id</code> property of the rendered html element.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

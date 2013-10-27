@@ -1,0 +1,15 @@
+﻿@model Ux.Mvc.Web.UI.Textbox
+@Model.GetGridWrapperStart()
+@if(Model.MultiLine)
+{
+    <textarea @Model.GetClientIdString() class="@Model.CssClass" placeholder="@Model.Placeholder" @Model.GetAttributes()>@Model.Text</textarea>
+}
+else
+{     
+    <input type="text" @Model.GetClientIdString() class="@Model.CssClass" placeholder="@Model.Placeholder" @Model.GetAttributes() value="@Model.Text" />
+}
+@if (Model.HelpText.IsNullOrEmpty() == false)
+{
+    <span class="help-block">@Model.HelpText</span>
+}
+@Model.GetGridWrapperEnd()
