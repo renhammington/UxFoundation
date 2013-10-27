@@ -21,7 +21,7 @@
                 <optgroup label="@group.Key">
                     @foreach (var option in group.Value)
                     {
-                        @Html.UxSelectOption(option)
+                        @Html.UxSelectOption(option.SetSelected(Model.SelectedValue == option.Value))
                     }
                 </optgroup>
         }
@@ -31,7 +31,7 @@
     {
         foreach (var option in DataSource.UnGroupedItems)
         {
-             @Html.UxSelectOption(option)
+             @Html.UxSelectOption(option.SetSelected(Model.SelectedValue == option.Value))
         }
     }
 

@@ -1,24 +1,29 @@
 ﻿@model Ux.Mvc.ViewModels.Examples
 <div class="page-header">
-    <h1>Foreign keys <small>int</small></h1>
+    <h1>Foreign keys <small>string</small></h1>
 </div>
-
+<p>If you have foreign keys in your model,...</p>
+<p>Requirements:</p>
+<ol>
+    <li>Map your integer values to strings in your view model. This is required for the selected values.</li>
+    <li>Annotate the property in your view model with <code>[UxHint(UxHintType.Select)]</code> to indicate that it should be presented as a select list.</li>
+</ol>
 <div class="highlight">
     <pre class="prettyprint">
 [UxHint(UxHintType.Select)]
-public int ForeignKeyValue { get; set; }
+public string ForeignKeyValue { get; set; }
 
-ForeignKeyValue = 4
+ForeignKeyValue = ""4""
 </pre>
 </div>
 
 <h3>Raw</h3>
 <div class="example">
-    @Model.ForeignKeyValue.ToString()
+    @Model.ForeignKeyValue
 </div>
 <div class="highlight">
     <pre class="prettyprint">
-@@Model.ForeignKeyValue.ToString()
+@@Model.ForeignKeyValue
 </pre>
 </div>
 

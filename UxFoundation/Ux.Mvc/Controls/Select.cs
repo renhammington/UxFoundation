@@ -16,7 +16,7 @@ namespace Ux.Mvc.Web.UI
         public bool ShowArrow { get; private set; }
         public bool AutoWidth { get; private set; }
         public DataSource DataSource { get; private set; }
-        public int? SelectedValue { get; private set; }
+        public string SelectedValue { get; private set; }
 
         /// <summary>
         /// The width of the select picker. Percentage or px, ie 50% or 200px
@@ -59,7 +59,7 @@ namespace Ux.Mvc.Web.UI
         }
 
         public Select(
-            int? selectedValue = null,
+            string selectedValue = null,
             DataSource datasource = null,
             SelectAppearanceType appearance = null,
             bool liveSearch = false,
@@ -95,7 +95,7 @@ namespace Ux.Mvc.Web.UI
             return this;
         }
 
-        public Select SetSelectedValue(int? value)
+        public Select SetSelectedValue(string value)
         {
             SelectedValue = value;
             return this;

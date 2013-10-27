@@ -97,12 +97,12 @@ namespace Ux.Mvc.ViewModels
 
         [UxHint(UxHintType.Select)]
 		[Display(Name="Normal list")]
-		public int ForeignKeyValue { get; set; }
+		public string ForeignKeyValue { get; set; } // Foreign keys need to be mapped as strings in your view model
 
 
 		[UxHint(UxHintType.Select)]
 		[Display(Name = "Grouped list")]
-		public int ForeignKeyValue2 { get; set; }
+		public string ForeignKeyValue2 { get; set; } // Foreign keys need to be mapped as strings in your view model
 
         #endregion
 

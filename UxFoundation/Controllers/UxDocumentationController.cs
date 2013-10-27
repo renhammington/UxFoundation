@@ -21,41 +21,46 @@ namespace Ux.Mvc.Controllers
 
         public ActionResult DataTypes(string partial = "Date")
         {
-            var note = new Examples()
-            {
-                EmailAddress = "someemail@domain.com",
-                EmailAddressWithAttribute = "someemail@domain.com",
-                Time = DateTime.Now,
-                Date = DateTime.Now,
-                DateTime = DateTime.Now,
-                Url = "http://www.google.com",
-                UrlWithAttribute = "http://www.google.com",
-                Currency = 123.456789M,
-                Integer = 123456,
-                Decimal = 123.456789M,
-                Double = 12345.6789,
-                Password = "thisisapassword123",
-                Html = "<b>Radish nopal, chickweed brussels sprout celtuce winter melon.</b><ul><li>Water chestnut taro jícama chickweed </li><li>Fava bean polk ti chard, tigernut</li></ul>",
-                SingleLineText = "Radish nopal, chickweed brussels sprout celtuce winter melon. Water chestnut taro jícama chickweed chicory; scorzonera beetroot. Fava bean polk ti chard, tigernut - napa cabbage arracacha black-eyed pea. American groundnut brinjal catsear tinda; ahipa bitter gourd ceylon spinach, fiddlehead? Mustard arracacha water chestnut bell pepper. Mustard chinese artichoke tigernut mizuna greens chrysanthemum leaves.",
-                MultiLineText = @"Napa cabbage tomato dolichos bean lotus root tarwi pumpkin brussels sprout lentil spring onion. Lotus root fava bean brussels sprout leaves arracacha; brussels sprout bamboo shoot spring onion. Sierra Leone bologi black-eyed pea beet greens. Mustard ulluco winter purslane. Prairie turnip yarrow indian pea - eggplant lotus root garlic celtuce greater plantain kurrat winter purslane." + Environment.NewLine + Environment.NewLine + "Gobo yardlong bean celeriac tomato chickweed carrot. Napa cabbage camas prussian asparagus, ensete garden rocket lotus root gumbo taro velvet bean.",
-                ImageUrl = "https://www.google.com/images/srpr/logo4w.png",
-                Boolean = true,
-                BooleanNullable = null,
-                BooleanByType = false,
-                BooleanExplicit = true,
-                BooleanNullableByType = null,
-                BooleanNullableExplicit = false,
-                ForeignKeyValue = 4,
-                ForeignKeyValue2 = 3
-            };
-
-            LoadDataSources(note);
+			var examples = CreateExamples();
 
             ViewBag.PartialToShow = "DataTypes/_" + partial;
 
 
-            return View(note);
+            return View(examples);
         }
+
+		private Examples CreateExamples()
+		{
+			var examples = new Examples()
+			{
+				EmailAddress = "someemail@domain.com",
+				EmailAddressWithAttribute = "someemail@domain.com",
+				Time = DateTime.Now,
+				Date = DateTime.Now,
+				DateTime = DateTime.Now,
+				Url = "http://www.google.com",
+				UrlWithAttribute = "http://www.google.com",
+				Currency = 123.456789M,
+				Integer = 123456,
+				Decimal = 123.456789M,
+				Double = 12345.6789,
+				Password = "thisisapassword123",
+				Html = "<b>Radish nopal, chickweed brussels sprout celtuce winter melon.</b><ul><li>Water chestnut taro jícama chickweed </li><li>Fava bean polk ti chard, tigernut</li></ul>",
+				SingleLineText = "Radish nopal, chickweed brussels sprout celtuce winter melon. Water chestnut taro jícama chickweed chicory; scorzonera beetroot. Fava bean polk ti chard, tigernut - napa cabbage arracacha black-eyed pea. American groundnut brinjal catsear tinda; ahipa bitter gourd ceylon spinach, fiddlehead? Mustard arracacha water chestnut bell pepper. Mustard chinese artichoke tigernut mizuna greens chrysanthemum leaves.",
+				MultiLineText = @"Napa cabbage tomato dolichos bean lotus root tarwi pumpkin brussels sprout lentil spring onion. Lotus root fava bean brussels sprout leaves arracacha; brussels sprout bamboo shoot spring onion. Sierra Leone bologi black-eyed pea beet greens. Mustard ulluco winter purslane. Prairie turnip yarrow indian pea - eggplant lotus root garlic celtuce greater plantain kurrat winter purslane." + Environment.NewLine + Environment.NewLine + "Gobo yardlong bean celeriac tomato chickweed carrot. Napa cabbage camas prussian asparagus, ensete garden rocket lotus root gumbo taro velvet bean.",
+				ImageUrl = "https://www.google.com/images/srpr/logo4w.png",
+				Boolean = true,
+				BooleanNullable = null,
+				BooleanByType = false,
+				BooleanExplicit = true,
+				BooleanNullableByType = null,
+				BooleanNullableExplicit = false,
+				ForeignKeyValue = "4",
+				ForeignKeyValue2 = "3"
+			};
+			LoadDataSources(examples);
+			return examples;
+		}
 
 
         private void LoadDataSources(Examples model)
@@ -68,18 +73,18 @@ namespace Ux.Mvc.Controllers
 				new SelectOption("Delta","4"),
 				new SelectOption("Echo", "5"),
 				new SelectOption("Foxtrot","6"),
-                new SelectOption("Golf", "6")
+                new SelectOption("Golf", "7")
 			};
 
             var brands = new List<SelectOption>() {
 				new SelectOption("Apple", "1", iconType:IconType.Apple),
 				new SelectOption("Windows","2", iconType:IconType.Windows, subText:"Microsoft"),
 				new SelectOption("Github","3", iconType:IconType.Github, disabled:true),
-                new SelectOption("Divider","2", divider:true),
-				new SelectOption("Pinterest","3", iconType:IconType.PinterestSign) ,
-				new SelectOption("Twitter","4", iconType:IconType.Twitter) ,
-                new SelectOption("Facebook","5", iconType:IconType.Facebook) ,
-                new SelectOption("Youtube","6", iconType:IconType.YoutubePlay, subText:"Google")
+                new SelectOption("Divider","", divider:true),
+				new SelectOption("Pinterest","4", iconType:IconType.PinterestSign) ,
+				new SelectOption("Twitter","5", iconType:IconType.Twitter) ,
+                new SelectOption("Facebook","6", iconType:IconType.Facebook) ,
+                new SelectOption("Youtube","7", iconType:IconType.YoutubePlay, subText:"Google")
 			};
 
             var grouped = new Dictionary<string, IEnumerable<SelectOption>>() {
@@ -100,12 +105,12 @@ namespace Ux.Mvc.Controllers
 
 
         [HttpPost]
-        public ActionResult DataTypes(Examples examples, ButtonCommand command)
+        public ActionResult DataTypes(string partial, Examples examples, ButtonCommand command)
         {
-            if (command == ButtonCommand.Cancel)
-                Response.Redirect("http://www.google.com");
+			//if (command == ButtonCommand.Cancel)
+			//	Response.Redirect("http://www.google.com");
 
-            if (ModelState.IsValid == false) return View(examples);
+			//if (ModelState.IsValid == false) return View(examples);
 
             // Get the original object
             // call the right method on the domain object
@@ -118,6 +123,8 @@ namespace Ux.Mvc.Controllers
 
             //orignal.changeName(note.name);
             //db.SaveChanges();
+			ViewBag.PartialToShow = "DataTypes/_" + partial;
+			LoadDataSources(examples);
 
             return View(examples);
         }
@@ -129,7 +136,7 @@ namespace Ux.Mvc.Controllers
             {
                 Boolean = true,
                 BooleanNullable = null,
-                ForeignKeyValue = 4,
+                ForeignKeyValue = "4",
                 SingleLineText = "This is a single line of text",
                 EmailAddress = "renhammington@gmail.com"
             };

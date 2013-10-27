@@ -195,6 +195,7 @@
     <Compile Include="Ux.Mvc\Enums\PopoverPlacement.cs" />
     <Compile Include="Ux.Mvc\Enums\PopoverTrigger.cs" />
     <Compile Include="Ux.Mvc\Enums\TooltipPlacement.cs" />
+    <Compile Include="Ux.Mvc\Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Ux.Mvc\Helpers\IntExtensions.cs" />
     <Compile Include="Ux.Mvc\Helpers\RenderUxControl.cs" />
     <Compile Include="Ux.Mvc\Helpers\RenderUxControlEnd.cs" />
