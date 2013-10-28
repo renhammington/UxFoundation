@@ -19,8 +19,8 @@
 {
     <label class="btn btn-primary @SetActive(option.Value == Model.SelectedValue)">
         <input type="radio" value="@option.Value" name="@ViewData.TemplateInfo.HtmlFieldPrefix" @SetChecked(option.Value == Model.SelectedValue) />
-        @if(option.IconType.HasValue) {
-            @Html.UxIcon(option.IconType.Value)
+        @if(option.IconType!=null) {
+            @Html.UxIcon(option.IconType)
         }
 		@option.Text
     </label>   
