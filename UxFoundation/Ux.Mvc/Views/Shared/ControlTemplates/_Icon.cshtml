@@ -1,7 +1,7 @@
 ﻿@model Ux.Mvc.Web.UI.Icon
 @if (!Model.CssClass.IsNullOrEmpty())
 {
-    <i class="icon-@Model.CssClass" @Model.GetClientIdString() @if(Model.Popover != null) {
+    <i class="fa fa-@Model.CssClass"  @Model.GetClientIdString() @if(Model.Popover != null) {
                                                                    @Model.Popover.ToHtmlString() 
     }></i>
 }

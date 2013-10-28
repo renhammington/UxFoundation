@@ -13,6 +13,7 @@ namespace Ux.Mvc.Web.UI
 		public bool Spin { get; private set; }
 		public bool PullRight { get; private set; }
 		public bool ListItem { get; private set; }
+		public bool FixedWidth { get; private set; }
         public Popover Popover { get; private set; }
 
 		// The css class to use for the icon
@@ -26,10 +27,11 @@ namespace Ux.Mvc.Web.UI
 			get
 			{
 				List<string> classes = new List<string>() { IconType.CssClass, Rotation.CssClass, Size.CssClass };
-				if (BorderVisible) classes.Add("icon-border");
-				if (Spin) classes.Add("icon-spin");
+				if (BorderVisible) classes.Add("fa-border");
+				if (Spin) classes.Add("fa-spin");
 				if (PullRight) classes.Add("pull-right");
-				if (ListItem) classes.Add("icon-li");
+				if (ListItem) classes.Add("fa-li");
+				if (FixedWidth) classes.Add("fa-fw");
 				return string.Join(" ", classes);
 			}
 		}
@@ -37,7 +39,7 @@ namespace Ux.Mvc.Web.UI
 		
 
 
-		public Icon(IconType iconType, IconSize size = null, IconRotation rotation = null, bool borderVisible = false, bool spin = false, bool pullRight = false, bool listItem = false, Popover popover = null,string clientId = null) : base("_Icon", clientId)
+		public Icon(IconType iconType, IconSize size = null, IconRotation rotation = null, bool borderVisible = false, bool spin = false, bool pullRight = false, bool listItem = false, Popover popover = null, bool fixedWidth = false, string clientId = null) : base("_Icon", clientId)
 		{
 			SetBorderVisible(borderVisible)
 				.SetSize(size)
@@ -46,8 +48,15 @@ namespace Ux.Mvc.Web.UI
 				.SetSpin(spin)
 				.SetPullRight(pullRight)
 				.SetListItem(listItem)
-                .SetPopover(popover);
+				.SetPopover(popover)
+				.SetFixedWidth(fixedWidth);
 			
+		}
+
+		public Icon SetFixedWidth(bool fixedWidth)
+		{
+			FixedWidth = fixedWidth;
+			return this;
 		}
 
         public Icon SetPopover(Popover popover)

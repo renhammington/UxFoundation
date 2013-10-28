@@ -16,7 +16,7 @@
 
 
     <h3>Icon type</h3>
-    <p>FontAwesome icons are used for rendering icons and are available using the <code>IconType</code> enumeration. A full list of icons (as at 3.2.1) is below.</p>
+    <p>FontAwesome icons are used for rendering icons and are available using the <code>IconType</code> enumeration. A full list of icons (as at 4.0.0) is below.</p>
     <div style="height: 400px; border-top: 1px #ddd solid; border-bottom: 1px #ddd solid; overflow: auto; padding: 18px;">
         @using (Html.UxBulletList(true, 3))
         {
@@ -36,14 +36,17 @@
         @Html.UxIcon(IconType.Twitter, IconSize.x2)
         @Html.UxIcon(IconType.Twitter, IconSize.x3)
         @Html.UxIcon(IconType.Twitter, IconSize.x4)
+		@Html.UxIcon(IconType.Twitter, IconSize.x5)
         @Html.UxIcon(IconType.Apple, IconSize.Large)
         @Html.UxIcon(IconType.Apple, IconSize.x2)
         @Html.UxIcon(IconType.Apple, IconSize.x3)
         @Html.UxIcon(IconType.Apple, IconSize.x4)
+		@Html.UxIcon(IconType.Apple, IconSize.x5)
         @Html.UxIcon(IconType.Windows, IconSize.Large)
         @Html.UxIcon(IconType.Windows, IconSize.x2)
         @Html.UxIcon(IconType.Windows, IconSize.x3)
         @Html.UxIcon(IconType.Windows, IconSize.x4)
+		@Html.UxIcon(IconType.Windows, IconSize.x5)
     </div>
     <div class="highlight">
         <pre class="prettyprint">
@@ -52,6 +55,7 @@
 @@Html.UxIcon(IconType.Twitter, IconSize.x2)
 @@Html.UxIcon(IconType.Twitter, IconSize.x3)
 @@Html.UxIcon(IconType.Twitter, IconSize.x4)
+@@Html.UxIcon(IconType.Twitter, IconSize.x5)
 </pre>
     </div>
 </div>
@@ -95,11 +99,11 @@
     <h3>Spin</h3>
     <p>Icons can be set to spin by setting the <code>spin</code> argument of the helper to <code>true</code></p>
     <div class="example">
-        @Html.UxIcon(IconType.Refresh, IconSize.x4, IconRotation.Default, spin: true)
+        @Html.UxIcon(IconType.Cog, IconSize.x4, IconRotation.Default, spin: true)
     </div>
     <div class="highlight">
         <pre class="prettyprint">
-@@Html.UxIcon(IconType.Refresh, spin: true)</pre>
+@@Html.UxIcon(IconType.Cog, spin: true)</pre>
 
     </div>
 
@@ -163,6 +167,18 @@
                     <td><code>false</code></td>
                     <td>For use when associated with a BulletListItem.</td>
                 </tr>
+				<tr>
+					<td>popover</td>
+					<td><code>Popover</code></td>
+					<td><code>null</code></td>
+					<td>Sets the popover to associate with the icon.</td>
+				</tr>
+				<tr>
+					<td>fixedWidth</td>
+					<td><code>bool</code></td>
+					<td><code>false</code></td>
+					<td></td>
+				</tr>
                 <tr>
                     <td>clientId</td>
                     <td><code>string</code></td>

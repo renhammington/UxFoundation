@@ -1,0 +1,31 @@
+﻿@model Ux.Mvc.Controllers.FontAwesomeIcons
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+		@{
+			var i = 0;
+		}
+		@foreach(var icon in Model.icons.OrderBy(ic=>ic.FixedName))
+		{
+			{
+				i = i + 1;
+			}
+			
+			//public static readonly IconType Skype = new IconType(283, "Skype", "skype");
+			
+			
+			<div>public static readonly IconType @icon.FixedName.Replace(" ","") = new IconType(@i,"@icon.FixedName","@icon.Id");</div>
+		}
+    </div>
+</body>
+</html>

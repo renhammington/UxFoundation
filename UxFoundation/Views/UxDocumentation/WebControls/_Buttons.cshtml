@@ -32,13 +32,13 @@
     <h3>Icons</h3>
     <p>Icons can be included with buttons using the <code>IconType</code> enumeration. The position of the icon can be set using the <code>IconPosition</code> enumeration. If there is no button text, the position is ignored.</p>
     <div class="example">
-        @Html.UxButton("Left icon", ButtonAppearanceType.Primary, iconType: IconType.Ok)
-        @Html.UxButton("Right icon", ButtonAppearanceType.Primary, iconType: IconType.Ok, position: IconPosition.Right)
+        @Html.UxButton("Left icon", ButtonAppearanceType.Primary, iconType: IconType.Check)
+        @Html.UxButton("Right icon", ButtonAppearanceType.Primary, iconType: IconType.Check, position: IconPosition.Right)
     </div>
     <div class="highlight">
         <pre class="prettyprint">
-@@Html.UxButton("Left icon", iconType: IconType.Ok)
-@@Html.UxButton("Right icon", iconType: IconType.Ok, position: IconPosition.Right)
+@@Html.UxButton("Left icon", iconType: IconType.Check)
+@@Html.UxButton("Right icon", iconType: IconType.Check, position: IconPosition.Right)
 </pre>
     </div>
 </div>

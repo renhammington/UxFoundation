@@ -12,7 +12,7 @@ public static partial class UxHtmlHelpers
     public static MvcHtmlString UxSaveButton(this HtmlHelper helper, ButtonSize size = null, string clientId = null)
     {
         var button = new Button("Save", ButtonCommand.Save, ButtonAppearanceType.Success)
-            .SetIcon(new Icon(IconType.Ok))
+            .SetIcon(new Icon(IconType.Check))
             .SetSize(size);
         button.SetClientId(clientId);
         return UxButton(helper, button);

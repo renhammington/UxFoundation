@@ -79,7 +79,7 @@ namespace Ux.Mvc.Configuration
                "~/Content/bootstrap/bootstrap.css",
                "~/Content/bootstrap-datepicker.css",
                "~/Content/bootstrap-select.css",
-               "~/Content/font-awesome.css",
+               "~/Content/fontawesome/font-awesome.css",
                "~/Ux.Mvc/Content/prettyCheckable.css",
                "~/Ux.Mvc/Content/daterangepicker-bs3.css",
                "~/Content/jquery.timepicker.css",

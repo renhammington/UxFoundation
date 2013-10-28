@@ -13,7 +13,7 @@ public static partial class UxHtmlHelpers
     {
         var button = new Button("Delete", ButtonCommand.Delete)
             .SetValidation(false)
-            .SetIcon(new Icon(IconType.Trash))
+            .SetIcon(new Icon(IconType.TrashOutlined))
             .SetSize(size);
         button.SetClientId(clientId);
         return UxButton(helper, button);

@@ -40,7 +40,7 @@ namespace Ux.Mvc.Controllers
 				new SelectOption("Windows","2", iconType:IconType.Windows, subText:"Microsoft"),
 				new SelectOption("Github","3", iconType:IconType.Github, disabled:true),
                 new SelectOption("Divider","2", divider:true),
-				new SelectOption("Pinterest","3", iconType:IconType.PinterestSign, selected:true) ,
+				new SelectOption("Pinterest","3", iconType:IconType.Pinterest, selected:true) ,
 				new SelectOption("Twitter","4", iconType:IconType.Twitter) ,
                 new SelectOption("Facebook","5", iconType:IconType.Facebook) ,
                 new SelectOption("Youtube","6", iconType:IconType.YoutubePlay, subText:"Google")

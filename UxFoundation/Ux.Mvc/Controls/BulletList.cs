@@ -20,7 +20,7 @@ namespace Ux.Mvc.Web.UI
 			get
 			{
 				List<string> classes = new List<string>();
-				if (UseCustomIcons) classes.Add("icons-ul");
+				if (UseCustomIcons) classes.Add("fa-ul");
 				if (ColumnCount > 1 && ColumnCount <= 6)
 					classes.Add("col-" + ColumnCount.ToString());
 				return string.Join(" ", classes).Trim();
