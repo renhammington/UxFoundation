@@ -75,7 +75,7 @@ namespace Ux.Mvc.Web.UI
             if (Disabled) properties.Add("disabled=\"disabled\"");
             if (Divider) properties.Add("data-divider=\"true\"");
             if (SubText.IsNullOrEmpty() == false) properties.Add("data-subtext=\"" + SubText + "\"");
-            if (IconType!=null) properties.Add("data-icon=\"icon-" + IconType.CssClass + "\"");
+            if (IconType!=null) properties.Add("data-icon=\"fa fa-" + IconType.CssClass + "\"");
             if (Selected) properties.Add("selected=\"selected\"");
             return MvcHtmlString.Create(string.Join(" ", properties));
         }

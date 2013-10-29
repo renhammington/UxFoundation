@@ -4,7 +4,7 @@
     @Model.Label 
     <div class="col-xs-9">
         @Model.Editor @if(Model.Tooltip.IsNullOrEmpty()== false) {
-        <a href="#" data-toggle="tooltip" data-original-title="@Model.Tooltip">@Html.UxIcon(IconType.QuestionSign)</a>
+        <a href="#" data-toggle="tooltip" data-original-title="@Model.Tooltip">@Html.UxIcon(IconType.QuestionCircle)</a>
     }
         @Model.Validation
     </div>
