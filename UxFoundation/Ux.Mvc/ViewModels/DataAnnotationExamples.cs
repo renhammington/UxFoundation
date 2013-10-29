@@ -7,11 +7,11 @@ using Ux.Mvc.Attributes;
 
 namespace Ux.Mvc.ViewModels
 {
-	public class TextboxWidths : BaseViewModel
+	public class DataAnnotationExamples : BaseViewModel
 	{
 
 		public string BaseText { get; set; }
-		public TextboxWidths(string baseText = "Lorem ipsum dolor sit amet")
+		public DataAnnotationExamples(string baseText = "Lorem ipsum dolor sit amet")
 		{
 			BaseText = baseText;
 		}
@@ -30,6 +30,12 @@ namespace Ux.Mvc.ViewModels
 		[DataType(DataType.MultilineText)]
 		[UxTextboxSize("60%", "100px")]
 		public string MultiLineWidthHeight { get; set; }
+
+		[UxPlaceholder("This placeholder text is set via data annotations")]
+		public string PlaceholderExample { get; set; }
+
+		[UxTooltip("This tooltip text is set via data annotations")]
+		public string TooltipExample { get; set; }
 
 
 

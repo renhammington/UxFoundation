@@ -28,11 +28,11 @@ namespace Ux.Mvc.Controllers
             return View(examples);
         }
 
-		public ActionResult Attributes(string partial = "TextboxSize")
+		public ActionResult DataAnnotations(string partial = "Placeholders")
 		{
-			var examples = new Ux.Mvc.ViewModels.TextboxWidths();
+			var examples = new Ux.Mvc.ViewModels.DataAnnotationExamples();
 
-			ViewBag.PartialToShow = "Attributes/_" + partial;
+			ViewBag.PartialToShow = "DataAnnotations/_" + partial;
 
 			return View(examples);
 		}

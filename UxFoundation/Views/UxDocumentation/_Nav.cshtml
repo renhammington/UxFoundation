@@ -33,11 +33,11 @@
                                                                                                          }
     </a></li>
 }
-@helper attributeItem(string text, string nameOfPartial, bool isNew = false)
+@helper annotationItem(string text, string nameOfPartial, bool isNew = false)
 {
 
     <li>
-        <a href="@Url.Action("Attributes", "UxDocumentation", new { partial = nameOfPartial }, null)">
+        <a href="@Url.Action("DataAnnotations", "UxDocumentation", new { partial = nameOfPartial }, null)">
             @text @if (isNew)
             {
                 @Html.UxLabel("New", appearance: LabelAppearanceType.Danger)
@@ -155,12 +155,14 @@
                     @sampleItem("Tables", "Tables")
                 </ul>
             </li>*@
-            <li @if (Url.Action("Attributes", "UxDocumentation") == Request.Url.LocalPath) { @: class="dropdown active"
+            <li @if (Url.Action("DataAnnotations", "UxDocumentation") == Request.Url.LocalPath) { @: class="dropdown active"
                                 } else { @: class="dropdown"
                                 }>
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Html.UxIcon(IconType.Code) Attributes <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Html.UxIcon(IconType.Code) Data annotations <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    @attributeItem("Textbox sizes", "TextboxSize", true)
+                    @annotationItem("Placeholders", "Placeholders", true)
+                    @annotationItem("Textbox sizes", "TextboxSize", true)                    
+                    @annotationItem("Tooltips", "Tooltips", true)
                 </ul>
             </li>
 

@@ -1,0 +1,53 @@
+﻿@model Ux.Mvc.ViewModels.DataAnnotationExamples
+<div class="page-header">
+    <h1>Placeholders <small>UxPlaceholder</small></h1>
+</div>
+<p>Allows you to set a placeholder for text input controls from your model.</p>
+<div class="highlight">
+    <pre class="prettyprint">
+[UxPlaceholder(text)]
+public string SingleLineText { get; set; }
+</pre>
+</div>
+
+<h3>Usage</h3>
+<div class="example">
+    @Html.EditorFor(m => m.PlaceholderExample)<br />
+
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+[UxTooltip("This placeholder text is set via data annotations")]
+public string PlaceholderExample { get; set; }
+</pre>
+</div>
+
+
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel())
+    {
+        @panel.Header(
+        @:UxPlaceholder
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>text</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The text to display as placeholder.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>
+

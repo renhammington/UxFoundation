@@ -266,7 +266,7 @@
     <Compile Include="Ux.Mvc\Enums\PagerType.cs" />
     <Compile Include="Ux.Mvc\Enums\UxHintType.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMappers\WellSize.cs" />
-    <Compile Include="Ux.Mvc\ViewModels\TextboxWidths.cs" />
+    <Compile Include="Ux.Mvc\ViewModels\DataAnnotationExamples.cs" />
     <Compile Include="Ux.Mvc\Views\UxViewEngine.cs" />
     <Compile Include="Ux.Mvc\Controls\Alert.cs" />
     <Compile Include="Ux.Mvc\Controls\Badge.cs" />
@@ -550,9 +550,11 @@
     <Content Include="Views\UxDocumentation\WebControls\_Textboxes.cshtml" />
     <Content Include="Views\Icon\Index.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\Decimal.cshtml" />
-    <Content Include="Views\UxDocumentation\Attributes\_TextboxSize.cshtml" />
-    <Content Include="Views\UxDocumentation\Attributes.cshtml" />
+    <Content Include="Views\UxDocumentation\DataAnnotations\_TextboxSize.cshtml" />
+    <Content Include="Views\UxDocumentation\DataAnnotations.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\String.cshtml" />
+    <Content Include="Views\UxDocumentation\DataAnnotations\_Tooltips.cshtml" />
+    <Content Include="Views\UxDocumentation\DataAnnotations\_Placeholders.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
