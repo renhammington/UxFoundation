@@ -1,1 +1,14 @@
-﻿Time control
+﻿@using Ux.Mvc.Web.UI
+@{
+    string PlaceHolder = null;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(Ux.Mvc.Attributes.UxAttributeKeys.Placeholder.Text))
+    {
+        PlaceHolder = ViewData.ModelMetadata.AdditionalValues[Ux.Mvc.Attributes.UxAttributeKeys.Placeholder.Text].ToString();
+    }
+}
+<div class="ux-tb-time">
+    <div class="input-group date">
+        @Html.TextBoxFor(item => item, new { @class = "form-control", type = "text", placeholder = PlaceHolder, novalidate = true })
+        <span class="input-group-addon" style="cursor:pointer;">@Html.UxIcon(IconType.ClockOutlined)</span>
+    </div>
+</div>

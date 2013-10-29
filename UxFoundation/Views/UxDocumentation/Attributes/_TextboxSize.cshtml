@@ -1,0 +1,62 @@
+﻿@model Ux.Mvc.ViewModels.TextboxWidths
+<div class="page-header">
+    <h1>Textbox size <small>UxTextboxSize</small></h1>
+</div>
+<p>Allows you to set the width of rendered textboxes from your view model.</p>
+<div class="highlight">
+    <pre class="prettyprint">
+[UxTextboxSize(width<i>{,height}</i>)]
+public string SingleLineText { get; set; }
+</pre>
+</div>
+
+<h3>Usage</h3>
+<div class="example">
+    @Html.EditorFor(m => m.SingleLinePixels)<br/>
+    @Html.EditorFor(m => m.SingleLinePercent)<br/>
+    @Html.EditorFor(m => m.MultiLinePixels)<br/>
+    @Html.EditorFor(m => m.MultiLineWidthHeight)<br/>
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+@@Html.EditorFor(m => m.SingleLinePixels)
+@@Html.EditorFor(m => m.SingleLinePercent)
+@@Html.EditorFor(m => m.MultiLinePixels)
+@@Html.EditorFor(m => m.MultiLineWidthHeight)
+</pre>
+</div>
+
+
+<div class="section">
+    <h3>Parameters</h3>
+    @using (var panel = Html.UxPanel())
+    {
+        @panel.Header(
+        @:UxTextboxSize
+)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>width</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The desired width of the textbox. Css width. Only works for <code>string</code> properties.</td>
+                </tr>
+                <tr>
+                    <td>height</td>
+                    <td><code>string</code></td>
+                    <td><code>null</code></td>
+                    <td>The desired height of the textbox. Css width. Only works  <code>string</code> properies with <code>[DataType(DataType.MultilineText)]</code> attribute.</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

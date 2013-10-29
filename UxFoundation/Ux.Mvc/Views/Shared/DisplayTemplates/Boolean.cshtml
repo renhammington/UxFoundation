@@ -1,4 +1,5 @@
 ﻿@using Ux.Mvc.Web.UI
+@using Ux.Mvc.Attributes
 @model bool?
 @{
 	
@@ -6,21 +7,21 @@
 	string trueText = "Yes";
 	string falseText = "No";
 
-	string key = "trueText";
+    string key = UxAttributeKeys.Boolean.TrueText;
 	if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(key) && ViewData.ModelMetadata.AdditionalValues[key] != null) 
 	{
 		trueText = ViewData.ModelMetadata.AdditionalValues[key].ToString(); 
 	}
-	key = "falseText";
+    key = UxAttributeKeys.Boolean.FalseText;
 	if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(key) && ViewData.ModelMetadata.AdditionalValues[key] != null)
 	{
 		falseText = ViewData.ModelMetadata.AdditionalValues[key].ToString();
 	}
 		
 
-	if (ViewData.ModelMetadata.AdditionalValues.ContainsKey("booleanType"))
-	{
-		var boolType = (BooleanType)ViewData.ModelMetadata.AdditionalValues["booleanType"];
+	if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(UxAttributeKeys.Boolean.Type))
+    {
+        var boolType = (BooleanType)ViewData.ModelMetadata.AdditionalValues[UxAttributeKeys.Boolean.Type];
 		switch (boolType)
 		{
 			case BooleanType.YesNo:
@@ -36,7 +37,7 @@
 		}
 	}
 
-	key = "nullText";
+    key = UxAttributeKeys.Boolean.NullText;
 	if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(key) && ViewData.ModelMetadata.AdditionalValues[key] != null)
 	{
 		nullText = ViewData.ModelMetadata.AdditionalValues[key].ToString();

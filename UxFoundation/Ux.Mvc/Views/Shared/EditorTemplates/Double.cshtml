@@ -1,2 +1,10 @@
-﻿@Html.TextBoxFor(model=>model,new { @class="textbox-double form-control" })
+﻿@{
+    string PlaceHolder = null;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(Ux.Mvc.Attributes.UxAttributeKeys.Placeholder.Text))
+    {
+        PlaceHolder = ViewData.ModelMetadata.AdditionalValues[Ux.Mvc.Attributes.UxAttributeKeys.Placeholder.Text].ToString();
+    }
+}
+@Html.TextBoxFor(model => model, new { @class = "ux-tb-double form-control", placeholder = PlaceHolder })
+
 

@@ -1,8 +1,14 @@
 ﻿@using Ux.Mvc.Web.UI
-<div style="width: 450px;">
+@{
+    string PlaceHolder = null;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(Ux.Mvc.Attributes.UxAttributeKeys.Placeholder.Text))
+    {
+        PlaceHolder = ViewData.ModelMetadata.AdditionalValues[Ux.Mvc.Attributes.UxAttributeKeys.Placeholder.Text].ToString();
+    }
+}
+<div class="ux-tb-url">
     <div class="input-group">
-        <span class="input-group-addon">@Html.UxIcon(IconType.Link)</span>
-
-        @Html.TextBoxFor(item => item, new { @class = "form-control", type="url", placeholder="www.something.com" })
+        <span class="input-group-addon">@Html.UxIcon(IconType.Globe)</span>
+        @Html.TextBoxFor(item => item, new { @class = "form-control", type = "url", placeholder = PlaceHolder })
     </div>
 </div>

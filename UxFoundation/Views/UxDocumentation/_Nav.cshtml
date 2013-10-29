@@ -33,6 +33,18 @@
                                                                                                          }
     </a></li>
 }
+@helper attributeItem(string text, string nameOfPartial, bool isNew = false)
+{
+
+    <li>
+        <a href="@Url.Action("Attributes", "UxDocumentation", new { partial = nameOfPartial }, null)">
+            @text @if (isNew)
+            {
+                @Html.UxLabel("New", appearance: LabelAppearanceType.Danger)
+            }
+        </a>
+    </li>
+}
 
 @helper dataItem(string text, string nameOfPartial, bool isNew = false)
 {
@@ -129,12 +141,7 @@
 
             </li>
 
-
-
-            @*@navItem("Files", "Files", "UxDocumentation")*@
-
-            @*@navItem("View models and models", "ViewModels", "UxDocumentation")*@
-            <li 
+            @*<li 
                 @if (Url.Action("Samples", "UxDocumentation") == Request.Url.LocalPath)
                 {
                     @:class="dropdown active" 
@@ -147,7 +154,25 @@
                 <ul class="dropdown-menu">
                     @sampleItem("Tables", "Tables")
                 </ul>
+            </li>*@
+            <li @if (Url.Action("Attributes", "UxDocumentation") == Request.Url.LocalPath) { @: class="dropdown active"
+                                } else { @: class="dropdown"
+                                }>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Html.UxIcon(IconType.Code) Attributes <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    @attributeItem("Textbox sizes", "TextboxSize", true)
+                </ul>
             </li>
+
+
+
+
+
+
+
+
+
+
 
 
 

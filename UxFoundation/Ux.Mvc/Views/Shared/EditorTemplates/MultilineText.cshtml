@@ -1,5 +1,22 @@
-﻿@{
-	string PlaceHolder = null;
-	if (ViewBag.PlaceHolder != null) { PlaceHolder = ViewBag.PlaceHolder; }        
+﻿@using Ux.Mvc.Attributes
+@{
+    string PlaceHolder = null;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(UxAttributeKeys.Placeholder.Text))
+    {
+        PlaceHolder = ViewData.ModelMetadata.AdditionalValues[UxAttributeKeys.Placeholder.Text].ToString();
+    }
+    string width = null, height = null;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(UxAttributeKeys.TextboxSize.Width))
+    {
+        width = ViewData.ModelMetadata.AdditionalValues[UxAttributeKeys.TextboxSize.Width].ToString();
+    }
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(UxAttributeKeys.TextboxSize.Height))
+    {
+        height = ViewData.ModelMetadata.AdditionalValues[UxAttributeKeys.TextboxSize.Height].ToString();
+    }
+
+    string widthStyle = width == null ? "" : string.Format("width:{0};", width);
+    string heightStyle = height == null ? "" : string.Format("height:{0};", height);
+    string Styles = widthStyle + heightStyle;   
 }
-@Html.TextAreaFor(item=>item, new { @class = "form-control textbox-large", placeholder = @PlaceHolder })
+@Html.TextAreaFor(item=>item, new { @class = "form-control ux-tb-large", placeholder = PlaceHolder, style = Styles })

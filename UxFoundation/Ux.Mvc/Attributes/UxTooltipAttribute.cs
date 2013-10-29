@@ -7,11 +7,11 @@ using System.Web.Mvc;
 namespace Ux.Mvc.Attributes
 {
 	[AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = false)]
-	sealed class PlaceholderAttribute : Attribute, IMetadataAware
+	sealed class UxTooltipAttribute : Attribute, IMetadataAware
 	{
-		readonly string text;
+	readonly string text;
 
-		public PlaceholderAttribute(string text)
+	public UxTooltipAttribute(string text)
 		{
 			this.text = text;
 		}
@@ -23,7 +23,7 @@ namespace Ux.Mvc.Attributes
 
 		public void OnMetadataCreated(ModelMetadata metadata)
 		{
-			metadata.AdditionalValues["placeholder"] = text;
+			metadata.AdditionalValues[UxAttributeKeys.Tooltip.Text] = text;
 		}
 	}
 }

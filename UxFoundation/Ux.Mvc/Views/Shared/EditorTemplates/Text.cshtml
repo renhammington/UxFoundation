@@ -1,5 +1,16 @@
-﻿@{
-	string PlaceHolder = null;
-	if (ViewBag.PlaceHolder != null) { PlaceHolder = ViewBag.PlaceHolder; }        
+﻿@using Ux.Mvc.Attributes
+@{
+    string PlaceHolder = null;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(UxAttributeKeys.Placeholder.Text))
+    {
+        PlaceHolder = ViewData.ModelMetadata.AdditionalValues[UxAttributeKeys.Placeholder.Text].ToString();
+    }
+    string width = null;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(UxAttributeKeys.TextboxSize.Width))
+    {
+        width = ViewData.ModelMetadata.AdditionalValues[UxAttributeKeys.TextboxSize.Width].ToString();
+    }
+    string Style = width == null ? "" : string.Format("width:{0};", width);
+    
 }
-@Html.TextBoxFor(item=>item, new { @class = "form-control", placeholder = @PlaceHolder })
+@Html.TextBoxFor(item => item, new { @class = "form-control", placeholder = PlaceHolder, style = Style })

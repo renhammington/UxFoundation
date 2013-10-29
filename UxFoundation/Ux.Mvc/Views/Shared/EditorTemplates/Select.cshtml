@@ -8,23 +8,6 @@
     ViewData["selectionMade"] = false;
         
 }
-@*@helper SetSelected(string value)
-{
-    if (value == null) { return; }
-    if (bool.Parse(ViewData["selectionMade"].ToString()) == true) { return; }
-    if (Model == int.Parse(value))
-    { @:selected="selected"   
-        ViewData["selectionMade"] = true;
-    }    
-}*@
-@*@helper RenderOption(SelectOption option)
-{
-    @:<option value="@option.Value" @SetSelected(option.Value) @option.GetAttributes()>@option.Text</option>
-}
-@helper RenderItem(SelectListItem item)
-{
-    @:<option value="@item.Value" @SetSelected(item.Value)>@item.Text</option>
-}*@
 
 @if (DataSource == null)
 {
@@ -34,30 +17,4 @@ else
 { 
     @Html.UxSelectWithDataSource(DataSource, Model, clientId: htmlField)
 }
-
-
-
-@*else if (DataSource.IsGrouped)
-{
-    @:<select name="@htmlField" id="@htmlField" class="selectpicker show-tick" data-live-search="true" data-width="auto" data-size="10">
-foreach (var group in DataSource.GroupedItems)
-    {
-        <optgroup label="@group.Key">
-            @foreach (var option in group.Value)
-            {
-                @RenderOption(option);
-            }
-        </optgroup>
-        }
-    @:</select>
-    }
-else
-{
-    @:<select name="@htmlField" id="@htmlField" class="selectpicker show-tick" data-live-search="true" data-width="auto" data-size="10">
-foreach (var option in DataSource.UnGroupedItems)
-    {
-        @RenderOption(option);
-    }
-    @:</select>
-}*@
 

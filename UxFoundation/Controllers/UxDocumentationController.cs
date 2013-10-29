@@ -24,10 +24,18 @@ namespace Ux.Mvc.Controllers
 			var examples = CreateExamples();
 
             ViewBag.PartialToShow = "DataTypes/_" + partial;
-
-
+			
             return View(examples);
         }
+
+		public ActionResult Attributes(string partial = "TextboxSize")
+		{
+			var examples = new Ux.Mvc.ViewModels.TextboxWidths();
+
+			ViewBag.PartialToShow = "Attributes/_" + partial;
+
+			return View(examples);
+		}
 
 		private Examples CreateExamples()
 		{

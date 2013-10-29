@@ -13,11 +13,11 @@ namespace Ux.Mvc.ViewModels
 		public int Id { get; set; }
 
 		[DataType(DataType.Text)]
-		[Placeholder("Enter whatever you please...")]
+		[UxPlaceholder("Enter whatever you please...")]
 		public string SingleLineText { get; set; }
 				
 		[DataType(DataType.MultilineText)]
-		[Placeholder("Lorem ipsum dolor sit amet")]
+		[UxPlaceholder("Lorem ipsum dolor sit amet")]
 		public string MultiLineText { get; set; }
 				
 		[DataType(DataType.EmailAddress)]
@@ -30,7 +30,7 @@ namespace Ux.Mvc.ViewModels
 
 
 		[DataType(DataType.Url)]
-		[Tooltip("Make sure you pick something amazing")]
+		[UxTooltip("Make sure you pick something amazing")]
 		public string Url { get; set; }
 
 		[DataType(DataType.Password)]
@@ -40,7 +40,7 @@ namespace Ux.Mvc.ViewModels
 		public string Html { get; set; }
 
 		[Url]
-		[Tooltip("Make sure you pick something amazing")]
+		[UxTooltip("Make sure you pick something amazing")]
 		public string UrlWithAttribute { get; set; }
 
 		[DataType(DataType.ImageUrl)]
@@ -79,16 +79,16 @@ namespace Ux.Mvc.ViewModels
 
 		public bool? BooleanNullable { get; set; }
 
-		[Boolean("Oui", "Non")]
+		[UxBoolean("Oui", "Non")]
 		public bool BooleanExplicit { get; set; }
 
-		[Boolean("Positive","Negative","Uncertain")]
+		[UxBoolean("Positive","Negative","Uncertain")]
 		public bool? BooleanNullableExplicit { get; set; }
 
-		[Boolean(BooleanType.TrueFalse)]
+		[UxBoolean(BooleanType.TrueFalse)]
 		public bool BooleanByType { get; set; }
 
-		[Boolean(BooleanType.TrueFalse, "Perhaps")]
+		[UxBoolean(BooleanType.TrueFalse, "Perhaps")]
 		public bool? BooleanNullableByType { get; set; }
 
 		#endregion

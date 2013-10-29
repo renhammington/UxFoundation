@@ -1,7 +1,14 @@
 ﻿@using Ux.Mvc.Web.UI
-<div style="width:150px;">
-<div class="input-group">
-    <span class="input-group-addon">@Html.UxIcon(IconType.UsDollar)</span>
-@Html.TextBoxFor(item=>item, new { @class = "form-control", type="text" })
-</div>
+@{
+    string PlaceHolder = null;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(UxAttributeKeys.Placeholder.Text))
+    {
+        PlaceHolder = ViewData.ModelMetadata.AdditionalValues[UxAttributeKeys.Placeholder.Text].ToString();
+    }
+}
+<div class="ux-tb-currency">
+    <div class="input-group">
+        <span class="input-group-addon">@Html.UxIcon(IconType.UsDollar)</span>
+        @Html.TextBoxFor(item => item, new { @class = "form-control", type = "text", placeholder = PlaceHolder })
     </div>
+</div>

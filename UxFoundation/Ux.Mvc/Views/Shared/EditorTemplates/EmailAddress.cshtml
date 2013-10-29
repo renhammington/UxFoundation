@@ -1,8 +1,16 @@
 ﻿@using Ux.Mvc.Web.UI
-<div style="width:300px;">
-<div class="input-group">
-    <span class="input-group-addon">@Html.UxIcon(IconType.EnvelopeOutlined)</span>
+@{
+    string PlaceHolder = null;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(Ux.Mvc.Attributes.UxAttributeKeys.Placeholder.Text))
+    {
+        PlaceHolder = ViewData.ModelMetadata.AdditionalValues[Ux.Mvc.Attributes.UxAttributeKeys.Placeholder.Text].ToString();
+    }
+}
 
-@Html.TextBoxFor(item=>item, new { @class = "form-control", type="email", placeholder = "something@domain.com" })
-</div>
+<div style="width:300px;">
+    <div class="input-group">
+        <span class="input-group-addon">@Html.UxIcon(IconType.EnvelopeOutlined)</span>
+        @Html.TextBoxFor(item => item, new { @class = "form-control", type = "email", placeholder = PlaceHolder })
     </div>
+</div>
+

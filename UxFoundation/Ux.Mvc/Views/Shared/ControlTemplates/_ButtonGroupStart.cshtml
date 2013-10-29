@@ -17,7 +17,7 @@
 }
 @helper RenderOption(SelectOption option)
 {
-    <label class="btn btn-primary @SetActive(option.Value == Model.SelectedValue)">
+    <label class="btn btn-default @SetActive(option.Value == Model.SelectedValue)">
         <input type="radio" value="@option.Value" name="@ViewData.TemplateInfo.HtmlFieldPrefix" @SetChecked(option.Value == Model.SelectedValue) />
         @if(option.IconType!=null) {
             @Html.UxIcon(option.IconType)

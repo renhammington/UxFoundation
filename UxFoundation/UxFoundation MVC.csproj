@@ -164,6 +164,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IconController.cs" />
+    <Compile Include="Ux.Mvc\Attributes\UxTextboxSizeAttribute.cs" />
     <Compile Include="Ux.Mvc\Binders\UxDateTimeModelBinder.cs" />
     <Compile Include="Ux.Mvc\Controls\Abbreviation.cs" />
     <Compile Include="Ux.Mvc\Controls\Checkbox.cs" />
@@ -207,6 +208,7 @@
     <Compile Include="Ux.Mvc\Helpers\RenderUxDisposableWebControl.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxAbbreviation.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxAlert.cs" />
+    <Compile Include="Ux.Mvc\Helpers\UxAttributeKeys.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxBadge.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxBeginForm.cs" />
     <Compile Include="Ux.Mvc\Helpers\UxBulletList.cs" />
@@ -251,9 +253,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Ux.Mvc\Attributes\BooleanAttribute.cs" />
-    <Compile Include="Ux.Mvc\Attributes\PlaceholderAttribute.cs" />
-    <Compile Include="Ux.Mvc\Attributes\TooltipAttribute.cs" />
+    <Compile Include="Ux.Mvc\Attributes\UxBooleanAttribute.cs" />
+    <Compile Include="Ux.Mvc\Attributes\UxPlaceholderAttribute.cs" />
+    <Compile Include="Ux.Mvc\Attributes\UxTooltipAttribute.cs" />
     <Compile Include="Ux.Mvc\Attributes\UxHintAttribute.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMappers\ButtonAppearanceType.cs" />
     <Compile Include="Ux.Mvc\Enums\BooleanType.cs" />
@@ -264,6 +266,7 @@
     <Compile Include="Ux.Mvc\Enums\PagerType.cs" />
     <Compile Include="Ux.Mvc\Enums\UxHintType.cs" />
     <Compile Include="Ux.Mvc\Enums\CssMappers\WellSize.cs" />
+    <Compile Include="Ux.Mvc\ViewModels\TextboxWidths.cs" />
     <Compile Include="Ux.Mvc\Views\UxViewEngine.cs" />
     <Compile Include="Ux.Mvc\Controls\Alert.cs" />
     <Compile Include="Ux.Mvc\Controls\Badge.cs" />
@@ -410,7 +413,6 @@
     <Content Include="Content\tomorrow.css" />
     <Content Include="Ux.Mvc\Scripts\ux.js" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_EditorRow.cshtml" />
-    <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\String.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\MultilineText.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\EmailAddress.cshtml" />
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Button.cshtml" />
@@ -547,6 +549,10 @@
     <Content Include="Ux.Mvc\Views\Shared\ControlTemplates\_Textbox.cshtml" />
     <Content Include="Views\UxDocumentation\WebControls\_Textboxes.cshtml" />
     <Content Include="Views\Icon\Index.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\Decimal.cshtml" />
+    <Content Include="Views\UxDocumentation\Attributes\_TextboxSize.cshtml" />
+    <Content Include="Views\UxDocumentation\Attributes.cshtml" />
+    <Content Include="Ux.Mvc\Views\Shared\EditorTemplates\String.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

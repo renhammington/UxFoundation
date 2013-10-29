@@ -19,8 +19,8 @@ public static partial class UxHtmlHelpers
         //var placeholder = expression ;
         //var tooltip = ;
         var member = ((MemberExpression)expression.Body).Member;
-        var placeholder = member.GetAttribute<PlaceholderAttribute>();
-        var tooltip = member.GetAttribute<TooltipAttribute>();
+        var placeholder = member.GetAttribute<UxPlaceholderAttribute>();
+        var tooltip = member.GetAttribute<UxTooltipAttribute>();
 
         //var uiHint = member.GetAttribute<UIHintAttribute>();
         //object datasource = null;

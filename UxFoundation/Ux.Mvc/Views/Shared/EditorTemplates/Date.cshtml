@@ -1,11 +1,14 @@
 ﻿@using Ux.Mvc.Web.UI
 @{
-	string PlaceHolder = "dd/mm/yyyy";
-	if (ViewBag.PlaceHolder != null) { PlaceHolder = ViewBag.PlaceHolder; }        
+    string PlaceHolder = null;
+    if (ViewData.ModelMetadata.AdditionalValues.ContainsKey(Ux.Mvc.Attributes.UxAttributeKeys.Placeholder.Text))
+    {
+        PlaceHolder = ViewData.ModelMetadata.AdditionalValues[Ux.Mvc.Attributes.UxAttributeKeys.Placeholder.Text].ToString();
+    }       
 }
-<div style="width: 150px;">
+<div class="ux-tb-date">
     <div class="input-group date">
-        @Html.TextBoxFor(item=>item, new { @class = "form-control", type="text", placeholder = PlaceHolder , value=Model.ToString("dd/MM/yyyy"), novalidate = true })
+        @Html.TextBoxFor(item=>item, new { @class = "form-control", type="text", placeholder = PlaceHolder, novalidate = true })
         <span class="input-group-addon" style="cursor:pointer;">@Html.UxIcon(IconType.Calendar)</span>
     </div>
 </div>
