@@ -2,13 +2,22 @@
 @{
     Layout = null;
 }
-
+@helper clean(string alias, int i, string id)
+{
+	string fixedName = alias.Replace("-", " ");
+	var words = fixedName.Split(' ');
+	List<string> cleanedWords = new List<string>();
+	words.Where(w => w.StartsWith("(") == false).ToList().ForEach(word => cleanedWords.Add(word.Substring(0, 1).ToUpper() + word.Substring(1).ToLower()));
+	var output = string.Join(" ", cleanedWords);
+	@:public static readonly IconType @string.Join("", cleanedWords) = new IconType(@i,"@output","@id");
+}
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+
 </head>
 <body>
     <div>
@@ -24,7 +33,12 @@
 			//public static readonly IconType Skype = new IconType(283, "Skype", "skype");
 			
 			
-			<div>public static readonly IconType @icon.FixedName.Replace(" ","") = new IconType(@i,"@icon.FixedName","@icon.Id");</div>
+			<div>public static readonly IconType @icon.FixedName.Replace(" ","").Replace(".","") = new IconType(@i,"@icon.FixedName","@icon.Id");</div>
+			foreach (var alias in icon.Aliases)
+			{
+				i++;
+				<div style="background:#4cff00">@clean(alias,i,icon.Id)</div>
+			}
 		}
     </div>
 </body>

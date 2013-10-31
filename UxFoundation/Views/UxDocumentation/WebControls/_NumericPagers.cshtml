@@ -1,41 +1,41 @@
 ﻿@using Ux.Mvc.Web.UI
 <div class="page-header">
-    <h1>Numeric pagers <small>UxNumericPager + UxPageLink</small></h1>
+	<h1>Numeric pagers <small>UxNumericPager + UxPageLink</small></h1>
 </div>
 <div class="section">
-    <h3>Helper</h3>
-    <div class="highlight highlight-large">
-        <pre class="prettyprint">
+	<h3>Helper</h3>
+	<div class="highlight highlight-large">
+		<pre class="prettyprint">
 @@using (Html.UxNumericPager()) 
 {
 	@@Html.UxPageLink()
 }
 </pre>
-    </div>
+	</div>
 </div>
 <div class="section">
 
 
 
-    <h3>Appearance</h3>
-    <div class="example">
+	<h3>Appearance</h3>
+	<div class="example">
 
 
-        @using (Html.UxNumericPager())
-        {
-            @Html.UxPageLink(IconType.DoubleAngleLeft, "/myurl")
-            var currentPage = 3;
-            for (int i = 1; i < 6; i++)
-            {
-            @Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString());
-            }	  
-            @Html.UxPageLink(IconType.DoubleAngleRight, "/myurl")
-        }
-        <br />
+		@using (Html.UxNumericPager())
+		{
+			@Html.UxPageLink(IconType.AngleDoubleLeft, "/myurl")
+			var currentPage = 3;
+			for (int i = 1; i < 6; i++)
+			{
+				@Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString());
+			}
+			@Html.UxPageLink(IconType.AngleDoubleRight, "/myurl")
+		}
+		<br />
 
-    </div>
-    <div class="highlight">
-        <pre class="prettyprint">
+	</div>
+	<div class="highlight">
+		<pre class="prettyprint">
 @@using (Html.UxNumericPager())
 {
 	@@Html.UxPageLink(IconType.DoubleAngleLeft, "/link/to/previouspage")
@@ -47,206 +47,206 @@
 	@@Html.UxPageLink(IconType.DoubleAngleRight, "/link/to/nextpage")
 }
 </pre>
-    </div>
+	</div>
 </div>
 <div class="section">
 
-    <h3>Size</h3>
-    <p>There are three pager sizes available using the <code>PagerSize</code> enumeration: Default, Small and Large</p>
-    <div class="example">
-        <div class="clearfix">
-            <div class="col-md-4">
-                @using (Html.UxNumericPager(PagerSize.Large))
-                {
-                    @Html.UxPageLink(IconType.DoubleAngleLeft, "/myurl")
-                    var currentPage = 5;
-                    var disabledPage = 1;
-                    for (int i = 1; i < 4; i++)
-                    {
-                    @Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString(), i == currentPage, i == disabledPage);
-                    }	  
-                    @Html.UxPageLink(IconType.DoubleAngleRight, "/myurl")
-                }
-            </div>
-            <div class="col-md-4">
-                @using (Html.UxNumericPager())
-                {
-                    @Html.UxPageLink(IconType.DoubleAngleLeft, "/myurl")
-                    var currentPage = 5;
-                    var disabledPage = 1;
-                    for (int i = 1; i < 4; i++)
-                    {
-                    @Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString(), i == currentPage, i == disabledPage);
-                    }	  
-                    @Html.UxPageLink(IconType.DoubleAngleRight, "/myurl")
-                }
-            </div>
-            <div class="col-md-4">
-                @using (Html.UxNumericPager(PagerSize.Small))
-                {
-                    @Html.UxPageLink(IconType.DoubleAngleLeft, "/myurl")
-                    var currentPage = 5;
-                    var disabledPage = 1;
-                    for (int i = 1; i < 4; i++)
-                    {
-                    @Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString(), i == currentPage, i == disabledPage);
-                    }	  
-                    @Html.UxPageLink(IconType.DoubleAngleRight, "/myurl")
-                }
-            </div>
-        </div>
-    </div>
-    <div class="highlight">
-        <pre class="prettyprint">
+	<h3>Size</h3>
+	<p>There are three pager sizes available using the <code>PagerSize</code> enumeration: Default, Small and Large</p>
+	<div class="example">
+		<div class="clearfix">
+			<div class="col-md-4">
+				@using (Html.UxNumericPager(PagerSize.Large))
+				{
+					@Html.UxPageLink(IconType.AngleDoubleLeft, "/myurl")
+					var currentPage = 5;
+					var disabledPage = 1;
+					for (int i = 1; i < 4; i++)
+					{
+						@Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString(), i == currentPage, i == disabledPage);
+					}
+					@Html.UxPageLink(IconType.AngleDoubleRight, "/myurl")
+				}
+			</div>
+			<div class="col-md-4">
+				@using (Html.UxNumericPager())
+				{
+					@Html.UxPageLink(IconType.AngleDoubleLeft, "/myurl")
+					var currentPage = 5;
+					var disabledPage = 1;
+					for (int i = 1; i < 4; i++)
+					{
+						@Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString(), i == currentPage, i == disabledPage);
+					}
+					@Html.UxPageLink(IconType.AngleDoubleRight, "/myurl")
+				}
+			</div>
+			<div class="col-md-4">
+				@using (Html.UxNumericPager(PagerSize.Small))
+				{
+					@Html.UxPageLink(IconType.AngleDoubleLeft, "/myurl")
+					var currentPage = 5;
+					var disabledPage = 1;
+					for (int i = 1; i < 4; i++)
+					{
+						@Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString(), i == currentPage, i == disabledPage);
+					}
+					@Html.UxPageLink(IconType.AngleDoubleRight, "/myurl")
+				}
+			</div>
+		</div>
+	</div>
+	<div class="highlight">
+		<pre class="prettyprint">
 @@using (Html.UxNumericPager(PagerSize.Large)) { &hellip; }
 @@using (Html.UxNumericPager()) { &hellip; }
 @@using (Html.UxNumericPager(PagerSize.Small)) { &hellip; }
 </pre>
 
-    </div>
+	</div>
 </div>
 <div class="section">
 
-    <h3>Active</h3>
-    <div class="example">
+	<h3>Active</h3>
+	<div class="example">
 
 
-        @using (Html.UxNumericPager())
-        {
-            @Html.UxPageLink(IconType.DoubleAngleLeft, "/myurl")
-            var currentPage = 3;
-            for (int i = 1; i < 6; i++)
-            {
-            @Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString(), i == currentPage);
-            }	  
-            @Html.UxPageLink(IconType.DoubleAngleRight, "/myurl")
-        }
-        <br />
+		@using (Html.UxNumericPager())
+		{
+			@Html.UxPageLink(IconType.AngleDoubleLeft, "/myurl")
+			var currentPage = 3;
+			for (int i = 1; i < 6; i++)
+			{
+				@Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString(), i == currentPage);
+			}
+			@Html.UxPageLink(IconType.AngleDoubleRight, "/myurl")
+		}
+		<br />
 
-    </div>
-    <div class="highlight">
-        <pre class="prettyprint">
+	</div>
+	<div class="highlight">
+		<pre class="prettyprint">
 &hellip;
 @@Html.UxPageLink("3", "/link/to/page/3", active: true)
 &hellip;
 </pre>
-    </div>
+	</div>
 </div>
 <div class="section">
 
-    <h3>Disabled</h3>
-    <div class="example">
+	<h3>Disabled</h3>
+	<div class="example">
 
-        @using (Html.UxNumericPager())
-        {
-            @Html.UxPageLink(IconType.DoubleAngleLeft, "/myurl")
-            var currentPage = 3;
-            for (int i = 1; i < 6; i++)
-            {
-            @Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString(), disabled: i == currentPage);
-            }	  
-            @Html.UxPageLink(IconType.DoubleAngleRight, "/myurl")
-        }
-        <br />
+		@using (Html.UxNumericPager())
+		{
+			@Html.UxPageLink(IconType.AngleDoubleLeft, "/myurl")
+			var currentPage = 3;
+			for (int i = 1; i < 6; i++)
+			{
+				@Html.UxPageLink(i.ToString(), "/myurl?page=" + i.ToString(), disabled: i == currentPage);
+			}
+			@Html.UxPageLink(IconType.AngleDoubleRight, "/myurl")
+		}
+		<br />
 
-    </div>
-    <div class="highlight">
-        <pre class="prettyprint">
+	</div>
+	<div class="highlight">
+		<pre class="prettyprint">
 &hellip;
 @@Html.UxPageLink("3", "/link/to/page/3", disabled:true)
 &hellip;
 </pre>
-    </div>
+	</div>
 </div>
 
 
 
 <div class="section">
-    <h3>Parameters</h3>
-    @using (var panel = Html.UxPanel())
-    {
-        @panel.Header(
-    @:UxNumericPager
+	<h3>Parameters</h3>
+	@using (var panel = Html.UxPanel())
+	{
+		@panel.Header(
+		@:UxNumericPager
 )
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Default</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>size</td>
-                    <td><code>PagerSize</code></td>
-                    <td><code>Default</code></td>
-                    <td>The size of the pager.</td>
-                </tr>
-                <tr>
-                    <td>clientId</td>
-                    <td><code>string</code></td>
-                    <td><code>null</code></td>
-                    <td>Sets the <code>id</code> property of the rendered html element.</td>
-                </tr>
-            </tbody>
-        </table>
-    }
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>size</td>
+					<td><code>PagerSize</code></td>
+					<td><code>Default</code></td>
+					<td>The size of the pager.</td>
+				</tr>
+				<tr>
+					<td>clientId</td>
+					<td><code>string</code></td>
+					<td><code>null</code></td>
+					<td>Sets the <code>id</code> property of the rendered html element.</td>
+				</tr>
+			</tbody>
+		</table>
+	}
 
-    @using (var panel = Html.UxPanel())
-    {
-        @panel.Header(
-    @:UxPageLink
+	@using (var panel = Html.UxPanel())
+	{
+		@panel.Header(
+		@:UxPageLink
 )
 
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Default</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>text</td>
-                    <td><code>string</code></td>
-                    <td><code>null</code></td>
-                    <td>The text of the page link.</td>
-                </tr>
-                <tr>
-                    <td>iconType</td>
-                    <td><code>IconType</code></td>
-                    <td><code>null</code></td>
-                    <td>Sets the icon to include in the link.</td>
-                </tr>
-                <tr>
-                    <td>url</td>
-                    <td><code>string</code></td>
-                    <td><code>null</code></td>
-                    <td>The Url to navigate to when the link is clicked.</td>
-                </tr>
-                <tr>
-                    <td>active</td>
-                    <td><code>bool</code></td>
-                    <td><code>false</code></td>
-                    <td>Highlights the link, if set to <code>true</code>.</td>
-                </tr>
-                <tr>
-                    <td>disabled</td>
-                    <td><code>bool</code></td>
-                    <td><code>false</code></td>
-                    <td>Disables the link, if set to <code>true</code>.</td>
-                </tr>
-                <tr>
-                    <td>clientId</td>
-                    <td><code>string</code></td>
-                    <td><code>null</code></td>
-                    <td>Sets the <code>id</code> property of the rendered html element.</td>
-                </tr>
-            </tbody>
-        </table>
-    }
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>text</td>
+					<td><code>string</code></td>
+					<td><code>null</code></td>
+					<td>The text of the page link.</td>
+				</tr>
+				<tr>
+					<td>iconType</td>
+					<td><code>IconType</code></td>
+					<td><code>null</code></td>
+					<td>Sets the icon to include in the link.</td>
+				</tr>
+				<tr>
+					<td>url</td>
+					<td><code>string</code></td>
+					<td><code>null</code></td>
+					<td>The Url to navigate to when the link is clicked.</td>
+				</tr>
+				<tr>
+					<td>active</td>
+					<td><code>bool</code></td>
+					<td><code>false</code></td>
+					<td>Highlights the link, if set to <code>true</code>.</td>
+				</tr>
+				<tr>
+					<td>disabled</td>
+					<td><code>bool</code></td>
+					<td><code>false</code></td>
+					<td>Disables the link, if set to <code>true</code>.</td>
+				</tr>
+				<tr>
+					<td>clientId</td>
+					<td><code>string</code></td>
+					<td><code>null</code></td>
+					<td>Sets the <code>id</code> property of the rendered html element.</td>
+				</tr>
+			</tbody>
+		</table>
+	}
 </div>
